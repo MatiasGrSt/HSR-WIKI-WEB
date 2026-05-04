@@ -1,0 +1,175 @@
+/* basico.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0b0b0b; 
+    color: #e0e0e0; 
+    margin: 0;
+    display: flex; /* Alineación base */
+    height: 100vh;
+    overflow: hidden; /* Evita que el body tenga scroll; el scroll será del main[cite: 10] */
+}
+
+#main-scroll {
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        transparent 5vh,
+        rgba(18, 18, 18, 0.8) 25vh,
+        #121212 80vh,
+        #121212 100%
+    );
+    background-attachment: local; /* Sincroniza el degradado con el scroll[cite: 16] */
+}
+
+#parallax-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: calc(100% - 13.5%);
+    height: 100vh;
+    object-fit: cover;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* NAV: Fijo y con ancho controlado[cite: 10] */
+nav {
+    width: 13.5%; 
+    min-width: 220px; 
+    flex-shrink: 0; 
+    position: fixed; /* Siempre visible a la izquierda[cite: 10] */
+    left: 0;
+    top: 0;
+    height: 100vh;
+    background-color: #0e0e0e;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+}
+
+/* MAIN: El contenedor de contenido que sí tiene scroll */
+main {
+    margin-left: 13.5%; /* Espacio exacto para el nav fijo */
+    width: calc(100% - 13.5%); /* Ocupa exactamente lo que sobra[cite: 12] */
+    height: 100vh; 
+    overflow-y: auto; /* Habilita el scroll vertical aquí[cite: 12] */
+    overflow-x: hidden; /* Evita scroll lateral por error */
+    box-sizing: border-box; /* El padding no suma ancho[cite: 12] */
+    flex-grow: 1;
+}
+
+nav {
+    width: 13.5%; 
+    min-width: 220px; 
+    flex-shrink: 0; 
+    position: fixed;
+    background-color: #0e0e0e;
+    height: 100%;
+    
+    /* --- NUEVO --- */
+    display: flex;
+    flex-direction: column; /* Apila el header y la lista verticalmente */
+}
+
+nav hr {
+    width: 100%; /* Evita que se encoja y parezca un punto */
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #ceae7d, transparent);
+    margin: 0; /* Quitamos los márgenes por defecto */
+}
+
+.nav-header {
+    position: relative; /* ¡Muy importante! Evita que la imagen absoluta se escape del nav */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0; 
+}
+
+/* 2. La imagen que va al FONDO (Logo.webp) */
+.nav-header a {
+    z-index: 1; /* Nivel más bajo */
+    display: block; /* Para evitar márgenes extraños del enlace */
+    width: 100%;
+}
+
+.fondo-logo {
+    display: block;
+    max-width: 100%; /* Ajusta el tamaño según necesites */
+    height: auto;
+    -webkit-mask-image: radial-gradient(circle, black 50%, transparent 100%);
+    mask-image: radial-gradient(circle, black 50%, transparent 100%);
+}
+
+/* 3. La imagen que va POR ENCIMA (Profile_Card) */
+.logo {
+    position: absolute; /* La saca del flujo normal para que "flote" */
+    z-index: 2; /* Nivel más alto, se pone encima de z-index: 1 */
+    
+    /* Esta es la fórmula mágica para centrar un elemento absoluto exactamente en el medio de su contenedor: */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    /* Ajusta el tamaño de la imagen superior si es muy grande */
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 7px rgba(0,0,0,1));
+}
+a .logo:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: all 0.3s ease;
+}
+
+
+nav ul li a{
+    display: block;
+    font-size: 25px;
+    object-fit: contain;
+    text-decoration: none;
+    padding: 1px 10px;
+    padding-block: 5px;
+    color: #BAB6B6;
+    transition: all 0.5s ease;
+    font-weight: bold;
+}
+nav ul li a:hover:not(.activo){
+    margin-left: 30px;
+    color: #e6e2e1;
+}
+nav a.activo {
+    font-size: 30px;
+    background: #817D7D40;
+    color: #e6e2e1;
+    padding: 1px 20px;
+}
+
+#fondo {
+    /* Eliminamos el z-index negativo y la opacidad para que los textos sean 100% visibles */
+    
+    background-repeat: no-repeat;
+    background-size: cover;       
+    background-position: center;  
+    
+    /* TRUCO: Para oscurecer/difuminar la imagen de fondo SIN afectar al texto, 
+       usamos un color de fondo semitransparente y lo mezclamos con la imagen */
+    background-color: rgba(14, 14, 14, 0.85); /* Ajusta el 0.85 para hacerlo más o menos oscuro */
+    background-blend-mode: multiply; /* Mezcla el color oscuro con la imagen */
+
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column; 
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+}
+
+.bottom-divider {
+    margin-top: auto; /* ¡La magia! Empuja este elemento y los siguientes hacia el fondo */
+    width: 100%;
+    border: 1px solid #1C1A1B; /* Ajusta el estilo de la línea si lo necesitas */
+}

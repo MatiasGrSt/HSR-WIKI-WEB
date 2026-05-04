@@ -1,0 +1,211 @@
+[
+    {
+        "character_id": "Boothill",
+        "name": "Espuelas rompetestas",
+        "type": "Ataque Básico",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "20",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Boothill como Daño <span class=\"element\">Físico</span> a un enemigo.",
+        "skill_levels": {
+            "stat_1": [
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140
+            ]
+        }
+    },
+    {
+        "character_id": "Boothill",
+        "name": "Tango de las brasas ardientes",
+        "type": "Habilidad Básica",
+        "target": "Alteracíon",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Hace que Boothill y un enemigo entren en el estado de Duelo a muerte. El ATQ básico de Boothill se potencia y no puede usar la habilidad básica durante <span class=\"stat\">2</span> turnos. Esta duración se reduce en <span class=\"stat\">1</span> al comienzo del turno de Boothill.<br>El objetivo enemigo con Duelo a muerte es afectado con Provocación. Cuando el enemigo/Boothill reciben un ataque uno del otro, el daño recibido aumenta en un <span class=\"stat\">{stat_1}%</span>/<span class=\"stat\">15%</span>.<br>Después de que este enemigo sea derrotado o se rompa su Debilidad, Boothill obtiene <span class=\"stat\">1</span> acumulación de Ventaja en el bolsillo y luego disipa Duelo a muerte.<br>Esta habilidad básica no puede recuperar energía y el turno no termina.<br>Inicia Duelo a muerte. Después de que el objetivo de Duelo a muerte sea derrotado o se rompa su Debilidad, Boothill obtiene Ventaja en el bolsillo y disipa Duelo a muerte. Potencia su ATQ básico y el turno no termina.",
+        "skill_levels": {
+            "stat_1": [
+                15,
+                16.5,
+                18,
+                19.5,
+                21,
+                22.5,
+                24.38,
+                26.25,
+                28.13,
+                30,
+                31.5,
+                33,
+                34.5,
+                36,
+                37.5
+            ]
+        }
+    },
+    {
+        "character_id": "Boothill",
+        "name": "Rodeo vespertino del diablo de polvo",
+        "type": "Definitiva",
+        "target": "ATQ individual",
+        "energy_activation": "115",
+        "energy_gain": "5",
+        "break": "ATQ individual : 90",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Aplica Debilidad Física a un enemigo durante <span class=\"stat\">2</span> turnos.<br>Además, inflige al enemigo un Daño <span class=\"element\">Físico</span> equivalente al <span class=\"stat\">{stat_1}%</span> del ATQ de Boothill y retrasa su acción en un <span class=\"stat\">{stat_2}%</span>.",
+        "skill_levels": {
+            "stat_1": [
+                240,
+                256,
+                272,
+                288,
+                304,
+                320,
+                340,
+                360,
+                380,
+                400,
+                416,
+                432,
+                448,
+                464,
+                480
+            ],
+            "stat_2": [
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36.25,
+                37.5,
+                38.75,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45
+            ]
+        }
+    },
+    {
+        "character_id": "Boothill",
+        "name": "Cinco guisantes en la vaina",
+        "type": "Talento",
+        "target": "Potenciación",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Cada acumulación de Ventaja en el bolsillo aumenta la Reducción de Firmeza del ATQ básico potenciado en un <span class=\"stat\">50%</span>, hasta un máximo de <span class=\"stat\">3</span> acumulaciones.<br>Si el enemigo está afectado por Ruptura de Debilidad cuando usa el ATQ básico potenciado, inflige a ese enemigo un Daño de Ruptura equivalente al <span class=\"stat\">{stat_1}%</span>/<span class=\"stat\">{stat_2}%</span>/<span class=\"stat\">{stat_3}%</span> del Daño de Ruptura <span class=\"element\">Físico</span> de Boothill, en función de las acumulaciones de Ventaja en el bolsillo. La Firmeza máxima calculada para este daño no puede superar <span class=\"stat\">16</span> veces la Reducción de Firmeza de base que tiene el ATQ básico \"Espuelas rompetestas\".<br>Tras ganar el combate, Boothill mantiene Ventaja en el bolsillo para el siguiente combate.<br>Ventaja en el bolsillo hace que el ATQ básico potenciado tenga más Reducción de Firmeza e inflija Daño de Ruptura <span class=\"element\">Físico</span> extra al enemigo afectado por Ruptura de Debilidad. Tras ganar el combate, Ventaja en el bolsillo se mantiene para el siguiente combate.",
+        "skill_levels": {
+            "stat_1": [
+                35,
+                38.5,
+                42,
+                45.5,
+                49,
+                52.5,
+                56.88,
+                61.25,
+                65.63,
+                70,
+                73.5,
+                77,
+                80.5,
+                84,
+                87.5
+            ],
+            "stat_2": [
+                60,
+                66,
+                72,
+                78,
+                84,
+                90,
+                97.5,
+                105,
+                112.5,
+                120,
+                126,
+                132,
+                138,
+                144,
+                150
+            ],
+            "stat_3": [
+                85,
+                93.5,
+                102,
+                110.5,
+                119,
+                127.5,
+                138.13,
+                148.75,
+                159.38,
+                170,
+                178.5,
+                187,
+                195.5,
+                204,
+                212.5
+            ]
+        }
+    },
+    {
+        "character_id": "Boothill",
+        "name": "Sonrisa 3×9",
+        "type": "Técnica",
+        "target": "Potenciación",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "La primera vez que use la habilidad básica en el siguiente combate después de usar la técnica, afecta al objetivo con una Debilidad Física equivalente a la de la habilidad definitiva durante <span class=\"stat\">2</span> turnos.<br>Tras usar la técnica, aplica Debilidad Física a un enemigo la primera vez que use la habilidad básica en el siguiente combate.",
+        "skill_levels": {}
+    },
+    {
+        "character_id": "Boothill",
+        "name": "Percutor de repetición",
+        "type": "Ataque Básico",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "30",
+        "break": "ATQ individual : 60",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Boothill como Daño <span class=\"element\">Físico</span> a un enemigo.<br>El ATQ básico potenciado no recupera pts. de habilidad básica y solo puede tener como objetivo al enemigo que tenga Duelo a muerte.<br>Inflige Daño <span class=\"element\">Físico</span> a un enemigo. Solo puede atacar al enemigo con Duelo a muerte.",
+        "skill_levels": {
+            "stat_1": [
+                110,
+                132,
+                154,
+                176,
+                198,
+                220,
+                242,
+                264,
+                286,
+                308
+            ]
+        }
+    }
+]

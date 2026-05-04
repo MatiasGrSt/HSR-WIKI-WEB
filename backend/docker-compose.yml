@@ -1,0 +1,30 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: hsr_mysql_db
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root_password_seguro
+      MYSQL_DATABASE: hsr_wiki
+      MYSQL_USER: hsr_admin
+      MYSQL_PASSWORD: admin_password_seguro
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./init-db:/docker-entrypoint-initdb.d
+
+  # --- NUESTRO NUEVO SERVIDOR XAMPP EN DOCKER ---
+  web:
+    build: . # Esto le dice que lea el 'Dockerfile' que creamos en el paso 1
+    container_name: hsr_php_web
+    restart: always
+    ports:
+      - "80:80" # El puerto web estándar
+    volumes:
+      - .:/var/www/html # Conecta tu carpeta actual con la carpeta pública del servidor
+    depends_on:
+      - db # Le dice a Docker que no encienda la web hasta que la BD esté lista
+
+volumes:
+  db_data:

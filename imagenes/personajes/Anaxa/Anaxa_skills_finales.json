@@ -1,0 +1,134 @@
+[
+    {
+        "character_id": "Anaxa",
+        "name": "Verdad destilada del dolor",
+        "type": "Ataque Básico",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "20",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Anaxa como Daño de <span class=\"element\">Viento</span> a un enemigo.",
+        "skill_levels": {
+            "stat_1": [
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140
+            ]
+        }
+    },
+    {
+        "character_id": "Anaxa",
+        "name": "Fractales que expulsan lo falso",
+        "type": "Habilidad Básica",
+        "target": "Rebote",
+        "energy_activation": null,
+        "energy_gain": "6",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_<span class=\"stat\">{stat_1}</span>}%</span> del ATQ de Anaxa como Daño de <span class=\"element\">Viento</span> a un enemigo y después inflige daño <span class=\"stat\">{stat_2}</span> veces más. Cada vez, inflige un <span class=\"stat\">{stat_<span class=\"stat\">{stat_3}</span>}%</span> del ATQ de Anaxa como Daño de <span class=\"element\">Viento</span> a un enemigo al azar y prioriza rebotar en los enemigos que no hayan sido golpeados por la habilidad básica en ese ataque.<br>Al lanzar la habilidad básica, el daño que inflige esa vez aumenta en un <span class=\"stat\">{stat_4}%</span> por cada enemigo que pueda ser atacado en el campo de batalla.",
+        "skill_levels": {
+            "stat_1": [
+                35,
+                38.5,
+                42,
+                45.5,
+                49,
+                52.5,
+                56.88,
+                61.25,
+                65.63,
+                70,
+                73.5,
+                77,
+                80.5,
+                84,
+                87.5
+            ]
+        }
+    },
+    {
+        "character_id": "Anaxa",
+        "name": "Tierra de verdor esculpida",
+        "type": "Definitiva",
+        "target": "ATQ AdE",
+        "energy_activation": "140",
+        "energy_gain": "5",
+        "break": "ATQ AdE : 60",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Afecta con Sublimación a todos los enemigos y acto seguido les inflige un Daño de <span class=\"element\">Viento</span> equivalente al <span class=\"stat\">{stat_1}%</span> del ATQ de Anaxa.<br>En el estado de Sublimación, los objetivos adquieren simultáneamente Debilidad Física, de <span class=\"element\">Fuego</span>, de <span class=\"element\">Hielo</span>, de <span class=\"element\">Rayo</span>, de <span class=\"element\">Viento</span>, Cuántica e Imaginaria hasta que comience su turno. Los objetivos sin RES a Control no pueden actuar en el estado de Sublimación.<br>Aplica Sublimación a todos los enemigos y les inflige Daño de <span class=\"element\">Viento</span>. A los objetivos en el estado de Sublimación se les implantan simultáneamente <span class=\"stat\">7</span> tipos de Debilidad y no pueden actuar si no tienen RES a Control.",
+        "skill_levels": {
+            "stat_1": [
+                80,
+                88,
+                96,
+                104,
+                112,
+                120,
+                130,
+                140,
+                150,
+                160,
+                168,
+                176,
+                184,
+                192,
+                200
+            ]
+        }
+    },
+    {
+        "character_id": "Anaxa",
+        "name": "Sabiduría tres veces grande",
+        "type": "Talento",
+        "target": "Alteracíon",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Cada vez que Anaxa golpea una vez a un enemigo, le implanta un tipo de Debilidad al azar durante <span class=\"stat\">3</span> turnos, priorizando los tipos de Debilidad que no tenga el objetivo actualmente.<br>Cuando Anaxa está en el campo de batalla, afecta con Desvelación cualitativa a los enemigos que tengan al menos <span class=\"stat\">5</span> tipos de Debilidad distintos. Anaxa inflige un <span class=\"stat\">{stat_1}%</span> más de daño a los objetivos con Desvelación cualitativa y, tras lanzarles su ATQ básico o habilidad básica, les lanza <span class=\"stat\">1</span> vez más su habilidad básica. Esta habilidad básica adicional no consume pts. de habilidad básica y no puede volver a activar este efecto. Si el objetivo es eliminado antes de que se pueda lanzar la habilidad básica adicional, se lanza contra un enemigo al azar.",
+        "skill_levels": {
+            "stat_1": [
+                18,
+                19.2,
+                20.4,
+                21.6,
+                22.8,
+                24,
+                25.5,
+                27,
+                28.5,
+                30,
+                31.2,
+                32.4,
+                33.6,
+                34.8,
+                36
+            ]
+        }
+    },
+    {
+        "character_id": "Anaxa",
+        "name": "Pupila prismática",
+        "type": "Técnica",
+        "target": "Alteracíon",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Tras usar la técnica, los enemigos de un área determinada son afectados con Aterrorizado. Los enemigos aterrorizados huyen de Anaxa durante <span class=\"stat\">10</span> segundos. Cuando los aliados atacan activamente a enemigos aterrorizados, siempre se considera que entran en combate atacando la Debilidad del enemigo. Tras entrar en combate, Anaxa implanta a cada enemigo una Debilidad del mismo tipo que el atacante durante <span class=\"stat\">3</span> turnos.<br>Afecta a los enemigos cercanos con Aterrorizado. Al atacar a un enemigo aterrorizado, se considera que se entra en combate atacando su Debilidad y se implanta a todos los enemigos una Debilidad del mismo tipo que el atacante.",
+        "skill_levels": {}
+    }
+]

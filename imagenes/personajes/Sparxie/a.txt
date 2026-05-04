@@ -1,0 +1,1321 @@
+
+Home
+Home
+New in 4.2
+New in 4.2
+Personajes
+Personajes
+Todo
+Todo
+Vía
+Vía
+Destrucción
+Destrucción
+Cacería
+Cacería
+Erudición
+Erudición
+Armonía
+Armonía
+Nihilidad
+Nihilidad
+Conservación
+Conservación
+Abundancia
+Abundancia
+Reminiscencia
+Reminiscencia
+Exultación
+Exultación
+Tipos de combate
+Tipos de combate
+Físico
+Físico
+Fuego
+Fuego
+Hielo
+Hielo
+Rayo
+Rayo
+Viento
+Viento
+Cuántico
+Cuántico
+Imaginario
+Imaginario
+Conos de luz
+Conos de luz
+Todos
+Todos
+Vía
+Vía
+Destrucción
+Destrucción
+Cacería
+Cacería
+Erudición
+Erudición
+Armonía
+Armonía
+Nihilidad
+Nihilidad
+Conservación
+Conservación
+Abundancia
+Abundancia
+Reminiscencia
+Reminiscencia
+Exultación
+Exultación
+Artefactos.
+Artefactos.
+Conjunto de artefactos
+Conjunto de artefactos
+Parte del cuerpo
+Parte del cuerpo
+Cabeza
+Cabeza
+Manos
+Manos
+Torso
+Torso
+Piernas
+Piernas
+Esfera de plano
+Esfera de plano
+Cuerda de unión
+Cuerda de unión
+Logros
+Logros
+Yo, Trazacaminos
+Yo, Trazacaminos
+Rastros luminosos
+Rastros luminosos
+Ferrocarril a las estrellas
+Ferrocarril a las estrellas
+Indagación de misterios
+Indagación de misterios
+Recuerdos de un viaje contigo
+Recuerdos de un viaje contigo
+La gloria de la determinación
+La gloria de la determinación
+Ansia de batalla
+Ansia de batalla
+Alegrías efímeras
+Alegrías efímeras
+El universo en una cáscara de nuez
+El universo en una cáscara de nuez
+Enemigos
+Enemigos
+Legión Antimateria
+Legión Antimateria
+Jarilo-VI
+Jarilo-VI
+El Luofu de Xianzhou
+El Luofu de Xianzhou
+Monstruos del Fragmentum
+Monstruos del Fragmentum
+Universo Simulado
+Universo Simulado
+Cazadores de Estelaron
+Cazadores de Estelaron
+Cosmos
+Cosmos
+El Enjambre
+El Enjambre
+Corporación para la Paz Interastral
+Corporación para la Paz Interastral
+Otros
+Otros
+Compañía Teatral de Terrores
+Compañía Teatral de Terrores
+Memes de la Zona de los Recuerdos
+Memes de la Zona de los Recuerdos
+Titandeudos
+Titandeudos
+Bestia crepuscular
+Bestia crepuscular
+Criatura de la marea oscura
+Criatura de la marea oscura
+Sirena abisal
+Sirena abisal
+Fabulae
+Fabulae
+Mnemoduende de Sangre Dorada
+Mnemoduende de Sangre Dorada
+Mapa
+Mapa
+Live updated for 4.2.
+Chispa
+Chispa
+Chispa	Nombre	Chispa
+Facción	Bufones Enmascarados
+Rareza	RaritystrRaritystrRaritystrRaritystrRaritystr
+Vía	Class Exultación
+Tipos de combate	Class Fuego
+Chino	赵爽
+Inglés	Lizzie Freeman
+Coreano	성예원
+Japonés	上田麗奈
+Materiales exclusivos	
+Crédito308K
+Crayón de la inocencia15
+Pluma creasueños15
+Protuberancia radiante65
+Pincel de los sueños15
+Material de Rastros	
+Crédito3M
+Guion gráfico hecho a mano de Pelosete18
+Crayón de la inocencia41
+Edición conmemorativa de la serialización de Pelosete69
+Pluma creasueños56
+Edición de coleccionista de Pelosete139
+Pincel de los sueños58
+Silencio taponador12
+Huellas del destino8
+Historia	¡Me gusta! ¡Seguir! ¡Directo! ¡Más vistas! ¡Fiesta hasta el fin del mundo!
+¡Chispa y Sparkle! Un bufón no es diferente de su máscara.
+¡La respuesta correcta es a quién ven y a quién aman!
+
+Plain
+Lines Display
+Tabs Display
+Tabs
+Índice
+Atributos
+Habilidad básica
+Rastros
+Eidolon
+Conos de luz
+Inventario
+Gallery
+Volumen de los diálogos
+Historia
+Atributos
+Habilidad básica
+Rastros
+Eidolon
+Conos de luz
+Inventario
+Gallery
+Volumen de los diálogos
+Historia
+Atributos
+Nivel	ATQ	DEF	PV	VEL	Prob. CRIT	Daño CRIT	Provocación	Energía	Materiales exclusivos
+1	87.12	62.7	143	107	5%	50%	100	160	
+20	169.88	122.27	278	107	5%	50%	100	160	
+Crédito4000
+Crayón de la inocencia5
+20+	204.73	147.34	335	107	5%	50%	100	160
+30	248.29	178.69	406	107	5%	50%	100	160	
+Crédito8000
+Crayón de la inocencia10
+30+	283.14	203.77	463	107	5%	50%	100	160
+40	326.7	235.12	535	107	5%	50%	100	160	
+Crédito16000
+Pluma creasueños6
+Protuberancia radiante3
+40+	361.55	260.2	592	107	5%	50%	100	160
+50	405.11	291.55	663	107	5%	50%	100	160	
+Crédito40000
+Pluma creasueños9
+Protuberancia radiante7
+50+	439.96	316.63	720	107	5%	50%	100	160
+60	483.52	347.99	791	107	5%	50%	100	160	
+Crédito80000
+Pincel de los sueños6
+Protuberancia radiante20
+60+	518.36	373.06	848	107	5%	50%	100	160
+70	561.92	404.41	920	107	5%	50%	100	160	
+Crédito160K
+Pincel de los sueños9
+Protuberancia radiante35
+70+	596.77	429.5	977	107	5%	50%	100	160
+80	640.33	460.85	1048	107	5%	50%	100	160	
+Nivel	Materiales exclusivos
+1	
+20	
+Crédito4000
+Crayón de la inocencia5
+20+
+40	
+Crédito16000
+Pluma creasueños6
+Protuberancia radiante3
+40+
+50	
+Crédito40000
+Pluma creasueños9
+Protuberancia radiante7
+50+
+60	
+Crédito80000
+Pincel de los sueños6
+Protuberancia radiante20
+60+
+70	
+Crédito160K
+Pincel de los sueños9
+Protuberancia radiante35
+70+
+80	
+Habilidad básica
+¿Se te apagó la chispa?	¿Se te apagó la chispa? - ATQ básico | ATQ individual
+Recuperación de energía : 20
+Ruptura de Debilidad : ATQ individual : 30
+Inflige un 140% del ATQ de Chispa como Daño de Fuego a un enemigo.
+
+Inflige una pequeña cantidad de Daño de Fuego a un enemigo.
+Nivel 10
+ Ver detalles
+	A	Materiales exclusivos
+1	50%	
+2	60%	
+Crédito4000
+Guion gráfico hecho a mano de Pelosete2
+Crayón de la inocencia5
+3	70%	
+Crédito8000
+Edición conmemorativa de la serialización de Pelosete2
+Pluma creasueños2
+4	80%	
+Crédito16000
+Edición conmemorativa de la serialización de Pelosete3
+Pluma creasueños3
+5	90%	
+Crédito32000
+Edición de coleccionista de Pelosete3
+Pincel de los sueños2
+6	100%	
+Crédito120K
+Edición de coleccionista de Pelosete5
+Pincel de los sueños2
+7	110%	
+8	120%	
+9	130%	
+10	140%	
+¡Griten! Chispa conectando	¡Griten! Chispa conectando - Habilidad básica | Potenciación
+Recuperación de energía : 0
+Ruptura de Debilidad : 0
+Inicia una conexión en directo, durante la que convierte el ATQ básico en ¡Mi arte, solo para el ganador! y lanza una vez Trampa interactiva. Durante la conexión, Trampa interactiva puede lanzarse repetidamente hasta 20 veces. Lanzar esta habilidad no se considera como un uso de la habilidad básica.
+
+Inicia una conexión en directo, durante la que convierte el ATQ básico en ¡Mi arte, solo para el ganador! y lanza una vez Trampa interactiva. Durante esta habilidad, Trampa interactiva puede lanzarse repetidamente.
+Nivel 15
+ Ver detalles
+	A	B	C	D	E	Materiales exclusivos
+1	20	28	3	7	4	
+2	20	28	3	7	4	
+Crédito2000
+Crayón de la inocencia2
+3	20	28	3	7	4	
+Crédito4000
+Guion gráfico hecho a mano de Pelosete3
+Crayón de la inocencia5
+4	20	28	3	7	4	
+Crédito8000
+Edición conmemorativa de la serialización de Pelosete2
+Pluma creasueños3
+5	20	28	3	7	4	
+Crédito15000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños3
+6	20	28	3	7	4	
+Crédito24000
+Edición conmemorativa de la serialización de Pelosete6
+Pluma creasueños5
+7	20	28	3	7	4	
+Crédito32000
+Edición de coleccionista de Pelosete2
+Pincel de los sueños2
+8	20	28	3	7	4	
+Crédito65000
+Edición de coleccionista de Pelosete4
+Silencio taponador1
+Pincel de los sueños4
+9	20	28	3	7	4	
+Crédito120K
+Edición de coleccionista de Pelosete6
+Huellas del destino1
+Silencio taponador1
+10	20	28	3	7	4	
+Crédito250K
+Edición de coleccionista de Pelosete12
+Huellas del destino1
+Silencio taponador1
+11	20	28	3	7	4	
+12	20	28	3	7	4	
+13	20	28	3	7	4	
+14	20	28	3	7	4	
+15	20	28	3	7	4	
+¡Que el espectáculo no pare!	¡Que el espectáculo no pare! - Habilidad definitiva | ATQ AdE
+Recuperación de energía : 5
+Ruptura de Debilidad : ATQ AdE : 60
+Obtiene 2 puntos de Chiste. Inflige un Daño de Fuego equivalente a (Exultación ×0.6 + el 60% del ATQ de Chispa) a todos los enemigos.
+
+Obtiene Chiste. Inflige Daño de Fuego a todos los enemigos.
+Nivel 15
+ Regalo Rastros
+¡Deslumbrante! Caleidoscopio de personajes	¡Deslumbrante! Caleidoscopio de personajes
+Requiere niv. de ascensión de personaje 4
+Cuando hay 1/2/3 o más personajes de la Vía de la Exultación en el equipo, Chispa obtiene adicionalmente 2/4/8 puntos de Chiste y 1/1/4 Detonaciones al lanzar la habilidad definitiva.
+Crédito20000
+Edición conmemorativa de la serialización de Pelosete4
+Huellas del destino1
+Silencio taponador1
+ Regalo Eidolon
+¡Miren! Compostura perfecta	¡Miren! Compostura perfecta	¡Miren! Compostura perfecta
+Al lanzar la habilidad definitiva, obtiene 5 puntos de Chiste extra y su Exultación aumenta en un 36% durante 3 turnos.
+ Ver detalles
+	A	B	C	Materiales exclusivos
+1	2	30%	0.6	
+2	2	32%	0.6	
+Crédito2000
+Crayón de la inocencia2
+3	2	34%	0.6	
+Crédito4000
+Guion gráfico hecho a mano de Pelosete3
+Crayón de la inocencia5
+4	2	36%	0.6	
+Crédito8000
+Edición conmemorativa de la serialización de Pelosete2
+Pluma creasueños3
+5	2	38%	0.6	
+Crédito15000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños3
+6	2	40%	0.6	
+Crédito24000
+Edición conmemorativa de la serialización de Pelosete6
+Pluma creasueños5
+7	2	42.5%	0.6	
+Crédito32000
+Edición de coleccionista de Pelosete2
+Pincel de los sueños2
+8	2	45%	0.6	
+Crédito65000
+Edición de coleccionista de Pelosete4
+Silencio taponador1
+Pincel de los sueños4
+9	2	47.5%	0.6	
+Crédito120K
+Edición de coleccionista de Pelosete6
+Huellas del destino1
+Silencio taponador1
+10	2	50%	0.6	
+Crédito250K
+Edición de coleccionista de Pelosete12
+Huellas del destino1
+Silencio taponador1
+11	2	52%	0.6	
+12	2	54%	0.6	
+13	2	56%	0.6	
+14	2	58%	0.6	
+15	2	60%	0.6	
+La chispa maestra	La chispa maestra - Talento | Potenciación
+Recuperación de energía : 0
+Ruptura de Debilidad : ATQ individual : 15
+Cuando Chispa tiene ¡Bien hecho!:
+Al lanzar el ATQ básico potenciado, inflige un 50% y un 25% de Daño de Exultación de Fuego a un enemigo y a los objetivos adyacentes respectivamente. Además, cada vez que lance Trampa interactiva, el ATQ básico potenciado inflige una vez adicional un 25% de Daño de Exultación de Fuego a uno de los enemigos atacados al azar.
+Al lanzar la habilidad definitiva, inflige un 60% de Daño de Exultación de Fuego a todos los enemigos.
+
+Cuando Chispa lanza el ATQ básico potenciado o la habilidad definitiva mientras tiene ¡Bien hecho!, inflige Daño de Exultación de Fuego a los enemigos.
+Nivel 15
+ Regalo Rastros
+¡Bien! Sesión de firmas de chistes	¡Bien! Sesión de firmas de chistes
+Requiere niv. de ascensión de personaje 2
+Si el ATQ de Chispa es superior a 2000, por cada 100 pts. de ATQ que superen este valor, su Exultación aumenta en un 5%, hasta un máximo del 80%.
+Crédito5000
+Guion gráfico hecho a mano de Pelosete2
+Silencio taponador1
+¡Frenesí! Paleta de verdades y mentiras	¡Frenesí! Paleta de verdades y mentiras
+Requiere niv. de ascensión de personaje 6
+Por cada punto de Chiste que se tenga actualmente, el Daño CRIT de todos los aliados aumenta en un 8%, hasta un aumento máximo del 80%.
+Crédito140K
+Edición de coleccionista de Pelosete8
+Huellas del destino1
+Silencio taponador1
+ Regalo Eidolon
+Tendencia: ¿quién es ella?	Tendencia: ¿quién es ella?	Tendencia: ¿quién es ella?
+Al finalizar el Momento Aha, obtiene 5 puntos de Chiste. Por cada punto de Chiste que haya actualmente, la PEN de la RES a todos los tipos de todos los aliados aumenta en un 1.5%, hasta un máximo del 15%.
+Los ojos del público no mienten	Los ojos del público no mienten	Los ojos del público no mienten
+Cuando termina el Momento Aha, Chispa obtiene 1 turno adicional y 2 Detonaciones. Por cada Detonación consumida, su Daño CRIT aumenta en un 10% durante 2 turnos. Se puede acumular hasta 4 veces.
+ Ver detalles
+	A	B	C	D	Materiales exclusivos
+1	10%	24%	20%	10%	
+2	11%	26.4%	22%	11%	
+Crédito2000
+Crayón de la inocencia2
+3	12%	28.8%	24%	12%	
+Crédito4000
+Guion gráfico hecho a mano de Pelosete3
+Crayón de la inocencia5
+4	13%	31.2%	26%	13%	
+Crédito8000
+Edición conmemorativa de la serialización de Pelosete2
+Pluma creasueños3
+5	14%	33.6%	28%	14%	
+Crédito15000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños3
+6	15%	36%	30%	15%	
+Crédito24000
+Edición conmemorativa de la serialización de Pelosete6
+Pluma creasueños5
+7	16.25%	39%	32.5%	16.25%	
+Crédito32000
+Edición de coleccionista de Pelosete2
+Pincel de los sueños2
+8	17.5%	42%	35%	17.5%	
+Crédito65000
+Edición de coleccionista de Pelosete4
+Silencio taponador1
+Pincel de los sueños4
+9	18.75%	45%	37.5%	18.75%	
+Crédito120K
+Edición de coleccionista de Pelosete6
+Huellas del destino1
+Silencio taponador1
+10	20%	48%	40%	20%	
+Crédito250K
+Edición de coleccionista de Pelosete12
+Huellas del destino1
+Silencio taponador1
+11	21%	50.4%	42%	21%	
+12	22%	52.8%	44%	22%	
+13	23%	55.2%	46%	23%	
+14	24%	57.6%	48%	24%	
+15	25%	60%	50%	25%	
+Ataque	Ataque
+Recuperación de energía : 0
+Ruptura de Debilidad : ATQ individual : 30
+Ataca a un enemigo y, tras entrar en combate, consume la Firmeza del tipo correspondiente del enemigo.
+
+Monetización del tráfico	Monetización del tráfico - Técnica | Alteración
+Recuperación de energía : 0
+Ruptura de Debilidad : 0
+Tras usar la técnica, los enemigos de una zona determinada quedan afectados por Lista negra durante 10 segundos, lo que les impide detectar a los aliados.
+Al entrar en combate tras atacar a un enemigo afectado por Lista negra, inflige a todos los enemigos un Daño de Fuego equivalente al 50% del ATQ de Chispa y recupera 2 pts. de habilidad básica para los aliados.
+
+Afecta con Lista negra a los enemigos de una zona. Al atacar a un enemigo afectado por Lista negra y entrar en combate, inflige una pequeña cantidad de Daño de Fuego a todos los enemigos y recupera pts. de habilidad básica.
+¡Mi arte, solo para el ganador!	¡Mi arte, solo para el ganador! - ATQ básico | Ráfaga
+Recuperación de energía : 40
+Ruptura de Debilidad : ATQ individual : 30 / Ráfaga : 15
+Calcula los resultados de la conexión en directo e inflige un 140% y un 70% del ATQ de Chispa como Daño de Fuego a un enemigo y a los objetivos adyacentes, respectivamente.
+
+Inflige una pequeña cantidad de Daño de Fuego a un enemigo y una pequeña cantidad de Daño de Fuego a los objetivos adyacentes.
+Nivel 10
+ Ver detalles
+	A	B	Materiales exclusivos
+1	50%	25%	
+2	60%	30%	
+Crédito4000
+Guion gráfico hecho a mano de Pelosete2
+Crayón de la inocencia5
+3	70%	35%	
+Crédito8000
+Edición conmemorativa de la serialización de Pelosete2
+Pluma creasueños2
+4	80%	40%	
+Crédito16000
+Edición conmemorativa de la serialización de Pelosete3
+Pluma creasueños3
+5	90%	45%	
+Crédito32000
+Edición de coleccionista de Pelosete3
+Pincel de los sueños2
+6	100%	50%	
+Crédito120K
+Edición de coleccionista de Pelosete5
+Pincel de los sueños2
+7	110%	55%	
+8	120%	60%	
+9	130%	65%	
+10	140%	70%	
+Trampa interactiva	Trampa interactiva - Habilidad básica | Potenciación
+Recuperación de energía : 0
+Ruptura de Debilidad : 0
+Aumenta en un 25% y un 12.5% el multiplicador de daño que ¡Mi arte, solo para el ganador! inflige respectivamente a un enemigo y a los objetivos adyacentes. Además, obtiene al azar uno de estos regalos:
+Chisporroteo: 2 pts. de Chiste y 2 pts. de habilidad básica.
+Petardazo: 1 pt. de Chiste.
+Lanzar esta habilidad no se considera como un uso de la habilidad básica.
+
+Aumenta el multiplicador de daño de ¡Mi arte, solo para el ganador! y obtiene al azar uno de estos regalos: Chisporroteo o Petardazo.
+Nivel 15
+ Ver detalles
+	A	B	C	D	E	Materiales exclusivos
+1	2	1	2	10%	5%	
+2	2	1	2	11%	5.5%	
+Crédito2000
+Crayón de la inocencia2
+3	2	1	2	12%	6%	
+Crédito4000
+Guion gráfico hecho a mano de Pelosete3
+Crayón de la inocencia5
+4	2	1	2	13%	6.5%	
+Crédito8000
+Edición conmemorativa de la serialización de Pelosete2
+Pluma creasueños3
+5	2	1	2	14%	7%	
+Crédito15000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños3
+6	2	1	2	15%	7.5%	
+Crédito24000
+Edición conmemorativa de la serialización de Pelosete6
+Pluma creasueños5
+7	2	1	2	16.25%	8.13%	
+Crédito32000
+Edición de coleccionista de Pelosete2
+Pincel de los sueños2
+8	2	1	2	17.5%	8.75%	
+Crédito65000
+Edición de coleccionista de Pelosete4
+Silencio taponador1
+Pincel de los sueños4
+9	2	1	2	18.75%	9.38%	
+Crédito120K
+Edición de coleccionista de Pelosete6
+Huellas del destino1
+Silencio taponador1
+10	2	1	2	20%	10%	
+Crédito250K
+Edición de coleccionista de Pelosete12
+Huellas del destino1
+Silencio taponador1
+11	2	1	2	21%	10.5%	
+12	2	1	2	22%	11%	
+13	2	1	2	23%	11.5%	
+14	2	1	2	24%	12%	
+15	2	1	2	25%	12.5%	
+¡Mi arte, solo para el ganador!	¡Mi arte, solo para el ganador! - ATQ básico | Ráfaga
+Recuperación de energía : 40
+Ruptura de Debilidad : ATQ individual : 30 / Ráfaga : 15
+
+
+Nivel 10
+ Ver detalles
+	A	B	Materiales exclusivos
+1	0.5	0.25	
+2	0.6	0.3	
+3	0.7	0.35	
+4	0.8	0.4	
+5	0.9	0.45	
+6	1	0.5	
+7	1.1	0.55	
+8	1.2	0.6	
+9	1.3	0.65	
+10	1.4	0.7	
+Desbordamiento de señal: ¡Retorna el juego!	Desbordamiento de señal: ¡Retorna el juego! - Habilidad de Exultación | ATQ AdE
+Recuperación de energía : 5
+Ruptura de Debilidad : ATQ individual : 5 / ATQ AdE : 20
+Inflige un 62.5% de Daño de Exultación de Fuego a todos los enemigos e inflige daño 20 veces adicionales. Cada vez, inflige un 31.25% de Daño de Exultación de Fuego a un enemigo al azar. Chispa obtiene 2 Detonaciones que pueden usarse para compensar su consumo de pts. de habilidad básica. Consumir Detonaciones se considera como consumir pts. de habilidad básica.
+
+Inflige Daño de Exultación de Fuego a todos los enemigos. A continuación, inflige una pequeña cantidad de Daño de Exultación de Fuego a un enemigo, y se dispara #3[i] veces en total. Obtiene Detonación, que puede compensar el consumo de pts. de habilidad básica.
+Nivel 15
+ Regalo Eidolon
+¡Tachán! Edición limitada de mí	¡Tachán! Edición limitada de mí	¡Tachán! Edición limitada de mí
+La PEN de la RES a todos los tipos aumenta en un 20%. La habilidad de Exultación inflige daño una vez más por cada 1 punto de Chiste contado, hasta un máximo de 40 veces.
+ Ver detalles
+	A	B	C	D	Materiales exclusivos
+1	12.5%	25%	20	2	
+2	13.75%	27.5%	20	2	
+Crédito2000
+Crayón de la inocencia2
+3	15%	30%	20	2	
+Crédito4000
+Guion gráfico hecho a mano de Pelosete3
+Crayón de la inocencia5
+4	16.25%	32.5%	20	2	
+Crédito8000
+Edición conmemorativa de la serialización de Pelosete2
+Pluma creasueños3
+5	17.5%	35%	20	2	
+Crédito15000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños3
+6	18.75%	37.5%	20	2	
+Crédito24000
+Edición conmemorativa de la serialización de Pelosete6
+Pluma creasueños5
+7	20.31%	40.63%	20	2	
+Crédito32000
+Edición de coleccionista de Pelosete2
+Pincel de los sueños2
+8	21.88%	43.75%	20	2	
+Crédito65000
+Edición de coleccionista de Pelosete4
+Pincel de los sueños4
+9	23.44%	46.88%	20	2	
+Crédito120K
+Edición de coleccionista de Pelosete6
+Pincel de los sueños4
+10	25%	50%	20	2	
+Crédito250K
+Edición de coleccionista de Pelosete12
+Pincel de los sueños4
+11	26.25%	52.5%	20	2	
+12	27.5%	55%	20	2	
+13	28.75%	57.5%	20	2	
+14	30%	60%	20	2	
+15	31.25%	62.5%	20	2	
+Rastros
+¡Bien! Sesión de firmas de chistes	¡Bien! Sesión de firmas de chistes
+Requiere niv. de ascensión de personaje 2
+Si el ATQ de Chispa es superior a 2000, por cada 100 pts. de ATQ que superen este valor, su Exultación aumenta en un 5%, hasta un máximo del 80%.
+Crédito5000
+Guion gráfico hecho a mano de Pelosete2
+Silencio taponador1
+Bonificación de Exultación	Bonificación de Exultación (Exultación)
+Requiere niv. de ascensión de personaje 3
+Exultación +4%
+Crédito10000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños2
+Bonificación de Daño CRIT	Bonificación de Daño CRIT (Daño CRIT)
+Requiere niv. de ascensión de personaje 3
+Daño CRIT +5.3%
+Crédito10000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños2
+¡Deslumbrante! Caleidoscopio de personajes	¡Deslumbrante! Caleidoscopio de personajes
+Requiere niv. de ascensión de personaje 4
+Cuando hay 1/2/3 o más personajes de la Vía de la Exultación en el equipo, Chispa obtiene adicionalmente 2/4/8 puntos de Chiste y 1/1/4 Detonaciones al lanzar la habilidad definitiva.
+Crédito20000
+Edición conmemorativa de la serialización de Pelosete4
+Huellas del destino1
+Silencio taponador1
+Bonificación de Exultación	Bonificación de Exultación (Exultación)
+Requiere niv. de ascensión de personaje 4
+Exultación +6%
+Crédito18000
+Edición conmemorativa de la serialización de Pelosete4
+Pluma creasueños3
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere niv. de ascensión de personaje 5
+Prob. CRIT +4%
+Crédito45000
+Edición de coleccionista de Pelosete3
+Pincel de los sueños2
+Bonificación de Exultación	Bonificación de Exultación (Exultación)
+Requiere niv. de ascensión de personaje 5
+Exultación +6%
+Crédito45000
+Edición de coleccionista de Pelosete3
+Pincel de los sueños2
+¡Frenesí! Paleta de verdades y mentiras	¡Frenesí! Paleta de verdades y mentiras
+Requiere niv. de ascensión de personaje 6
+Por cada punto de Chiste que se tenga actualmente, el Daño CRIT de todos los aliados aumenta en un 8%, hasta un aumento máximo del 80%.
+Crédito140K
+Edición de coleccionista de Pelosete8
+Huellas del destino1
+Silencio taponador1
+Bonificación de Daño CRIT	Bonificación de Daño CRIT (Daño CRIT)
+Requiere niv. de ascensión de personaje 6
+Daño CRIT +8%
+Crédito120K
+Edición de coleccionista de Pelosete5
+Pincel de los sueños2
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere personaje de niv. 75
+Prob. CRIT +5.3%
+Crédito160K
+Edición de coleccionista de Pelosete8
+Pincel de los sueños8
+Bonificación de Exultación	Bonificación de Exultación (Exultación)
+Requiere personaje de niv. 80
+Exultación +8%
+Crédito160K
+Edición de coleccionista de Pelosete8
+Pincel de los sueños8
+Bonificación de Exultación	Bonificación de Exultación (Exultación)
+Exultación +4%
+Crédito2000
+Crayón de la inocencia2
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere niv. de ascensión de personaje 2
+Prob. CRIT +2.7%
+Crédito5000
+Guion gráfico hecho a mano de Pelosete2
+Crayón de la inocencia6
+Eidolon
+Tendencia: ¿quién es ella?	Tendencia: ¿quién es ella?	Tendencia: ¿quién es ella?
+Al finalizar el Momento Aha, obtiene 5 puntos de Chiste. Por cada punto de Chiste que haya actualmente, la PEN de la RES a todos los tipos de todos los aliados aumenta en un 1.5%, hasta un máximo del 15%.
+Los ojos del público no mienten	Los ojos del público no mienten	Los ojos del público no mienten
+Cuando termina el Momento Aha, Chispa obtiene 1 turno adicional y 2 Detonaciones. Por cada Detonación consumida, su Daño CRIT aumenta en un 10% durante 2 turnos. Se puede acumular hasta 4 veces.
+Hagan clic: hipervínculo pulsante	Hagan clic: hipervínculo pulsante	Hagan clic: hipervínculo pulsante
+Niv. de habilidad básica +2 (máximo: nivel 15). Niv. de ATQ básico +1 (máximo: nivel 10). Niv. de habilidad de Exultación +1 (máximo: nivel 15).
+¡Miren! Compostura perfecta	¡Miren! Compostura perfecta	¡Miren! Compostura perfecta
+Al lanzar la habilidad definitiva, obtiene 5 puntos de Chiste extra y su Exultación aumenta en un 36% durante 3 turnos.
+La chispa que arregla el mundo	La chispa que arregla el mundo	La chispa que arregla el mundo
+Niv. de habilidad definitiva +2 (máximo: nivel 15). Niv. de talento +2 (máximo: nivel 15). Niv. de habilidad de Exultación +1 (máximo: nivel 15).
+¡Tachán! Edición limitada de mí	¡Tachán! Edición limitada de mí	¡Tachán! Edición limitada de mí
+La PEN de la RES a todos los tipos aumenta en un 20%. La habilidad de Exultación inflige daño una vez más por cada 1 punto de Chiste contado, hasta un máximo de 40 veces.
+Conos de luz
+4
+5
+	Nombre	Rareza	Vía	ATQ	DEF	PV	Habilidad básica	Materiales exclusivos
+Risita burlona
+	Risita burlona	3
+RarstrRarstrRarstr
+	elation-class	370.44	264.6	740.88	Al lanzar el Momento Aha, la Exultación del portador aumenta en un 16% hasta que Momento Aha termina.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+Las lágrimas que quedan
+	Las lágrimas que quedan	3
+RarstrRarstrRarstr
+	elation-class	317.52	264.6	846.72	Cuando hay 10 o más puntos de Chiste, el Daño CRIT del portador aumenta en un 20%.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+Las aventuras de Champigaga
+	Las aventuras de Champigaga	4
+RarstrRarstrRarstrRarstr
+	elation-class	476.28	396.9	846.72	La Exultación del portador aumenta en un 12%. Cuando el portador lanza la habilidad de Exultación, el Daño de Exultación que reciben todos los enemigos aumenta en un 6% durante 2 turnos.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+La buena suerte de hoy
+	La buena suerte de hoy	4
+RarstrRarstrRarstrRarstr
+	elation-class	529.2	396.9	952.56	La Prob. CRIT del portador aumenta en un 12%. Cuando el portador lanza la habilidad de Exultación, la Exultación aumenta en un 12%. Este efecto se puede acumular hasta 2 veces.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+El cautivador mundochispa
+	El cautivador mundochispa	5
+RarstrRarstrRarstrRarstrRarstr
+	elation-class	582.12	463.05	1058.4	El Daño CRIT del portador aumenta en un 48%. Cuando el portador está en el campo de batalla, el límite máximo de pts. de habilidad básica aumenta en 1 pt. por cada personaje de la Vía de Exultación que haya en el equipo, hasta un máximo de 3 pts. Cada vez que el portador consume 1 pt. de habilidad básica, el Daño de Exultación que inflige ignora un 5% de la DEF del enemigo. Este efecto se puede acumular hasta 4 veces. Si en un mismo turno consume 4 o más pts. de habilidad básica, el portador obtiene Directo promocional. Cuando el portador tiene Directo promocional, la Exultación de todos los aliados aumenta en un 20%. Los efectos de conos de luz del mismo tipo no se pueden acumular.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+Cuando se decidió a ver
+	Cuando se decidió a ver	5
+RarstrRarstrRarstrRarstrRarstr
+	elation-class	529.2	529.2	1058.4	La VEL del portador aumenta en un 18%. Cuando el portador entra en combate o lanza la habilidad definitiva a un aliado, el portador obtiene Gran suerte durante 3 turnos. Cuando el portador tiene Gran suerte, la Prob. CRIT y el Daño CRIT de todos los aliados aumentan en un 10% y un 30% respectivamente, y la recuperación de energía del portador aumenta en un 12%.
+Al comenzar cada oleada, el portador recupera 15 pts. de energía.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+Exultación desbordante de bendiciones
+	Exultación desbordante de bendiciones	5
+RarstrRarstrRarstrRarstrRarstr
+	elation-class	529.2	463.05	952.56	El ATQ del portador aumenta en un 20%. Cuando el portador lanza la habilidad básica o la habilidad definitiva sobre un personaje aliado, la Exultación del objetivo aumenta en un 12% durante 2 turnos.	
+Edición de coleccionista de Pelosete
+Núcleo serpenteante
+Encuentro en la próxima primavera
+	Encuentro en la próxima primavera	5
+RarstrRarstrRarstrRarstrRarstr
+	elation-class	635.04	463.05	952.56	Aumenta el Daño CRIT del portador en un 60% y la recuperación de energía en un 10%. Cuando la energía máxima del portador es superior a 120, la recuperación de energía aumenta en un 0.3% adicional por cada 10 pts. de energía máxima de exceso. Se cuentan hasta 360 pts. de energía máxima excedentes. Cuando el portador lanza la habilidad de Exultación, el daño que reciben todos los enemigos aumenta en un 15% durante 2 turnos. Los efectos del mismo tipo no se pueden acumular.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+Bienvenidos a la ciudad cósmica
+	Bienvenidos a la ciudad cósmica	5
+RarstrRarstrRarstrRarstrRarstr
+	elation-class	476.28	529.2	1164.24	La VEL del portador aumenta en un 18%. El Daño de Exultación infligido ignora un 20% de la DEF del objetivo. Cuando el portador lanza su habilidad definitiva sobre sí mismo, obtiene 20 pts. de Chiste. Este efecto puede activarse 1 vez como máximo y el contador de activaciones se restablece tras lanzar 3 ATQ básicos.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+Juntos hacia el futuro
+	Juntos hacia el futuro	4
+RarstrRarstrRarstrRarstr
+	elation-class	476.28	330.75	952.56	El Daño CRIT del portador aumenta en un 12%. Después de que el portador lance la habilidad definitiva, la Exultación de todos los aliados aumenta en un 8% durante 1 turno.	
+Edición de coleccionista de Pelosete
+Pincel de los sueños
+Per Page	
+Prev								Next
+Inventario
+	Nombre	Rareza	Tipo	Receta
+Crédito
+	Crédito	3
+RarstrRarstrRarstr
+	Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Crayón de la inocencia
+	Crayón de la inocencia	2
+RarstrRarstr
+	Potenciación de conos de luz, Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Pluma creasueños
+	Pluma creasueños	3
+RarstrRarstrRarstr
+	Potenciación de conos de luz, Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Protuberancia radiante
+	Protuberancia radiante	4
+RarstrRarstrRarstrRarstr
+	Material de ascensión de personaje	
+Pincel de los sueños
+	Pincel de los sueños	4
+RarstrRarstrRarstrRarstr
+	Potenciación de conos de luz, Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Guion gráfico hecho a mano de Pelosete
+	Guion gráfico hecho a mano de Pelosete	2
+RarstrRarstr
+	Potenciación de conos de luz, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Edición conmemorativa de la serialización de Pelosete
+	Edición conmemorativa de la serialización de Pelosete	3
+RarstrRarstrRarstr
+	Potenciación de conos de luz, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Edición de coleccionista de Pelosete
+	Edición de coleccionista de Pelosete	4
+RarstrRarstrRarstrRarstr
+	Potenciación de conos de luz, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Silencio taponador
+	Silencio taponador	4
+RarstrRarstrRarstrRarstr
+	Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Huellas del destino
+	Huellas del destino	5
+RarstrRarstrRarstrRarstrRarstr
+	Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Per Page	
+Prev								Next
+Gallery
+Chispa Icon
+Chispa Icon
+Chispa Side Icon
+Chispa Side Icon
+Chispa Action Side Icon
+Chispa Action Side Icon
+Chispa Mini Icon
+Chispa Mini Icon
+Chispa Head Icon
+Chispa Head Icon
+Chispa Waiting Icon
+Chispa Waiting Icon
+Chispa Splash (No BG)
+Chispa Splash (No BG)
+Chispa Splash (BG)
+Chispa Splash (BG)
+Chispa Splash Image
+Chispa Splash Image
+Chispa Gacha Result BG
+Chispa Gacha Result BG
+Chispa Foreground Splash
+Chispa Foreground Splash
+Chispa Shop Icon
+Chispa Shop Icon
+Chispa Special Action Icon
+Chispa Special Action Icon
+% buffered00:00
+00:00
+Download
+Video #1
+Tendencia: ¿quién es ella? Icon
+Tendencia: ¿quién es ella? Icon
+Tendencia: ¿quién es ella? Smol Icon
+Tendencia: ¿quién es ella? Smol Icon
+Los ojos del público no mienten Icon
+Los ojos del público no mienten Icon
+Los ojos del público no mienten Smol Icon
+Los ojos del público no mienten Smol Icon
+Hagan clic: hipervínculo pulsante Icon
+Hagan clic: hipervínculo pulsante Icon
+Hagan clic: hipervínculo pulsante Smol Icon
+Hagan clic: hipervínculo pulsante Smol Icon
+¡Miren! Compostura perfecta Icon
+¡Miren! Compostura perfecta Icon
+¡Miren! Compostura perfecta Smol Icon
+¡Miren! Compostura perfecta Smol Icon
+La chispa que arregla el mundo Icon
+La chispa que arregla el mundo Icon
+La chispa que arregla el mundo Smol Icon
+La chispa que arregla el mundo Smol Icon
+¡Tachán! Edición limitada de mí Icon
+¡Tachán! Edición limitada de mí Icon
+¡Tachán! Edición limitada de mí Smol Icon
+¡Tachán! Edición limitada de mí Smol Icon
+¿Se te apagó la chispa? Icon
+¿Se te apagó la chispa? Icon
+¡Que el espectáculo no pare! Icon
+¡Que el espectáculo no pare! Icon
+¡Que el espectáculo no pare! Activated Icon
+¡Que el espectáculo no pare! Activated Icon
+La chispa maestra Icon
+La chispa maestra Icon
+Ataque Icon
+Ataque Icon
+Monetización del tráfico Icon
+Monetización del tráfico Icon
+¡Mi arte, solo para el ganador! Icon
+¡Mi arte, solo para el ganador! Icon
+Trampa interactiva Icon
+Trampa interactiva Icon
+Desbordamiento de señal: ¡Retorna el juego! Icon
+Desbordamiento de señal: ¡Retorna el juego! Icon
+¿Se te apagó la chispa? Icon
+¿Se te apagó la chispa? Icon
+¡Que el espectáculo no pare! Icon
+¡Que el espectáculo no pare! Icon
+La chispa maestra Icon
+La chispa maestra Icon
+Monetización del tráfico Icon
+Monetización del tráfico Icon
+¡Bien! Sesión de firmas de chistes Icon
+¡Bien! Sesión de firmas de chistes Icon
+¡Deslumbrante! Caleidoscopio de personajes Icon
+¡Deslumbrante! Caleidoscopio de personajes Icon
+¡Frenesí! Paleta de verdades y mentiras Icon
+¡Frenesí! Paleta de verdades y mentiras Icon
+Bonificación de Exultación Icon
+Bonificación de Exultación Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Exultación Icon
+Bonificación de Exultación Icon
+Bonificación de Daño CRIT Icon
+Bonificación de Daño CRIT Icon
+Bonificación de Exultación Icon
+Bonificación de Exultación Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Exultación Icon
+Bonificación de Exultación Icon
+Bonificación de Daño CRIT Icon
+Bonificación de Daño CRIT Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Exultación Icon
+Bonificación de Exultación Icon
+Desbordamiento de señal: ¡Retorna el juego! Icon
+Desbordamiento de señal: ¡Retorna el juego! Icon
+Volumen de los diálogos
+Idioma
+Continuous RePlay
+Primer encuentro	
+Primer encuentro	
+
+* Se desbloquea tras completar la misión trazacaminos «#1».
+Saludo	
+Despedida	
+Despedida	
+
+* Se desbloquea tras completar la misión trazacaminos «#1».
+Acerca de sí misma: Chispa 1	
+Acerca de sí misma: Chispa 2	
+
+* Se desbloquea tras completar la misión trazacaminos «#1».
+Conversación: Juegos Fabuluna	
+Conversación: guion del directo	
+Conversación: chispinejos y chispiñones	
+Aficiones	
+Molestias	
+Algo que compartir	
+Un dato: El Fin del Mundo	
+Acerca de Trazacaminos	
+
+* Se desbloquea tras completar la misión trazacaminos «#1».
+Acerca de Sparkle	
+
+* Se desbloquea tras completar la misión trazacaminos «#1».
+Acerca de Yao Guang	
+Acerca de Sunday	
+
+* Se desbloquea tras completar la misión trazacaminos «#1».
+Acerca de Ashveil	
+Acerca de Silver Wolf Niv. 999	
+Acerca de Evanescia	
+Activación de Eidolon	
+Ascensión de personaje	
+Nivel máximo alcanzado	
+Activación de Rastro	
+Miembro del equipo: Trazacaminos	
+Miembro del equipo: Sparkle	
+Miembro del equipo: Sampo	
+Miembro del equipo: Yao Guang	
+Miembro del equipo: Sunday	
+Miembro del equipo: Ashveil	
+Miembro del equipo: Evanescia	
+Miembro del equipo: Silver Wolf Niv. 999	
+Comienzo de la batalla: Ruptura de Debilidad	
+Comienzo de la batalla: alerta de peligro	
+Comienzo del turno 1	
+Comienzo del turno 2	
+En espera	
+ATQ básico	
+Habilidad básica: activación 1	
+Habilidad básica: activación 2	
+Habilidad básica: interacción 1	
+Habilidad básica: interacción 2	
+Habilidad básica: lanzamiento 1	
+Habilidad básica: lanzamiento 2	
+Al recibir un ataque ligero	
+Al recibir un ataque fuerte	
+Habilidad de Exultación 1	
+Habilidad de Exultación 2	
+Habilidad definitiva: activación	
+Habilidad definitiva: lanzamiento	
+Fuera de combate	
+Retorno a la batalla	
+Regeneración de PV	
+Técnica	
+Victoria	
+Al abrir un tesoro 1	
+Al abrir un tesoro 2	
+Al abrir un tesoro valioso	
+Al resolver un acertijo 1	
+Al resolver un acertijo 2	
+Objetivo enemigo encontrado	
+Al regresar a la ciudad	
+Historia
+Detalles del personaje	¡Me gusta! ¡Seguir! ¡Directo! ¡Más vistas! ¡Fiesta hasta el fin del mundo!
+¡Chispa y Sparkle! Un bufón no es diferente de su máscara.
+¡La respuesta correcta es a quién ven y a quién aman!
+Historia del personaje I	La cuenta llamada CaminoChispeante se dedicaba a compartir guías de viajes extraordinarios.
+
+«Exploramos la escuela nucleosueño abandonada de Planarcadia». Los comentarios se llenaron de quejas de gente harta de fabulae supuestamente misteriosos. "Por favor, ¿ahora cualquier lugarucho puede considerarse nucleosueño?".
+«Gasté 100 000 créditos y encontré un fabuser hongo raro». Después de publicar este video, muchos dejaron de seguir la cuenta. "¡Que coman pasteles!".
+
+"De verdad, qué difícil es el público de hoy...", dijo ella sonriendo.
+...
+
+La cuenta LágrimasComoFlores relataba un lastimoso pasado.
+
+«Soy la única superviviente de mi planeta natal». Este video solo recibió tres me gusta, y todos eran Plañideros que habían pasado por lo mismo.
+«Llevo cien años a la deriva en esta nave». Este tampoco tuvo repercusión. En los comentarios alguien explicó el motivo: otro creador de contenido llevaba vagando dos mil años.
+«¿Tengo suerte de huérfana?», «Abuela, no soy feliz en Bidimensia», «Un brindis por haber revivido en el distrito Palomaguas». Esta trilogía recibió, inesperadamente, un mensaje privado de un Historiador Espurio en busca de consejo.
+
+"Casi que admiro a los Plañideros... Hasta el dolor debe ser innovador", dijo mientras se limpiaba dos lágrimas ilusorias.
+...
+
+Las cuentas ChispaGris, SeDiceChispaNoSparkle y Hanami publicaban sus actividades diarias de diferentes formas.
+Nadie hacía clic en la cuenta que solo tenía texto. La gente se saltaba los videos cortos nada más empezarlos y no terminaba de ver los largos.
+Solo la cuenta Hanami tuvo un éxito inesperado: en Tengoku@sala de chat, su voz alegre atrajo a muchos trabajadores de oficina insomnes que al fin conseguían conciliar el sueño escuchando las charlas y bromas de Hanami.
+
+"Creo que ya lo tengo... Aunque no tengamos una Hanami, debería resultar igual con una Haname o Hanamo, ¿cierto?", dijo sacando la lengua mientras daba un brinco.
+...
+
+"Aquí se celebra una fiesta a base de dopamina, y mi trabajo es proporcionar el sustento espiritual a todos".
+La Imagiesencia fluía como un arroyo suave, dándole forma a su cuerpo: "Solo cuando la atención fluye hacia ti sin cesar, tienes la oportunidad de sobrevivir.".
+
+Por enésima vez, Chispa saltó como un pez fuera del agua y subió al escenario bañado por los focos.
+"❤ Entonces... ¡creemos nuevas 'chispas' en esta era de celebrar hasta que el cuerpo aguante! ❤".
+
+* Se desbloquea en el nivel 20 de personaje.
+Historia del personaje II	Publicación:
+"¡Guau, soy tendencia! Gracias por el apoyo, corazones. ¡Sigan animando a su streamer favorita!, ¿sí?".
+Enlace: Grabación del Especial 100 000 seguidores de Chispita
+Comentarios: 5685
+"Chispita es tan linda ❤ Ojito a esto, si te suscribes ahora, serás fan original".
+"¡Cuántos comentarios! Chispa está despegando :)".
+"Sin bromas, Chispa es una diosa (gana 5 créditos por comentario)".
+"Este comentario ha sido eliminado".
+...
+
+Publicación:
+"¡El primer evento presencial fue todo un éxito!"
+Enlace: Grabación del evento de Chispa (adaptada para baliza sinestésica)
+Comentarios: 1.003 millones
+"¡Yo estuve allí, el ambiente era increíble!".
+"La verdad sobre Chispa al descubierto: en realidad es un tipo llamado Sampo disfrazado y los directos están llenos de filtros y efectos especiales. Copia y pega este comentario antes de que los fans tóxicos vengan por nosotros".
+"Dicen que Chispa fue atacada por alguien con mascarilla. Cuando atraparon al tipo, dijo que había visto dos Chispas... En fin, espero que nuestra streamer esté bien".
+...
+
+Artículo de Entretenimiento Arcadio:
+"Chispa se corona como la influencer más popular del año, ¿cuál es su secreto para atraer seguidores?"
+Últimas noticias del canal de televisión Buendeseo:
+"Chispa, la popular streamer de Planarcadia, aparentemente recibió amenazas de un fan extremista durante su directo de ayer...".
+Reportaje de El Osipachi Informativo:
+"Revelamos el vergonzoso pasado de Chispa, lo que se esconde detrás de su apariencia deslumbrante es...".
+...
+
+Locura, alabanzas, provocación, condenas... innumerables emociones inundan su canal, como hongos de distintos colores que brotan después de la lluvia.
+"Ji, ji, bienvenidos al canal de Chispa... aquí pueden mostrar su verdadero yo con total tranquilidad".
+
+Mientras acariciaba al chispinejo y al chispiñón, se le ocurrió un nuevo juego.
+"Todos tienen tubos de fuegos artificiales. En lugar de que yo me convierta en el blanco, ¿por qué no hacer que disparen en todas direcciones? ¡Qué espectacular sería la Gala Chispas si cada persona se convirtiera en una 'chispa' que puede prender la mecha!".
+
+Teclea un ( ✿＞◡•) y hace clic en "Publicar".
+Frente a la pantalla parpadeante, los innumerables comentarios estallan como fuegos artificiales.
+
+* Se desbloquea en el nivel 40 de personaje.
+Historia del personaje III	Publicación:
+"Felicidades a @ChispitaPetardazos y los demás usuarios, 24 en total, por ganar el premio: ¡una hora del sistema de uso de la cuenta de Chispa! Efectivo mañana".
+En la penumbra detrás de la pantalla, ella se pregunta si al ponerse la máscara de Chispa la gente se convierte en sí misma o en Chispa.
+
+A las cero horas del sistema, el usuario ChispitaPetardazos se convirtió en "Chispa".
+"Chispa" hizo una declaración a sus fans y los animó a dejar malas reseñas a los creadores de contenido que no le agradaban, hasta que su ejército de seguidores inundó los canales de otros.
+...
+
+A las doce horas del sistema, cuando "Chispa" apareció nuevamente frente a la audiencia, estaba rodeada de productos etiquetados con la marca Chispa.
+La pantalla se llenó de enlaces de compra, pero los precios eran diez veces más altos que los de productos similares.
+Cinco minutos después, el directo tuvo que ser suspendido por una hora debido a las numerosas quejas de los espectadores.
+...
+
+A las veintitrés horas del sistema, "Chispa" comenzó a revisar el historial de la cuenta. Reveló ante su audiencia todos sus comentarios y contenido guardado en favoritos, intentando descubrir algún trapo sucio de la auténtica Chispa.
+"¡Vaya, así que Chispa no es más que una streamer común y corriente! ¡Entonces me inventaré algún escándalo!". Tras un breve momento de desánimo, esta "Chispa" comenzó rápidamente a publicar nuevo contenido.
+...
+
+Veinticuatro Chispas se turnaron una tras otra, y este caótico espectáculo alcanzó un nivel de popularidad sin precedentes.
+
+"Todos están siendo manipulados por las máscaras que llevan. ¿Lo ves, modelo obsoleto? ¿Quién dijo que las máscaras no podían convertirse en los amos?".
+
+Cuando regresó al directo, la pantalla se inundó al instante de comentarios. Su sonrisa era dulce y adorable.
+"¡Felicitaciones a todos por completar el 'Juego de las 24 horas del sistema'! Ahora, pregunta: ¿Quién ha sido la mejor imitadora de Chispa?".
+
+En medio de la avalancha de comentarios, Chispa parecía irradiar un resplandor deslumbrante...
+
+"¡Parece que la opinión es unánime! Entonces... ¡felicitemos a Chispa por su victoria!".
+
+* Se desbloquea en el nivel 60 de personaje.
+Historia del personaje IV	Al llegar a la taberna, contempló las máscaras que quedaban.
+Sparkle la estudiante, Sparkle la oficinista, Sparkle la paciente, Sparkle la marioneta... Sonreían, lloraban, sufrían, se regocijaban.
+
+"¿Saben por qué se quedaron aquí tan solitas?".
+Acariciaba las máscaras una por una, como si fueran abrigos pasados de moda.
+"Por más que intenten imitarla, recrearla, disfrazarse de ella... no será suficientemente exultante".
+
+"¡Los Bufones que no comprenden la Exultación están destinados a ser eliminados por el paso del tiempo!".
+Ella se apoderó de la identidad de la Bufona y completó su propia definición...
+
+Su risa resonaba por toda la arcadia: en los trenes que pasaban a toda velocidad, en las habitaciones estrechas y oscuras, en los comentarios del público.
+La persona en la pantalla sostuvo la cámara y se inclinó para mirar por el agujero negro de la lente. No podía ver a los espectadores, pero sabía con certeza que se reflejaba en sus ojos.
+
+"En Planarcadia, no gustarle a nadie es lo mismo que estar muerto. Y si nadie te odia... ¿Qué sentido tiene vivir?".
+
+Las miradas de innumerables fans se entrelazaban como hilos en sus manos. Ella sabía que Planarcadia se había convertido en el escenario de Chispa, y que los incontables espectadores eran actores en sus manos.
+
+Y ella también era observada por las miradas de innumerables fans. Los espectadores sabían que Planarcadia se había convertido en una celebración para todos, y mientras hubiera alguien que anhelara a Chispa, en su escenario jamás bajaría el telón.
+
+La luna de la Exultación se ha alzado. ¿Cuánto tiempo ha pasado desde que Planarcadia no escucha una risa desenfrenada?
+"¿No existe acaso esta fascinante arcadia para cumplir los deseos de todos ustedes?".
+Se coloca la máscara de reverente, lista para ofrecer pura exultación a estos juegos...
+
+¡Convirtámonos juntos en la Chispa que brilla en nuestros corazones!
+
+* Se desbloquea en el nivel 80 de personaje.
+Page: 1 / 1
+9 responses to “Chispa”
+
+    Profile picture Just asking says:
+    February 4, 2026 at 9:43 am
+
+    is she work well with auto battle?
+    for some reason, skill based character having weird behavior when using auto, especially on currency war.
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture anonymous user says:
+    January 18, 2026 at 3:48 am
+
+    man
+
+    what in gods name is any of this shit
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture , says:
+    January 8, 2026 at 8:00 am
+
+    Uhh what am I looking at. Ts is just weird
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture kafka enjoyer says:
+        January 8, 2026 at 3:37 pm
+
+        Skill acts like DHIL’s/QQ’s where it doesn’t end turn and juices up an enhanced basic. Every time you hit it beefs up the basic (and other stuff), with a 50/50 to give 2SP. A combination of OG sparkle in the team, extra sources of SP, or just luck, you can hit it up to 20 times.
+        Elation skill (goes off when Aha takes a turn) It does damage
+        Ult – Does damage
+        Scales of ATK%, converts ATK% to elation DMG, gives team CD, and gets boosted for more elation allies.
+        Everything else is just more damage based on her doing stuff
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+    Profile picture SomeGuy1 says:
+    January 6, 2026 at 10:18 am
+
+    So she’s DHIL with (toned down) versions of the currency wars buff. Mash that skill as much as she can for that enhanced basic, with a chance for an activation to keep going.
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture Daniel says:
+    January 6, 2026 at 7:02 am
+
+    Elation path is literally premium FUA mechanic for the rich. Most funny part – they are not working together
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture kurorato says:
+    January 6, 2026 at 5:36 am
+
+    she’s a cutie patoote good enough for me
+    funny skill names
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture First says:
+    January 6, 2026 at 5:32 am
+
+    I don’t like the new path. It doesn’t feel epic at all.
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture KaiserEXE says:
+        January 6, 2026 at 1:38 pm
+
+        and it shouldnt be epic. its THE Troll Aeon and his troll followers. In a way, its intresting how far they can take it
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+
+Leave a Reply
+
+Your email address will not be published. Required fields are marked *
+
+Comment *
+
+Name *
+
+Email *
+
+Website
+
+Save my name, email, and website in this browser for the next time I comment.
+
+Page: 1 / 1
+Default Avatar
+Guest (Login)
+Measurehead at Evanescia
+
+bro is gonna pull absolute dog-mid because she is food for simpletons who cant read. never gonna ma...
+John Due at Evanescia
+
+iirc, yae imouto passed from disease in HI3. and now she's in HSR as emanator(?) of abundance. hmm
+Revive Skott Shaoji at New in 4.2
+
+watch her be abundance after they reveal she was cured from the weathering curse via abundance
+TopButton
+Discord
+This website is made for educational and research purpose (and us, eating macaroni).
+Privacy | Terms of Service
+© 2026 - honeyhunterworld.com HHWPEngine Mk 1.0

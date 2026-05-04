@@ -1,0 +1,22 @@
+/* --- POSICIONAMIENTO INDIVIDUAL --- */
+/* Modifica los valores de top y left para moverlos sobre la imagen */
+
+#Ataque_Básico { top: 45%; left: 25%; }  /* Nodo central inferior (Espada) */
+#Habilidad_Básica { top: 45%; left: 75%; }  /* Nodo central superior */
+#Definitiva { top: 43%; left: 50%; }   /* Nodo superior central */
+#Talento { top: 24%; left: 50%; }     /* Nodo central */
+
+#Técnica { top: 65%; left: 50%; }   /* Nodo inferior */
+
+/* Rastros Grandes (Pasivas laterales) */
+#Pasiva_1 { top: 38%; left: 6%; }     /* Izquierda */
+#Pasiva_2 { top: 38%; left: 94%; }     /* Derecha */
+#Pasiva_3 { top: 6.5%; left: 50%; }     /* Otro ejemplo */
+
+#min1{ top: 75%; left: 30%; }
+#min2{ top: 85%; left: 50%; }
+#min3{ top: 75%; left: 70%; }
+
+.habilidades #hab_cont::before{
+    background-image: url("../../imagenes/Vias/Path_Nihility.webp");
+}

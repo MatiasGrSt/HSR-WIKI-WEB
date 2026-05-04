@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HSR Wiki</title>
+    <link rel="stylesheet" href="css/basico.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <main id="main-scroll">
+        <!-- Fondo fijo que se oculta al scrollear -->
+        <img src="imagenes/Utilities/version_bg.webp" id="parallax-bg">
+
+        <div id="content-layout">
+            <!-- SECCIÓN SUPERIOR: Eventos y Sidebar[cite: 16] -->
+            <div class="hero-grid">
+                <section class="section-events">
+                    <h2 class="section-title">EVENT TIMELINE</h2>
+                    <div id="events-list">
+                        <!-- Aquí se inyectarán las .event-card con JS -->
+                    </div>
+                </section>
+
+                <aside class="sidebar">
+                    <section class="panel-codes glass-dark">
+                        <h2 class="section-title">ACTIVE CODES</h2>
+                        <div id="codes-list">
+                            <!-- Aquí se inyectarán los .code-item con JS -->
+                        </div>
+                    </section>
+
+                    <section class="panel-daily glass-dark">
+                        <h2 class="section-title">DAILY RESET</h2>
+                        <div id="daily-countdown" class="timer-display">00h : 00m : 00s</div>
+                    </section>
+                </aside>
+            </div>
+
+            <!-- SECCIÓN PERSONAJES[cite: 15, 16] -->
+            <section class="section-characters">
+                <h2 class="section-title centered">FEATURED CHARACTERS</h2>
+                <div id="characters-list">
+                    <!-- Aquí se inyectarán los .char-card con JS -->
+                </div>
+            </section>
+        </div>
+
+        <footer class="main-footer">
+            <p>&copy; 2026 HSR Wiki | Fan Project</p>
+        </footer>
+    </main>
+
+    <script src="./js/nav.js"></script>
+    <script type='module' src="./js/home.js"></script>
+</body>
+</html>

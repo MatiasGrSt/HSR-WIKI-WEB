@@ -1,0 +1,168 @@
+[
+    {
+        "character_id": "Bronya",
+        "name": "Bala del vendaval",
+        "type": "Ataque Básico",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "20",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Bronya como Daño de <span class=\"element\">Viento</span> a un enemigo.",
+        "skill_levels": {
+            "stat_1": [
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140
+            ]
+        }
+    },
+    {
+        "character_id": "Bronya",
+        "name": "Reorganización del combate",
+        "type": "Habilidad Básica",
+        "target": "Apoyo",
+        "energy_activation": null,
+        "energy_gain": "30",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Elimina un estado negativo de un aliado, hace que realice una acción inmediatamente y aumenta el daño que inflige en un <span class=\"stat\">{stat_1}%</span> durante <span class=\"stat\">1</span> turno.<br>Si utiliza esta habilidad consigo misma, no se activará la acción inmediata.<br>Elimina <span class=\"stat\">1</span> estado negativo de un aliado, aumenta el daño que inflige y hace que realice una acción inmediatamente.",
+        "skill_levels": {
+            "stat_1": [
+                33,
+                36.3,
+                39.6,
+                42.9,
+                46.2,
+                49.5,
+                53.63,
+                57.75,
+                61.88,
+                66,
+                69.3,
+                72.6,
+                75.9,
+                79.2,
+                82.5
+            ]
+        }
+    },
+    {
+        "character_id": "Bronya",
+        "name": "Marcha de Belobog",
+        "type": "Definitiva",
+        "target": "Apoyo",
+        "energy_activation": "120",
+        "energy_gain": "5",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "El ATQ de todos los aliados aumenta en un <span class=\"stat\">{stat_1}%</span> y el Daño CRIT se incrementa en un <span class=\"stat\">{stat_2}%</span> del Daño CRIT de Bronya + <span class=\"stat\">{stat_3}%</span> durante <span class=\"stat\">2</span> turnos.<br>Aumenta el ATQ y el Daño CRIT de todos los aliados.",
+        "skill_levels": {
+            "stat_1": [
+                33,
+                35.2,
+                37.4,
+                39.6,
+                41.8,
+                44,
+                46.75,
+                49.5,
+                52.25,
+                55,
+                57.2,
+                59.4,
+                61.6,
+                63.8,
+                66
+            ],
+            "stat_2": [
+                12,
+                12.4,
+                12.8,
+                13.2,
+                13.6,
+                14,
+                14.5,
+                15,
+                15.5,
+                16,
+                16.4,
+                16.8,
+                17.2,
+                17.6,
+                18
+            ],
+            "stat_3": [
+                12,
+                12.8,
+                13.6,
+                14.4,
+                15.2,
+                16,
+                17,
+                18,
+                19,
+                20,
+                20.8,
+                21.6,
+                22.4,
+                23.2,
+                24
+            ]
+        }
+    },
+    {
+        "character_id": "Bronya",
+        "name": "Liderazgo",
+        "type": "Talento",
+        "target": "Potenciación",
+        "energy_activation": null,
+        "energy_gain": "5",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Tras usar el ATQ básico, la siguiente acción de Bronya se adelanta un <span class=\"stat\">{stat_1}%</span>.",
+        "skill_levels": {
+            "stat_1": [
+                15,
+                16.5,
+                18,
+                19.5,
+                21,
+                22.5,
+                24.38,
+                26.25,
+                28.13,
+                30,
+                31.5,
+                33,
+                34.5,
+                36,
+                37.5
+            ]
+        }
+    },
+    {
+        "character_id": "Bronya",
+        "name": "Estandarte de mando",
+        "type": "Técnica",
+        "target": "Apoyo",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Tras usar la técnica, al comenzar la siguiente batalla, el ATQ de todos los aliados aumenta en un <span class=\"stat\">15%</span> durante <span class=\"stat\">2</span> turnos.",
+        "skill_levels": {}
+    }
+]

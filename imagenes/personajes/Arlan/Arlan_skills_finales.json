@@ -1,0 +1,151 @@
+[
+    {
+        "character_id": "Arlan",
+        "name": "Velocidad del rayo",
+        "type": "Ataque Básico",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "20",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Arlan como Daño de <span class=\"element\">Rayo</span> a un enemigo.",
+        "skill_levels": {
+            "stat_1": [
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130,
+                140
+            ]
+        }
+    },
+    {
+        "character_id": "Arlan",
+        "name": "Rompeataduras",
+        "type": "Habilidad Básica",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "30",
+        "break": "ATQ individual : 60",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Arlan consume una cantidad de PV equivalente al <span class=\"stat\">15%</span> de sus PV máx. e inflige un <span class=\"stat\">{stat_1}%</span> de su ATQ como Daño de <span class=\"element\">Rayo</span> a un enemigo. Si no hay suficientes PV, al usar la habilidad básica los PV actuales de Arlan se reducen a <span class=\"stat\">1</span>.<br>Consume una parte de sus PV para infligir Daño de <span class=\"element\">Rayo</span> a un enemigo.",
+        "skill_levels": {
+            "stat_1": [
+                120,
+                132,
+                144,
+                156,
+                168,
+                180,
+                195,
+                210,
+                225,
+                240,
+                252,
+                264,
+                276,
+                288,
+                300
+            ]
+        }
+    },
+    {
+        "character_id": "Arlan",
+        "name": "Castigo furibundo",
+        "type": "Definitiva",
+        "target": "Ráfaga",
+        "energy_activation": "110",
+        "energy_gain": "5",
+        "break": "ATQ individual : 60 / Ráfaga : 60",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Arlan inflige un <span class=\"stat\">{stat_1}%</span> de su ATQ como Daño de <span class=\"element\">Rayo</span> a un enemigo y un <span class=\"stat\">{stat_2}%</span> de su ATQ como Daño de <span class=\"element\">Rayo</span> a los enemigos adyacentes.",
+        "skill_levels": {
+            "stat_1": [
+                192,
+                204.8,
+                217.6,
+                230.4,
+                243.2,
+                256,
+                272,
+                288,
+                304,
+                320,
+                332.8,
+                345.6,
+                358.4,
+                371.2,
+                384
+            ],
+            "stat_2": [
+                96,
+                102.4,
+                108.8,
+                115.2,
+                121.6,
+                128,
+                136,
+                144,
+                152,
+                160,
+                166.4,
+                172.8,
+                179.2,
+                185.6,
+                192
+            ]
+        }
+    },
+    {
+        "character_id": "Arlan",
+        "name": "Ira y dolor",
+        "type": "Talento",
+        "target": "Potenciación",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Arlan obtiene una bonificación de daño según el porcentaje de PV que haya perdido hasta el momento. Como máximo puede infligir un <span class=\"stat\">{stat_1}%</span> más de daño.<br>Aumenta el daño según el porcentaje de PV que haya perdido hasta el momento.",
+        "skill_levels": {
+            "stat_1": [
+                36,
+                39.6,
+                43.2,
+                46.8,
+                50.4,
+                54,
+                58.5,
+                63,
+                67.5,
+                72,
+                75.6,
+                79.2,
+                82.8,
+                86.4,
+                90
+            ]
+        }
+    },
+    {
+        "character_id": "Arlan",
+        "name": "Cosecha rápida",
+        "type": "Técnica",
+        "target": "No especificado",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "ATQ individual : 60",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Ataca inmediatamente al enemigo y entra en combate. Inflige un <span class=\"stat\">80%</span> del ATQ de Arlan como Daño de <span class=\"element\">Rayo</span> a todos los enemigos.",
+        "skill_levels": {}
+    }
+]

@@ -1,0 +1,101 @@
+.info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Muy importante para que esta capa invisible no bloquee los clics en tus botones */
+}
+
+/* Reactivamos los clics/selección de texto solo para las cajas de información */
+#introduction, #voice_actors {
+    pointer-events: auto; 
+}
+
+#introduction {
+    position: absolute;
+    top: 30vh;
+    
+    /* EFECTO CRISTAL MEJORADO */
+    background: linear-gradient(
+        135deg, 
+        rgba(0, 0, 0, 0.1), 
+        rgba(0, 0, 0, 0.564)
+    ); 
+    backdrop-filter: blur(12px); /* Un poco más de desenfoque para que sea premium */
+    -webkit-backdrop-filter: blur(12px); /* Soporte para Safari */
+    
+    /* BORDES ESTILO UI JUEGO */
+    border-radius: 0 15px 15px 0;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde cristalino */
+    border-left: 4px solid var(--color-rareza, #f29e38); /* Tu borde de acento naranja */
+    
+    /* SOMBRAS Y DIMENSIÓN */
+    box-shadow: 10px 0 30px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 500px;
+    max-width: 90vw; /* Evita que en móviles se salga de la pantalla */
+    
+    /* COMPORTAMIENTO DEL TEXTO */
+    line-height: 1.6; /* Mejora la legibilidad */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+
+    display: block;          /* IMPORTANTE: Los <p> a veces se portan raro con fixed si no son block */
+    box-sizing: border-box;  /* Esto hace que el padding y el border no ensanchen los 500px */
+    margin: 0;               /* Quita los márgenes por defecto del navegador que mueven el fixed */
+    
+    /* Para asegurar que el texto no se salga */
+    white-space: pre-wrap;   
+    overflow: hidden;
+}
+
+#introduction::after {
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to top, rgba(0,0,0,0.3), transparent);
+    pointer-events: none; /* Para que no moleste si quieres copiar texto */
+    border-radius: 0 0 15px 0;
+}
+
+#voice_actors{
+    display: flex;
+    flex-direction: column; /* Apila .element_path arriba y #rarity abajo */
+    align-items: end;
+    margin: 0;
+    width: fit-content;     /* Se ajusta al contenido */
+    padding: 0 0 0 10px;
+    
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px 0 0 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+    position: absolute;
+    right: 0;
+    top: 20vh;
+    
+}
+
+#voice_actors > div {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-right: 5px solid var(--color-rareza, #f29e38);
+    text-align: right;
+    margin-block: 20px;
+}
+
+#voice_actors>div p{
+    margin-right: 5px;
+    margin-block: 5px;
+    font-weight: bold;
+}
+
+#voice_actors>div p:last-of-type{
+    font-weight: normal;
+    border-top: 1px solid #e0e0e0;
+    margin-right: 0;
+    padding-right: 5px;
+}

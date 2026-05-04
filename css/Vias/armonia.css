@@ -1,0 +1,22 @@
+/* --- POSICIONAMIENTO INDIVIDUAL --- */
+/* Modifica los valores de top y left para moverlos sobre la imagen */
+
+#Ataque_Básico { top: 42.5%; left: 25.5%; }  /* Nodo central inferior (Espada) */
+#Habilidad_Básica { top: 42.5%; left: 74.5%; }  /* Nodo central superior */
+#Definitiva { top: 61%; left: 50%; }   /* Nodo superior central */
+#Talento { top: 38%; left: 50%; }     /* Nodo central */
+
+#Técnica { top: 84%; left: 50%; }   /* Nodo inferior */
+
+/* Rastros Grandes (Pasivas laterales) */
+#Pasiva_1 { top: 55%; left: -5%; }     /* Izquierda */
+#Pasiva_2 { top: 55%; left: 105%; }     /* Derecha */
+#Pasiva_3 { top: 12%; left: 50%; }     /* Otro ejemplo */
+
+#min1{ top: 30%; left: 30%; }
+#min2{ top: 25%; left: 50%; }
+#min3{ top: 30%; left: 70%; }
+
+.habilidades #hab_cont::before{
+    background-image: url("../../imagenes/Vias/Path_Harmony.webp");
+}

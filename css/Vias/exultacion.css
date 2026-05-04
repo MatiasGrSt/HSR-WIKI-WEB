@@ -1,0 +1,28 @@
+/* --- POSICIONAMIENTO INDIVIDUAL --- */
+/* Modifica los valores de top y left para moverlos sobre la imagen */
+
+#Ataque_Básico { top: 13%; left: 29.5%; }  /* Nodo central inferior (Espada) */
+#Habilidad_Básica { top: 13%; left: 70.5%; }  /* Nodo central superior */
+#Definitiva { top: 29.5%; left: 50%; }   /* Nodo superior central */
+#Talento { top: 50.5%; left: 50%; }     /* Nodo central */
+
+#Técnica { top: 70.9%; left: 50%; }   /* Nodo inferior */
+
+/* Rastros Grandes (Pasivas laterales) */
+#Pasiva_1 { top: 94%; left: 50%; }     /* Izquierda */
+#Pasiva_2 { top: 26%; left: 10%; }     /* Derecha */
+#Pasiva_3 { top: 26%; left: 90%; }     /* Otro ejemplo */
+
+#min1{ top: 47%; left: 30%; }
+#min2{ top: 40%; left: 50%; }
+#min3{ top: 47%; left: 70%; }
+
+#Habilidad_de_Exultación{ top: 6%; left: 50%; }
+
+.habilidades #hab_cont::before{
+    background-image: url("../../imagenes/Vias/Path_Elation.webp");
+}
+
+#hab_cont .elat_hab img {
+    filter: grayscale(100%) brightness(80%) sepia(100%) hue-rotate(-50deg) saturate(500%);
+}

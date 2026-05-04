@@ -1,0 +1,1663 @@
+
+Home
+Home
+New in 4.2
+New in 4.2
+Personajes
+Personajes
+Todo
+Todo
+Vía
+Vía
+Destrucción
+Destrucción
+Cacería
+Cacería
+Erudición
+Erudición
+Armonía
+Armonía
+Nihilidad
+Nihilidad
+Conservación
+Conservación
+Abundancia
+Abundancia
+Reminiscencia
+Reminiscencia
+Exultación
+Exultación
+Tipos de combate
+Tipos de combate
+Físico
+Físico
+Fuego
+Fuego
+Hielo
+Hielo
+Rayo
+Rayo
+Viento
+Viento
+Cuántico
+Cuántico
+Imaginario
+Imaginario
+Conos de luz
+Conos de luz
+Todos
+Todos
+Vía
+Vía
+Destrucción
+Destrucción
+Cacería
+Cacería
+Erudición
+Erudición
+Armonía
+Armonía
+Nihilidad
+Nihilidad
+Conservación
+Conservación
+Abundancia
+Abundancia
+Reminiscencia
+Reminiscencia
+Exultación
+Exultación
+Artefactos.
+Artefactos.
+Conjunto de artefactos
+Conjunto de artefactos
+Parte del cuerpo
+Parte del cuerpo
+Cabeza
+Cabeza
+Manos
+Manos
+Torso
+Torso
+Piernas
+Piernas
+Esfera de plano
+Esfera de plano
+Cuerda de unión
+Cuerda de unión
+Logros
+Logros
+Yo, Trazacaminos
+Yo, Trazacaminos
+Rastros luminosos
+Rastros luminosos
+Ferrocarril a las estrellas
+Ferrocarril a las estrellas
+Indagación de misterios
+Indagación de misterios
+Recuerdos de un viaje contigo
+Recuerdos de un viaje contigo
+La gloria de la determinación
+La gloria de la determinación
+Ansia de batalla
+Ansia de batalla
+Alegrías efímeras
+Alegrías efímeras
+El universo en una cáscara de nuez
+El universo en una cáscara de nuez
+Enemigos
+Enemigos
+Legión Antimateria
+Legión Antimateria
+Jarilo-VI
+Jarilo-VI
+El Luofu de Xianzhou
+El Luofu de Xianzhou
+Monstruos del Fragmentum
+Monstruos del Fragmentum
+Universo Simulado
+Universo Simulado
+Cazadores de Estelaron
+Cazadores de Estelaron
+Cosmos
+Cosmos
+El Enjambre
+El Enjambre
+Corporación para la Paz Interastral
+Corporación para la Paz Interastral
+Otros
+Otros
+Compañía Teatral de Terrores
+Compañía Teatral de Terrores
+Memes de la Zona de los Recuerdos
+Memes de la Zona de los Recuerdos
+Titandeudos
+Titandeudos
+Bestia crepuscular
+Bestia crepuscular
+Criatura de la marea oscura
+Criatura de la marea oscura
+Sirena abisal
+Sirena abisal
+Fabulae
+Fabulae
+Mnemoduende de Sangre Dorada
+Mnemoduende de Sangre Dorada
+Mapa
+Mapa
+Live updated for 4.2.
+Blade
+Blade
+Blade	Nombre	Blade
+Facción	Cazadores de Estelaron
+Rareza	RaritystrRaritystrRaritystrRaritystrRaritystr
+Vía	Class Destrucción
+Tipos de combate	Class Viento
+Chino	刘以嘉
+Inglés	Daman Mills
+Coreano	곽윤상
+Japonés	三木眞一郎
+Materiales exclusivos	
+Crédito308K
+Brote verde inmortal15
+Flor etérea inmortal15
+Vestigios elevados65
+Rama gloriosa inmortal15
+Material de Rastros	
+Crédito3M
+Espada rota18
+Brote verde inmortal41
+Espada inerte69
+Flor etérea inmortal56
+Espada rompemundos139
+Rama gloriosa inmortal58
+Arrepentimiento del eterno vehículo del alma12
+Huellas del destino8
+Historia	Miembro de los Cazadores de Estelaron y espadachín que abandonó su cuerpo para convertirse en espada.
+Juró lealtad al Esclavo del Destino y posee una terrorífica capacidad de autocuración.
+
+Plain
+Lines Display
+Tabs Display
+Tabs
+Índice
+Atributos
+Habilidad básica
+Habilidad básica (Old)
+Rastros
+Rastros (Old)
+Eidolon
+Eidolon (Old)
+Conos de luz
+Inventario
+Gallery
+Volumen de los diálogos
+Historia
+Atributos
+Habilidad básica
+Habilidad básica (Old)
+Rastros
+Rastros (Old)
+Eidolon
+Eidolon (Old)
+Conos de luz
+Inventario
+Gallery
+Volumen de los diálogos
+Historia
+Atributos
+Nivel	ATQ	DEF	PV	VEL	Prob. CRIT	Daño CRIT	Provocación	Energía	Materiales exclusivos
+1	73.92	66	185	97	5%	50%	125	130	
+20	144.14	128.7	360	97	5%	50%	125	130	
+Crédito4000
+Brote verde inmortal5
+20+	173.71	155.1	434	97	5%	50%	125	130
+30	210.67	188.1	527	97	5%	50%	125	130	
+Crédito8000
+Brote verde inmortal10
+30+	240.24	214.5	601	97	5%	50%	125	130
+40	277.2	247.5	693	97	5%	50%	125	130	
+Crédito16000
+Flor etérea inmortal6
+Vestigios elevados3
+40+	306.77	273.9	767	97	5%	50%	125	130
+50	343.73	306.9	859	97	5%	50%	125	130	
+Crédito40000
+Flor etérea inmortal9
+Vestigios elevados7
+50+	373.3	333.3	933	97	5%	50%	125	130
+60	410.26	366.3	1026	97	5%	50%	125	130	
+Crédito80000
+Rama gloriosa inmortal6
+Vestigios elevados20
+60+	439.82	392.7	1100	97	5%	50%	125	130
+70	476.78	425.7	1192	97	5%	50%	125	130	
+Crédito160K
+Rama gloriosa inmortal9
+Vestigios elevados35
+70+	506.35	452.1	1266	97	5%	50%	125	130
+80	543.31	485.1	1358	97	5%	50%	125	130	
+Nivel	Materiales exclusivos
+1	
+20	
+Crédito4000
+Brote verde inmortal5
+20+
+40	
+Crédito16000
+Flor etérea inmortal6
+Vestigios elevados3
+40+
+50	
+Crédito40000
+Flor etérea inmortal9
+Vestigios elevados7
+50+
+60	
+Crédito80000
+Rama gloriosa inmortal6
+Vestigios elevados20
+60+
+70	
+Crédito160K
+Rama gloriosa inmortal9
+Vestigios elevados35
+70+
+80	
+Habilidad básica
+Espada fragmentada	Espada fragmentada - ATQ básico | ATQ individual
+Recuperación de energía : 20
+Ruptura de Debilidad : ATQ individual : 30
+Inflige un 70% de los PV máx. de Blade como Daño de Viento a un enemigo.
+
+Inflige una pequeña cantidad de Daño de Viento a un enemigo.
+Nivel 10
+ Ver detalles
+	A	Materiales exclusivos
+1	25%	
+2	30%	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+3	35%	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+4	40%	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+5	45%	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+6	50%	
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal4
+7	55%	
+8	60%	
+9	65%	
+10	70%	
+Panorama infernal	Panorama infernal - Habilidad básica | Potenciación
+Recuperación de energía : 0
+Ruptura de Debilidad : 0
+Consume un 30% de los PV máx. de Blade y entra en el estado Panorama infernal.
+En el estado Panorama infernal no puede lanzar la habilidad básica y el daño que inflige Blade aumenta en un 54%. Además, aumenta en gran medida la probabilidad de recibir ataques de los enemigos. El ATQ básico Espada fragmentada se potencia y se transforma en Bosque de espadas durante 3 turnos.
+Si Blade no tiene suficientes PV, al usar la habilidad básica sus PV se reducen a 1.
+Esta habilidad básica no puede recuperar energía. Tras usar esta habilidad básica, el turno no termina.
+
+Consume sus PV, obtiene un ATQ básico potenciado y aumenta la probabilidad de recibir ataques. El turno no termina.
+Nivel 15
+ Regalo Eidolon
+Mil pesares por un sueño roto	Mil pesares por un sueño roto	Mil pesares por un sueño roto
+Cuando Blade está en el estado Panorama infernal, su Prob. CRIT aumenta en un 15%.
+ Ver detalles
+	A	B	C	D	E	Materiales exclusivos
+1	30%	3	1	12%	10	
+2	30%	3	1	14.8%	10	
+Crédito2500
+Brote verde inmortal3
+3	30%	3	1	17.6%	10	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+4	30%	3	1	20.4%	10	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+5	30%	3	1	23.2%	10	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+6	30%	3	1	26%	10	
+Crédito30000
+Espada inerte7
+Flor etérea inmortal6
+7	30%	3	1	29.5%	10	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+8	30%	3	1	33%	10	
+Crédito80000
+Espada rompemundos5
+Arrepentimiento del eterno vehículo del alma1
+Rama gloriosa inmortal4
+9	30%	3	1	36.5%	10	
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+10	30%	3	1	40%	10	
+Crédito300K
+Espada rompemundos14
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+11	30%	3	1	42.8%	10	
+12	30%	3	1	45.6%	10	
+13	30%	3	1	48.4%	10	
+14	30%	3	1	51.2%	10	
+15	30%	3	1	54%	10	
+Sentencia de muerte	Sentencia de muerte - Habilidad definitiva | Ráfaga
+Recuperación de energía : 5
+Ruptura de Debilidad : ATQ individual : 60 / Ráfaga : 60
+Los PV actuales de Blade se establecen en el 50% de sus PV máx. e inflige a un enemigo un Daño de Viento equivalente al 180% de los PV máx. de Blade + 144% del recuento de PV que ha perdido en esta batalla. También inflige a los objetivos adyacentes un Daño de Viento equivalente al 72% de los PV máx. de Blade + 72% del recuento de PV que ha perdido en esta batalla.
+El recuento de PV perdidos en esta batalla no puede superar el 90% de los PV máx. de Blade. Al lanzar su habilidad definitiva, este recuento se reinicia.
+
+Los PV actuales se establecen en el 50% de sus PV máx., inflige una gran cantidad de Daño de Viento a un enemigo y Daño de Viento a los objetivos adyacentes.
+Nivel 15
+ Regalo Rastros
+Vida infinita	Vida infinita
+Requiere niv. de ascensión de personaje 2
+El recuento de PV perdidos que se borra al lanzar la habilidad definitiva de Blade pasa a ser el 50%.
+Crédito5000
+Espada rota3
+Arrepentimiento del eterno vehículo del alma1
+ Regalo Eidolon
+La espada que atraviesa el infierno	La espada que atraviesa el infierno	La espada que atraviesa el infierno
+El daño que infligen el ATQ básico potenciado y la habilidad definitiva de Blade a un enemigo determinado aumenta en una cantidad adicional equivalente al 150% del recuento de PV perdidos de la habilidad definitiva.
+ Ver detalles
+	A	B	C	D	E	F	G	Materiales exclusivos
+1	90%	0.6	36%	0.3	72%	36%	90%	
+2	96%	0.64	38.4%	0.32	76.8%	38.4%	90%	
+Crédito2500
+Brote verde inmortal3
+3	102%	0.68	40.8%	0.34	81.6%	40.8%	90%	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+4	108%	0.72	43.2%	0.36	86.4%	43.2%	90%	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+5	114%	0.76	45.6%	0.38	91.2%	45.6%	90%	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+6	120%	0.8	48%	0.4	96%	48%	90%	
+Crédito30000
+Espada inerte7
+Flor etérea inmortal6
+7	127.5%	0.85	51%	0.425	102%	51%	90%	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+8	135%	0.9	54%	0.45	108%	54%	90%	
+Crédito80000
+Espada rompemundos5
+Arrepentimiento del eterno vehículo del alma1
+Rama gloriosa inmortal4
+9	142.5%	0.95	57%	0.475	114%	57%	90%	
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+10	150%	1	60%	0.5	120%	60%	90%	
+Crédito300K
+Espada rompemundos14
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+11	156%	1.04	62.4%	0.52	124.8%	62.4%	90%	
+12	162%	1.08	64.8%	0.54	129.6%	64.8%	90%	
+13	168%	1.12	67.2%	0.56	134.4%	67.2%	90%	
+14	174%	1.16	69.6%	0.58	139.2%	69.6%	90%	
+15	180%	1.2	72%	0.6	144%	72%	90%	
+Regalo de Shuhu	Regalo de Shuhu - Talento | ATQ AdE
+Recuperación de energía : 10
+Ruptura de Debilidad : ATQ AdE : 30
+Cuando Blade recibe daño o consume PV, obtiene 1 acumulación de carga, hasta un máximo de 5 acumulaciones. Cada vez que recibe un ataque obtiene 1 acumulación como máximo gracias a este efecto.
+Cuando las acumulaciones llegan al máximo, lanza un ataque adicional a todos los enemigos que inflige un Daño de Viento equivalente al 162.5% de los PV máx. de Blade. Además, Blade regenera el 25% de sus PV máx. Tras lanzar el ataque adicional se consumen todas las acumulaciones de carga.
+
+Cuando Blade pierde PV, obtiene 1 acumulación de carga. Cuando la carga llega al máximo, lanza un ataque adicional que inflige Daño de Viento a todos los enemigos y regenera PV, lo que consume todas las acumulaciones.
+Nivel 15
+ Regalo Rastros
+Muertes incesantes	Muertes incesantes
+Requiere niv. de ascensión de personaje 4
+Los PV regenerados al recibir una curación aumentan en un 20%. Después de recibir una curación, un 25% del valor de curación se convierte en PV perdidos del recuento de PV perdidos de la habilidad definitiva.
+Crédito20000
+Espada inerte5
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+Ciclón destructivo	Ciclón destructivo
+Requiere niv. de ascensión de personaje 6
+El daño de ataque adicional que inflige el talento aumenta en un 20%. Además, recupera 15 pts. de energía adicionales.
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+ Regalo Eidolon
+Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida
+Cuando el porcentaje de PV pasa de ser superior al 50% a igual o inferior al 50%, los PV máx. aumentan en un 20%. Este efecto se puede acumular hasta 2 veces.
+Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío
+El límite de acumulaciones de carga se reduce a 4. El daño infligido por el ataque adicional del talento aumenta en una cantidad equivalente al 50% de los PV máx. de Blade.
+ Ver detalles
+	A	B	C	D	Materiales exclusivos
+1	3	65%	25%	0.65	
+2	3	71.5%	25%	0.715	
+Crédito2500
+Brote verde inmortal3
+3	3	78%	25%	0.78	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+4	3	84.5%	25%	0.845	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+5	3	91%	25%	0.91	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+6	3	97.5%	25%	0.975	
+Crédito30000
+Espada inerte7
+Flor etérea inmortal6
+7	3	105.63%	25%	1.05625	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+8	3	113.75%	25%	1.1375	
+Crédito80000
+Espada rompemundos5
+Arrepentimiento del eterno vehículo del alma1
+Rama gloriosa inmortal4
+9	3	121.88%	25%	1.21875	
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+10	3	130%	25%	1.3	
+Crédito300K
+Espada rompemundos14
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+11	3	136.5%	25%	1.365	
+12	3	143%	25%	1.43	
+13	3	149.5%	25%	1.495	
+14	3	156%	25%	1.56	
+15	3	162.5%	25%	1.625	
+Ataque	Ataque
+Recuperación de energía : 0
+Ruptura de Debilidad : ATQ individual : 30
+Ataca a un enemigo y, tras entrar en combate, consume la Firmeza del tipo correspondiente del enemigo.
+
+Viento kármico	Viento kármico - Técnica
+Recuperación de energía : 0
+Ruptura de Debilidad : ATQ individual : 60
+Ataca inmediatamente al enemigo y entra en combate. Blade consume una cantidad de PV equivalente al 20% de sus PV máx. e inflige un 40% de sus PV máx. como Daño de Viento a todos los enemigos.
+Si no tiene suficientes PV, al usar la técnica los PV de Blade se reducen a 1.
+
+Ataca al enemigo y entra en combate. Consume sus PV e inflige Daño de Viento a todos los enemigos.
+Bosque de espadas	Bosque de espadas - ATQ básico | Ráfaga
+Recuperación de energía : 30
+Ruptura de Debilidad : ATQ individual : 60 / Ráfaga : 30
+Consume el 10% de los PV máx. de Blade e inflige un Daño de Viento equivalente al 182% de los PV máx. de Blade a un enemigo. También inflige un Daño de Viento equivalente al 72.8% de los PV máx. de Blade a los objetivos adyacentes.
+Si Blade no tiene suficientes PV, tras lanzar Bosque de espadas sus PV se reducen a 1.
+Bosque de espadas no puede recuperar pts. de habilidad básica.
+
+Consume PV e inflige Daño de Viento a un enemigo y una pequeña cantidad de Daño de Viento a los objetivos adyacentes.
+Nivel 10
+ Ver detalles
+	A	B	C	D	E	Materiales exclusivos
+1	10%	65%	26%	0.65	0.2	
+2	10%	78%	31.2%	0.78	0.24	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+3	10%	91%	36.4%	0.91	0.28	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+4	10%	104%	41.6%	1.04	0.32	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+5	10%	117%	46.8%	1.17	0.36	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+6	10%	130%	52%	1.3	0.4	
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal4
+7	10%	143%	57.2%	1.43	0.44	
+8	10%	156%	62.4%	1.56	0.48	
+9	10%	169%	67.6%	1.69	0.52	
+10	10%	182%	72.8%	1.82	0.56	
+16911956374043616971% (Old)
+Espada fragmentada	Espada fragmentada - ATQ básico | ATQ individual
+Recuperación de energía : 20
+Ruptura de Debilidad : ATQ individual : 30
+Inflige un 140% del ATQ de Blade como Daño de Viento a un enemigo.
+
+Inflige una pequeña cantidad de Daño de Viento a un enemigo.
+Nivel 10
+ Regalo Rastros
+Muertes incesantes	Muertes incesantes
+Requiere niv. de ascensión de personaje 4
+Tras usar Bosque de espadas, si Blade golpea a un enemigo afectado por Ruptura de Debilidad, regenera una cantidad de PV equivalente al 5% de sus PV máx. + 100.
+Crédito20000
+Espada inerte5
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+ Ver detalles
+	A	Materiales exclusivos
+1	50%	
+2	60%	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+3	70%	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+4	80%	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+5	90%	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+6	100%	
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal4
+7	110%	
+8	120%	
+9	130%	
+10	140%	
+Panorama infernal	Panorama infernal - Habilidad básica | Potenciación
+Recuperación de energía : 0
+Ruptura de Debilidad : 0
+Consume un 30% de los PV máx. de Blade y entra en el estado Panorama infernal.
+En el estado Panorama infernal no se puede usar la habilidad básica y el daño que inflige Blade aumenta en un 54%. El ATQ básico Espada fragmentada se potencia y se transforma en Bosque de espadas durante 3 turnos.
+Si Blade no tiene suficientes PV, al usar la habilidad básica sus PV se reducen a 1.
+Esta habilidad básica no recupera energía. Tras usar esta habilidad básica, el turno no termina.
+
+Consume sus PV, potencia su ATQ básico y el turno no termina.
+Nivel 15
+ Regalo Eidolon
+Mil pesares por un sueño roto	Mil pesares por un sueño roto	Mil pesares por un sueño roto
+Cuando Blade está en el estado Panorama infernal, su Prob. CRIT aumenta en un 15%.
+ Ver detalles
+	A	B	C	D	Materiales exclusivos
+1	30%	3	1	12%	
+2	30%	3	1	14.8%	
+Crédito2500
+Brote verde inmortal3
+3	30%	3	1	17.6%	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+4	30%	3	1	20.4%	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+5	30%	3	1	23.2%	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+6	30%	3	1	26%	
+Crédito30000
+Espada inerte7
+Flor etérea inmortal6
+7	30%	3	1	29.5%	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+8	30%	3	1	33%	
+Crédito80000
+Espada rompemundos5
+Arrepentimiento del eterno vehículo del alma1
+Rama gloriosa inmortal4
+9	30%	3	1	36.5%	
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+10	30%	3	1	40%	
+Crédito300K
+Espada rompemundos14
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+11	30%	3	1	42.8%	
+12	30%	3	1	45.6%	
+13	30%	3	1	48.4%	
+14	30%	3	1	51.2%	
+15	30%	3	1	54%	
+Sentencia de muerte	Sentencia de muerte - Habilidad definitiva | Ráfaga
+Recuperación de energía : 5
+Ruptura de Debilidad : ATQ individual : 60 / Ráfaga : 60
+Los PV actuales de Blade se establecen en el 50% de sus PV máx. e inflige a un enemigo un Daño de Viento equivalente al 48% del ATQ de Blade + 120% de sus PV máx. + 120% del recuento de PV que ha perdido en esta batalla. También inflige a los enemigos adyacentes un Daño de Viento equivalente al 19.2% del ATQ de Blade + 48% de sus PV máx. + 48% del recuento de PV que ha perdido en esta batalla.
+El recuento de PV perdidos en esta batalla no puede superar el 90% de los PV máx. de Blade. Al usar su habilidad definitiva, este recuento se reinicia.
+
+Los PV actuales se establecen en el 50% de sus PV máx., inflige una gran cantidad de Daño de Viento a un enemigo y Daño de Viento a los enemigos adyacentes.
+Nivel 15
+ Regalo Eidolon
+La espada que atraviesa el infierno	La espada que atraviesa el infierno	La espada que atraviesa el infierno
+El daño que inflige la habilidad definitiva de Blade a un enemigo determinado aumenta en una cantidad adicional equivalente al 150% del recuento de PV que ha perdido en esta batalla.
+El recuento de PV perdidos en esta batalla no puede superar el 90% de los PV máx. de Blade. Al usar su habilidad definitiva, este recuento se reinicia.
+ Ver detalles
+	A	B	C	D	E	F	G	Materiales exclusivos
+1	24%	60%	9.6%	24%	60%	24%	90%	
+2	25.6%	64%	10.24%	25.6%	64%	25.6%	90%	
+Crédito2500
+Brote verde inmortal3
+3	27.2%	68%	10.88%	27.2%	68%	27.2%	90%	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+4	28.8%	72%	11.52%	28.8%	72%	28.8%	90%	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+5	30.4%	76%	12.16%	30.4%	76%	30.4%	90%	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+6	32%	80%	12.8%	32%	80%	32%	90%	
+Crédito30000
+Espada inerte7
+Flor etérea inmortal6
+7	34%	85%	13.6%	34%	85%	34%	90%	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+8	36%	90%	14.4%	36%	90%	36%	90%	
+Crédito80000
+Espada rompemundos5
+Arrepentimiento del eterno vehículo del alma1
+Rama gloriosa inmortal4
+9	38%	95%	15.2%	38%	95%	38%	90%	
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+10	40%	100%	16%	40%	100%	40%	90%	
+Crédito300K
+Espada rompemundos14
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+11	41.6%	104%	16.64%	41.6%	104%	41.6%	90%	
+12	43.2%	108%	17.28%	43.2%	108%	43.2%	90%	
+13	44.8%	112%	17.92%	44.8%	112%	44.8%	90%	
+14	46.4%	116%	18.56%	46.4%	116%	46.4%	90%	
+15	48%	120%	19.2%	48%	120%	48%	90%	
+Regalo de Shuhu	Regalo de Shuhu - Talento | ATQ AdE
+Recuperación de energía : 10
+Ruptura de Debilidad : ATQ AdE : 30
+Cuando Blade recibe daño o consume PV, obtiene 1 acumulación de carga, hasta un máximo de 5 acumulaciones. Cada vez que recibe un ataque obtiene 1 acumulación como máximo gracias a este efecto.
+Cuando las acumulaciones llegan al máximo, lanza un ataque adicional a todos los enemigos que inflige un Daño de Viento equivalente al 55% del ATQ de Blade + 137.5% de sus PV máx. Además, Blade regenera el 25% de sus PV máx. Tras lanzar el ataque adicional se consumen todas las acumulaciones de carga.
+
+Cuando Blade pierde PV, obtiene 1 acumulación de carga. Cuando la carga llega al máximo, lanza un ataque adicional que inflige Daño de Viento a todos los enemigos y recupera PV, lo que consume todas las acumulaciones.
+Nivel 15
+ Regalo Rastros
+Vida infinita	Vida infinita
+Requiere niv. de ascensión de personaje 2
+Si el porcentaje de PV de Blade es igual o inferior al 50% de sus PV máx., sus PV regenerados al recibir curación aumentan en un 20%.
+Crédito5000
+Espada rota3
+Arrepentimiento del eterno vehículo del alma1
+Ciclón destructivo	Ciclón destructivo
+Requiere niv. de ascensión de personaje 6
+El daño de ataque adicional infligido por el talento aumenta en un 20%.
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+ Regalo Eidolon
+Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida
+Cuando el porcentaje de PV pasa de ser superior al 50% a igual o inferior al 50%, los PV máx. aumentan en un 20%. Este efecto se puede acumular hasta 2 veces.
+Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío
+El límite de acumulaciones de carga se reduce a 4. El daño infligido por el ataque adicional del talento aumenta en una cantidad equivalente al 50% de los PV máx. de Blade.
+ Ver detalles
+	A	B	C	D	Materiales exclusivos
+1	3	22%	25%	55%	
+2	3	24.2%	25%	60.5%	
+Crédito2500
+Brote verde inmortal3
+3	3	26.4%	25%	66%	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+4	3	28.6%	25%	71.5%	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+5	3	30.8%	25%	77%	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+6	3	33%	25%	82.5%	
+Crédito30000
+Espada inerte7
+Flor etérea inmortal6
+7	3	35.75%	25%	89.38%	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+8	3	38.5%	25%	96.25%	
+Crédito80000
+Espada rompemundos5
+Arrepentimiento del eterno vehículo del alma1
+Rama gloriosa inmortal4
+9	3	41.25%	25%	103.13%	
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+10	3	44%	25%	110%	
+Crédito300K
+Espada rompemundos14
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+11	3	46.2%	25%	115.5%	
+12	3	48.4%	25%	121%	
+13	3	50.6%	25%	126.5%	
+14	3	52.8%	25%	132%	
+15	3	55%	25%	137.5%	
+Ataque	Ataque
+Recuperación de energía : 0
+Ruptura de Debilidad : ATQ individual : 30
+Ataca a un enemigo y, tras entrar en combate, consume la Firmeza del tipo correspondiente del enemigo.
+
+Viento kármico	Viento kármico - Técnica
+Recuperación de energía : 0
+Ruptura de Debilidad : ATQ individual : 60
+Ataca inmediatamente al enemigo y entra en combate. Blade consume una cantidad de PV equivalente al 20% de sus PV máx. e inflige un 40% de sus PV máx. como Daño de Viento a todos los enemigos.
+Si no tiene suficientes PV, al usar la técnica los PV de Blade se reducen a 1.
+
+Ataca al enemigo y entra en combate. Consume sus PV e inflige Daño de Viento a todos los enemigos.
+Bosque de espadas	Bosque de espadas - ATQ básico | Ráfaga
+Recuperación de energía : 30
+Ruptura de Debilidad : ATQ individual : 60 / Ráfaga : 30
+Consume el 10% de los PV máx. de Blade e inflige un Daño de Viento equivalente al 56% del ATQ de Blade + 140% de sus PV máx. a un enemigo. También inflige un Daño de Viento equivalente al 22.4% del ATQ de Blade + 56% de sus PV máx. a los enemigos adyacentes.
+Si Blade no tiene suficientes PV, tras usar Bosque de espadas sus PV se reducen a 1.
+Bosque de espadas no puede recuperar pts. de habilidad básica.
+
+Consume PV e inflige Daño de Viento a un enemigo y una pequeña cantidad de Daño de Viento a los enemigos adyacentes.
+Nivel 10
+ Ver detalles
+	A	B	C	D	E	Materiales exclusivos
+1	10%	20%	8%	50%	20%	
+2	10%	24%	9.6%	60%	24%	
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+3	10%	28%	11.2%	70%	28%	
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+4	10%	32%	12.8%	80%	32%	
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+5	10%	36%	14.4%	90%	36%	
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+6	10%	40%	16%	100%	40%	
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal4
+7	10%	44%	17.6%	110%	44%	
+8	10%	48%	19.2%	120%	48%	
+9	10%	52%	20.8%	130%	52%	
+10	10%	56%	22.4%	140%	56%	
+Rastros
+Vida infinita	Vida infinita
+Requiere niv. de ascensión de personaje 2
+El recuento de PV perdidos que se borra al lanzar la habilidad definitiva de Blade pasa a ser el 50%.
+Crédito5000
+Espada rota3
+Arrepentimiento del eterno vehículo del alma1
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere niv. de ascensión de personaje 2
+Prob. CRIT +2.7%
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+Bonificación de PV	Bonificación de PV (PV)
+Requiere niv. de ascensión de personaje 3
+PV máx. +4%
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+Bonificación de RES a efecto	Bonificación de RES a efecto (RES a efecto)
+Requiere niv. de ascensión de personaje 3
+RES a efecto +4%
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+Muertes incesantes	Muertes incesantes
+Requiere niv. de ascensión de personaje 4
+Los PV regenerados al recibir una curación aumentan en un 20%. Después de recibir una curación, un 25% del valor de curación se convierte en PV perdidos del recuento de PV perdidos de la habilidad definitiva.
+Crédito20000
+Espada inerte5
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+Bonificación de PV	Bonificación de PV (PV)
+Requiere niv. de ascensión de personaje 4
+PV máx. +6%
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere niv. de ascensión de personaje 5
+Prob. CRIT +4%
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+Bonificación de PV	Bonificación de PV (PV)
+Requiere niv. de ascensión de personaje 5
+PV máx. +6%
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+Ciclón destructivo	Ciclón destructivo
+Requiere niv. de ascensión de personaje 6
+El daño de ataque adicional que inflige el talento aumenta en un 20%. Además, recupera 15 pts. de energía adicionales.
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+Bonificación de RES a efecto	Bonificación de RES a efecto (RES a efecto)
+Requiere niv. de ascensión de personaje 6
+RES a efecto +6%
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal8
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere personaje de niv. 75
+Prob. CRIT +5.3%
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal8
+Bonificación de PV	Bonificación de PV (PV)
+Requiere personaje de niv. 80
+PV máx. +8%
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal8
+Bonificación de PV	Bonificación de PV (PV)
+PV máx. +4%
+Crédito2500
+Brote verde inmortal2
+14880414635306502729% (Old)
+Vida infinita	Vida infinita
+Requiere niv. de ascensión de personaje 2
+Si el porcentaje de PV de Blade es igual o inferior al 50% de sus PV máx., sus PV regenerados al recibir curación aumentan en un 20%.
+Crédito5000
+Espada rota3
+Arrepentimiento del eterno vehículo del alma1
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere niv. de ascensión de personaje 2
+Prob. CRIT +2.7%
+Crédito5000
+Espada rota3
+Brote verde inmortal6
+Bonificación de PV	Bonificación de PV (PV)
+Requiere niv. de ascensión de personaje 3
+PV máx. +4%
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+Bonificación de RES a efecto	Bonificación de RES a efecto (RES a efecto)
+Requiere niv. de ascensión de personaje 3
+RES a efecto +4%
+Crédito10000
+Espada inerte3
+Flor etérea inmortal3
+Muertes incesantes	Muertes incesantes
+Requiere niv. de ascensión de personaje 4
+Tras usar Bosque de espadas, si Blade golpea a un enemigo afectado por Ruptura de Debilidad, regenera una cantidad de PV equivalente al 5% de sus PV máx. + 100.
+Crédito20000
+Espada inerte5
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+Bonificación de PV	Bonificación de PV (PV)
+Requiere niv. de ascensión de personaje 4
+PV máx. +6%
+Crédito20000
+Espada inerte5
+Flor etérea inmortal4
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere niv. de ascensión de personaje 5
+Prob. CRIT +4%
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+Bonificación de PV	Bonificación de PV (PV)
+Requiere niv. de ascensión de personaje 5
+PV máx. +6%
+Crédito45000
+Espada rompemundos3
+Rama gloriosa inmortal3
+Ciclón destructivo	Ciclón destructivo
+Requiere niv. de ascensión de personaje 6
+El daño de ataque adicional infligido por el talento aumenta en un 20%.
+Crédito160K
+Espada rompemundos8
+Huellas del destino1
+Arrepentimiento del eterno vehículo del alma1
+Bonificación de RES a efecto	Bonificación de RES a efecto (RES a efecto)
+Requiere niv. de ascensión de personaje 6
+RES a efecto +6%
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal8
+Bonificación de Prob. CRIT	Bonificación de Prob. CRIT (Prob. CRIT)
+Requiere personaje de niv. 75
+Prob. CRIT +5.3%
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal8
+Bonificación de PV	Bonificación de PV (PV)
+Requiere personaje de niv. 80
+PV máx. +8%
+Crédito160K
+Espada rompemundos8
+Rama gloriosa inmortal8
+Bonificación de PV	Bonificación de PV (PV)
+PV máx. +4%
+Crédito2500
+Brote verde inmortal2
+Eidolon
+La espada que atraviesa el infierno	La espada que atraviesa el infierno	La espada que atraviesa el infierno
+El daño que infligen el ATQ básico potenciado y la habilidad definitiva de Blade a un enemigo determinado aumenta en una cantidad adicional equivalente al 150% del recuento de PV perdidos de la habilidad definitiva.
+Mil pesares por un sueño roto	Mil pesares por un sueño roto	Mil pesares por un sueño roto
+Cuando Blade está en el estado Panorama infernal, su Prob. CRIT aumenta en un 15%.
+Acero templado para sangrar sombras	Acero templado para sangrar sombras	Acero templado para sangrar sombras
+Niv. de habilidad definitiva +2 (máximo: nivel 15). Niv. de talento +2 (máximo: nivel 15).
+Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida
+Cuando el porcentaje de PV pasa de ser superior al 50% a igual o inferior al 50%, los PV máx. aumentan en un 20%. Este efecto se puede acumular hasta 2 veces.
+Muerte a ojos de los Diez Líderes	Muerte a ojos de los Diez Líderes	Muerte a ojos de los Diez Líderes
+Niv. de habilidad básica +2 (máximo: nivel 15). Niv. de ATQ básico +1 (máximo: nivel 10).
+Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío
+El límite de acumulaciones de carga se reduce a 4. El daño infligido por el ataque adicional del talento aumenta en una cantidad equivalente al 50% de los PV máx. de Blade.
+2714010652589696920% (Old)
+La espada que atraviesa el infierno	La espada que atraviesa el infierno	La espada que atraviesa el infierno
+El daño que inflige la habilidad definitiva de Blade a un enemigo determinado aumenta en una cantidad adicional equivalente al 150% del recuento de PV que ha perdido en esta batalla.
+El recuento de PV perdidos en esta batalla no puede superar el 90% de los PV máx. de Blade. Al usar su habilidad definitiva, este recuento se reinicia.
+Mil pesares por un sueño roto	Mil pesares por un sueño roto	Mil pesares por un sueño roto
+Cuando Blade está en el estado Panorama infernal, su Prob. CRIT aumenta en un 15%.
+Acero templado para sangrar sombras	Acero templado para sangrar sombras	Acero templado para sangrar sombras
+Niv. de habilidad definitiva +2 (máximo: nivel 15). Niv. de talento +2 (máximo: nivel 15).
+Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida	Rechazado por la muerte, infectado por la vida
+Cuando el porcentaje de PV pasa de ser superior al 50% a igual o inferior al 50%, los PV máx. aumentan en un 20%. Este efecto se puede acumular hasta 2 veces.
+Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío	Renacimiento en un cuerpo vacío
+El límite de acumulaciones de carga se reduce a 4. El daño infligido por el ataque adicional del talento aumenta en una cantidad equivalente al 50% de los PV máx. de Blade.
+		
+		
+Conos de luz
+4
+5
+	Nombre	Rareza	Vía	ATQ	DEF	PV	Habilidad básica	Materiales exclusivos
+Colapso celeste
+	Colapso celeste	3
+RarstrRarstrRarstr
+	destruction-class	370.44	198.45	846.72	El daño que infligen el ATQ básico y la habilidad básica del portador aumenta en un 20%.	
+Espada rompemundos
+Voluntad de conquista
+Hogar destrozado
+	Hogar destrozado	3
+RarstrRarstrRarstr
+	destruction-class	370.44	198.45	846.72	El daño que el portador inflige a los enemigos cuyo porcentaje de PV sea superior al 50% aumenta en un 20%.	
+Espada rompemundos
+Núcleo serpenteante
+Final mutuo
+	Final mutuo	3
+RarstrRarstrRarstr
+	destruction-class	370.44	198.45	846.72	Si el portador tiene un porcentaje de PV inferior al 80%, su Prob. CRIT aumenta en un 12%.	
+Espada rompemundos
+Medalla del guardia
+Los Topos te dan la bienvenida
+	Los Topos te dan la bienvenida	4
+RarstrRarstrRarstrRarstr
+	destruction-class	476.28	264.6	1058.4	Cuando el portador ataca al enemigo con su ATQ básico, habilidad básica o habilidad definitiva, acumula Picardía una sola vez por cada tipo de ataque. Por cada acumulación, su ATQ aumenta en un 12%.	
+Espada rompemundos
+Voluntad de conquista
+Juramento secreto
+	Juramento secreto	4
+RarstrRarstrRarstrRarstr
+	destruction-class	476.28	264.6	1058.4	Aumenta el daño que inflige el portador en un 20%. El daño que inflige a los enemigos con un porcentaje de PV igual o superior al suyo aumenta en un 20% adicional.	
+Espada rompemundos
+Medalla del guardia
+Bajo el cielo azul
+	Bajo el cielo azul	4
+RarstrRarstrRarstrRarstr
+	destruction-class	476.28	330.75	952.56	El ATQ del portador aumenta en un 16%. Cuando el portador derrota a un enemigo, su Prob. CRIT aumenta en un 12% durante 3 turnos.	
+Espada rompemundos
+Rama gloriosa inmortal
+¡Guau! ¡Hora de pasear!
+	¡Guau! ¡Hora de pasear!	4
+RarstrRarstrRarstrRarstr
+	destruction-class	476.28	330.75	952.56	El ATQ del portador aumenta en un 10% y el daño que inflige a los enemigos afectados por Quemadura o Sangrado aumenta en un 16%. Este efecto también es válido para el Daño con el tiempo.	
+Espada rompemundos
+Núcleo serpenteante
+Sin escapatoria
+	Sin escapatoria	4
+RarstrRarstrRarstrRarstr
+	destruction-class	529.2	264.6	952.56	El ATQ del portador aumenta en un 24%. Cuando el portador elimina a un enemigo, regenera una cantidad de PV equivalente al 12% de su ATQ.	
+Espada rompemundos
+Medalla del guardia
+Algo insustituible
+	Algo insustituible	5
+RarstrRarstrRarstrRarstrRarstr
+	destruction-class	582.12	396.9	1164.24	El ATQ del portador aumenta en un 24%. Cuando el portador elimina a un enemigo o recibe un ataque, regenera PV equivalentes al 8% de su ATQ y el daño que inflige aumenta en un 24% hasta que termine su siguiente turno. Este efecto no se puede acumular y solo se puede activar una vez en cada turno.	
+Espada rompemundos
+Motor antiguo
+Orilla inalcanzable
+	Orilla inalcanzable	5
+RarstrRarstrRarstrRarstrRarstr
+	destruction-class	582.12	330.75	1270.08	La Prob. CRIT del portador aumenta en un 18% y sus PV máx. aumentan en un 18%. Cuando el portador recibe un ataque o consume sus propios PV, el daño que inflige aumenta en un 24%. Este último efecto se elimina después de que el portador lance un ataque.	
+Espada rompemundos
+Rama gloriosa inmortal
+Per Page	
+Prev								Next
+Inventario
+	Nombre	Rareza	Tipo	Receta
+Crédito
+	Crédito	3
+RarstrRarstrRarstr
+	Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Brote verde inmortal
+	Brote verde inmortal	2
+RarstrRarstr
+	Potenciación de conos de luz, Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Flor etérea inmortal
+	Flor etérea inmortal	3
+RarstrRarstrRarstr
+	Potenciación de conos de luz, Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Vestigios elevados
+	Vestigios elevados	4
+RarstrRarstrRarstrRarstr
+	Material de ascensión de personaje	
+Rama gloriosa inmortal
+	Rama gloriosa inmortal	4
+RarstrRarstrRarstrRarstr
+	Potenciación de conos de luz, Material de ascensión de personaje, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Espada rota
+	Espada rota	2
+RarstrRarstr
+	Potenciación de conos de luz, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Espada inerte
+	Espada inerte	3
+RarstrRarstrRarstr
+	Potenciación de conos de luz, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Espada rompemundos
+	Espada rompemundos	4
+RarstrRarstrRarstrRarstr
+	Potenciación de conos de luz, Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Arrepentimiento del eterno vehículo del alma
+	Arrepentimiento del eterno vehículo del alma	4
+RarstrRarstrRarstrRarstr
+	Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Huellas del destino
+	Huellas del destino	5
+RarstrRarstrRarstrRarstrRarstr
+	Habilidad básica Materiales de mejora, Materiales de mejora de Rastros	
+Per Page	
+Prev								Next
+Gallery
+Blade Icon
+Blade Icon
+Blade Side Icon
+Blade Side Icon
+Blade Action Side Icon
+Blade Action Side Icon
+Blade Mini Icon
+Blade Mini Icon
+Blade Head Icon
+Blade Head Icon
+Blade Waiting Icon
+Blade Waiting Icon
+Blade Splash (No BG)
+Blade Splash (No BG)
+Blade Splash (BG)
+Blade Splash (BG)
+Blade Splash Image
+Blade Splash Image
+Blade Gacha Result BG
+Blade Gacha Result BG
+Blade Foreground Splash
+Blade Foreground Splash
+Blade Shop Icon
+Blade Shop Icon
+Blade Special Action Icon
+Blade Special Action Icon
+La espada que atraviesa el infierno Icon
+La espada que atraviesa el infierno Icon
+La espada que atraviesa el infierno Smol Icon
+La espada que atraviesa el infierno Smol Icon
+Mil pesares por un sueño roto Icon
+Mil pesares por un sueño roto Icon
+Mil pesares por un sueño roto Smol Icon
+Mil pesares por un sueño roto Smol Icon
+Acero templado para sangrar sombras Icon
+Acero templado para sangrar sombras Icon
+Acero templado para sangrar sombras Smol Icon
+Acero templado para sangrar sombras Smol Icon
+Rechazado por la muerte, infectado por la vida Icon
+Rechazado por la muerte, infectado por la vida Icon
+Rechazado por la muerte, infectado por la vida Smol Icon
+Rechazado por la muerte, infectado por la vida Smol Icon
+Muerte a ojos de los Diez Líderes Icon
+Muerte a ojos de los Diez Líderes Icon
+Muerte a ojos de los Diez Líderes Smol Icon
+Muerte a ojos de los Diez Líderes Smol Icon
+Renacimiento en un cuerpo vacío Icon
+Renacimiento en un cuerpo vacío Icon
+Renacimiento en un cuerpo vacío Smol Icon
+Renacimiento en un cuerpo vacío Smol Icon
+Espada fragmentada Icon
+Espada fragmentada Icon
+Panorama infernal Icon
+Panorama infernal Icon
+Sentencia de muerte Icon
+Sentencia de muerte Icon
+Sentencia de muerte Activated Icon
+Sentencia de muerte Activated Icon
+Regalo de Shuhu Icon
+Regalo de Shuhu Icon
+Ataque Icon
+Ataque Icon
+Viento kármico Icon
+Viento kármico Icon
+Bosque de espadas Icon
+Bosque de espadas Icon
+Espada fragmentada Icon
+Espada fragmentada Icon
+Panorama infernal Icon
+Panorama infernal Icon
+Sentencia de muerte Icon
+Sentencia de muerte Icon
+Regalo de Shuhu Icon
+Regalo de Shuhu Icon
+Viento kármico Icon
+Viento kármico Icon
+Vida infinita Icon
+Vida infinita Icon
+Muertes incesantes Icon
+Muertes incesantes Icon
+Ciclón destructivo Icon
+Ciclón destructivo Icon
+Bonificación de PV Icon
+Bonificación de PV Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de PV Icon
+Bonificación de PV Icon
+Bonificación de RES a efecto Icon
+Bonificación de RES a efecto Icon
+Bonificación de PV Icon
+Bonificación de PV Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de PV Icon
+Bonificación de PV Icon
+Bonificación de RES a efecto Icon
+Bonificación de RES a efecto Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de Prob. CRIT Icon
+Bonificación de PV Icon
+Bonificación de PV Icon
+Volumen de los diálogos
+Idioma
+Continuous RePlay
+Primer encuentro	
+Saludo	
+Despedida	
+Acerca de sí mismo: nombre	
+Acerca de sí mismo: posesión por Mara	
+Acerca de sí mismo: demonios	
+Conversación: los Cazadores de Estelaron	
+Conversación: la inmortalidad	
+Conversación: sacrificio	
+Aficiones	
+Molestias	
+Algo que compartir	
+Un dato	
+Acerca de Kafka	
+Acerca de Silver Wolf	
+Acerca de Jing Yuan	
+Acerca de Dan Heng	
+Acerca de Jingliu	
+Acerca de Sam	
+Acerca de Luciérnaga	
+Acerca de Silver Wolf Niv. 999	
+Activación de Eidolon	
+Ascensión de personaje	
+Nivel máximo alcanzado	
+Activación de Rastro	
+Miembro del equipo: Kafka	
+Miembro del equipo: Silver Wolf	
+Miembro del equipo: Jingliu	
+Miembro del equipo: Jing Yuan	
+Miembro del equipo: Dan Heng	
+Miembro del equipo: Dan Heng - Imbibitor Lunae	
+Miembro del equipo: Luciérnaga	
+Miembro del equipo: Silver Wolf Niv. 999	
+Comienzo de la batalla: Ruptura de Debilidad	
+Comienzo de la batalla: alerta de peligro	
+Comienzo del turno 1	
+Comienzo del turno 2	
+En espera	
+ATQ básico potenciado	
+Habilidad básica 1	
+Habilidad básica 2	
+Al recibir un ataque ligero	
+Al recibir un ataque fuerte	
+Habilidad definitiva: activación	
+Habilidad definitiva: lanzamiento	
+Talento	
+Fuera de combate	
+Retorno a la batalla	
+Regeneración de PV	
+Victoria	
+Al abrir un tesoro 1	
+Al abrir un tesoro 2	
+Al abrir un tesoro valioso	
+Al resolver un acertijo 1	
+Al resolver un acertijo 2	
+Objetivo enemigo encontrado	
+Al regresar a la ciudad	
+Historia
+Detalles del personaje	Un espadachín que abandonó su cuerpo para convertirse en una espada. Se desconoce su nombre de nacimiento.
+Juró lealtad al Esclavo del Destino y posee una terrorífica habilidad de autocuración.
+Blade empuña una espada antigua llena de grietas, al igual que su cuerpo y su mente.
+Historia del personaje I	Lo único que percibió fue una mancha carmesí en los ojos y un sabor metálico en la boca. Sus extremidades no respondían.
+Debía estar muerto.
+
+"¿Ya lo has aprendido?".
+Abrió la boca, perdido, con la voz tan ronca como la de una bestia salvaje.
+Su garganta dejó de emitir sonidos abruptamente, tan pronto como el objeto frío y duro perforó su torso.
+Una y otra y otra vez, el proceso se repitió mil veces.
+
+Maravilloso. Mientras sus fibras musculares se desgarraban, oía el sutil sonido que producían los tendones al unirse y conectarse de nuevo.
+Qué maravilla. El monstruo dentro de su cuerpo se alimentaba, pero quería más, quería convertirse en una bestia enorme.
+¡Qué maravilla! Ya había perdido toda voluntad de sobrevivir, pero aun así su cuerpo se regeneraba solo.
+Simplemente maravilloso.
+
+Antes de que la espada perforara una vez más su piel, la agarró con las manos desnudas y se incorporó lentamente.
+"¿Ya lo has aprendido?".
+Se encontró con los ojos de la mujer, rojos como la sangre. Su mente continuaba en blanco.
+Fue apuñalado una vez más.
+"Recuerda cómo se siente la muerte y muéstraselo a ellos".
+
+El carmesí volvió a sus ojos. Miró fijamente la espada que lo mataba y la hoja se partió por la mitad.
+"Levántate y déjame matarte una vez más...".
+
+
+* Se desbloquea en el nivel 20 de personaje.
+Historia del personaje II	Lo único que percibió fue una mancha carmesí en los ojos y un sabor metálico en la boca. Sus extremidades no respondían.
+Debía estar muerto.
+
+El joven de cabello oscuro se estremeció violentamente, todavía aferrado a la lanza que tenía en sus manos.
+No tenía cuernos de dragón y su reacción fue un poco menos madura de lo que recordaba...
+Pero nunca olvidaría la lanza, aquellos ojos, la crueldad estallando bajo aquel verde tan pacífico como la superficie de un lago.
+Sus heridas comenzaron a sanar. Sus pupilas parpadearon y encontraron al joven una vez más.
+Sin dudarlo, el joven volvió a blandir la lanza...
+
+"Eso es todo".
+Eres tú quien no muestra piedad ante los enemigos.
+Eres tú quien enterró a su ser amado sin ayuda.
+Y también eres tú quien casi provoca la destrucción de su propio mundo.
+
+Volvió a caer una vez más.
+El joven presionó la mano contra sus heridas y retrocedió, hasta que desapareció de su vista.
+"Antes de que presencie tu muerte, nos volveremos a ver, ███".
+
+* Se desbloquea en el nivel 40 de personaje.
+Historia del personaje III	Lo único que percibió fue una mancha carmesí en los ojos y un sabor metálico en la boca. Sus extremidades no respondían.
+Debía estar muerto.
+
+El monstruo lo engulló de nuevo, pero esta vez no se enfrentaba a una persona.
+La imponente armadura permaneció en silencio. Estaba aprisionado entre aquellos brazos. La mujer con lentes de sol le habló.
+
+"Escúchame, puedo matarte de nuevo o no podré llevarte de vuelta".
+Su voz era tan dulce que hasta el monstruo dentro de su cuerpo se había callado para escucharla.
+"Pero no quiero hacerlo".
+La mujer se inclinó y le susurró al oído. Era un trato que no podía rechazar.
+"¿Qué quieres?".
+"¿Hay algo más gratificante que ver cómo mueren los inmortales? Eso dijo él".
+
+La armadura gigante aflojó la presión. El destino apunta hacia adelante y él irá con ellos.
+"Escúchame, Bladie, relájate".
+"Escúchame, no pienses en nada".
+Él asintió. La mujer se acercó a él. Ella sonrió, pero él pensó que su sonrisa transmitía tristeza.
+"Tal vez alguien se fue y no terminó de escuchar lo que decía", pensó.
+
+* Se desbloquea en el nivel 60 de personaje.
+Historia del personaje IV	Ya no veía nada.
+
+Recordó que, hacía décadas, había llegado a Xianzhou con un buque mercante y quedó impresionado por la espléndida artesanía del lugar.
+El joven estaba tan obsesionado que llegó al punto de olvidarse de comer y beber. Se esforzó por dar rienda suelta a su inspiración, como si se le estuviera agotando el tiempo. Forjó cientos de objetos raros, cuatro de los cuales obtuvieron gran reconocimiento.
+
+La llamada Espada fragmentada lucía impecable cuando se forjó. Su cuerpo entintado brillaba como la sangre. Solo los maestros espadachines más poderosos de Xianzhou pudieron determinar el verdadero motivo de su existencia.
+En situaciones desesperadas, la joven raposiana solía disparar tres flechas simultáneamente con su arco recurvo, sin dejar de pilotar el astroesquife y reír con los demás.
+El hombre de cabello negro con cuernos de dragón usó sus habilidades de manipulación del agua para rejuvenecer a sus aliados, antes de atar el agua a la lanza y destruir sus defensas.
+También estaba el joven que no paraba de discutir con él. En el momento en que vio el Archa del Devastador, la agarró, prometiendo que nunca se separaría de ella.
+
+Ahora, ██ había fallecido. Su primera y única muerte.
+Sin embargo, él seguía aquí, con su mente joven agitándose, pensando, por toda la eternidad.
+Pensó en sus manos, ya sin fuerzas. Esas manos que ya no podrían forjar otra espada ni crear otra arma.
+Pero nada de eso importaba.
+A partir de ese momento, ese cuerpo sería la única espada que necesitaría.
+
+* Se desbloquea en el nivel 80 de personaje.
+Page: 3 / 3
+97 responses to “Blade”
+« Older Comments
+
+    Profile picture AndreLip911 says:
+    May 22, 2025 at 8:06 pm
+
+    I hope they fix his A4 before new version. It’s still sucks. It would be better to give him the possibility to stack over 5, or something to give him more stacks.
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture A Lonely Hologram says:
+        June 16, 2025 at 8:33 pm
+
+        Since no one’s saying it, the changes they made are pretty cool. Before this they made so some healing taken is converted for his hp loss tally, which pairs well with his A2 but a bit gimmicky. Now they combined it, with the extra healing always active. Though im slightly confused withe wording on the new A2, do they mean that his tally gets set to 50% after ulting? Which does sound strong, letting him spam his ult more consistently without having to build it up over and over after every use.
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+    Profile picture Some British Dude On The Internet says:
+    May 22, 2025 at 3:15 pm
+
+    His E1 being actually good now is amazing. Complete HP scaling? Amazing. I do wish his E6 got buffed though, its identical to what it was. Maybe just give him res pen like they did with Jingliu
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture Waiting for E2 Blade says:
+    December 6, 2024 at 6:59 pm
+
+    Any news of this guy rerun?
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture Zeroabalonie says:
+        May 23, 2025 at 11:39 am
+
+        I’m pretty sure he’s on the standard banner now so I don’t think he’ll get a rerun.
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+    Profile picture absorb says:
+    October 11, 2024 at 7:56 pm
+
+    Still alive in current moc against kafka. Blade e0s1, fu xuan e0s0, robin e0s1, march 7 hunt cruising – 2 cycles
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture DemoAcct says:
+    June 7, 2024 at 10:12 pm
+
+    It’s kinda sad how hard Blade has been powercreeped. Firefly has higher sustain, faster ults, far better damage and much more healing. Blade also has no dedicated supports, meaning unless you use RM your damage will be underwhelming.
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture Frankjito says:
+        July 13, 2024 at 8:40 am
+
+        Who said it’s powercreeped? Wait for a furina to come out for him and he will shine
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+            Profile picture LayKors says:
+            June 5, 2025 at 2:51 pm
+
+            So he is powercreeeped to the state that he needs someone as powerful as Furina. Got it
+            Reply
+            Expand
+            Votes0
+            Votes0
+            Votes0
+            Votes0
+            Votes0
+    Profile picture aeslisk says:
+    August 1, 2023 at 8:44 pm
+
+    he is the best in game character at E6, and has a hu tao build.
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture nindroid20 says:
+        August 1, 2023 at 10:22 pm
+
+        silverwolf e6 is better because she has really good damage and can be used as support
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+            Profile picture SAMPO KOSKI! says:
+            August 4, 2023 at 12:25 am
+
+            Sampo e6 is the best, because he’s hot.
+            Reply
+            Expand
+            Votes0
+            Votes0
+            Votes0
+            Votes0
+            Votes0
+                Profile picture el wiwi says:
+                October 25, 2023 at 3:44 am
+
+                you’re so real for this
+                Reply
+                Expand
+                Votes0
+                Votes0
+                Votes0
+                Votes0
+                Votes0
+        Profile picture luochador says:
+        August 9, 2023 at 1:04 am
+
+        Luocha E6S5
+        +buncha heals
+        +Spd bonus
+        +atk bonus
+        +shield
+        +damage reduction
+        +res reduction
+
+        He is Nihility, preservation, harmony and abundance in one go.
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+    Profile picture Bladie is the best says:
+    July 28, 2023 at 7:35 pm
+
+    Is blade’s skill duration based on the number of actions he takes or the number of cycles that pass?
+    So will his skill end faster when paired with Bronya or will it not change?
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture uhm says:
+    July 28, 2023 at 7:22 pm
+
+    its not a rumor when there are literally backlogs on reddit with changes to his dmg and eidolons. don’t forget the purpose of the beta is not only bug finding but also to fine tune a character, before they are finalized and shipped to live server, since nerfing them after the fact is highly frowned upon and may cause legal issues.
+    Reply
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Profile picture SeJing says:
+    July 14, 2023 at 4:51 am
+
+    did he got nerfed after before release in 1.2??
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture CrazyNympo says:
+        July 18, 2023 at 4:59 am
+
+        They never nerf characters after release.
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Profile picture why do people still think this says:
+        July 18, 2023 at 9:37 am
+
+        no he didnt, idk who started this rumor but Blade hasnt been changed, since his first beta appearance the only thing they changed is a buff, the fact that now the ult also deals damage based on the hp you’ve lost
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+    Profile picture Asyrus says:
+    July 13, 2023 at 12:10 pm
+
+    it’s kinda sad that forest of swords can’t regenerate skill points
+    Reply
+      
+    Expand
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+    Votes0
+        Profile picture gamer says:
+        July 13, 2023 at 8:08 pm
+
+        Well he basically only consumes 0,33 SP per turn, I’d say it’s 100% fair to have it that way
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Profile picture binch says:
+        July 14, 2023 at 8:23 pm
+
+        if his skill is like arlan’s then it won’t consume sp. i don’t know if it is or not
+        Reply
+        Expand
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+        Votes0
+
+« Older Comments
+Leave a Reply
+
+Your email address will not be published. Required fields are marked *
+
+Comment *
+
+Name *
+
+Email *
+
+Website
+
+Save my name, email, and website in this browser for the next time I comment.
+
+Page: 3 / 3
+Default Avatar
+Guest (Login)
+Measurehead at Evanescia
+
+bro is gonna pull absolute dog-mid because she is food for simpletons who cant read. never gonna ma...
+John Due at Evanescia
+
+iirc, yae imouto passed from disease in HI3. and now she's in HSR as emanator(?) of abundance. hmm
+Revive Skott Shaoji at New in 4.2
+
+watch her be abundance after they reveal she was cured from the weathering curse via abundance
+TopButton
+Discord
+This website is made for educational and research purpose (and us, eating macaroni).
+Privacy | Terms of Service
+© 2026 - honeyhunterworld.com HHWPEngine Mk 1.0

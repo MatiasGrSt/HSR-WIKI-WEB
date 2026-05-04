@@ -1,0 +1,163 @@
+[
+    {
+        "character_id": "Archer",
+        "name": "Kanshou y Bakuya",
+        "type": "Ataque Básico",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "20",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Archer como Daño Cuántico a un enemigo.",
+        "skill_levels": {
+            "stat_1": [
+                50,
+                60,
+                70,
+                80,
+                90,
+                100,
+                110,
+                120,
+                130
+            ]
+        }
+    },
+    {
+        "character_id": "Archer",
+        "name": "Caladbolg II: Espada espiral falsa",
+        "type": "Habilidad Básica",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "30",
+        "break": "ATQ individual : 60",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Entra en el estado Conexión de circuitos. Archer inflige un <span class=\"stat\">{stat_1}%</span> de su ATQ como Daño Cuántico a un enemigo. Tras lanzar la habilidad básica durante el estado Conexión de circuitos, el turno no termina y el daño que inflige la habilidad básica de Archer aumenta en un <span class=\"stat\">{stat_2}%</span>. Este efecto se puede acumular hasta <span class=\"stat\">2</span> veces y dura hasta que salga del estado Conexión de circuitos. Cuando la habilidad básica se haya lanzado <span class=\"stat\">5</span> veces de forma activa o no haya suficientes pts. de habilidad básica para volver a lanzarla, sale del estado Conexión de circuitos. Cuando todos los enemigos de una oleada hayan sido eliminados, sale del estado Conexión de circuitos.",
+        "skill_levels": {
+            "stat_1": [
+                180,
+                198,
+                216,
+                234,
+                252,
+                270,
+                292.5,
+                315,
+                337.5,
+                360,
+                378,
+                396,
+                414,
+                432,
+                450
+            ],
+            "stat_2": [
+                60,
+                64,
+                68,
+                72,
+                76,
+                80,
+                85,
+                90,
+                95,
+                100,
+                104,
+                108,
+                112,
+                116,
+                120
+            ]
+        }
+    },
+    {
+        "character_id": "Archer",
+        "name": "Unlimited Blade Works",
+        "type": "Definitiva",
+        "target": "ATQ individual",
+        "energy_activation": "220",
+        "energy_gain": "5",
+        "break": "ATQ individual : 90",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Archer como Daño Cuántico a un enemigo y obtiene <span class=\"stat\">2</span> pts. de carga (puede tener hasta <span class=\"stat\">4</span> pts. de carga).",
+        "skill_levels": {
+            "stat_1": [
+                600,
+                640,
+                680,
+                720,
+                760,
+                800,
+                850,
+                900,
+                950,
+                1000,
+                1040,
+                1080,
+                1120,
+                1160,
+                1200
+            ]
+        }
+    },
+    {
+        "character_id": "Archer",
+        "name": "Ojo de la mente (verdadero)",
+        "type": "Talento",
+        "target": "ATQ individual",
+        "energy_activation": null,
+        "energy_gain": "5",
+        "break": "ATQ individual : 30",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Después de que un compañero de equipo de Archer ataque a un enemigo, Archer consume <span class=\"stat\">1</span> pt. de carga y lanza al objetivo principal un ataque adicional que inflige un <span class=\"stat\">{stat_1}%</span> del ATQ de Archer como Daño Cuántico. Además, recupera <span class=\"stat\">1</span> pt. de habilidad básica. Si el objetivo es eliminado antes de lanzar este ataque adicional, entonces lo lanza contra un enemigo al azar.",
+        "skill_levels": {
+            "stat_1": [
+                100,
+                110,
+                120,
+                130,
+                140,
+                150,
+                162.5,
+                175,
+                187.5,
+                200,
+                210,
+                220,
+                230,
+                240,
+                250
+            ]
+        }
+    },
+    {
+        "character_id": "Archer",
+        "name": "Clarividencia",
+        "type": "Técnica",
+        "target": "No especificado",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "ATQ individual : 60",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Ataca inmediatamente al enemigo y entra en combate. Inflige un <span class=\"stat\">200%</span> del ATQ de Archer como Daño Cuántico a todos los enemigos y obtiene <span class=\"stat\">1</span> pt. de carga.",
+        "skill_levels": {}
+    },
+    {
+        "character_id": "Archer",
+        "name": "Finalización",
+        "type": "Habilidad Básica",
+        "target": "No especificado",
+        "energy_activation": null,
+        "energy_gain": "0",
+        "break": "0",
+        "memosprite": null,
+        "enchanced": null,
+        "description": "Sale del estado Conexión de circuitos y termina el turno.",
+        "skill_levels": {}
+    }
+]
