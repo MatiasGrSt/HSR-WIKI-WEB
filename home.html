@@ -9,16 +9,33 @@
 </head>
 <body>
     <main id="main-scroll">
-        <!-- Fondo fijo que se oculta al scrollear -->
-        <img src="imagenes/Utilities/version_bg.webp" id="parallax-bg">
 
         <div id="content-layout">
-            <!-- SECCIÓN SUPERIOR: Eventos y Sidebar[cite: 16] -->
+            <!-- SECCIÓN SUPERIOR: Eventos y Sidebar -->
             <div class="hero-grid">
                 <section class="section-events">
                     <h2 class="section-title">EVENT TIMELINE</h2>
-                    <div id="events-list">
-                        <!-- Aquí se inyectarán las .event-card con JS -->
+
+                    <!-- Selector de Región -->
+                    <div class="region-selector" id="region-selector">
+                        <button class="region-btn" data-region="eu">Europa</button>
+                        <button class="region-btn" data-region="am">América</button>
+                        <button class="region-btn" data-region="as">Asia / TW</button>
+                    </div>
+
+                    <div class="events-columns">
+                        <div class="events-column">
+                            <h3 class="column-subtitle">Activos</h3>
+                            <div id="events-active" class="events-column-list">
+                                <!-- Aquí se inyectarán las .event-card con JS -->
+                            </div>
+                        </div>
+                        <div class="events-column">
+                            <h3 class="column-subtitle">Próximos y Anunciados</h3>
+                            <div id="events-upcoming" class="events-column-list">
+                                <!-- Aquí se inyectarán las .event-card con JS -->
+                            </div>
+                        </div>
                     </div>
                 </section>
 
@@ -32,12 +49,12 @@
 
                     <section class="panel-daily glass-dark">
                         <h2 class="section-title">DAILY RESET</h2>
-                        <div id="daily-countdown" class="timer-display">00h : 00m : 00s</div>
+                        <div id="daily-countdown" class="timer-display">00h : 00m</div>
                     </section>
                 </aside>
             </div>
 
-            <!-- SECCIÓN PERSONAJES[cite: 15, 16] -->
+            <!-- SECCIÓN PERSONAJES -->
             <section class="section-characters">
                 <h2 class="section-title centered">FEATURED CHARACTERS</h2>
                 <div id="characters-list">

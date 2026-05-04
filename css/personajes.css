@@ -1,162 +1,155 @@
-main {
-    margin-left: 13.5%; /* Deja el hueco para el nav */
-    width: calc(100% - 13.5%); /* REGLA CLAVE: Resta el margen al ancho total */
-    box-sizing: border-box; /* Asegura que el padding no sume ancho extra */
-    
-    overflow-y: auto !important; /* Habilita el scroll vertical si hay muchos personajes[cite: 9] */
-    overflow-x: hidden; /* Evita cualquier desplazamiento lateral */
-    padding: 20px 20px;
-}
+/* =========================================
+   CHARACTERS PAGE SPECIFIC STYLES
+   ========================================= */
 
-/* Ajuste para cuando el nav llega a su tamaño mínimo de 220px */
-@media (max-width: 1630px) {
-    main {
-        margin-left: 220px;
-        width: calc(100% - 220px); 
-    }
-}
-
-main h2 {
-    color: #fff;
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    border-left: 5px solid var(--main);
-    padding-left: 15px;
-}
-
-/* --- Formulario y Buscador --- */
-.superior form {
+/* --- Search & Filters Bar --- */
+.panel-filters form {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    padding-bottom: 15px;
-    border-radius: 10px;
-    border: 0px solid #333;
+    gap: 15px;
 }
 
 form .nombre {
     flex: 2;
     min-width: 200px;
-    padding: 10px 15px;
+    padding: 12px 20px;
     margin-right: 10px;
     font-size: 16px;
-    border: 0px;
-    border-radius: 5px;
-    background-color: #2a2a2a;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
     color: white;
+    transition: all 0.3s ease;
 }
 
 form .nombre:focus {
-    border-color: var(--main);
+    border-color: #4cc9f0;
+    outline: none;
+    box-shadow: 0 0 15px rgba(76, 201, 240, 0.3);
+    background: rgba(0, 0, 0, 0.6);
 }
 
+/* Filter Categories Containers */
 form div {
     display: flex;
     flex: 1;
     min-width: 150px;
-    overflow: hidden;
+    gap: 6px;
 }
 
+/* Glass-Neon Filter Buttons */
 form div input[type="checkbox"] {
     appearance: none;
     flex: 1;
-    height: 40px;
-    background-color: #2a2a2a;
+    height: 48px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--c); /* Uses CSS var from inline style */
     background-repeat: no-repeat;
     background-position: center;
     background-size: 24px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.2s ease;
+    opacity: 0.4; /* Muted state */
+    filter: grayscale(80%);
 }
 
 form div input[type="checkbox"]:hover {
-    background-color: #3a3a3a;
+    background-color: rgba(255, 255, 255, 0.05);
+    opacity: 0.8;
+    filter: grayscale(0%);
 }
 
 form div input[type="checkbox"]:checked {
-    background-color: #444;
-    border-bottom: 6px solid #fff; /* Indicador simple de activo */
+    background-color: color-mix(in srgb, var(--c) 25%, rgba(255, 255, 255, 0.08));
+    opacity: 1;
+    filter: grayscale(0%);
+    box-shadow: inset 0 0 15px color-mix(in srgb, var(--c) 40%, transparent);
 }
 
-/* --- Contenedor de la lista --- */
+/* --- Characters Grid & Cards --- */
 .lista-personajes {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 25px;
     list-style: none;
-    padding: 10px;
-    margin: 20px 0;
+    padding: 10px 0;
+    margin: 10px 0 40px;
 }
 
-/* --- Estilo de la Carta (li) --- */
+/* Character Card Base */
 .lista-personajes li {
     position: relative;
     aspect-ratio: 1 / 1.5;
     overflow: hidden;
     background-color: #1a1a1a;
-    border:3px solid #333; /* Borde gris oscuro por defecto */
-    border-radius: 4px 15px 4px 4px; /* Estilo característico de HSR */
-    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 0 12px 0 0;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
     cursor: pointer;
+    
+    /* Hardware acceleration & isolation for smooth scroll */
+    contain: content;
+    will-change: transform;
 }
 
-/* Efecto hover general en la carta */
+/* Hover Elevation & Glow */
 .lista-personajes li:hover {
-    transform: scale(1.05);
+    transform: translateY(-10px) scale(1.03);
     z-index: 10;
+    border-color: var(--color-rareza, #f29e38);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 30px color-mix(in srgb, var(--color-rareza, #f29e38) 40%, transparent);
 }
 
-/* --- Imagen del Personaje (Ocupa todo el li) --- */
-/* Es la última imagen generada en tu JS */
+/* Character Image */
 .lista-personajes li a>img:last-of-type {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Asegura que rellene sin deformarse */
+    object-fit: cover;
     z-index: 1;
+    transition: transform 0.5s ease;
 }
 
-/* --- Icono del Elemento (Esquina superior izquierda) --- */
-/* Es la primera imagen generada dentro del link en tu JS */
+.lista-personajes li:hover a>img:last-of-type {
+    transform: scale(1.05);
+}
+
+/* Element Type Badge */
 .lista-personajes li a>img:first-of-type {
     position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 25px;
-    height: 25px;
+    top: 10px;
+    left: 10px;
+    width: 28px;
+    height: 28px;
     z-index: 3;
-    filter: drop-shadow(0 0 5px black); /* Sombra para que resalte sobre el arte */
+    
+    /* Replaced expensive drop-shadow with performant background */
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.7) 30%, transparent 70%);
+    border-radius: 50%;
 }
 
-/* --- Recuadro del Nombre (Fondo negro sólido) --- */
-.lista-personajes li a p {
+/* Character Name Gradient Overlay */
+.lista-personajes li a p:not(.version):not(.novaflare) {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     margin: 0;
-    padding: 12px 0;
-    background: #000000; /* Negro total como pediste */
+    padding: 35px 0 15px;
+    background: linear-gradient(to top, rgba(10, 10, 12, 1) 0%, rgba(10, 10, 12, 0.7) 40%, transparent 100%);
     color: white;
     text-align: center;
-    font-weight: bold;
-    font-size: 1rem;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
     z-index: 3;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
 }
 
-/* --- Lógica de Rarezas al pasar el cursor (Hover) --- */
-
-.lista-personajes li:hover {
-    border-color: var(--color-rareza, #f29e38);
-    box-shadow: 0 0 15px color-mix(in srgb, var(--color-rareza, #f29e38) 60%, transparent);
-}
-
-/* Contenedor de las estrellas */
+/* Rarity Stars Positioning */
 .rarity-stars {
     position: absolute;
     display: flex;
@@ -167,13 +160,12 @@ form div input[type="checkbox"]:checked {
     bottom: -12px;
 }
 
-/* Tamaño de cada estrella individual */
 .star-icon {
-    width: 25px;            /* Ajusta el tamaño según tu diseño */
+    width: 25px;
     height: auto;
 }
 
-/* --- Etiqueta de Versión (Opcional, si la usas) --- */
+/* Optional Badges (e.g. New Version) */
 .version {
     position: absolute;
     top: 0;
@@ -200,7 +192,7 @@ form div input[type="checkbox"]:checked {
     border-radius: 0 0 8px 0;
 }
 
-/* --- Ajuste Mobile --- */
+/* --- Responsive Adjustments --- */
 @media (max-width: 480px) {
     .lista-personajes {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
