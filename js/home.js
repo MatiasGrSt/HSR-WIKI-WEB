@@ -12,7 +12,7 @@ function renderEvent(data) {
     const statusText = data.status === 'activo' ? 'Current' : 'Upcoming';
 
     const html = `
-        <div class="event-card" style="background-image: url('${data.image_url}');">
+        <div class="event-card" style="background-image: url('${data.icon_url}');">
             <div class="event-overlay">
                 <div class="event-info">
                     <h3>${data.title}</h3>

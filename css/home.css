@@ -36,18 +36,14 @@
     position: absolute;
     right: 0;
     top: 0;
-    width: 65%;
+    width: 70%;
     height: 100%;
-    background: linear-gradient(to left, 
-        rgba(20, 20, 25, 0.98) 50%, 
-        rgba(20, 20, 25, 0.8) 80%, 
-        transparent 100%
-    );
+    background: linear-gradient(90deg,rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.25) 25%, rgba(0, 0, 0, 0.31) 50%, rgba(0, 0, 0, 0.76) 75%, rgba(0, 0, 0, 0.81) 100%);
     backdrop-filter: blur(8px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px 0 100px;
+    padding: 0 0 0 100px;
 }
 
 /* SIDEBAR: Vidrio oscuro[cite: 16] */
