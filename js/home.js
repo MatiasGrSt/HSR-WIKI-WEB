@@ -1,74 +1,75 @@
-// Contenedores donde se inyectará la información
-const eventsList = document.getElementById('events-list');
-const codesList = document.getElementById('codes-list');
+import { initRegionButtons, setRegion, getCurrentRegion } from './utils/regionManager.js';
+import { updateCountdowns, updateDailyReset, startCountdownUpdates } from './utils/countdownUpdater.js';
+import { renderAllEvents, toggleEventExpand } from './utils/eventRenderer.js';
+import { setCurrentRegion } from './utils/dateUtils.js';
+import { DOM_SELECTORS } from './utils/constants.js';
 
-/**
- * Procesa e inyecta un único evento al contenedor
- * @param {Object} data - Objeto con la información del evento
- */
-function renderEvent(data) {
-    // Mapeo de estados a las clases CSS definidas en home.css
-    const statusClass = data.status === 'activo' ? 'status-active' : 'status-upcoming';
-    const statusText = data.status === 'activo' ? 'Current' : 'Upcoming';
+const codesList = document.getElementById(DOM_SELECTORS.codesList.slice(1));
 
-    const html = `
-        <div class="event-card" style="background-image: url('${data.icon_url}');">
-            <div class="event-overlay">
-                <div class="event-info">
-                    <h3>${data.title}</h3>
-                    <span class="status-label ${statusClass}">${statusText}</span>
-                </div>
-                <p class="time-display">Ends in: ${data.end_time}</p>
-                <button class="expand-btn" onclick="toggleEvent(this)">▼</button>
-            </div>
-            <!-- Contenido extra para la expansión -->
-            <div class="event-details" style="padding: 20px; display: none;">
-                <p>${data.description || 'No hay detalles adicionales.'}</p>
-            </div>
-        </div>
-    `;
-    eventsList.innerHTML += html;
-}
+let globalEvents = [];
+let finVersionDate = null;
 
-/**
- * Función principal asíncrona para cargar datos[cite: 15]
- */
-async function main() {
+async function loadEvents() {
     try {
-        // Petición al backend
         const res = await fetch('../backend/php/home.php?accion=eventos');
         const data = await res.json();
 
-        // Limpiar contenedor antes de inyectar
-        eventsList.innerHTML = '';
-        console.log("Datos recibidos:", data); // Debug: Ver qué se recibe del backend
+        finVersionDate = data.fin_version;
+        globalEvents = data.eventos || [];
 
-        // Si el PHP devuelve un array, iteramos sobre él
-        if (Array.isArray(data)) {
-            data.forEach(evento => renderEvent(evento));
-        } else {
-            renderEvent(data);
-        }
+        renderAllEvents(globalEvents, finVersionDate);
+        updateCountdowns();
     } catch (error) {
-        console.error("Error cargando eventos:", error);
+        console.error('Error cargando eventos:', error);
     }
 }
 
-// Función de expansión[cite: 6, 16]
-window.toggleEvent = function(btn) {
-    const card = btn.closest('.event-card');
-    const details = card.querySelector('.event-details');
-    
-    card.classList.toggle('expanded');
-    
-    if (card.classList.contains('expanded')) {
-        btn.innerText = '▲';
-        if (details) details.style.display = 'block';
-    } else {
-        btn.innerText = '▼';
-        if (details) details.style.display = 'none';
+async function loadCodes() {
+    try {
+        const res = await fetch('../backend/php/home.php?accion=codes');
+        const codigos = await res.json();
+
+        if (!codesList) return;
+
+        let codesHTML = '';
+        codigos.forEach(codigo => {
+            codesHTML += `
+                <div class="code-item">
+                    <code>${codigo.values}</code>
+                </div>
+            `;
+        });
+
+        codesList.innerHTML = codesHTML;
+    } catch (error) {
+        console.error('Error cargando códigos:', error);
     }
+}
+
+async function main() {
+    try {
+        const region = getCurrentRegion();
+        setCurrentRegion(region);
+
+        initRegionButtons(() => {
+            renderAllEvents(globalEvents, finVersionDate);
+            updateCountdowns();
+            updateDailyReset();
+        });
+
+        await loadEvents();
+        await loadCodes();
+
+        startCountdownUpdates();
+    } catch (error) {
+        console.error('Error en inicialización:', error);
+    }
+}
+
+window.toggleEvent = function (btn) {
+    toggleEventExpand(btn);
 };
 
-// Iniciar carga cuando el DOM esté listo[cite: 15]
-document.addEventListener('DOMContentLoaded', () => main());
+document.addEventListener('DOMContentLoaded', () => {
+    main();
+});
