@@ -4,10 +4,10 @@ import {colores} from './colores.js';
 export async function lista(filtros = {}) {
     try {
         const queryParams = new URLSearchParams(filtros).toString();
-        const res = await fetch(`http://localhost/php/datos.php?${queryParams}`);
+        const res = await fetch(`../backend/php/datos.php?${queryParams}`);
         const data = await res.json();
 
-        const response = await fetch('http://localhost/php/home.php?accion=version');
+        const response = await fetch('../backend/php/home.php?accion=version');
         const general = await response.json();
         const version = general.version;
         

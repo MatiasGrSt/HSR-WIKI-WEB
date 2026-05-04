@@ -106,7 +106,7 @@ async function refrescarModalUI() {
     imgIcono.src = `../imagenes/personajes/${modalState.charName}/${nombreImg}.webp`;
     imgIcono.onerror = () => { if(uIdx > 0) { imgIcono.onerror = null; imgIcono.src = `../imagenes/personajes/${modalState.charName}/${tipoF}.webp`; } };
 
-    const res = await fetch(`http://localhost/php/obtener_info_pj.php?skill_id=${habilidad.id}&tipo=skill_levels`);
+    const res = await fetch(`../backend/php/obtener_info_pj.php?skill_id=${habilidad.id}&tipo=skill_levels`);
     const data = await res.json();
     modalState.levels = {};
     (Array.isArray(data) ? data : [data]).forEach(n => { if(n?.params) modalState.levels[n.indice] = JSON.parse(n.params); });
@@ -177,7 +177,7 @@ export async function cargarHabilidades(name, element) {
     asegurarModalIniciado();
     const container = document.getElementById('hab_cont');
     try {
-        const res = await fetch(`http://localhost/php/obtener_info_pj.php?personaje=${name}&tipo=skills`);
+        const res = await fetch(`../backend/php/obtener_info_pj.php?personaje=${name}&tipo=skills`);
         const data = await res.json();
         
         const grupos = data.reduce((acc, h) => {
@@ -240,7 +240,7 @@ export async function cargarMinorTraces(name, element) { renderTraces(name, 'min
 
 async function renderTraces(char, tipo, className, imgPrefix, element = null) {
     const container = document.getElementById('hab_cont');
-    const res = await fetch(`http://localhost/php/obtener_info_pj.php?personaje=${char}&tipo=${tipo}`);
+    const res = await fetch(`../backend/php/obtener_info_pj.php?personaje=${char}&tipo=${tipo}`);
     const data = await res.json();
     data.forEach((t, i) => {
         const item = document.createElement('div');

@@ -36,7 +36,7 @@ function renderEvent(data) {
 async function main() {
     try {
         // Petición al backend
-        const res = await fetch('http://localhost/php/home.php?accion=eventos');
+        const res = await fetch('../backend/php/home.php?accion=eventos');
         const data = await res.json();
 
         // Limpiar contenedor antes de inyectar

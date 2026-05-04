@@ -73,7 +73,7 @@ async function info() {
     const personaje = urlParams.get('personaje');
     document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
     try {
-        const res = await fetch(`http://localhost/php/obtener_info_pj.php?nombre=${personaje}&tipo=info`);
+        const res = await fetch(`../backend/php/obtener_info_pj.php?nombre=${personaje}&tipo=info`);
         const data = await res.json();
         console.log("Datos del personaje:", personaje); // Debug: Ver qué se recibe del backend
 

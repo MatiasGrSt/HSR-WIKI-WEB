@@ -20,9 +20,9 @@ services:
     container_name: hsr_php_web
     restart: always
     ports:
-      - "80:80" # El puerto web estándar
+      - "8080:80" # El 8080 es el exterior (tu PC), el 80 es el interior (el contenedor)
     volumes:
-      - .:/var/www/html # Conecta tu carpeta actual con la carpeta pública del servidor
+      - ../:/var/www/html # Conecta tu carpeta actual con la carpeta pública del servidor
     depends_on:
       - db # Le dice a Docker que no encienda la web hasta que la BD esté lista
 

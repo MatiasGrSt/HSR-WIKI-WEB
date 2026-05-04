@@ -2,7 +2,7 @@
 export async function cargarEidolones(personaje) {
     try {
         // Le mandamos el nombre del personaje al PHP por la URL
-        const res = await fetch(`http://localhost/php/obtener_info_pj.php?personaje=${personaje}&tipo=eidolons`); 
+        const res = await fetch(`../backend/php/obtener_info_pj.php?personaje=${personaje}&tipo=eidolons`); 
         const eidolones = await res.json(); 
         
         const contenedorPrincipal = document.querySelector('.eidolones');
