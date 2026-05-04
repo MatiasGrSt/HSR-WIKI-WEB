@@ -8,45 +8,51 @@
     <link rel="stylesheet" href="../css/personajes.css">
 </head>
 <body>
-    <main>
-        <h2>PERSONAJES</h2> 
-        <div class="superior">
-            <form>
-                <div class="buscador-rarezas">
-                    <input type="text" class="nombre" placeholder="Buscar...">
-                    <div class="rareza">
-                        <input type="checkbox" id="all-rarity" name="all-rarity" value="todos" style="background-image: url(../imagenes/Utilities/Todos.svg); border-color: #ffffff;" checked>
-                        <input type="checkbox" id="five-estrellas" name="cinco-estrellas" value="5 Estrellas" style="background-image: url(../imagenes/Utilities/5.webp); border-color: #d29640;">
-                        <input type="checkbox" id="four-estrellas" name="cuatro-estrellas" value="4 Estrellas" style="background-image: url(../imagenes/Utilities/4.webp); border-color: #a359ff;">
+    <main id="main-scroll">
+        <div id="content-layout">
+            <h2 class="section-title">PERSONAJES</h2> 
+            
+            <section class="panel-filters glass-dark">
+                <form>
+                    <div class="buscador-rarezas">
+                        <input type="text" class="nombre" placeholder="Buscar personaje...">
+                        <div class="rareza">
+                            <input type="checkbox" id="all-rarity" name="all-rarity" value="todos" style="background-image: url(../imagenes/Utilities/Todos.svg); --c: #ffffff;" checked>
+                            <input type="checkbox" id="five-estrellas" name="cinco-estrellas" value="5 Estrellas" style="background-image: url(../imagenes/Utilities/5.webp); --c: #d29640;">
+                            <input type="checkbox" id="four-estrellas" name="cuatro-estrellas" value="4 Estrellas" style="background-image: url(../imagenes/Utilities/4.webp); --c: #a359ff;">
+                        </div>
                     </div>
-                </div>
-                <div class="elemento">
-                    <input type="checkbox" id="all-elements" name="all-elements" value="Todos Elementos" style="background-image: url(../imagenes/Utilities/Todos.svg); border-color: #ffffff;" checked>
-                    <input type="checkbox" id="fisico" name="Físico" value="fisico" style="background-image: url(../imagenes/personajes/Tipos/Físico.webp); border-color: #acabab;">
-                    <input type="checkbox" id="fuego" name="Fuego" value="fuego" style="background-image: url(../imagenes/personajes/Tipos/Fuego.webp); border-color: #f04644;">
-                    <input type="checkbox" id="hielo" name="Hielo" value="hielo" style="background-image: url(../imagenes/personajes/Tipos/Hielo.webp); border-color: #1fb6d1;">
-                    <input type="checkbox" id="rayo" name="Rayo" value="rayo" style="background-image: url(../imagenes/personajes/Tipos/Rayo.webp); border-color: #cc5ce3;">
-                    <input type="checkbox" id="viento" name="Viento" value="viento" style="background-image: url(../imagenes/personajes/Tipos/Viento.webp); border-color: #3bbd86;">
-                    <input type="checkbox" id="cuantico" name="Cuántico" value="cuantico" style="background-image: url(../imagenes/personajes/Tipos/Cuántico.webp); border-color: #8c80ff;">
-                    <input type="checkbox" id="imaginario" name="Imaginario" value="imaginario" style="background-image: url(../imagenes/personajes/Tipos/Imaginario.webp); border-color: #d6c146;">
-                </div>
-                <div class="via">
-                    <input type="checkbox" id="all-paths" name="all-paths" value="Todas Vias" style="background-image: url(../imagenes/Utilities/Todos.svg); border-color: #ffffff;" checked>
-                    <input type="checkbox" id="abundancia" name="Abundancia" value="abundancia" style="background-image: url(../imagenes/personajes/Vias/Abundancia.webp); border-color: rgb(159, 189, 104);">
-                    <input type="checkbox" id="destruccion" name="Destrucción" value="destruccion" style="background-image: url(../imagenes/personajes/Vias/Destruccion.webp); border-color: rgb(185, 137, 48);">
-                    <input type="checkbox" id="erudicion" name="Erudición" value="erudicion" style="background-image: url(../imagenes/personajes/Vias/Erudicion.webp); border-color: rgb(183, 0, 58);">
-                    <input type="checkbox" id="armonia" name="Armonía" value="armonia" style="background-image: url(../imagenes/personajes/Vias/Armonia.webp); border-color: rgb(255, 77, 160);">
-                    <input type="checkbox" id="caceria" name="Cacería" value="caceria" style="background-image: url(../imagenes/personajes/Vias/Caceria.webp); border-color: rgb(88, 124, 221);">
-                    <input type="checkbox" id="nihilidad" name="Nihilidad" value="nihilidad" style="background-image: url(../imagenes/personajes/Vias/Nihilidad.webp); border-color: rgb(72, 34, 168);">
-                    <input type="checkbox" id="conservacion" name="Conservación" value="conservacion" style="background-image: url(../imagenes/personajes/Vias/Conservacion.webp); border-color: rgb(112, 66, 36);">
-                    <input type="checkbox" id="reminiscencia" name="Reminiscencia" value="reminiscencia" style="background-image: url(../imagenes/personajes/Vias/Reminiscencia.webp); border-color: rgb(175, 231, 255);">
-                    <input type="checkbox" id="exultacion" name="Exultación" value="exultacion" style="background-image: url(../imagenes/personajes/Vias/Exultacion.webp); border-color: rgb(255, 54, 54);">
-                </div>
-            </form>
-        </div>
-        <hr>
+                    <div class="elemento">
+                        <input type="checkbox" id="all-elements" name="all-elements" value="Todos Elementos" style="background-image: url(../imagenes/Utilities/Todos.svg); --c: #ffffff;" checked>
+                        <input type="checkbox" id="fisico" name="Físico" value="fisico" style="background-image: url(../imagenes/personajes/Tipos/Físico.webp); --c: #acabab;">
+                        <input type="checkbox" id="fuego" name="Fuego" value="fuego" style="background-image: url(../imagenes/personajes/Tipos/Fuego.webp); --c: #f04644;">
+                        <input type="checkbox" id="hielo" name="Hielo" value="hielo" style="background-image: url(../imagenes/personajes/Tipos/Hielo.webp); --c: #1fb6d1;">
+                        <input type="checkbox" id="rayo" name="Rayo" value="rayo" style="background-image: url(../imagenes/personajes/Tipos/Rayo.webp); --c: #cc5ce3;">
+                        <input type="checkbox" id="viento" name="Viento" value="viento" style="background-image: url(../imagenes/personajes/Tipos/Viento.webp); --c: #3bbd86;">
+                        <input type="checkbox" id="cuantico" name="Cuántico" value="cuantico" style="background-image: url(../imagenes/personajes/Tipos/Cuántico.webp); --c: #8c80ff;">
+                        <input type="checkbox" id="imaginario" name="Imaginario" value="imaginario" style="background-image: url(../imagenes/personajes/Tipos/Imaginario.webp); --c: #d6c146;">
+                    </div>
+                    <div class="via">
+                        <input type="checkbox" id="all-paths" name="all-paths" value="Todas Vias" style="background-image: url(../imagenes/Utilities/Todos.svg); --c: #ffffff;" checked>
+                        <input type="checkbox" id="abundancia" name="Abundancia" value="abundancia" style="background-image: url(../imagenes/personajes/Vias/Abundancia.webp); --c: rgb(159, 189, 104);">
+                        <input type="checkbox" id="destruccion" name="Destrucción" value="destruccion" style="background-image: url(../imagenes/personajes/Vias/Destruccion.webp); --c: rgb(185, 137, 48);">
+                        <input type="checkbox" id="erudicion" name="Erudición" value="erudicion" style="background-image: url(../imagenes/personajes/Vias/Erudicion.webp); --c: rgb(183, 0, 58);">
+                        <input type="checkbox" id="armonia" name="Armonía" value="armonia" style="background-image: url(../imagenes/personajes/Vias/Armonia.webp); --c: rgb(255, 77, 160);">
+                        <input type="checkbox" id="caceria" name="Cacería" value="caceria" style="background-image: url(../imagenes/personajes/Vias/Caceria.webp); --c: rgb(88, 124, 221);">
+                        <input type="checkbox" id="nihilidad" name="Nihilidad" value="nihilidad" style="background-image: url(../imagenes/personajes/Vias/Nihilidad.webp); --c: rgb(72, 34, 168);">
+                        <input type="checkbox" id="conservacion" name="Conservación" value="conservacion" style="background-image: url(../imagenes/personajes/Vias/Conservacion.webp); --c: rgb(112, 66, 36);">
+                        <input type="checkbox" id="reminiscencia" name="Reminiscencia" value="reminiscencia" style="background-image: url(../imagenes/personajes/Vias/Reminiscencia.webp); --c: rgb(175, 231, 255);">
+                        <input type="checkbox" id="exultacion" name="Exultación" value="exultacion" style="background-image: url(../imagenes/personajes/Vias/Exultacion.webp); --c: rgb(255, 54, 54);">
+                    </div>
+                </form>
+            </section>
 
-        <ul class="lista-personajes"></ul>
+            <ul class="lista-personajes"></ul>
+        </div>
+        
+        <footer class="main-footer">
+            <p>&copy; 2026 HSR Wiki | Fan Project</p>
+        </footer>
     </main>
 
     <script type="module" src="../js/buscador.js"></script>
