@@ -132,7 +132,7 @@ async function info() {
 
         const botonesImg = document.querySelectorAll('.botones img');
 
-        botonesImg.forEach(boton => {
+                botonesImg.forEach(boton => {
             boton.addEventListener('click', function() {
                 // 1. Quitamos la clase 'selected' de todos los botones para limpiar
                 botonesImg.forEach(img => img.classList.remove('activo'));
@@ -143,6 +143,15 @@ async function info() {
                 cambiarPestana(this.id);
             });
         });
+
+        // Añadir el listener para el switch Novaflare
+        const novaflareCheckbox = document.getElementById('novaflare-checkbox');
+        if (novaflareCheckbox) {
+            novaflareCheckbox.addEventListener('change', function() {
+                console.log('Switch Novaflare clicado. Estado:', this.checked);
+                // Por ahora, solo logueamos el estado como se solicitó
+            });
+        }
 
         mostrarHabilidadesEspeciales(data.path);
 
