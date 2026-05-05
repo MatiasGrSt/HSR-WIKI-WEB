@@ -260,8 +260,9 @@ nav {
    NOVAFLARE — COMPONENTES GLOBALES (SWITCH Y BADGE)
    ==================================================================== */
 .novaflare-switch-wrapper {
-    display: flex;
+    display: none; /* Se activa via JS con toggleSwitchVisibility */
     align-items: center;
+    justify-content: center;
     gap: 12px;
     z-index: 100;
     background: rgba(0, 0, 0, 0.6);
@@ -270,6 +271,10 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     pointer-events: auto;
+    
+    /* Posicionamiento debajo del element_path_rarity */
+    margin: 10px auto 0 auto;
+    width: fit-content;
 }
 
 .switch-label {
