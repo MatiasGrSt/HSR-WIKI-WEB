@@ -54,13 +54,21 @@ export function renderEventHTML(eventData, finVersionDate) {
                 <p class="time-display time-countdown" data-endtime="${targetIso}" data-label="${timeLabel}">${timeLabel} Calculando...</p>
                 <button class="expand-btn" onclick="toggleEvent(this)">▼</button>
             </div>
-            <div class="event-details" style="padding: 20px; display: none;">
+            <div class="event-details" style="display: none;">
                 <div class="time-info">
-                    <p class="start">Inicio: ${eventData.start_time}</p>
-                    <p class="end">Fin: ${eventData.end_time}</p>
+                    <span class="start">Inicio: ${eventData.start_time}</span>
+                    <span class="separator">|</span>
+                    <span class="end">Fin: ${eventData.end_time}</span>
                 </div>
 
-                <p>${eventData.description || 'No hay detalles adicionales.'}</p>
+                <div class="event-description">
+                    <p>${eventData.description || 'No hay detalles adicionales.'}</p>
+                </div>
+                
+                ${eventData.event_type === 'web' && eventData.web_url ? `
+                <div class="event-action">
+                    <a href="${eventData.web_url}" target="_blank" class="event-web-link">Ir al evento Web</a>
+                </div>` : ''}
             </div>
         </div>
     `;

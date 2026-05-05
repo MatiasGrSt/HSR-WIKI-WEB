@@ -45,7 +45,10 @@ switch ($accion) {
                 $eventos[] = $row;
             }
         }
-        echo json_encode($eventos, JSON_UNESCAPED_UNICODE);
+        echo json_encode([
+            "eventos" => $eventos,
+            "fin_version" => $fin_version
+        ], JSON_UNESCAPED_UNICODE);
         break;
 
     case 'codes':
@@ -58,6 +61,18 @@ switch ($accion) {
             }
         }
         echo json_encode($codigos, JSON_UNESCAPED_UNICODE);
+        break;
+
+    case 'featured_characters':
+        $sql_chars = "SELECT `values` FROM general WHERE name LIKE 'character_%'";
+        $res_chars = $conn->query($sql_chars);
+        $personajes = [];
+        if ($res_chars && $res_chars->num_rows > 0) {
+            while($row = $res_chars->fetch_assoc()) {
+                $personajes[] = $row['values'];
+            }
+        }
+        echo json_encode($personajes, JSON_UNESCAPED_UNICODE);
         break;
 
     case 'version':
