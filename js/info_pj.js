@@ -94,7 +94,7 @@ async function main() {
         await cargarHabilidades(data.name, data.element, isNovaflareChar);
 
         // Cargar traces
-        await cargarMajorTraces(data.name);
+        await cargarMajorTraces(data.name, isNovaflareChar);
         await cargarMinorTraces(data.name, data.element);
 
         // Cargar eidolones

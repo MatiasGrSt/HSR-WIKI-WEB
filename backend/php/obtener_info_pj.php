@@ -70,6 +70,53 @@ switch ($tipo) {
                 WHERE c.name = ?";
         break;
 
+    case 'all':
+        // 1. Obtener la info básica del personaje
+        $stmt = $conn->prepare("SELECT * FROM characters WHERE name = ?");
+        $stmt->bind_param("s", $personaje);
+        $stmt->execute();
+        $resBasic = $stmt->get_result()->fetch_assoc();
+
+        if (!$resBasic) {
+            die(json_encode(["error" => "Personaje no encontrado."]));
+        }
+
+        // 2. Obtener Skills
+        $stmt = $conn->prepare("SELECT * FROM skills WHERE character_id = ?");
+        $stmt->bind_param("s", $personaje);
+        $stmt->execute();
+        $resSkills = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        // 3. Obtener Eidolons
+        $stmt = $conn->prepare("SELECT * FROM eidolons WHERE character_id = ? ORDER BY lvl ASC");
+        $stmt->bind_param("s", $personaje);
+        $stmt->execute();
+        $resEidolons = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        // 4. Obtener Traces (Major)
+        $stmt = $conn->prepare("SELECT * FROM traces WHERE character_id = ?");
+        $stmt->bind_param("s", $personaje);
+        $stmt->execute();
+        $resTraces = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        // 5. Obtener Traces (Minor)
+        $stmt = $conn->prepare("SELECT * FROM traces_mi WHERE character_id = ?");
+        $stmt->bind_param("s", $personaje);
+        $stmt->execute();
+        $resTracesMi = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
+
+        // Construimos el objeto final
+        $finalData = [
+            "info" => $resBasic,
+            "skills" => $resSkills,
+            "eidolons" => $resEidolons,
+            "major_traces" => $resTraces,
+            "minor_traces" => $resTracesMi
+        ];
+
+        echo json_encode($finalData, JSON_UNESCAPED_UNICODE);
+        exit; // Salimos para que no ejecute el código de abajo del switch
+
     // --- NUEVO CASO: BUSCAR LOS NIVELES DE HABILIDAD ---
     case 'skill_levels':
         $sql = "SELECT * FROM skill_levels WHERE skill_id = ?";

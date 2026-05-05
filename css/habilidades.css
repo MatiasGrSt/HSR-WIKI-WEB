@@ -67,7 +67,6 @@
 #hab_cont>div {
     position: absolute;
     z-index: 5;
-    /* Es buena práctica definir el tamaño base (1) explícitamente */
     transform: translate(-50%, -50%) scale(1);
     display: flex;
     justify-content: center;
@@ -77,21 +76,100 @@
     border-radius: 50%;
     pointer-events: auto;
     cursor: pointer;
-
-    /* CORRECCIÓN 1: Usamos 'transition' en lugar de 'animation' */
     transition: all 0.3s ease-in-out;
 }
 
+/* Habilidades: tamaño fijo del círculo */
+#hab_cont>div.skill-item-container {
+    width: 75px;
+    height: 75px;
+    overflow: visible;
+}
+
+/* Wrappers de versión: ocupan todo el contenedor y centran */
+#hab_cont>div.skill-item-container>.skill-version {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover para los nodos de habilidades */
+#hab_cont>div:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Imagen adaptada y centrada dentro del círculo de habilidad */
+#hab_cont>div.skill-item-container>.skill-version>img {
+    width: 95%;
+    height: 95%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Imágenes de traces (hijos directos del div) */
 #hab_cont>div>img {
     width: 70px;
-    /* Ajusta según el tamaño de los círculos de tu imagen */
     aspect-ratio: 1/1;
     filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
-/* Hover para los nodos principales (pasan de 1 a 1.2) */
-#hab_cont>div:hover {
+/* Wrappers de versión: ocupan todo el contenedor y centran */
+#hab_cont>div.skill-item-container>.skill-version {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover para los nodos principales */
+#hab_cont>div.skill-item-container:hover {
     transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Imagen adaptada y centrada dentro del círculo */
+#hab_cont>div.skill-item-container>.skill-version>img {
+    width: 97%;
+    height: 97%;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+}
+
+/* Los wrappers de versión deben ocupar todo el contenedor y centrar */
+#hab_cont>div.skill-item-container>.skill-version {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    border: none;
+    transform: none;
+}
+
+/* Hover para los nodos principales (pasan de 1 a 1.2) */
+#hab_cont>div.skill-item-container:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Imágenes dentro del círculo */
+#hab_cont>div>.skill-version>img {
+    width: 70px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+    pointer-events: none; /* Evita que la imagen capture clicks antes del wrapper */
 }
 
 .popup {
@@ -170,29 +248,53 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* --- TAMAÑOS MAYORES --- */
+/* ====================================================================
+   MAJOR TRACES (Pasivas) — Estructura Dual
+   ==================================================================== */
 #hab_cont .trace_ma {
-    transform: translate(-50%, -50%) scale(1.2);
+    /* Dimensiones fijas para que los hijos absolutos no colapsen el div */
+    width: 80px;
+    height: 80px;
     background-color: #e0e0e0;
     border: 5px solid rgb(196, 213, 255);
+    border-radius: 50%;
     cursor: default;
+    overflow: visible;
+    position: absolute; /* Reafirmamos posicionamiento */
+    z-index: 5;
+    
+    /* Centrado base por si acaso */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-/* CORRECCIÓN 2: Le damos su propio hover para que crezca más (pasa de 1.2 a 1.4) */
+/* Wrappers de versión (apilan uno sobre otro) */
+#hab_cont .trace_ma > .skill-version {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Iconos dentro de traces */
+#hab_cont .trace_ma > .skill-version > img {
+    width: 75px;
+    aspect-ratio: 1/1;
+    filter: brightness(0); /* Iconos blancos por defecto */
+    pointer-events: none;
+}
+/* Hover */
 #hab_cont .trace_ma:hover {
-    transform: translate(-50%, -50%) scale(1.3);
+    transform: translate(-50%, -50%) scale(1.2);
 }
-
-.popup .description {
-    font-size: 12px;
-    text-align: center;
-    margin: 0;
-    padding-top: 5px;
-}
-
-.trace_mi .popup .description {
-    font-size: 14px;
-    font-weight: bolder;
+/* Badge NF para traces (ajuste fino) */
+#hab_cont .trace_ma .skill-novaflare-badge {
+    bottom: -12px;
+    font-size: 0.55rem;
+    padding: 1px 6px;
 }
 
 /* --- TAMAÑOS MENORES --- */
@@ -461,4 +563,38 @@
     box-shadow:
         0 0 16px 5px rgba(255, 204, 0, 0.65),
         0 0 32px 10px rgba(255, 78, 80, 0.3);
+}
+
+/* Badge posicionado sobre el círculo de habilidad */
+.skill-novaflare-badge {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.6rem;
+    padding: 2px 8px;
+    white-space: nowrap;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* ====================================================================
+   SKILL VERSIONS — Apilan normal y NF, toggle por display
+   ==================================================================== */
+
+.skill-version {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-version > img {
+    width: 70px;
+    aspect-ratio: 1/1;
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
