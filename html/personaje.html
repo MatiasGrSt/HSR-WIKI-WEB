@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,28 +8,14 @@
     <link rel="stylesheet" href="../css/general.css">
     <link rel="stylesheet" id="estilo" href="">
 </head>
+
 <body>
     <main>
         <img class="splash_art">
         <div class="general">
             <h1 id="name"></h1>
 
-            <div class="element_path_rarity">
-                <div class="element_path">
-                    <div id="element">
-                        <img id="element_icon">
-                        <p id="element_name" class="element" style="margin-right: 5px;"></p>
-                    </div>
-
-                    <div id="path">
-                        <img id="path_icon" style="margin-left: 5px;">
-                        <p id="path_name" class="path"></p>
-                    </div>
-                </div>
-
-                <div id="rarity"></div>
-
-            </div>
+            <div class="element_path_rarity"></div>
 
             <div class="info">
                 <p id="introduction"></p>
@@ -56,21 +43,23 @@
             </div>
 
             <div class="botones">
-                    <img src="../imagenes/Utilities/Info.webp" id="principal">
-                    <img src="../imagenes/Utilities/Abilities.webp" id="hab">
-                    <img src="../imagenes/Utilities/Eidolons.webp" id="eido">
-                    <img src="../imagenes/Utilities/Guide.webp" id="guide">
-                </div>
+                <img src="../imagenes/Utilities/Info.webp" id="info">
+                <img src="../imagenes/Utilities/Abilities.webp" id="habilidades">
+                <img src="../imagenes/Utilities/Eidolons.webp" id="eidolones">
+                <img src="../imagenes/Utilities/Guide.webp" id="guide">
+            </div>
 
             <div class="habilidades">
+                <div id="novaflare-switch-container"></div>
                 <div id="hab_cont"></div>
             </div>
 
-            <div class="eidolones"></div>
+            <div class="eidolones" id="eidolones-container"></div>
         </div>
     </main>
 
     <script type="module" src="../js/info_pj.js"></script>
     <script src="../js/nav.js"></script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-.splash_art{
+.splash_art {
     filter: blur(20px);
     opacity: 0.5;
 }
@@ -8,18 +8,20 @@
     display: flex !important;
     width: 100%;
     /* Obligamos a que mida 70% de la pantalla o al menos 600px */
-    height: 80vh !important; 
-    min-height: 600px !important; 
+    height: 80vh !important;
+    min-height: 600px !important;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
 }
 
+
+
 /* Estilo base de cada fragmento */
 .shard {
     position: absolute;
     /* Eliminamos cualquier rastro de fondo aquí */
-    background: none !important; 
+    background: none !important;
     transition: transform 0.3s ease;
     display: flex;
     justify-content: center;
@@ -31,13 +33,16 @@
 .shard::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
-    
+
     /* REEMPLAZO IMPORTANTE: Usamos la variable --bg que viene del JS */
-    background-image: var(--bg); 
-    
+    background-image: var(--bg);
+
     filter: brightness(0.7) grayscale(0.5);
     transition: filter 0.3s ease;
     z-index: -1;
@@ -46,7 +51,8 @@
 
 .shard:hover {
     transform: scale(1.05);
-    z-index: 100; /* Asegura que el pop-up esté por encima de todo */
+    z-index: 100;
+    /* Asegura que el pop-up esté por encima de todo */
 }
 
 .shard:hover::before {
@@ -67,10 +73,10 @@
     border-style: solid;
     padding: 15px;
     border-radius: 4px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
     pointer-events: none;
     text-align: left;
-    display: none; 
+    display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
@@ -90,24 +96,76 @@
 
 /* --- ASIGNACIÓN DE CLIP-PATH AL CRISTAL (::before) --- */
 
-.shard-1::before { clip-path: polygon(10% 0, 100% 20%, 80% 90%, 0 70%); }
-.shard-2::before { clip-path: polygon(0 30%, 90% 0, 100% 70%, 20% 100%); }
-.shard-3::before { clip-path: polygon(20% 0, 100% 20%, 80% 100%, 0 80%); }
-.shard-4::before { clip-path: polygon(0 20%, 80% 0, 100% 80%, 20% 100%); }
-.shard-5::before { clip-path: polygon(20% 0, 100% 30%, 80% 100%, 0 70%); }
-.shard-6::before { clip-path: polygon(0 0, 100% 20%, 70% 100%, 10% 80%); }
+.shard-1::before {
+    clip-path: polygon(10% 0, 100% 20%, 80% 90%, 0 70%);
+}
+
+.shard-2::before {
+    clip-path: polygon(0 30%, 90% 0, 100% 70%, 20% 100%);
+}
+
+.shard-3::before {
+    clip-path: polygon(20% 0, 100% 20%, 80% 100%, 0 80%);
+}
+
+.shard-4::before {
+    clip-path: polygon(0 20%, 80% 0, 100% 80%, 20% 100%);
+}
+
+.shard-5::before {
+    clip-path: polygon(20% 0, 100% 30%, 80% 100%, 0 70%);
+}
+
+.shard-6::before {
+    clip-path: polygon(0 0, 100% 20%, 70% 100%, 10% 80%);
+}
 
 /* Posiciones de los contenedores (Igual que antes) */
-.shard-1 { width: 300px; height: 300px; top: calc(15% - 150px); left: calc(32% - 150px); }
-.shard-2 { width: 300px; height: 300px; top: calc(30% - 150px); left: calc(50% - 150px); }
-.shard-3 { width: 300px; height: 300px; top: calc(30% - 150px); left: calc(65% - 150px); }
-.shard-4 { width: 300px; height: 300px; top: calc(70% - 150px); left: calc(62% - 150px); }
-.shard-5 { width: 300px; height: 300px; top: calc(75% - 150px); left: calc(43% - 150px); }
-.shard-6 { width: 300px; height: 300px; top: calc(53% - 150px); left: calc(30% - 150px); }
+.shard-1 {
+    width: 300px;
+    height: 300px;
+    top: calc(15% - 150px);
+    left: calc(32% - 150px);
+}
+
+.shard-2 {
+    width: 300px;
+    height: 300px;
+    top: calc(30% - 150px);
+    left: calc(50% - 150px);
+}
+
+.shard-3 {
+    width: 300px;
+    height: 300px;
+    top: calc(30% - 150px);
+    left: calc(65% - 150px);
+}
+
+.shard-4 {
+    width: 300px;
+    height: 300px;
+    top: calc(70% - 150px);
+    left: calc(62% - 150px);
+}
+
+.shard-5 {
+    width: 300px;
+    height: 300px;
+    top: calc(75% - 150px);
+    left: calc(43% - 150px);
+}
+
+.shard-6 {
+    width: 300px;
+    height: 300px;
+    top: calc(53% - 150px);
+    left: calc(30% - 150px);
+}
 
 /* Círculo indicador del número (Niv 1-6) */
 .shard-number {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     border: 1px solid #fff;
     border-color: var(--color-rareza, #f29e38);
     border-radius: 50%;
@@ -118,4 +176,79 @@
     align-items: center;
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+/* ====================================================================
+   NOVAFLARE — SWITCH + AURA DORADA EN EIDOLONES
+   ==================================================================== */
+
+/* Switch posicionado arriba de la sección */
+.novaflare-switch-eido {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    pointer-events: auto;
+}
+
+/* Aura dorada pulsante para shards con Novaflare activo */
+.shard.novaflare-active::before {
+    filter: brightness(1.1) grayscale(0) !important;
+    box-shadow:
+        0 0 14px 4px rgba(255, 204, 0, 0.5),
+        0 0 28px 8px rgba(255, 78, 80, 0.25);
+    animation: novaflare-eido-pulse 2.2s ease-in-out infinite;
+}
+
+.shard.novaflare-active .shard-number {
+    border-color: #ffcc00 !important;
+    box-shadow:
+        0 0 8px 2px rgba(255, 204, 0, 0.5),
+        0 0 16px 4px rgba(255, 78, 80, 0.2);
+}
+
+.shard.novaflare-active:hover::before {
+    box-shadow:
+        0 0 20px 6px rgba(255, 204, 0, 0.7),
+        0 0 38px 12px rgba(255, 78, 80, 0.35);
+}
+
+@keyframes novaflare-eido-pulse {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 14px 4px rgba(255, 204, 0, 0.5),
+            0 0 28px 8px rgba(255, 78, 80, 0.25);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px 6px rgba(255, 204, 0, 0.7),
+            0 0 38px 12px rgba(255, 78, 80, 0.35);
+    }
+}
+
+/* Badge "Novaflare" debajo del número del shard */
+.eido-novaflare-badge {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.55rem;
+    padding: 1px 6px;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Tag "Novaflare" dentro del popup */
+.eido-novaflare-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    padding: 2px 8px;
+    margin-left: 8px;
+    vertical-align: middle;
 }

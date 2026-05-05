@@ -1,5 +1,5 @@
 import { ordenarLista } from './ordenar.js';
-import {colores} from './colores.js';
+import { colores } from './colores.js';
 
 export async function lista(filtros = {}) {
     try {
@@ -9,27 +9,31 @@ export async function lista(filtros = {}) {
 
         const response = await fetch('../backend/php/home.php?accion=version');
         const general = await response.json();
-        const version = general.version;
-        
+        const vActual = parseFloat(general.version);
+
         const contenedor = document.querySelector('.lista-personajes');
         if (!contenedor) return;
 
-        contenedor.innerHTML = ""; 
+        contenedor.innerHTML = "";
 
         data.forEach(p => {
             // Convertimos a números para evitar errores de comparación
-            const vPersonaje = parseFloat(p.version); 
-            const vActual = parseFloat(version);
+            const vPersonaje = parseFloat(p.version);
             const esNovaflare = Number(p.novaflare) === 1;
             const rareza = Number(p.rarity)
+
+            const colorRareza = colores.rarezas[rareza];
+            const colorElemento = colores.elementos[p.element];
+            const colorVia = colores.vias[p.path];
+
+            document.documentElement.style.setProperty('--color-rareza', colorRareza);
+            document.documentElement.style.setProperty('--color-via', colorVia);
+            document.documentElement.style.setProperty('--color-elemento', colorElemento);
 
             const estrellasHTML = Array(rareza).fill(`<img src="../imagenes/Utilities/${rareza}.webp" class="star-icon">`).join('');
 
             const li = document.createElement("li");
             li.id = p.name;
-
-            const colorRareza = colores.rarezas[p.rarity];
-            li.style.setProperty('--color-rareza', colorRareza);
 
             // Estructura base
             li.innerHTML = ` 
@@ -52,10 +56,10 @@ export async function lista(filtros = {}) {
             // 1. Lógica de Versiones (Corregida con parseFloat)
             if (vPersonaje === vActual) {
                 li.innerHTML += `<p class='version' id='nuevo'>NEW!</p>`;
-            } 
+            }
             else if (vPersonaje > vActual && vPersonaje < (vActual + 0.31)) { // +0.31 para evitar errores de coma flotante
                 li.innerHTML += `<p class='version'>${p.version}</p>`;
-            } 
+            }
             else if (vPersonaje >= (vActual + 0.31)) {
                 li.style.display = 'none';
             }
@@ -69,7 +73,7 @@ export async function lista(filtros = {}) {
         });
 
         // Ordenamos la lista después de que se haya llenado
-        ordenarLista(); 
+        ordenarLista();
 
     } catch (error) {
         console.error("Error al cargar desde la BD:", error);

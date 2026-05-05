@@ -1,172 +1,122 @@
-import {colores} from './colores.js';
-import {cargarEidolones} from './eidolones.js';
-import {cargarHabilidades,cargarMinorTraces,cargarMajorTraces} from './habilidades.js';
+import { colores } from './colores.js';
+import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
+import { cargarHabilidades, cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
 
 function cambiarPestana(idBoton) {
-    // 1. Lista de todas las secciones que quieres controlar
     const secciones = {
-        'principal': document.querySelector('.info'),
-        'hab': document.querySelector('.habilidades'),
-        'eido': document.querySelector('.eidolones')
+        'info': document.querySelector('.info'),
+        'habilidades': document.querySelector('.habilidades'),
+        'eidolones': document.getElementById('eidolones-container'),
+        'guide': document.querySelector('.guide')
     };
 
-    // 2. Iteramos por el diccionario para ocultar todo primero
     Object.values(secciones).forEach(seccion => {
-        if (seccion) {
-            seccion.style.display = 'none'; 
-        }
+        if (seccion) seccion.style.display = 'none';
     });
 
-    // 3. Mostramos solo la sección que coincide con el ID del botón
     const seccionActiva = secciones[idBoton];
     if (seccionActiva) {
-        
-        // --- CAMBIO AQUÍ ---
-        // Si es la pestaña de habilidades, usamos flex. Si no, block.
-        if (idBoton === 'hab') {
-            seccionActiva.style.display = 'flex';
-        } else {
-            seccionActiva.style.display = 'flex';
-        }
-        // -------------------
-
+        seccionActiva.style.display = 'flex';
         const styleSheet = document.getElementById('estilo');
-
-        if (idBoton === 'hab') {
-            styleSheet.href = `../css/habilidades.css`;
-        } else if (idBoton === 'eido') {
-            styleSheet.href = `../css/eidolones.css`;
-        } else {
-            styleSheet.href = `../css/info.css`;
-        }
-        
-        // Añadimos una pequeña animación de entrada
-        seccionActiva.style.animation = 'none'; // Reseteamos la animación
-        seccionActiva.offsetHeight; // Forzamos reflow para que reinicie
+        styleSheet.href = `../css/${idBoton}.css`;
+        seccionActiva.style.animation = 'none';
+        seccionActiva.offsetHeight;
         seccionActiva.style.animation = 'fadeInRight 0.5s ease-out';
     }
 }
 
-function mostrarHabilidadesEspeciales(path) {
-    // 1. Seleccionamos las listas de elementos
-    const elementosRem = document.querySelectorAll('.rem');
-    const elementosElat = document.querySelectorAll('.elat_hab');
+function cargarInfo(data) {
+    const via = data.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    const rareza = Number(data.rarity);
 
-    // 2. Ocultamos todos primero usando un bucle forEach
-    elementosRem.forEach(el => el.style.visibility = 'hidden');
-    elementosElat.forEach(el => el.style.visibility = 'hidden');
+    document.getElementById('name').innerText = data.name;
 
-    // 3. Convertimos a string y comparamos (ojo con las tildes)
-    const pathString = path ? path.toString() : "";
+    const estrellasHTML = Array(rareza).fill(`<img src="../imagenes/Utilities/${rareza}.webp" class="star-icon">`).join('');
+    const div_element_path_rarity = document.querySelector('.element_path_rarity');
 
-    if (pathString === 'Reminiscencia') {
-        elementosRem.forEach(el => el.style.visibility = 'visible');
-    } else if (pathString === 'Exultación') {
-        elementosElat.forEach(el => el.style.visibility = 'visible');
-    }
+    div_element_path_rarity.innerHTML = `
+        <div class="element_path">
+            <div id="element">
+                <img id="element_icon" src = '../imagenes/personajes/Tipos/${data.element}.webp'>
+                <p id="element_name" class="element" style="margin-right: 5px;">${data.element.toUpperCase()}</p>
+            </div>
+            <div id="path">
+                <img id="path_icon" src = '../imagenes/personajes/Vias/${via}.webp' style="margin-left: 5px;">
+                <p id="path_name" class="path">${data.path.toUpperCase()}</p>
+            </div>
+        </div>
+        <div id="rarity">${estrellasHTML}</div>
+    `;
+
+    document.getElementById('introduction').innerHTML = data.description;
+    document.getElementById('eng').innerHTML = data.eng_va || '-';
+    document.getElementById('jpn').innerHTML = data.jpn_va || '-';
+    document.getElementById('chn').innerHTML = data.cn_va || '-';
+    document.getElementById('kor').innerHTML = data.kr_va || '-';
+
+    const botonesImg = document.querySelectorAll('.botones img');
+    botonesImg.forEach(boton => {
+        boton.addEventListener('click', function () {
+            botonesImg.forEach(img => img.classList.remove('activo'));
+            this.classList.add('activo');
+            cambiarPestana(this.id);
+        });
+    });
 }
 
-async function info() {
-    cambiarPestana('principal');
-    document.getElementById('principal').classList.add('activo');
+// Variable global para el switch
+let globalSwitch = null;
+
+async function main() {
+    cambiarPestana('info');
+    document.getElementById('info').classList.add('activo');
+
     const urlParams = new URLSearchParams(window.location.search);
     const personaje = urlParams.get('personaje');
     document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
+
     try {
         const res = await fetch(`../backend/php/obtener_info_pj.php?nombre=${personaje}&tipo=info`);
         const data = await res.json();
-        console.log("Datos del personaje:", personaje); // Debug: Ver qué se recibe del backend
-
-        const via = data.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-        const rareza = Number(data.rarity);
-
-        const colorRareza = colores.rarezas[data.rarity];
-        const colorElemento = colores.elementos[data.element];
-        const colorVia = colores.vias[data.path];
-
-        document.documentElement.style.setProperty('--color-rareza', colorRareza);
-        document.documentElement.style.setProperty('--color-via', colorVia);
-        document.documentElement.style.setProperty('--color-elemento', colorElemento);
 
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = `../css/Vias/${via}.css`;
+        link.href = `../css/Vias/${data.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}.css`;
         document.head.appendChild(link);
 
         document.querySelector('.splash_art').src = `../imagenes/personajes/${data.name}/Splash_Art.webp`;
+        cargarInfo(data);
 
-        const nombre_cont = document.getElementById('name')
-        nombre_cont.innerText = data.name;
+        const isNovaflareChar = Number(data.novaflare) === 1;
 
-        document.getElementById('element_icon').src = `../imagenes/personajes/Tipos/${data.element}.webp`
-        document.getElementById('element_name').innerText = data.element.toUpperCase();
-        document.getElementById('path_icon').src = `../imagenes/personajes/Vias/${via}.webp`
-        document.getElementById('path_name').innerText = data.path.toUpperCase();
+        // Cargar habilidades (que crearán el switch si es necesario)
+        await cargarHabilidades(data.name, data.element, isNovaflareChar);
 
-        const rareza_cont = document.getElementById('rarity');
-        rareza_cont.innerHTML = ''; 
-        for (let i = 0; i < rareza; i++) {
-            const img = document.createElement("img");
-            img.src = `../imagenes/Utilities/${rareza}.webp`;
-            
-            // Aplicamos lógica especial solo si la rareza es 5
-            if (rareza === 5) {
-                if (i === 1 || i === 3) { 
-                    // 2ª y 4ª estrella
-                    img.style.width = "30px";
-                } else if (i === 2) { 
-                    // 3ª estrella
-                    img.style.width = "25px";
+        // Cargar traces
+        await cargarMajorTraces(data.name);
+        await cargarMinorTraces(data.name, data.element);
+
+        // Cargar eidolones
+        await cargarEidolones(data.name, isNovaflareChar);
+
+        // Si hay Novaflare, agregar listener al switch para actualizar eidolones
+        if (isNovaflareChar) {
+            const switchContainer = document.getElementById('novaflare-switch-container');
+            if (switchContainer) {
+                const checkbox = switchContainer.querySelector('input[type="checkbox"]');
+                if (checkbox) {
+                    checkbox.addEventListener('change', () => {
+                        const mode = checkbox.checked ? 'novaflare' : 'normal';
+                        updateEidolonesMode(mode);
+                    });
                 }
-            } else {
             }
-
-            rareza_cont.appendChild(img);
         }
-        document.getElementById('introduction').innerHTML = data.description;
-        document.getElementById('eng').innerHTML = data.eng_va || '-';
-        document.getElementById('jpn').innerHTML = data.jpn_va || '-';
-        document.getElementById('chn').innerHTML = data.cn_va || '-';
-        document.getElementById('kor').innerHTML = data.kr_va || '-';
-
-        const botonesImg = document.querySelectorAll('.botones img');
-
-                botonesImg.forEach(boton => {
-            boton.addEventListener('click', function() {
-                // 1. Quitamos la clase 'selected' de todos los botones para limpiar
-                botonesImg.forEach(img => img.classList.remove('activo'));
-                
-                // 2. Añadimos la clase 'selected' solo al que hemos clicado
-                this.classList.add('activo');
-                
-                cambiarPestana(this.id);
-            });
-        });
-
-        // Añadir el listener para el switch Novaflare
-        const novaflareCheckbox = document.getElementById('novaflare-checkbox');
-        if (novaflareCheckbox) {
-            novaflareCheckbox.addEventListener('change', function() {
-                console.log('Switch Novaflare clicado. Estado:', this.checked);
-                // Por ahora, solo logueamos el estado como se solicitó
-            });
-        }
-
-        mostrarHabilidadesEspeciales(data.path);
-
-        cargarHabilidades(data.name, data.element);
-        cargarMajorTraces(data.name);
-        cargarMinorTraces(data.name, data.element);
-
-        cargarEidolones(data.name);
-        
-
-
 
     } catch (error) {
-        console.error("Error al cargar desde la BD:", error);
+        console.error("Error:", error);
     }
-};
+}
 
-document.addEventListener('DOMContentLoaded', () => info());
+document.addEventListener('DOMContentLoaded', () => main());
