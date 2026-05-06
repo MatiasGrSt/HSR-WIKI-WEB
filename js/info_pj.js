@@ -41,7 +41,7 @@ function cargarInfo(data) {
                 <p id="element_name" class="element" style="margin-right: 5px;">${data.element.toUpperCase()}</p>
             </div>
             <div id="path">
-                <img id="path_icon" src = '../imagenes/personajes/Vias/${via}.webp' style="margin-left: 5px;">
+                <img id="path_icon" src = '../imagenes/personajes/Vias/${data.path}.webp' style="margin-left: 5px;">
                 <p id="path_name" class="path">${data.path.toUpperCase()}</p>
             </div>
         </div>
