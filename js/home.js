@@ -12,7 +12,7 @@ let finVersionDate = null;
 
 async function loadEvents() {
     try {
-        const res = await fetch('../backend/php/home.php?accion=eventos');
+        const res = await fetch('../php/php/home.php?accion=eventos');
         const data = await res.json();
 
         finVersionDate = data.fin_version;
@@ -27,7 +27,7 @@ async function loadEvents() {
 
 async function loadCodes() {
     try {
-        const res = await fetch('../backend/php/home.php?accion=codes');
+        const res = await fetch('../php/php/home.php?accion=codes');
         const codigos = await res.json();
 
         if (!codesList) return;
@@ -49,7 +49,7 @@ async function loadCodes() {
 
 async function loadFeaturedCharacters() {
     try {
-        const res = await fetch('../backend/php/home.php?accion=featured_characters');
+        const res = await fetch('../php/php/home.php?accion=featured_characters');
         const personajes = await res.json();
 
         if (!charactersList) return;

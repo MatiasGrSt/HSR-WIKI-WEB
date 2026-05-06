@@ -7,7 +7,7 @@ export async function cargarEidolones(personaje, isNovaflareChar = false) {
     currentCharName = personaje;
 
     try {
-        const res = await fetch(`../backend/php/obtener_info_pj.php?personaje=${personaje}&tipo=eidolons`);
+        const res = await fetch(`../php/php/obtener_info_pj.php?personaje=${personaje}&tipo=eidolons`);
         allEidolones = await res.json();
 
         if (!allEidolones || allEidolones.length === 0) {
