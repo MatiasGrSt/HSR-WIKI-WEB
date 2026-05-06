@@ -67,7 +67,7 @@ export async function cargarHabilidades(name, element, isNovaflareChar = false) 
     currentMode = 'normal';
 
     try {
-        const res = await fetch(`../php/php/obtener_info_pj.php?personaje=${name}&tipo=skills`);
+        const res = await fetch(`../php/obtener_info_pj.php?personaje=${name}&tipo=skills`);
         const data = await res.json();
         const allSkills = Array.isArray(data) ? data : [data];
 
@@ -136,7 +136,7 @@ function pairMajorTracesByName(traces) {
 async function renderMajorTraces(char, isNovaflareChar) {
     const container = document.getElementById('hab_cont');
     try {
-        const res = await fetch(`../php/php/obtener_info_pj.php?personaje=${char}&tipo=major_traces`);
+        const res = await fetch(`../php/obtener_info_pj.php?personaje=${char}&tipo=major_traces`);
         const data = await res.json();
         if (!Array.isArray(data) || data.length === 0) return;
 
@@ -319,7 +319,7 @@ function toggleSkillVisibility(mode) {
 async function renderTraces(char, tipo, className, imgPrefix, element = null) {
     const container = document.getElementById('hab_cont');
     try {
-        const res = await fetch(`../php/php/obtener_info_pj.php?personaje=${char}&tipo=${tipo}`);
+        const res = await fetch(`../php/obtener_info_pj.php?personaje=${char}&tipo=${tipo}`);
         const data = await res.json();
         data.forEach((t, i) => {
             const item = document.createElement('div');
@@ -424,7 +424,7 @@ async function updateModalContent() {
 
     modalLevels = {};
     try {
-        const res = await fetch(`../php/php/obtener_info_pj.php?skill_id=${skill.id}&tipo=skill_levels`);
+        const res = await fetch(`../php/obtener_info_pj.php?skill_id=${skill.id}&tipo=skill_levels`);
         if (res.ok) {
             const data = await res.json();
             (Array.isArray(data) ? data : [data]).forEach(n => { if (n?.params) modalLevels[n.indice] = JSON.parse(n.params); });
