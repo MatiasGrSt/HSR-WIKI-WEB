@@ -6,7 +6,7 @@ header('Access-Control-Allow-Origin: *');
 $db_pass = getenv('DB_PASSWORD') ?: "tu_contraseña_local"; 
 
 // Hacemos la conexión usando esa variable
-$conn = new mysqli("srv-captain--wiki-db", "root", $db_pass, "hsr_wiki");
+$conn = new mysqli("srv-captain--wiki-db-db", "root", $db_pass, "hsr_wiki");
 
 if ($conn->connect_error) {
     die(json_encode(["error" => "Conexión fallida: " . $conn->connect_error]));

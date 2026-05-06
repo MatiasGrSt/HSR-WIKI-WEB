@@ -28,7 +28,7 @@ if (empty($tipo)) {
 $db_pass = getenv('DB_PASSWORD') ?: "tu_contraseña_local"; 
 
 // Hacemos la conexión usando esa variable
-$conn = new mysqli("srv-captain--wiki-db", "root", $db_pass, "hsr_wiki");
+$conn = new mysqli("srv-captain--wiki-db-db", "root", $db_pass, "hsr_wiki");
 $conn->set_charset("utf8mb4");
 
 if ($conn->connect_error) {

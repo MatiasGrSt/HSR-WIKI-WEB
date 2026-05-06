@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3. Obtener el nombre del archivo actual para saber en qué página estamos
     let archivoActual = pathArray[pathArray.length - 1];
-    if (archivoActual === '') archivoActual = 'home.html'; // Por defecto si carga la raíz
+    if (archivoActual === '') archivoActual = 'index.html'; // Por defecto si carga la raíz
 
     // Función auxiliar para añadir una clase 'activo' al enlace correspondiente
     const esActivo = (nombre) => archivoActual === nombre ? 'class="activo"' : '';
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const navegador = document.createElement('nav');
     navegador.innerHTML = `
         <div class='nav-header'>
-            <a href="${rutaRaiz}home.html">
+            <a href="${rutaRaiz}index.html">
                 <img src="${rutaRaiz}imagenes/Utilities/Logo.webp" class="logo" alt="Logo">
             </a>
             <img src="${rutaRaiz}imagenes/Utilities/Profile_Card_Default.webp" class="fondo-logo" alt="Profile">
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const ul = document.createElement('ul');
     ul.id = 'fondo';
     ul.innerHTML = `
-        <li><a href="${rutaRaiz}home.html" ${esActivo('home.html')}>Home</a></li>
+        <li><a href="${rutaRaiz}index.html" ${esActivo('index.html')}>Home</a></li>
         <li><a href="${rutaHtml}personajes.html" ${esActivo('personajes.html')}>Personajes</a></li>
         <li><a href="${rutaHtml}tier-list.html" ${esActivo('tier-list.html')}>Tier List</a></li>
         <li><a href="${rutaHtml}light_cones.html" ${esActivo('light_cones.html')}>Conos de Luz</a></li>
@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
         
         <hr class="bottom-divider"> 
         
-        <li><a href="${rutaRaiz}home.html#opiniones">Opiniones</a></li>
-        <li><a href="${rutaRaiz}home.html#creditos">Créditos</a></li>
+        <li><a href="${rutaRaiz}index.html#opiniones">Opiniones</a></li>
+        <li><a href="${rutaRaiz}index.html#creditos">Créditos</a></li>
     `;
     const urlParams = new URLSearchParams(window.location.search);
     const personaje = urlParams.get('personaje');
