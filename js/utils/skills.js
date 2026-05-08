@@ -1,3 +1,5 @@
+import { openSkillModal } from "./modal.js";
+
 export function organizarHabilidades(habilidades) {
     const normal = habilidades.filter(h => h.enhanced === null);
     const novaflare = habilidades.filter(h => h.enhanced === 1);
@@ -13,6 +15,27 @@ export function juntarHabilidades(lista) {
         grupos[habilidad.type].push(habilidad);
     });
     return grupos;
+}
+
+function activarClicsModal(groups, charName) {
+    const triggers = document.querySelectorAll('.skill-trigger');
+
+    triggers.forEach(img => {
+        img.addEventListener('click', (evento) => {
+            evento.stopPropagation(); // Evita que el clic dispare cosas del fondo
+
+            // Leemos los atributos que pusimos en el HTML
+            const tipo = img.dataset.tipo; 
+            const isNovaflare = img.dataset.isnf === "true"; 
+
+            // Decidimos qué datos pasarle al modal
+            const skillsArray = isNovaflare ? groups.novaflare[tipo] : groups.normal[tipo];
+            const modeString = isNovaflare ? 'novaflare' : 'normal';
+            
+            // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
+            openSkillModal(tipo, skillsArray, modeString, charName); 
+        });
+    });
 }
 
 export function crearIconosHabilidades(habilidades, charName) {
@@ -84,4 +107,6 @@ export function crearIconosHabilidades(habilidades, charName) {
         htmlFinal += `</div>`; // Cerramos el contenedor principal
     }
     document.getElementById('hab_cont').insertAdjacentHTML('beforeend', htmlFinal);
+
+    activarClicsModal(habilidades, charName);
 }
