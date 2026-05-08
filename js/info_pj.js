@@ -76,8 +76,10 @@ async function main() {
     document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
 
     try {
-        const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}&tipo=info`);
+        const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}`);
         const data = await res.json();
+
+        console.log("Datos del personaje:", data);
 
         const link = document.createElement('link');
         link.rel = 'stylesheet';
