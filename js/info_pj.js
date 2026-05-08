@@ -2,6 +2,18 @@ import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 import { cargarHabilidades, cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
 
+const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}`);
+const data = await res.json();
+
+const info = data.info;
+const habilidades = data.skills;
+const traces_ma = data.traces;
+const eidolones = data.eidolons;
+const tracen_mi = data.traces_mi;
+
+const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const rareza = Number(info.rarity);
+
 function cambiarPestana(idBoton) {
     const secciones = {
         'info': document.querySelector('.info'),
@@ -25,11 +37,8 @@ function cambiarPestana(idBoton) {
     }
 }
 
-function cargarInfo(data) {
-    const via = data.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    const rareza = Number(data.rarity);
-
-    document.getElementById('name').innerText = data.name;
+function cargarInfo() {
+    document.getElementById('name').innerText = info.name;
 
     const estrellasHTML = Array(rareza).fill(`<img src="../imagenes/Utilities/${rareza}.webp" class="star-icon">`).join('');
     const div_element_path_rarity = document.querySelector('.element_path_rarity');
@@ -37,22 +46,22 @@ function cargarInfo(data) {
     div_element_path_rarity.innerHTML = `
         <div class="element_path">
             <div id="element">
-                <img id="element_icon" src = '../imagenes/personajes/Tipos/${data.element}.webp'>
-                <p id="element_name" class="element" style="margin-right: 5px;">${data.element.toUpperCase()}</p>
+                <img id="element_icon" src = '../imagenes/personajes/Tipos/${info.element}.webp'>
+                <p id="element_name" class="element" style="margin-right: 5px;">${info.element.toUpperCase()}</p>
             </div>
             <div id="path">
-                <img id="path_icon" src = '../imagenes/personajes/Vias/${data.path}.webp' style="margin-left: 5px;">
-                <p id="path_name" class="path">${data.path.toUpperCase()}</p>
+                <img id="path_icon" src = '../imagenes/personajes/Vias/${info.path}.webp' style="margin-left: 5px;">
+                <p id="path_name" class="path">${info.path.toUpperCase()}</p>
             </div>
         </div>
         <div id="rarity">${estrellasHTML}</div>
     `;
 
-    document.getElementById('introduction').innerHTML = data.description;
-    document.getElementById('eng').innerHTML = data.eng_va || '-';
-    document.getElementById('jpn').innerHTML = data.jpn_va || '-';
-    document.getElementById('chn').innerHTML = data.cn_va || '-';
-    document.getElementById('kor').innerHTML = data.kr_va || '-';
+    document.getElementById('introduction').innerHTML = info.description;
+    document.getElementById('eng').innerHTML = info.eng_va || '-';
+    document.getElementById('jpn').innerHTML = info.jpn_va || '-';
+    document.getElementById('chn').innerHTML = info.cn_va || '-';
+    document.getElementById('kor').innerHTML = info.kr_va || '-';
 
     const botonesImg = document.querySelectorAll('.botones img');
     botonesImg.forEach(boton => {
@@ -76,31 +85,27 @@ async function main() {
     document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
 
     try {
-        const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}`);
-        const data = await res.json();
-
-        console.log("Datos del personaje:", data.eidolons);
 
         const link = document.createElement('link');
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = `../css/Vias/${data.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}.css`;
+        link.href = `../css/Vias/${via}.css`;
         document.head.appendChild(link);
 
-        document.querySelector('.splash_art').src = `../imagenes/personajes/${data.name}/Splash_Art.webp`;
-        cargarInfo(data);
+        document.querySelector('.splash_art').src = `../imagenes/personajes/${info.name}/Splash_Art.webp`;
+        cargarInfo();
 
-        const isNovaflareChar = Number(data.novaflare) === 1;
+        const isNovaflareChar = Number(info.novaflare) === 1;
 
         // Cargar habilidades (que crearán el switch si es necesario)
-        await cargarHabilidades(data.name, data.element, isNovaflareChar);
+        await cargarHabilidades(info.name, info.element, isNovaflareChar);
 
         // Cargar traces
-        await cargarMajorTraces(data.name, isNovaflareChar);
-        await cargarMinorTraces(data.name, data.element);
+        await cargarMajorTraces(info.name, isNovaflareChar);
+        await cargarMinorTraces(info.name, info.element);
 
         // Cargar eidolones
-        await cargarEidolones(data.name, isNovaflareChar);
+        await cargarEidolones(info.name, isNovaflareChar);
 
         // Si hay Novaflare, agregar listener al switch para actualizar eidolones
         if (isNovaflareChar) {
