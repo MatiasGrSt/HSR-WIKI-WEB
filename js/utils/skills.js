@@ -63,15 +63,12 @@ export function crearIconosHabilidades(habilidades, charName) {
                 const imgName = index === 0 ? tipoLimpio : `${tipoLimpio}_${index + 1}`;
                 // AQUÍ ESTÁ LA MAGIA: Guardamos los parámetros en atributos "data-"
                 return `<img src="../imagenes/personajes/${charName}/${imgName}.webp" 
-                             class="skill-trigger" 
-                             data-tipo="${tipo}" 
-                             data-isnf="false"
                              onerror="this.src='../imagenes/personajes/${charName}/${tipoLimpio}.webp'">`;
             }).join('');
 
             htmlFinal += `
                 <div class="skill-version skill-normal-version skill-trigger" data-tipo="${tipo}" data-isnf="false">
-                    <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="false">
+                    <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp">
                     <div class="popup skill-popup">
                         <h3 class="type">${tipo}</h3>
                         <div class="icons">${miniIconosNormal}</div>
@@ -87,14 +84,11 @@ export function crearIconosHabilidades(habilidades, charName) {
             const miniIconosNf = skillsNovaflare.map((skill, index) => {
                 const imgName = index === 0 ? tipoLimpio : `${tipoLimpio}_${index + 1}`;
                 return `<img src="../imagenes/personajes/${charName}/${imgName}.webp" 
-                             class="skill-trigger" 
-                             data-tipo="${tipo}" 
-                             data-isnf="true"
                              onerror="this.src='../imagenes/personajes/${charName}/${tipoLimpio}.webp'">`;
             }).join('');
 
             htmlFinal += `
-                <div class="skill-version skill-nf-version" style="display: none;" skill-trigger data-tipo="${tipo}" data-isnf="true">
+                <div class="skill-version skill-nf-version skill-trigger" style="display: none;" data-tipo="${tipo}" data-isnf="true">
                     <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="true">
                     <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
                     <div class="popup skill-popup">
