@@ -15,7 +15,7 @@ function juntarHabilidades(lista) {
     return grupos;
 }
 
-export function habilidades(habilidades){
+export function main_habilidades(habilidades){
     const { normal, novaflare } = organizarHabilidades(habilidades);
     
     const gruposNormal = juntarHabilidades(normal);

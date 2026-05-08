@@ -1,7 +1,7 @@
 import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 import { cargarHabilidades, cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
-import {habilidades} from './a.js';
+import {main_habilidades} from './a.js';
 
 const urlParams = new URLSearchParams(window.location.search);
 const personaje = urlParams.get('personaje');
@@ -95,7 +95,7 @@ async function main() {
 
         document.querySelector('.splash_art').src = `../imagenes/personajes/${info.name}/Splash_Art.webp`;
         cargarInfo();
-        habilidades(habilidades);
+        main_habilidades(habilidades);
 
         const isNovaflareChar = Number(info.novaflare) === 1;
 
