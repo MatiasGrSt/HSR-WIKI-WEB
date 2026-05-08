@@ -2,93 +2,91 @@
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 
-// Pedimos la contraseña al servidor. Si el servidor no nos la da (porque estamos en local), usamos una de prueba.
-$db_pass = getenv('DB_PASSWORD') ?: "tu_contraseña_local"; 
+$token = "GOTW0iUyBua4MUf8g8ojTKr2fQGZnxLq";
+$base_url = "https://panel.astralwiki.com/items/";
 
-// Hacemos la conexión usando esa variable
-$conn = new mysqli("srv-captain--wiki-db-db", "root", $db_pass, "hsr_wiki");
-
-if ($conn->connect_error) {
-    die(json_encode(["error" => "Conexión fallida: " . $conn->connect_error]));
+// Función para llamar a Directus
+function fetchDirectus($url_final) {
+    global $token;
+    $opciones = [
+        "http" => [
+            "header" => "Authorization: Bearer " . $token . "\r\n"
+        ]
+    ];
+    $res = @file_get_contents($url_final, false, stream_context_create($opciones));
+    return $res ? json_decode($res, true)['data'] : [];
 }
 
-// QUITAMOS el (int) para que acepte palabras como 'version'
-$accion = isset($_GET['accion']) ? $_GET['accion'] : 'eventos';
-
-// Buscamos el fin_version usando 'title' (según tu imagen)
-$sql_config = "SELECT end_time FROM events WHERE title = 'fin_version' LIMIT 1";
-$res_config = $conn->query($sql_config);
-if ($res_config && $res_config->num_rows > 0) {
-    $row_config = $res_config->fetch_assoc();
-    $fin_version = $row_config['end_time']; 
-}
+$accion = $_GET['accion'] ?? 'eventos';
 
 switch ($accion) {
     
     case 'eventos':
-        // Cambiamos a 'start_time' y 'title' según tu imagen
-        $sql = "SELECT *, 
-                CASE 
-                    WHEN NOW() BETWEEN start_time AND end_time THEN 'activo'
-                    WHEN NOW() < start_time AND start_time <= '$fin_version' THEN 'proximamente'
-                    WHEN NOW() < start_time AND start_time > '$fin_version' THEN 'anunciado'
-                END AS status 
-                FROM events 
-                WHERE title != 'fin_version'
-                ORDER BY status = 'activo' DESC, start_time ASC";
+        // 1. Obtener el fin de versión
+        $fin_version_data = fetchDirectus($base_url . "events?filter[title][_eq]=fin_version&fields=end_time&limit=1");
+        $fin_version = !empty($fin_version_data) ? $fin_version_data[0]['end_time'] : null;
 
-        $result = $conn->query($sql);
-        $eventos = [];
-        if ($result && $result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                $eventos[] = $row;
+        // 2. Obtener todos los eventos (menos el marcador de fin_version)
+        $eventos_raw = fetchDirectus($base_url . "events?filter[title][_neq]=fin_version");
+
+        $ahora = date('Y-m-d H:i:s');
+        $eventos_procesados = [];
+
+        foreach ($eventos_raw as $evento) {
+            $start = $evento['start_time'];
+            $end = $evento['end_time'];
+            $status = 'finalizado'; // Valor por defecto
+
+            if ($ahora >= $start && $ahora <= $end) {
+                $status = 'activo';
+            } elseif ($ahora < $start && $start <= $fin_version) {
+                $status = 'proximamente';
+            } elseif ($ahora < $start && $start > $fin_version) {
+                $status = 'anunciado';
             }
+
+            $evento['status'] = $status;
+            $eventos_procesados[] = $evento;
         }
+
+        // 3. Ordenar: Activos primero, luego por fecha de inicio
+        usort($eventos_procesados, function($a, $b) {
+            if ($a['status'] === 'activo' && $b['status'] !== 'activo') return -1;
+            if ($a['status'] !== 'activo' && $b['status'] === 'activo') return 1;
+            return strcmp($a['start_time'], $b['start_time']);
+        });
+
         echo json_encode([
-            "eventos" => $eventos,
+            "eventos" => $eventos_procesados,
             "fin_version" => $fin_version
         ], JSON_UNESCAPED_UNICODE);
         break;
 
     case 'codes':
-        $sql_codes = "SELECT * FROM general WHERE name LIKE 'code_%'";
-        $res_codes = $conn->query($sql_codes);
-        $codigos = [];
-        if ($res_codes && $res_codes->num_rows > 0) {
-            while($row = $res_codes->fetch_assoc()) {
-                $codigos[] = $row;
-            }
-        }
+        // Filtramos en la tabla general los que empiecen por code_
+        $codigos = fetchDirectus($base_url . "general?filter[name][_contains]=code_");
         echo json_encode($codigos, JSON_UNESCAPED_UNICODE);
         break;
 
     case 'featured_characters':
-        $sql_chars = "SELECT `values` FROM general WHERE name LIKE 'character_%'";
-        $res_chars = $conn->query($sql_chars);
-        $personajes = [];
-        if ($res_chars && $res_chars->num_rows > 0) {
-            while($row = $res_chars->fetch_assoc()) {
-                $personajes[] = $row['values'];
-            }
-        }
-        echo json_encode($personajes, JSON_UNESCAPED_UNICODE);
+        // Filtramos personajes destacados
+        $featured = fetchDirectus($base_url . "general?filter[name][_contains]=character_");
+        $nombres = array_column($featured, 'values');
+        echo json_encode($nombres, JSON_UNESCAPED_UNICODE);
         break;
 
     case 'version':
-        $sql_version = "SELECT `values` FROM general WHERE name = 'version' LIMIT 1";
-        $res_version = $conn->query($sql_version);
-        if ($res_version && $res_version->num_rows > 0) {
-            $row_version = $res_version->fetch_assoc();
-            echo json_encode(["version" => $row_version['values']], JSON_UNESCAPED_UNICODE);
+        // Obtenemos la versión actual
+        $version_data = fetchDirectus($base_url . "general?filter[name][_eq]=version&limit=1");
+        if (!empty($version_data)) {
+            echo json_encode(["version" => $version_data[0]['values']], JSON_UNESCAPED_UNICODE);
         } else {
             echo json_encode(["error" => "No se encontró la versión"], JSON_UNESCAPED_UNICODE);
         }
         break;
 
     default:
-        echo json_encode(["error" => "Acción no válida. Usa eventos, codes o version"]);
+        echo json_encode(["error" => "Acción no válida."]);
         break;
 }
-
-$conn->close();
 ?>
