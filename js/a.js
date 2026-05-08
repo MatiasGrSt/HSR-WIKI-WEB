@@ -35,12 +35,11 @@ export async function cargarHabilidades(habilidades, charName) {
                              class="skill-trigger" 
                              data-tipo="${tipo}" 
                              data-isnf="false"
-                             style="display: none;"
                              onerror="this.src='../imagenes/personajes/${charName}/${tipoLimpio}.webp'">`;
             }).join('');
 
             htmlFinal += `
-                <div class="skill-version skill-normal-version">
+                <div class="skill-version skill-normal-version" style="display: none;">
                     <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="false">
                     <div class="popup skill-popup">
                         <h3 class="type">${tipo}</h3>
@@ -63,7 +62,7 @@ export async function cargarHabilidades(habilidades, charName) {
             }).join('');
 
             htmlFinal += `
-                <div class="skill-version skill-nf-version" style="display: none;">
+                <div class="skill-version skill-nf-version">
                     <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="true">
                     <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
                     <div class="popup skill-popup">
