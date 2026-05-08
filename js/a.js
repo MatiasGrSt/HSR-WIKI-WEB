@@ -9,5 +9,7 @@ export async function cargarHabilidades(habilidades, charName) {
 
     const groups = { normal: gruposNormal, novaflare: gruposNovaflare };
 
+    console.log('Grupos organizados:', groups); // Verificar que los grupos estén correctos
+
     crearIconosHabilidades(groups, charName);
 }
