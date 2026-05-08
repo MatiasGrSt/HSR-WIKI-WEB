@@ -2,6 +2,10 @@ import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 import { cargarHabilidades, cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
 
+const urlParams = new URLSearchParams(window.location.search);
+const personaje = urlParams.get('personaje');
+document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
+
 const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}`);
 const data = await res.json();
 
@@ -79,10 +83,6 @@ let globalSwitch = null;
 async function main() {
     cambiarPestana('info');
     document.getElementById('info').classList.add('activo');
-
-    const urlParams = new URLSearchParams(window.location.search);
-    const personaje = urlParams.get('personaje');
-    document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
 
     try {
 
