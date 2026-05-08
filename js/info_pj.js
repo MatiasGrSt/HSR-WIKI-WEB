@@ -10,11 +10,13 @@ document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
 const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}`);
 const data = await res.json();
 
-const info = data.characters;
+console.log("Datos recibidos:", data);
+
+const info = data.info;
 const habilidades = data.skills;
-const traces_ma = data.traces;
+const traces_ma = data.major_traces;
 const eidolones = data.eidolons;
-const tracen_mi = data.traces_mi;
+const tracen_mi = data.minor_traces;
 
 const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const rareza = Number(info.rarity);
