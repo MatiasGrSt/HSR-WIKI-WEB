@@ -4,12 +4,13 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
+// Recogemos los datos
 $personaje = $_GET['personaje'] ?? $_GET['nombre'] ?? ''; 
-$tipo = $_GET['tipo'] ?? '';
 
-if (empty($personaje) || empty($tipo)) {
-    die(json_encode(["error" => "Faltan parámetros."]));
-}
+$token = "GOTW0iUyBua4MUf8g8ojTKr2fQGZnxLq";
+$base_url = "https://panel.astralwiki.com/items/";
+
+// ... a partir de aquí sigue la función fetchDirectus y el switch ...
 
 $token = "GOTW0iUyBua4MUf8g8ojTKr2fQGZnxLq";
 $base_url = "https://panel.astralwiki.com/items/";
