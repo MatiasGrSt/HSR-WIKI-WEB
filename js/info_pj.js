@@ -1,6 +1,6 @@
 import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
-import { cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
+//import { cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
 import { cargarHabilidades } from './a.js';
 
 function cambiarPestana(idBoton) {
@@ -108,8 +108,8 @@ async function main() {
 
         // Cargar el resto de módulos
         await cargarHabilidades(habilidades, info.name);
-        await cargarMajorTraces(info.name, isNovaflareChar);
-        await cargarMinorTraces(info.name, info.element);
+        //await cargarMajorTraces(info.name, isNovaflareChar);
+        //await cargarMinorTraces(info.name, info.element);
         await cargarEidolones(info.name, isNovaflareChar);
 
         // Si hay Novaflare, agregar listener al switch para actualizar eidolones
