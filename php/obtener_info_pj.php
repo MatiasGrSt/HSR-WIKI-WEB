@@ -50,7 +50,7 @@ $resTraces = fetchDirectus('traces', 'character_id', $personaje);
 $resTracesMi = fetchDirectus('traces_mi', 'character_id', $personaje);
 
 $finalData = [
-    "info" => $resBasic, // Solo el primer objeto, ya que name es único
+    "info" => $resBasic[0], // Solo el primer objeto, ya que name es único
     "skills" => $resSkills,
     "eidolons" => $resEidolons,
     "major_traces" => $resTraces,
