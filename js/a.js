@@ -35,6 +35,7 @@ export async function cargarHabilidades(habilidades, charName) {
                              class="skill-trigger" 
                              data-tipo="${tipo}" 
                              data-isnf="false"
+                             style="display: none;"
                              onerror="this.src='../imagenes/personajes/${charName}/${tipoLimpio}.webp'">`;
             }).join('');
 
@@ -54,7 +55,7 @@ export async function cargarHabilidades(habilidades, charName) {
         // ---------------------------------------------------------
         if (skillsNovaflare.length > 0) {
             const miniIconosNf = skillsNovaflare.map((skill, index) => {
-                return `<img src="../imagenes/personajes/${charName}/${tipoLimpio}_2.webp" 
+                return `<img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" 
                              class="skill-trigger" 
                              data-tipo="${tipo}" 
                              data-isnf="true"
@@ -63,7 +64,7 @@ export async function cargarHabilidades(habilidades, charName) {
 
             htmlFinal += `
                 <div class="skill-version skill-nf-version" style="display: none;">
-                    <img src="../imagenes/personajes/${charName}/${tipoLimpio}_2.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="true">
+                    <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="true">
                     <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
                     <div class="popup skill-popup">
                         <h3 class="type">${tipo}</h3>
