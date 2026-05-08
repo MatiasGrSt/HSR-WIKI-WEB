@@ -54,7 +54,35 @@
             </div>
 
             <div class="habilidades">
-                <div id="hab_cont"></div>
+                <div id="hab_cont">
+                    <div id="modal-info-habilidad" class="modal-overlay-skill" style="display:none;">
+                        <div class="modal-content-skill">
+                            <span class="modal-close-skill">&times;</span>
+                            <div class="modal-header-container">
+                                <button id="modal-prev-skill" class="modal-arrow" style="display:none;">&#10094;</button>
+                                <div class="modal-header-skill">
+                                    <div class="modal-img-wrapper"><img id="modal-img-skill" src="" alt="Icono"></div>
+                                    <div class="modal-title-box">
+                                        <div class="modal-name-row">
+                                            <h2 id="modal-name-skill">Nombre</h2>
+                                            <span id="novaflare-tag" class="novaflare-badge" style="display:none;">Novaflare</span>
+                                        </div>
+                                        <p id="modal-type-target-skill" class="type"></p>
+                                    </div>
+                                </div>
+                                <button id="modal-next-skill" class="modal-arrow" style="display:none;">&#10095;</button>
+                            </div>
+                            <div id="modal-tabs-container" class="modal-tabs-container" style="display:none;"></div>
+                            <div class="level-selector-cont" id="level-selector-box">
+                                <label>Nivel: <span id="lvl-display">1</span></label>
+                                <input type="range" id="skill-lvl-range" min="1" max="15" value="1">
+                            </div>
+                            <div class="modal-stats-skill" id="modal-stats-skill"></div>
+                            <hr class="modal-divider">
+                            <div class="modal-description-skill" id="modal-desc-skill"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="eidolones" id="eidolones-container"></div>

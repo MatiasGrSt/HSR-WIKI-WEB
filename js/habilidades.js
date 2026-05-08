@@ -60,42 +60,6 @@ function buildTypeGroups(baseArray, nfArray) {
 // RENDER — Crea TODOS los iconos, oculta los NF por defecto
 // ====================================================================
 
-export async function cargarHabilidades(name, element, isNovaflareChar = false) {
-    ensureModalExists();
-    currentCharName = name;
-    currentElement = element;
-    currentMode = 'normal';
-
-    try {
-        const res = await fetch(`../php/obtener_info_pj.php?personaje=${name}&tipo=skills`);
-        const data = await res.json();
-        const allSkills = Array.isArray(data) ? data : [data];
-
-        const separated = separateSkills(allSkills);
-        normalSkills = separated.normals;
-        novaflareSkills = separated.novaflares;
-
-        const groups = buildTypeGroups(normalSkills, novaflareSkills);
-        renderAllSkillTypes(groups, 'normal');
-
-        if (isNovaflareChar) {
-            const container = document.getElementById('novaflare-switch-container');
-            if (container && !switchElement) {
-                switchElement = createNovaflareSwitch(container, (mode) => {
-                    currentMode = mode;
-                    toggleSkillVisibility(mode);
-                    const modal = document.getElementById('modal-info-habilidad');
-                    if (modal) modal.style.display = 'none';
-                });
-            }
-            toggleSwitchVisibility(switchElement, true);
-        } else {
-            if (switchElement) toggleSwitchVisibility(switchElement, false);
-        }
-    } catch (e) {
-        console.error('Error:', e);
-    }
-}
 
 export async function cargarMajorTraces(char, isNovaflareChar = false) { renderMajorTraces(char, isNovaflareChar); }
 export async function cargarMinorTraces(name, element) { renderTraces(name, 'minor_traces', 'trace_mi', null, element); }
@@ -352,49 +316,6 @@ function openSkillModal(type, skills, mode) {
     modalState.activeIndex = 0;
     document.getElementById('modal-info-habilidad').style.display = 'flex';
     updateModalContent();
-}
-
-function ensureModalExists() {
-    let modal = document.getElementById('modal-info-habilidad');
-    if (!modal) {
-        modal = document.createElement('div');
-        modal.id = 'modal-info-habilidad';
-        modal.className = 'modal-overlay-skill';
-        modal.style.display = 'none';
-        modal.innerHTML = `
-            <div class="modal-content-skill">
-                <span class="modal-close-skill">&times;</span>
-                <div class="modal-header-container">
-                    <button id="modal-prev-skill" class="modal-arrow" style="display:none;">&#10094;</button>
-                    <div class="modal-header-skill">
-                        <div class="modal-img-wrapper"><img id="modal-img-skill" src="" alt="Icono"></div>
-                        <div class="modal-title-box">
-                            <div class="modal-name-row">
-                                <h2 id="modal-name-skill">Nombre</h2>
-                                <span id="novaflare-tag" class="novaflare-badge" style="display:none;">Novaflare</span>
-                            </div>
-                            <p id="modal-type-target-skill" class="type"></p>
-                        </div>
-                    </div>
-                    <button id="modal-next-skill" class="modal-arrow" style="display:none;">&#10095;</button>
-                </div>
-                <div id="modal-tabs-container" class="modal-tabs-container" style="display:none;"></div>
-                <div class="level-selector-cont" id="level-selector-box">
-                    <label>Nivel: <span id="lvl-display">1</span></label>
-                    <input type="range" id="skill-lvl-range" min="1" max="15" value="1">
-                </div>
-                <div class="modal-stats-skill" id="modal-stats-skill"></div>
-                <hr class="modal-divider">
-                <div class="modal-description-skill" id="modal-desc-skill"></div>
-            </div>`;
-        document.body.appendChild(modal);
-
-        modal.querySelector('.modal-close-skill').onclick = () => modal.style.display = 'none';
-        modal.onclick = (e) => { if (e.target === modal) modal.style.display = 'none'; };
-        modal.querySelector('#modal-prev-skill').onclick = () => navigateModal(-1);
-        modal.querySelector('#modal-next-skill').onclick = () => navigateModal(1);
-        modal.querySelector('#skill-lvl-range').oninput = () => updateModalDescription();
-    }
 }
 
 function navigateModal(direction) {

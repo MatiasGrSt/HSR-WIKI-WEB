@@ -1,7 +1,7 @@
 import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
-import { cargarHabilidades, cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
-import { main_habilidades } from './a.js';
+import { cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
+import { cargarHabilidades } from './a.js';
 
 function cambiarPestana(idBoton) {
     const secciones = {
@@ -103,14 +103,11 @@ async function main() {
         
         // Llamamos a cargarInfo pasándole los datos que necesita
         cargarInfo(info, rareza);
-        
-        // Supongo que main_habilidades también necesita procesar algo inicial
-        main_habilidades(habilidades);
 
         const isNovaflareChar = Number(info.novaflare) === 1;
 
         // Cargar el resto de módulos
-        await cargarHabilidades(info.name, info.element, isNovaflareChar);
+        await cargarHabilidades(habilidades, info.name);
         await cargarMajorTraces(info.name, isNovaflareChar);
         await cargarMinorTraces(info.name, info.element);
         await cargarEidolones(info.name, isNovaflareChar);
