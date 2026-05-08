@@ -31,6 +31,7 @@ function activarClicsModal(groups, charName) {
             // Decidimos qué datos pasarle al modal
             const skillsArray = isNovaflare ? groups.novaflare[tipo] : groups.normal[tipo];
             const modeString = isNovaflare ? 'novaflare' : 'normal';
+            console.log(`Abriendo modal para ${tipo} (${modeString}) con ${skillsArray.length} habilidades.`);
             
             // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
             openSkillModal(tipo, skillsArray, modeString, charName); 
@@ -69,7 +70,7 @@ export function crearIconosHabilidades(habilidades, charName) {
             }).join('');
 
             htmlFinal += `
-                <div class="skill-version skill-normal-version">
+                <div class="skill-version skill-normal-version skill-trigger" data-tipo="${tipo}" data-isnf="false">
                     <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="false">
                     <div class="popup skill-popup">
                         <h3 class="type">${tipo}</h3>
@@ -93,7 +94,7 @@ export function crearIconosHabilidades(habilidades, charName) {
             }).join('');
 
             htmlFinal += `
-                <div class="skill-version skill-nf-version" style="display: none;">
+                <div class="skill-version skill-nf-version" style="display: none;" skill-trigger data-tipo="${tipo}" data-isnf="true">
                     <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="true">
                     <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
                     <div class="popup skill-popup">
