@@ -1,5 +1,5 @@
 import { inicializarModal } from "./utils/modal.js";
-import { organizarHabilidades,juntarHabilidades } from "./utils/skills.js";
+import { organizarHabilidades,juntarHabilidades,crearIconosHabilidades } from "./utils/skills.js";
 
 export async function cargarHabilidades(habilidades, charName) {
     const { normal, novaflare } = organizarHabilidades(habilidades);
