@@ -54,7 +54,8 @@ export async function cargarHabilidades(habilidades, charName) {
         // ---------------------------------------------------------
         if (skillsNovaflare.length > 0) {
             const miniIconosNf = skillsNovaflare.map((skill, index) => {
-                return `<img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" 
+                const imgName = index === 0 ? tipoLimpio : `${tipoLimpio}_${index + 1}`;
+                return `<img src="../imagenes/personajes/${charName}/${imgName}.webp" 
                              class="skill-trigger" 
                              data-tipo="${tipo}" 
                              data-isnf="true"
