@@ -18,6 +18,8 @@ const tracen_mi = data.traces_mi;
 const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const rareza = Number(info.rarity);
 
+console.log("Información del personaje:", rareza, info);
+
 function cambiarPestana(idBoton) {
     const secciones = {
         'info': document.querySelector('.info'),
