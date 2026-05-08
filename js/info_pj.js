@@ -1,6 +1,7 @@
 import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 import { cargarHabilidades, cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
+import {habilidades} from './a.js';
 
 const urlParams = new URLSearchParams(window.location.search);
 const personaje = urlParams.get('personaje');
@@ -9,7 +10,7 @@ document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
 const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}`);
 const data = await res.json();
 
-const info = data.info;
+const info = data.characters;
 const habilidades = data.skills;
 const traces_ma = data.traces;
 const eidolones = data.eidolons;
@@ -17,8 +18,6 @@ const tracen_mi = data.traces_mi;
 
 const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 const rareza = Number(info.rarity);
-
-console.log("Información del personaje:", rareza, info);
 
 function cambiarPestana(idBoton) {
     const secciones = {
@@ -96,6 +95,7 @@ async function main() {
 
         document.querySelector('.splash_art').src = `../imagenes/personajes/${info.name}/Splash_Art.webp`;
         cargarInfo();
+        habilidades(habilidades);
 
         const isNovaflareChar = Number(info.novaflare) === 1;
 
