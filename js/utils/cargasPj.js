@@ -1,4 +1,5 @@
 import { organizarHabilidades, juntarHabilidades, crearIconosHabilidades } from "./skillsUtils.js"
+import { crearIconosMajorTraces } from "./majorTracesUtils.js";
 
 // Le pasamos info y rareza como parámetros para no depender de variables globales
 export function cargarInfo(info, rareza) {
@@ -47,5 +48,6 @@ export function cargarMajorTraces(traces) {
         }
         grupos[trace.name].push(trace);
     });
-    return grupos;
+    
+    crearIconosMajorTraces(grupos);
 }
