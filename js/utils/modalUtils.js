@@ -67,7 +67,7 @@ async function updateModalContent() {
     // 2. Imagen e Iconos
     const tipoF = skill.type.replaceAll(' ', '_');
     const img = modal.querySelector('#modal-img-skill');
-    img.src = `../imagenes/personajes/${skill.character_id}/${tipoF}.webp`;
+    img.src = `../imagenes/personajes/${skill.character_id}/${tipoF}_${modalState.activeIndex}.webp`;
     img.onerror = () => { img.src = `../imagenes/personajes/${skill.character_id}/${tipoF}.webp`; };
 
     // 3. Títulos y Badges
