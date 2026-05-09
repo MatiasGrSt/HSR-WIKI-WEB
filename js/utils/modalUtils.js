@@ -1,5 +1,3 @@
-
-
 let modalState = { skills: [], activeIndex: 0 };
 let modalLevels = {}; // Para el fondo del modal, se actualizará al abrirlo
 let elemento = null; // Valor por defecto, se actualizará al cargar el personaje
@@ -9,7 +7,8 @@ let elemento = null; // Valor por defecto, se actualizará al cargar el personaj
  * Se llama una sola vez desde el main().
  */
 export function inicializarModal() {
-    const modal = document.querySelector('.modal-content-skill');
+    // CAMBIO 1: Buscamos el fondo oscuro (overlay) en lugar del contenido
+    const modal = document.querySelector('.modal-overlay-skill');
     if (!modal) return;
 
     // Botón cerrar
@@ -17,7 +16,7 @@ export function inicializarModal() {
         modal.style.display = 'none';
     });
 
-    // Cerrar al hacer clic fuera
+    // Cerrar al hacer clic fuera (ahora sí detectará el fondo)
     modal.addEventListener('click', (e) => {
         if (e.target === modal) modal.style.display = 'none';
     });
@@ -35,14 +34,15 @@ export function inicializarModal() {
  */
 export async function openSkillModal(type, skills, element) {
     console.log('Abriendo modal para:', type, skills, element);
+    
     // Guardamos las habilidades en el estado del modal
     modalState.skills = skills.map(s => ({
         skill: s
     }));
     modalState.activeIndex = 0;
-    // Actualizamos el elemento para el fondo del modal
     elemento = element;
     
+    // Mostramos el overlay principal
     document.querySelector('.modal-overlay-skill').style.display = 'flex';
     
     // Cargamos el contenido inicial
@@ -53,6 +53,7 @@ export async function openSkillModal(type, skills, element) {
  * Actualiza el contenido visual (Imagen, Título, Stats y Niveles).
  */
 async function updateModalContent() {
+    // Ya usamos correctamente el overlay aquí
     const modal = document.querySelector('.modal-overlay-skill');
     const entry = modalState.skills[modalState.activeIndex];
     const skill = entry.skill;
@@ -61,7 +62,6 @@ async function updateModalContent() {
     // 1. Estética y Fondo según el elemento
     const content = modal.querySelector('.modal-content-skill');
     content.classList.toggle('is-novaflare', isNF);
-    // Asumiendo que tienes los fondos por elemento
     content.style.backgroundImage = `url('../imagenes/fondos/${elemento}.webp')`;
 
     // 2. Imagen e Iconos
@@ -121,7 +121,6 @@ function updateModalDescription() {
 
     let text = skill.description || '';
     
-    // Reemplazo dinámico con Regex
     Object.keys(modalLevels).forEach(idx => {
         const valores = modalLevels[idx];
         const val = valores[lvl - 1] || valores[valores.length - 1];
@@ -144,7 +143,8 @@ function navigateModal(direction) {
  * Dibuja los puntitos (tabs) si hay más de una habilidad.
  */
 function updateTabs() {
-    const modal = document.getElementById('modal-info-habilidad');
+    // CAMBIO 2: Cambiamos la búsqueda por ID por la búsqueda por clase del overlay
+    const modal = document.querySelector('.modal-overlay-skill');
     const container = modal.querySelector('#modal-tabs-container');
     const hasMultiple = modalState.skills.length > 1;
 
