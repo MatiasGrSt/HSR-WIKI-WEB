@@ -77,7 +77,7 @@ export function crearIconosHabilidades(habilidades, charName, element) {
             }).join('');
 
             htmlFinal += `
-                <div class="skill-version skill-normal-version skill-trigger" style="display: none;" data-tipo="${tipo}" data-isnf="false">
+                <div class="skill-version skill-normal-version skill-trigger" data-tipo="${tipo}" data-isnf="false">
                     <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp">
                     <div class="popup skill-popup">
                         <h3 class="type">${tipo}</h3>
@@ -98,7 +98,7 @@ export function crearIconosHabilidades(habilidades, charName, element) {
             }).join('');
 
             htmlFinal += `
-                <div class="skill-version skill-nf-version skill-trigger" data-tipo="${tipo}" data-isnf="true">
+                <div class="skill-version skill-nf-version skill-trigger" style="display: none;" data-tipo="${tipo}" data-isnf="true">
                     <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp">
                     <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
                     <div class="popup skill-popup">
