@@ -69,10 +69,9 @@ export function crearIconosHabilidades(habilidades, charName, element) {
         // ---------------------------------------------------------
         if (skillsNormales.length > 0) {
             // Creamos los mini-iconos del popup
-            const miniIconosNormal = skillsNormales.map((skill, index) => {
-                const imgName = index === 0 ? tipoLimpio : `${tipoLimpio}_${index + 1}`;
+            const miniIconosNormal = skillsNormales.map(skill => {
                 // AQUÍ ESTÁ LA MAGIA: Guardamos los parámetros en atributos "data-"
-                return `<img src="../imagenes/personajes/${charName}/${imgName}.webp" 
+                return `<img src="../imagenes/personajes/${charName}/${skill.icon}.webp" 
                              onerror="this.src='../imagenes/personajes/${charName}/${tipoLimpio}.webp'">`;
             }).join('');
 
@@ -91,9 +90,8 @@ export function crearIconosHabilidades(habilidades, charName, element) {
         // 2. CREAMOS LA PARTE NOVAFLARE (Oculta por defecto)
         // ---------------------------------------------------------
         if (skillsNovaflare.length > 0) {
-            const miniIconosNf = skillsNovaflare.map((skill, index) => {
-                const imgName = index === 0 ? tipoLimpio : `${tipoLimpio}_${index + 1}`;
-                return `<img src="../imagenes/personajes/${charName}/${imgName}.webp" 
+            const miniIconosNf = skillsNovaflare.map(skill => {
+                return `<img src="../imagenes/personajes/${charName}/${skill.icon}.webp" 
                              onerror="this.src='../imagenes/personajes/${charName}/${tipoLimpio}.webp'">`;
             }).join('');
 

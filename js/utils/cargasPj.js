@@ -30,7 +30,7 @@ export function cargarInfo(info, rareza) {
 }
 
 export async function cargarHabilidades(habilidades, charName, element) {
-    const { normal, novaflare } = organizarHabilidades(habilidades[0]);
+    const { normal, novaflare } = organizarHabilidades(habilidades);
     
     const gruposNormal = juntarHabilidades(normal);
     const gruposNovaflare = juntarHabilidades(novaflare);
