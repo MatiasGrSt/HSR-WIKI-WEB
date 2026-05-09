@@ -1,4 +1,4 @@
-import { toggleSwitchVisibility } from './utils.js';
+import { toggleSwitchVisibility } from './utils/switchUtils.js';
 
 let allEidolones = [];
 let currentCharName = '';

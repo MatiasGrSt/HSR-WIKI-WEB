@@ -3,6 +3,7 @@ import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 import { crearIconosMinorTraces } from './utils/tracesUtils.js';
 import { cargarInfo, cargarHabilidades, cargarMajorTraces } from './utils/cargasPj.js';
 import { inicializarModal } from './utils/modalUtils.js';
+import { createNovaflareSwitch, toggleSwitchVisibility } from './utils/switchUtils.js';
 
 function cambiarPestana(idBoton) {
     const secciones = {
@@ -38,6 +39,19 @@ function manejoBotones() {
     });
 }
 
+// --- NUEVA FUNCIÓN GLOBAL PARA EL CAMBIO DE MODO ---
+function aplicarModoGlobal(modo) {
+    const isNF = (modo === 'novaflare');
+
+    // 1. Swapear Habilidades
+    document.querySelectorAll('.skill-normal-version').forEach(el => el.style.display = isNF ? 'none' : 'flex');
+    document.querySelectorAll('.skill-nf-version').forEach(el => el.style.display = isNF ? 'flex' : 'none');
+
+    // 2. Swapear Rastros Mayores (Major Traces)
+    document.querySelectorAll('.Matrace-normal-version').forEach(el => el.style.display = isNF ? 'none' : 'block');
+    document.querySelectorAll('.Matrace-novaflare-version').forEach(el => el.style.display = isNF ? 'block' : 'none');
+}
+
 // Variable global para el switch
 let globalSwitch = null;
 
@@ -66,6 +80,7 @@ async function main() {
 
         const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const rareza = Number(info.rarity);
+        const isNovaflareChar = Number(info.novaflare) === 1;
 
         const colorRareza = colores.rarezas[rareza];
         const colorElemento = colores.elementos[info.element];
@@ -74,6 +89,7 @@ async function main() {
         document.documentElement.style.setProperty('--color-rareza', colorRareza);
         document.documentElement.style.setProperty('--color-via', colorVia);
         document.documentElement.style.setProperty('--color-elemento', colorElemento);
+
 
         // 5. Aplicamos los datos al HTML
         const link = document.createElement('link');
@@ -87,27 +103,23 @@ async function main() {
         // Llamamos a cargarInfo pasándole los datos que necesita
         await cargarInfo(info, rareza);
 
-        const isNovaflareChar = Number(info.novaflare) === 1;
+        if (isNovaflareChar) {
+        const switchContainer = document.getElementById('novaflare-switch-container');
+        if (switchContainer) {
+            // Limpiamos por si acaso y creamos el switch usando tu utilidad
+            switchContainer.innerHTML = ''; 
+            createNovaflareSwitch(switchContainer, (modo) => {
+                aplicarModoGlobal(modo);
+            });
+            toggleSwitchVisibility(switchContainer, true);
+        }
+    }
 
         // Cargar el resto de módulos
         await cargarHabilidades(habilidades, info.name, info.element);
         await cargarMajorTraces(traces_ma);
         await crearIconosMinorTraces(tracen_mi, info.element);
         // await cargarEidolones(info.name, isNovaflareChar);
-
-        // Si hay Novaflare, agregar listener al switch para actualizar eidolones
-        if (isNovaflareChar) {
-            const switchContainer = document.getElementById('novaflare-switch-container');
-            if (switchContainer) {
-                const checkbox = switchContainer.querySelector('input[type="checkbox"]');
-                if (checkbox) {
-                    checkbox.addEventListener('change', () => {
-                        const mode = checkbox.checked ? 'novaflare' : 'normal';
-                        updateEidolonesMode(mode);
-                    });
-                }
-            }
-        }
 
     } catch (error) {
         console.error("Error al cargar los datos:", error);

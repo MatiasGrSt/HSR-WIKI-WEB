@@ -1,7 +1,6 @@
 // ====================================================================
 // UTILIDADES COMPARTIDAS - SIMPLE Y DIRECTO
 // ====================================================================
-
 /**
  * Crea el switch Novaflare en un contenedor dado
  * @param {HTMLElement} container - Contenedor donde insertar el switch
@@ -22,14 +21,11 @@ export function createNovaflareSwitch(container, callback) {
     const checkbox = wrapper.querySelector('input[type="checkbox"]');
 
     checkbox.addEventListener('change', function() {
-        console.log('Switch clicked, checked:', this.checked);
         const mode = this.checked ? 'novaflare' : 'normal';
-        console.log('Calling callback with mode:', mode);
         callback(mode);
     });
 
     container.appendChild(wrapper);
-    console.log('Switch created and appended to container');
     return wrapper;
 }
 
@@ -39,7 +35,6 @@ export function createNovaflareSwitch(container, callback) {
 export function toggleSwitchVisibility(switchElement, show = true) {
     if (switchElement) {
         switchElement.style.display = show ? 'flex' : 'none';
-        console.log('Switch visibility toggled to:', show ? 'visible' : 'hidden');
     }
 }
 
