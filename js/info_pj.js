@@ -14,7 +14,7 @@ function cambiarPestana(idBoton) {
     Object.values(secciones).forEach(seccion => {
         if (seccion) seccion.style.display = 'none';
     });
-
+ 
     const seccionActiva = secciones[idBoton];
     if (seccionActiva) {
         seccionActiva.style.display = 'flex';
