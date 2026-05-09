@@ -34,11 +34,10 @@ export function inicializarModal() {
 /**
  * Función principal para abrir el modal desde fuera (skills.js).
  */
-export async function openSkillModal(type, skills, mode) {
+export async function openSkillModal(type, skills) {
     // Guardamos las habilidades en el estado del modal
     modalState.skills = skills.map(s => ({
-        skill: s,
-        isNF: mode === 'novaflare'
+        skill: s
     }));
     modalState.activeIndex = 0;
 
