@@ -40,8 +40,7 @@ export async function openSkillModal(type, skills) {
         skill: s
     }));
     modalState.activeIndex = 0;
-
-    console.log(modalState);
+    
     document.getElementById('modal-info-habilidad').style.display = 'flex';
     
     // Cargamos el contenido inicial
@@ -55,7 +54,10 @@ async function updateModalContent() {
     const modal = document.getElementById('modal-info-habilidad');
     const entry = modalState.skills[modalState.activeIndex];
     const skill = entry.skill;
-    const isNF = entry.isNF;
+    const isNF = skill.enhanced;
+
+    console.log(entry);
+    console.log(isNF);
 
     // 1. Estética y Fondo según el elemento
     const content = modal.querySelector('.modal-content-skill');

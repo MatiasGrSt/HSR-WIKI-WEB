@@ -34,7 +34,7 @@ function activarClicsModal(groups, charName) {
             const modeString = isNovaflare ? 'novaflare' : 'normal';
             
             // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
-            openSkillModal(tipo, skillsArray, modeString, charName); 
+            openSkillModal(tipo, skillsArray); 
         });
     });
 }
