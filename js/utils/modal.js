@@ -54,9 +54,6 @@ async function updateModalContent() {
     const skill = entry.skill;
     const isNF = skill.enhanced;
 
-    console.log(entry);
-    console.log(isNF);
-
     // 1. Estética y Fondo según el elemento
     const content = modal.querySelector('.modal-content-skill');
     content.classList.toggle('is-novaflare', isNF);
