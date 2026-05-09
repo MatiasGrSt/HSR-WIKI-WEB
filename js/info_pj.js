@@ -88,6 +88,9 @@ async function main() {
         const traces_ma = data.major_traces;
         const eidolones = data.eidolons;
         const tracen_mi = data.minor_traces;
+        const skill_levels = data.skill_levels;
+
+        const pack_skills = [habilidades, skill_levels];
 
         const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const rareza = Number(info.rarity);
@@ -107,7 +110,7 @@ async function main() {
         const isNovaflareChar = Number(info.novaflare) === 1;
 
         // Cargar el resto de módulos
-        await cargarHabilidades(habilidades, info.name);
+        await cargarHabilidades(pack_skills, info.name);
         //await cargarMajorTraces(info.name, isNovaflareChar);
         //await cargarMinorTraces(info.name, info.element);
         await cargarEidolones(info.name, isNovaflareChar);
