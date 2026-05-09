@@ -2,8 +2,6 @@
 
 let modalState = { skills: [], activeIndex: 0 };
 let modalLevels = {};
-let currentCharName = '';
-let currentElement = '';
 
 /**
  * Inicializa los eventos fijos del modal (Cerrar, Flechas, Slider).
@@ -69,8 +67,8 @@ async function updateModalContent() {
     const tipoF = skill.type.replaceAll(' ', '_');
     const imgName = isNF ? `${tipoF}_2` : tipoF;
     const img = modal.querySelector('#modal-img-skill');
-    img.src = `../imagenes/personajes/${currentCharName}/${imgName}.webp`;
-    img.onerror = () => { img.src = `../imagenes/personajes/${currentCharName}/${tipoF}.webp`; };
+    img.src = `../imagenes/personajes/${skill.character_id}/${imgName}.webp`;
+    img.onerror = () => { img.src = `../imagenes/personajes/${skill.character_id}/${tipoF}.webp`; };
 
     // 3. Títulos y Badges
     modal.querySelector('#modal-name-skill').textContent = skill.name;
