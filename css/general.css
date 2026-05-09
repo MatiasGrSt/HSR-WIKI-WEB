@@ -316,11 +316,19 @@ input:checked + .slider:before {
 
 .botones img.activo {
     border-color: var(--color-rareza, #f29e38);
-    background: linear-gradient(135deg, rgba(30,25,10,0.95) 0%, rgba(10,11,16,0.95) 100%);
-    box-shadow: 0 0 20px var(--color-rareza, rgba(242, 158, 56, 0.5)),
-                inset 0 0 10px rgba(255,204,0,0.1);
+    
+    /* Gradiente con transparencia al 50% */
+    background: linear-gradient(135deg, 
+        color-mix(in srgb, var(--color-rareza), transparent 50%) 0%, 
+        rgba(10,11,16,0.95) 100%);
+    
+    /* Glow exterior traslúcido (60% de opacidad) */
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-rareza), transparent 40%),
+                inset 0 0 10px color-mix(in srgb, var(--color-rareza), transparent 10%);
+    
     filter: saturate(1.2) brightness(1.15);
     transform: scale(1.06);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); /* Añade esto para que el cambio sea suave */
 }
 
 /* ====================================================================
