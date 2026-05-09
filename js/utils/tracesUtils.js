@@ -60,10 +60,6 @@ export function crearIconosMinorTraces(traces) {
         if (rastroN.type == "DMG") {
             console.log(rastroN);
         }
-
-        // ---------------------------------------------------------
-        // PARTE NORMAL
-        // ---------------------------------------------------------
         if (TraceNormales.length > 0) {
             const rastroN = TraceNormales[0];
             htmlFinal += `
