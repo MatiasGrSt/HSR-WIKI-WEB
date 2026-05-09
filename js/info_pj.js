@@ -67,6 +67,14 @@ async function main() {
         const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const rareza = Number(info.rarity);
 
+        const colorRareza = colores.rarezas[rareza];
+        const colorElemento = colores.elementos[info.element];
+        const colorVia = colores.vias[info.path];
+
+        document.documentElement.style.setProperty('--color-rareza', colorRareza);
+        document.documentElement.style.setProperty('--color-via', colorVia);
+        document.documentElement.style.setProperty('--color-elemento', colorElemento);
+
         // 5. Aplicamos los datos al HTML
         const link = document.createElement('link');
         link.rel = 'stylesheet';
