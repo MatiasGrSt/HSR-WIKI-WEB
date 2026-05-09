@@ -1,8 +1,8 @@
-// utils/modal.js
-import { elemento } from "./info_pj.js";
+
 
 let modalState = { skills: [], activeIndex: 0 };
 let modalLevels = {}; // Para el fondo del modal, se actualizará al abrirlo
+let elemento = null; // Valor por defecto, se actualizará al cargar el personaje
 
 /**
  * Inicializa los eventos fijos del modal (Cerrar, Flechas, Slider).
@@ -33,12 +33,14 @@ export function inicializarModal() {
 /**
  * Función principal para abrir el modal desde fuera (skills.js).
  */
-export async function openSkillModal(type, skills) {
+export async function openSkillModal(type, skills, element) {
     // Guardamos las habilidades en el estado del modal
     modalState.skills = skills.map(s => ({
         skill: s
     }));
     modalState.activeIndex = 0;
+    // Actualizamos el elemento para el fondo del modal
+    elemento = element;
     
     document.getElementById('modal-info-habilidad').style.display = 'flex';
     

@@ -94,7 +94,6 @@ async function main() {
 
         const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const rareza = Number(info.rarity);
-        export const elemento = info.element;
 
         // 5. Aplicamos los datos al HTML
         const link = document.createElement('link');
