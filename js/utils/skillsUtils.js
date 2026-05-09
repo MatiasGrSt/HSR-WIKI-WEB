@@ -1,4 +1,4 @@
-import { openSkillModal, inicializarModal } from "./modalUtils.js";
+import { openSkillModal } from "./modalUtils.js";
 
 //------------------------------------------------------------------------------------------
 //---------------------------------UTILS DE ORGANIZACIÓN DE HABILIDADES--------------------- cargasPj.js
@@ -41,7 +41,6 @@ function activarClicsModal(groups, charName, element) {
             
             // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
             openSkillModal(tipo, skillsArray, element); 
-            inicializarModal();
         });
     });
 }

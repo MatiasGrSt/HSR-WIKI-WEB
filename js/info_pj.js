@@ -43,6 +43,7 @@ let globalSwitch = null;
 
 async function main() {
     // 1. Preparamos el terreno visual
+    inicializarModal();
     manejoBotones();
     cambiarPestana('info');
     document.getElementById('info').classList.add('activo');
