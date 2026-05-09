@@ -17,7 +17,7 @@ export function juntarHabilidades(lista) {
     return grupos;
 }
 
-function activarClicsModal(groups, charName) {
+function activarClicsModal(groups, charName, element) {
     const triggers = document.querySelectorAll('.skill-trigger');
 
     triggers.forEach(img => {
@@ -34,12 +34,12 @@ function activarClicsModal(groups, charName) {
             const modeString = isNovaflare ? 'novaflare' : 'normal';
             
             // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
-            openSkillModal(tipo, skillsArray); 
+            openSkillModal(tipo, skillsArray, element); 
         });
     });
 }
 
-export function crearIconosHabilidades(habilidades, charName) {
+export function crearIconosHabilidades(habilidades, charName, element) {
     const todosLosTipos = new Set([
         ...Object.keys(habilidades.normal || {}), 
         ...Object.keys(habilidades.novaflare || {})
@@ -103,5 +103,5 @@ export function crearIconosHabilidades(habilidades, charName) {
     }
     document.getElementById('hab_cont').insertAdjacentHTML('beforeend', htmlFinal);
 
-    activarClicsModal(habilidades, charName);
+    activarClicsModal(habilidades, charName, element);
 }

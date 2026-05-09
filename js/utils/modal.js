@@ -1,7 +1,8 @@
 // utils/modal.js
+import { elemento } from "./info_pj.js";
 
 let modalState = { skills: [], activeIndex: 0 };
-let modalLevels = {};
+let modalLevels = {}; // Para el fondo del modal, se actualizará al abrirlo
 
 /**
  * Inicializa los eventos fijos del modal (Cerrar, Flechas, Slider).
@@ -49,7 +50,7 @@ export async function openSkillModal(type, skills) {
  * Actualiza el contenido visual (Imagen, Título, Stats y Niveles).
  */
 async function updateModalContent() {
-    const modal = document.getElementById('modal-info-habilidad');
+    const modal = document.getElementById('modal-overlay-skill');
     const entry = modalState.skills[modalState.activeIndex];
     const skill = entry.skill;
     const isNF = skill.enhanced;
@@ -58,7 +59,7 @@ async function updateModalContent() {
     const content = modal.querySelector('.modal-content-skill');
     content.classList.toggle('is-novaflare', isNF);
     // Asumiendo que tienes los fondos por elemento
-    // content.style.backgroundImage = `url('../imagenes/fondos/${currentElement}.webp')`;
+    content.style.backgroundImage = `url('../imagenes/fondos/${elemento}.webp')`;
 
     // 2. Imagen e Iconos
     const tipoF = skill.type.replaceAll(' ', '_');

@@ -94,6 +94,7 @@ async function main() {
 
         const via = info.path.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
         const rareza = Number(info.rarity);
+        export const elemento = info.element;
 
         // 5. Aplicamos los datos al HTML
         const link = document.createElement('link');
@@ -110,7 +111,7 @@ async function main() {
         const isNovaflareChar = Number(info.novaflare) === 1;
 
         // Cargar el resto de módulos
-        await cargarHabilidades(pack_skills, info.name);
+        await cargarHabilidades(pack_skills, info.name, info.element);
         //await cargarMajorTraces(info.name, isNovaflareChar);
         //await cargarMinorTraces(info.name, info.element);
         await cargarEidolones(info.name, isNovaflareChar);
