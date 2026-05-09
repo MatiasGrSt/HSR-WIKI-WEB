@@ -10,7 +10,7 @@ export function crearIconosMajorTraces(traces) {
 
         htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}">`;
 
-        // ---------------------------------------------------------
+        // --------------------------------------------------------- 
         // PARTE NORMAL
         // ---------------------------------------------------------
         if (TraceNormales.length > 0) {
