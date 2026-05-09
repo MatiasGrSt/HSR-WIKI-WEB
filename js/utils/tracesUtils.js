@@ -51,31 +51,81 @@ export function crearIconosMajorTraces(traces) {
     document.getElementById('hab_cont').insertAdjacentHTML('beforeend', htmlFinal);
 }
 
-export function crearIconosMinorTraces(traces) {
+function transformarTrace(texto, valor, element) {
+    let tipoLimpio = '';
+    let valorLimpio = '';
+
+    switch (texto) {
+        case 'ATK':
+            tipoLimpio = 'Ataque';
+            break; // IMPORTANTE: Poner break en cada uno
+        case 'DEF':
+            tipoLimpio = 'Defensa';
+            break;
+        case 'HP':
+            tipoLimpio = 'Vida';
+            break;
+        case 'CRIT D':
+            tipoLimpio = 'Daño Crítico';
+            break;
+        case 'CRIT R':
+            tipoLimpio = 'Probabilidad Crítica';
+            break;
+        case 'EFFECT RES':
+            tipoLimpio = 'Resistencia a Efectos';
+            break;
+        case 'EFFECT RATE':
+            tipoLimpio = 'Acierto de Efecto';
+            break;
+        case 'BREAK':
+            tipoLimpio = 'Ruptura';
+            break;
+        case 'SPD':
+            tipoLimpio = 'Velocidad';
+            break;
+        case 'ELATION':
+            tipoLimpio = 'Exultación';
+            break;
+        case 'DMG':
+            tipoLimpio = `Daño ${element}`;
+            break;
+        default:
+            tipoLimpio = texto; // CORREGIDO: rastro no existe aquí, es texto
+            break;
+    }
+
+    if (texto !== 'SPD' && texto !== 'ELATION') {
+        valorLimpio = '+' + valor + '%';
+    } else {
+        valorLimpio = '+' + valor;
+    }
+
+    return [tipoLimpio, valorLimpio];
+}
+
+
+export function crearIconosMinorTraces(traces, element) {
     let htmlFinal = '';
     let idx = 1;
 
-    for (const [nombreGrupo, listaRastros] of Object.entries(traces)) {
-
-        if (rastroN.type == "DMG") {
-            console.log(rastroN);
-        }
-        if (TraceNormales.length > 0) {
-            const rastroN = TraceNormales[0];
-            htmlFinal += `
-                <div class="trace_mi" id="min${idx}">
-                    <img src="../imagenes/Stats/${rastroN.type}.webp">
-                    <div class="popup Matrace-popup">
-                        <h3 class="type">${rastroN.type}</h3>
-                        <p>${rastroN.description}</p>
-                    </div>
+    traces.forEach(rastro => {
+        // Obtenemos los valores transformados
+        const [tipoLimpio, valorLimpio] = transformarTrace(rastro.type, rastro.value, element);
+        
+        // CORREGIDO: Inyectamos el div completo cerrado correctamente
+        htmlFinal += `
+            <div class="trace_mi" id="min${idx}">
+                <img src="../imagenes/Stats/${tipoLimpio}.webp" onerror="this.src='../imagenes/Stats/Desconocido.webp'">
+                <div class="popup Matrace-popup">
+                    <h3 class="type">${tipoLimpio}</h3>
+                    <p class="value-text">${valorLimpio}</p>
                 </div>
-            `;
-        }
-
-        htmlFinal += `</div>`; // Cerramos el contenedor principal
+            </div>
+        `;
+        
         idx++;
-    }
-    
+    });
+
+    // Lo inyectamos en el DOM al final
     document.getElementById('hab_cont').insertAdjacentHTML('beforeend', htmlFinal);
 }

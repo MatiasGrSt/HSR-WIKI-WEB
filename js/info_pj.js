@@ -84,9 +84,8 @@ async function main() {
         // Cargar el resto de módulos
         await cargarHabilidades(habilidades, info.name, info.element);
         await cargarMajorTraces(traces_ma);
-        console.log(tracen_mi);
-        await crearIconosMinorTraces(tracen_mi);
-        await cargarEidolones(info.name, isNovaflareChar);
+        await crearIconosMinorTraces(tracen_mi, info.element);
+        // await cargarEidolones(info.name, isNovaflareChar);
 
         // Si hay Novaflare, agregar listener al switch para actualizar eidolones
         if (isNovaflareChar) {
