@@ -1,19 +1,40 @@
-main {
-    margin-left: 13.5%;
-    /* Deja el hueco para el nav */
-    width: calc(100% - 13.5%);
-    /* REGLA CLAVE: Resta el margen al ancho total */
-    box-sizing: border-box;
-    /* Asegura que el padding no sume ancho extra */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
-    overflow-y: auto !important;
-    /* Habilita el scroll vertical si hay muchos personajes[cite: 9] */
-    overflow-x: hidden;
-    /* Evita cualquier desplazamiento lateral */
-    padding: 0;
+/* ====================================================================
+   ANTIGRAVITY — GENERAL.CSS
+   Variables, layout, nav, name, element/path, botones, switch
+   ==================================================================== */
+
+:root {
+    --ag-bg-base: #06070a;
+    --ag-panel-bg: rgba(14, 16, 26, 0.95);
+    --ag-accent-1: #00f0ff;
+    --ag-accent-2: #7000ff;
+    --ag-nf-1: #ff0055;
+    --ag-nf-2: #ffcc00;
+    --ag-text-main: #e2e8f0;
+    --ag-text-muted: #94a3b8;
+    --ag-font: 'Outfit', sans-serif;
 }
 
-/* Ajuste para cuando el nav llega a su tamaño mínimo de 220px */
+* {
+    font-family: var(--ag-font);
+    box-sizing: border-box;
+}
+
+/* ====================================================================
+   LAYOUT
+   ==================================================================== */
+main {
+    margin-left: 13.5%;
+    width: calc(100% - 13.5%);
+    box-sizing: border-box;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding: 0;
+    background-color: var(--ag-bg-base);
+}
+
 @media (max-width: 1630px) {
     main {
         margin-left: 220px;
@@ -21,105 +42,85 @@ main {
     }
 }
 
-@keyframes fadeInRight {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.splash_art {
-    position: absolute;
-    top: 70%;
-    /* Lo empuja a la mitad hacia abajo */
-    left: 50%;
-    /* Lo empuja a la mitad hacia la derecha */
-    transform: translate(-50%, -50%);
-    /* Lo centra perfectamente sobre su propio eje */
-
-    /* Sugerencia para que se vea como en el juego: */
-    width: 80%;
-    z-index: -1;
-    opacity: 0.9;
-    /* Opcional: bajarle un poquito la opacidad si resalta demasiado */
-}
-
-nav {
-    width: 15%;
-}
-
 .general {
     display: flex;
     flex-direction: column;
     width: 100%;
-    /* Ya no necesitamos el calc(100% - 13%) */
     height: 100%;
-    /* En lugar de min-height */
     position: relative;
-
-    animation: fadeInRight 1s ease-out;
-    background: radial-gradient(circle at top right, rgba(40, 40, 80, 0.3), transparent);
+    animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    background: radial-gradient(ellipse at top right, rgba(0, 240, 255, 0.04), transparent 60%),
+                radial-gradient(ellipse at bottom left, rgba(112, 0, 255, 0.05), transparent 60%);
     pointer-events: none;
-
-    /* NUEVO: Permite hacer scroll en la info del personaje si es muy larga, 
-       sin mover el nav ni el splash art */
     overflow-y: auto;
-
-    /* Eliminamos el margin-left: 13%; el top: 0; y right: 0; */
 }
 
+/* ====================================================================
+   SPLASH ART
+   ==================================================================== */
+.splash_art {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: -1;
+    opacity: 0.6;
+    mask-image: radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
+}
+
+/* ====================================================================
+   NAME
+   ==================================================================== */
 #name {
     text-align: center;
-    font-weight: bold;
-    font-size: 75px;
-    margin: 0px auto;
-    /* 'auto' a los lados lo centra */
+    font-weight: 800;
+    font-size: 72px;
+    letter-spacing: 3px;
+    margin: 0 auto;
     width: fit-content;
-    /* Se ajusta solo al texto */
-    padding: 10px 40px;
+    padding: 20px 50px 10px 50px;
     pointer-events: auto;
     cursor: default;
 
-    /* Opcional: Un brillo sutil para que encaje con la UI */
-    text-shadow: 0 0 20px var(--color-rareza, #f29e38);
-    transition: all 0.3s ease
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-rareza, #f29e38) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8));
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
 }
 
 #name:hover {
-    transform: scale(1.05);
+    transform: scale(1.04);
+    filter: drop-shadow(0 0 15px var(--color-rareza, #f29e38));
 }
 
+/* ====================================================================
+   ELEMENTO / VÍA / RAREZA
+   ==================================================================== */
 .element_path_rarity {
     display: flex;
     flex-direction: column;
-    /* Apila .element_path arriba y #rarity abajo */
     align-items: center;
-    margin: 0 auto;
+    margin: 0 auto 10px auto;
     width: fit-content;
-    /* Se ajusta al contenido */
-    padding: 10px 20px;
+    padding: 14px 28px;
 
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 15px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(135deg, rgba(20, 22, 35, 0.95) 0%, rgba(10, 11, 16, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+    pointer-events: auto;
 }
 
 .element_path {
     display: flex;
-    /* Los pone uno al lado del otro */
     justify-content: center;
-    gap: 20px;
-    /* Espacio horizontal entre Rayo y Nihilidad */
+    gap: 24px;
     width: 100%;
-    padding-bottom: 5px;
-    /* Espacio antes de la línea */
+    padding-bottom: 10px;
 }
 
 #element,
@@ -131,20 +132,29 @@ nav {
 
 #element img,
 #path img {
-    width: 30px;
-    /* Ajusta el tamaño de los iconos de Viento/Vía */
+    width: 28px;
     height: auto;
+    filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
 }
 
 #element p,
 #path p {
     margin: 0;
-    margin-inline: 5px;
-    font-size: 14px;
-    font-weight: bold;
+    font-size: 13px;
+    font-weight: 700;
     text-transform: uppercase;
-    /* Estilo Honkai */
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    color: var(--ag-text-muted);
+}
+
+.element {
+    font-weight: 700;
+    color: var(--color-elemento, var(--ag-accent-1));
+}
+
+.path {
+    font-weight: 700;
+    color: var(--color-via, var(--ag-accent-2));
 }
 
 #rarity {
@@ -152,144 +162,64 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-
-    /* La línea blanca pegada arriba */
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    padding-top: 8px;
-    /* Espacio entre la línea y las estrellas */
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 10px;
     margin-top: 0;
+    gap: 4px;
 }
 
-#rarity img {
-    width: 35px;
-    /* Tamaño de cada estrella */
+#rarity img,
+.star-icon {
+    width: 28px;
     height: auto;
-    /* Resplandor amarillo suave */
     filter: drop-shadow(0 0 5px var(--color-rareza, #f29e38));
 }
 
-.botones {
-    position: absolute;
-    /* Se posiciona respecto a .general */
-    top: 20px;
-    /* Distancia desde arriba */
-    right: 20px;
-    display: flex;
-    /* Alinea en fila */
-    gap: 15px;
-    /* Espacio entre botones */
-    justify-content: center;
-    /* Centra los botones */
-    align-items: center;
-    padding: 20px;
-    pointer-events: auto;
-}
-
-.botones img {
-    width: 60px;
-    /* Tamaño del botón */
-    height: 60px;
-    border-radius: 50%;
-    /* Los hace redondos */
-    cursor: pointer;
-
-    /* Estética Honkai: Star Rail */
-    background: rgba(0, 0, 0, 0.5);
-    /* Fondo sutil */
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    /* Borde cristalino */
-    backdrop-filter: blur(5px);
-    /* Efecto de desenfoque de cristal */
-    transition: all 0.3s ease;
-    /* Animación suave */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-
-    /* Ajuste de la imagen interna */
-    object-fit: cover;
-    padding: 5px;
-    /* Margen interno para que el icono no toque el borde */
-}
-
-/* Efecto al pasar el ratón (Hover) */
-.botones img:hover {
-    border-color: var(--color-rareza, #f29e38);
-    /* El naranja característico del juego */
-    transform: scale(1.1);
-    /* Se agranda un poquito */
-    box-shadow: 0 0 15px var(--color-rareza, rgba(242, 158, 56, 0.6));
-    /* Resplandor naranja */
-    filter: brightness(1.2);
-}
-
-/* Efecto cuando el botón está seleccionado o pulsado */
-.botones img:active {
-    transform: scale(0.95);
-    filter: brightness(0.8);
-}
-
-.botones img.activo {
-    border-color: var(--color-rareza, #f29e38);
-    /* Usa el color de la rareza */
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 0 20px var(--color-rareza, rgba(242, 158, 56, 0.6));
-    transform: scale(1.05);
-    filter: brightness(1.2);
-}
-
-.habilidades,
-.eidolones {
-    display: none;
-}
-
-.element {
-    font-weight: bold;
-    color: var(--color-elemento);
-}
-
-.path {
-    font-weight: bold;
-    color: var(--color-via);
-}
-
-.stat {
-    font-weight: bold;
-    color: var(--color-rareza);
-}
-
 /* ====================================================================
-   NOVAFLARE — COMPONENTES GLOBALES (SWITCH Y BADGE)
+   NOVAFLARE SWITCH (visible en general y hab)
    ==================================================================== */
 .novaflare-switch-wrapper {
-    display: none; /* Se activa via JS con toggleSwitchVisibility */
+    display: none; /* Activado via JS con toggleSwitchVisibility */
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 14px;
     z-index: 100;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px 20px;
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
     pointer-events: auto;
-    
-    /* Posicionamiento debajo del element_path_rarity */
-    margin: 10px auto 0 auto;
+
+    background: linear-gradient(135deg, rgba(20, 22, 35, 0.98) 0%, rgba(10, 11, 16, 0.98) 100%);
+    border: 1px solid rgba(255, 0, 85, 0.3);
+    padding: 10px 24px;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(255, 0, 85, 0.2), inset 0 1px 0 rgba(255,255,255,0.05);
+    margin: 8px auto 0 auto;
     width: fit-content;
+    transition: box-shadow 0.3s ease;
+}
+
+.novaflare-switch-wrapper:has(input:checked) {
+    border-color: rgba(255, 204, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(255, 204, 0, 0.25), inset 0 1px 0 rgba(255,255,255,0.05);
 }
 
 .switch-label {
-    font-size: 14px;
-    font-weight: bold;
-    color: #fff;
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--ag-text-muted);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.novaflare-switch-wrapper:has(input:checked) .switch-label {
+    color: var(--ag-nf-2);
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
 }
 
 .switch {
     position: relative;
     display: inline-block;
-    width: 50px;
-    height: 24px;
+    width: 52px;
+    height: 26px;
 }
 
 .switch input {
@@ -301,12 +231,10 @@ nav {
 .slider {
     position: absolute;
     cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #444;
-    transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .slider:before {
@@ -317,48 +245,132 @@ nav {
     left: 3px;
     bottom: 3px;
     background-color: white;
-    transition: .4s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-input:checked+.slider {
-    background-color: var(--color-rareza, #f29e38);
+input:checked + .slider {
+    background: linear-gradient(135deg, var(--ag-nf-1), var(--ag-nf-2));
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(255, 0, 85, 0.5);
 }
 
-input:checked+.slider:before {
+input:checked + .slider:before {
     transform: translateX(26px);
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
 }
 
 .slider.round {
     border-radius: 34px;
 }
-
 .slider.round:before {
     border-radius: 50%;
 }
 
-/* Clases base para el badge */
+/* ====================================================================
+   BOTONES DE SECCIÓN (Info / Habilidades / Eidolones / Guía)
+   ==================================================================== */
+.botones {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    pointer-events: auto;
+    z-index: 50;
+}
+
+.botones img {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    cursor: pointer;
+    object-fit: cover;
+    padding: 6px;
+
+    background: linear-gradient(135deg, rgba(20,22,35,0.9) 0%, rgba(10,11,16,0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255,255,255,0.05);
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+                border-color 0.3s ease,
+                box-shadow 0.3s ease,
+                filter 0.3s ease;
+    filter: saturate(0.7) brightness(0.8);
+}
+
+.botones img:hover {
+    transform: scale(1.12) translateY(-3px);
+    border-color: var(--ag-accent-1);
+    box-shadow: 0 10px 25px rgba(0, 240, 255, 0.3), inset 0 0 12px rgba(0, 240, 255, 0.1);
+    filter: saturate(1) brightness(1.1);
+}
+
+.botones img:active {
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+
+.botones img.activo {
+    border-color: var(--color-rareza, #f29e38);
+    background: linear-gradient(135deg, rgba(30,25,10,0.95) 0%, rgba(10,11,16,0.95) 100%);
+    box-shadow: 0 0 20px var(--color-rareza, rgba(242, 158, 56, 0.5)),
+                inset 0 0 10px rgba(255,204,0,0.1);
+    filter: saturate(1.2) brightness(1.15);
+    transform: scale(1.06);
+}
+
+/* ====================================================================
+   SECCIONES (mostrar/ocultar)
+   ==================================================================== */
+.habilidades,
+.eidolones {
+    display: none;
+}
+
+/* ====================================================================
+   UTILIDADES DE TEXTO
+   ==================================================================== */
+.stat {
+    font-weight: 800;
+    color: var(--color-rareza, #f29e38);
+}
+
+/* ====================================================================
+   BADGES NOVAFLARE GLOBALES
+   ==================================================================== */
 .novaflare-badge-global {
-    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    background: linear-gradient(135deg, var(--ag-nf-1), var(--ag-nf-2));
     color: #000;
-    border-radius: 3px;
+    border-radius: 4px;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(255, 0, 85, 0.4);
+}
+
+/* ====================================================================
+   ANIMACIONES
+   ==================================================================== */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes novaflare-pulse {
-
-    0%,
-    100% {
-        box-shadow:
-            0 0 10px 3px rgba(255, 204, 0, 0.45),
-            0 0 22px 6px rgba(255, 78, 80, 0.2);
+    0%, 100% {
+        box-shadow: 0 0 10px 3px rgba(255, 0, 85, 0.5), 0 0 22px 6px rgba(255, 204, 0, 0.2);
     }
-
     50% {
-        box-shadow:
-            0 0 16px 5px rgba(255, 204, 0, 0.65),
-            0 0 32px 10px rgba(255, 78, 80, 0.3);
+        box-shadow: 0 0 18px 5px rgba(255, 204, 0, 0.65), 0 0 30px 8px rgba(255, 0, 85, 0.3);
     }
 }
