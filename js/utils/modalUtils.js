@@ -7,18 +7,18 @@ let elemento = null; // Valor por defecto, se actualizará al cargar el personaj
  * Se llama una sola vez desde el main().
  */
 export function inicializarModal() {
-    // CAMBIO 1: Buscamos el fondo oscuro (overlay) en lugar del contenido
     const modal = document.querySelector('.modal-content-skill');
+    const overlay = modal.parentElement;
     if (!modal) return;
 
     // Botón cerrar
     modal.querySelector('.modal-close-skill').addEventListener('click', () => {
-        modal.style.display = 'none';
+        overlay.style.display = 'none';
     });
 
     // Cerrar al hacer clic fuera (ahora sí detectará el fondo)
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) modal.style.display = 'none';
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) overlay.style.display = 'none';
     });
 
     // Navegación (Flechas)
