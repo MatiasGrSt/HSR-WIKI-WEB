@@ -22,8 +22,8 @@ export function inicializarModal() {
     });
 
     // Navegación (Flechas)
-    modal.querySelector('#modal-prev-skill').addEventListener('click', () => navigateModal(-1));
-    modal.querySelector('#modal-next-skill').addEventListener('click', () => navigateModal(1));
+    modal.querySelector('#modal-prev-skill').addEventListener('click', () => navigateModal(1));
+    modal.querySelector('#modal-next-skill').addEventListener('click', () => navigateModal(-1));
 
     // Slider de nivel
     modal.querySelector('#skill-lvl-range').addEventListener('input', () => updateModalDescription());
