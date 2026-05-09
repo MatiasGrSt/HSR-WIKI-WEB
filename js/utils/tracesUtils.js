@@ -115,7 +115,7 @@ export function crearIconosMinorTraces(traces, element) {
         // CORREGIDO: Inyectamos el div completo cerrado correctamente
         htmlFinal += `
             <div class="trace_mi" id="min${idx}">
-                <img src="../imagenes/Stats/${tipoLimpio}.webp" onerror="this.src='../imagenes/Stats/Desconocido.webp'">
+                <img src="../imagenes/Stats/${tipoLimpio.replaceAll(' ', '_')}.webp">
                 <div class="popup Matrace-popup">
                     <h3 class="type">${tipoLimpio}</h3>
                     <p class="value-text">${valorLimpio}</p>
