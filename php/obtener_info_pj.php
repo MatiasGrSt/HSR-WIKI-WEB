@@ -49,15 +49,12 @@ $resEidolons = fetchDirectus('eidolons', 'character_id', $personaje, 'lvl');
 $resTraces = fetchDirectus('traces', 'character_id', $personaje);
 $resTracesMi = fetchDirectus('traces_mi', 'character_id', $personaje);
 
-$resSkillLevels = fetchDirectus('skills_levels', 'character_id', $personaje);
-
 $finalData = [
     "info" => $resBasic[0], // Solo el primer objeto, ya que name es único
     "skills" => $resSkills,
     "eidolons" => $resEidolons,
     "major_traces" => $resTraces,
-    "minor_traces" => $resTracesMi,
-    "skill_levels" => $resSkillLevels
+    "minor_traces" => $resTracesMi
 ];
 
 echo json_encode($finalData, JSON_UNESCAPED_UNICODE);
