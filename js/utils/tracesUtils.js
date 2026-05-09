@@ -57,6 +57,10 @@ export function crearIconosMinorTraces(traces) {
 
     for (const [nombreGrupo, listaRastros] of Object.entries(traces)) {
 
+        if (rastroN.type == "DMG") {
+            console.log(rastroN);
+        }
+
         // ---------------------------------------------------------
         // PARTE NORMAL
         // ---------------------------------------------------------
@@ -66,7 +70,7 @@ export function crearIconosMinorTraces(traces) {
                 <div class="trace_mi" id="min${idx}">
                     <img src="../imagenes/Stats/${rastroN.type}.webp">
                     <div class="popup Matrace-popup">
-                        <h3 class="type">${nombreGrupo}</h3>
+                        <h3 class="type">${rastroN.type}</h3>
                         <p>${rastroN.description}</p>
                     </div>
                 </div>
