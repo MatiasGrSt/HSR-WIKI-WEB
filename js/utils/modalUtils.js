@@ -8,7 +8,7 @@ let elemento = null; // Valor por defecto, se actualizará al cargar el personaj
  */
 export function inicializarModal() {
     // CAMBIO 1: Buscamos el fondo oscuro (overlay) en lugar del contenido
-    const modal = document.querySelector('.modal-overlay-skill');
+    const modal = document.querySelector('.modal-content-skill');
     if (!modal) return;
 
     // Botón cerrar

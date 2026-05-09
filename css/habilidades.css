@@ -334,6 +334,7 @@
     justify-content: center;
     align-items: center;
     z-index: 9999;
+    pointer-events: auto;
     /* Para que quede por encima de absolutamente todo */
 }
 
