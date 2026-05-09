@@ -2,6 +2,7 @@ import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 //import { cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
 import { cargarInfo, cargarHabilidades } from './utils/cargasPj.js';
+import { inicializarModal } from './utils/modalUtils.js';
 
 function cambiarPestana(idBoton) {
     const secciones = {
@@ -42,6 +43,7 @@ let globalSwitch = null;
 
 async function main() {
     // 1. Preparamos el terreno visual
+    inicializarModal();
     manejoBotones();
     cambiarPestana('info');
     document.getElementById('info').classList.add('activo');
