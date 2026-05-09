@@ -99,7 +99,7 @@ export function crearIconosHabilidades(habilidades, charName, element) {
 
             htmlFinal += `
                 <div class="skill-version skill-nf-version skill-trigger" style="display: none;" data-tipo="${tipo}" data-isnf="true">
-                    <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp" class="skill-trigger" data-tipo="${tipo}" data-isnf="true">
+                    <img src="../imagenes/personajes/${charName}/${tipoLimpio}.webp">
                     <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
                     <div class="popup skill-popup">
                         <h3 class="type">${tipo}</h3>
