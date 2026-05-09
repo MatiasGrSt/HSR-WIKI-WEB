@@ -1,7 +1,7 @@
 import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 //import { cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
-import { cargarInfo, cargarHabilidades } from './Utils/cargasPj.js';
+import { cargarInfo, cargarHabilidades } from './utils/cargasPj.js';
 
 function cambiarPestana(idBoton) {
     const secciones = {
