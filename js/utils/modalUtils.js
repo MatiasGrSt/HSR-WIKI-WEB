@@ -59,8 +59,6 @@ async function updateModalContent() {
     const skill = entry.skill;
     const isNF = skill.enhanced;
 
-    console.log('Actualizando modal con skill:', entry);
-
     // 1. Estética y Fondo según el elemento
     const content = modal.querySelector('.modal-content-skill');
     content.classList.toggle('is-novaflare', isNF);
@@ -138,7 +136,6 @@ function updateModalDescription() {
 function navigateModal(direction) {
     const total = modalState.skills.length;
     modalState.activeIndex = (modalState.activeIndex + direction + total) % total;
-    console.log('Navegando a índice:', modalState.activeIndex);
     updateModalContent();
 }
 
