@@ -80,7 +80,7 @@ async function main() {
         document.querySelector('.splash_art').src = `../imagenes/personajes/${info.name}/Splash_Art.webp`;
         
         // Llamamos a cargarInfo pasándole los datos que necesita
-        cargarInfo(info, rareza);
+        await cargarInfo(info, rareza);
 
         const isNovaflareChar = Number(info.novaflare) === 1;
 
