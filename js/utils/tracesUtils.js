@@ -7,6 +7,7 @@ export function crearIconosMajorTraces(traces) {
         // 2. AHORA SÍ filtramos el array que está dentro de cada grupo
         const TraceNormales = listaRastros.filter(t => t.enhanced === null);
         const TraceNovaflare = listaRastros.filter(t => t.enhanced === 1);
+        console.log(`Grupo: ${nombreGrupo}, Normales: ${TraceNormales.length}, Novaflare: ${TraceNovaflare.length}`);
 
         htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}">`;
 
