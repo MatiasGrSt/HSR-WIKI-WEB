@@ -85,7 +85,7 @@ async function main() {
 
         // Cargar el resto de módulos
         await cargarHabilidades(habilidades, info.name, info.element);
-        await cargarMajorTraces(traces_ma);
+        const traces = await cargarMajorTraces(traces_ma);
         //await cargarMinorTraces(info.name, info.element);
         await cargarEidolones(info.name, isNovaflareChar);
 
