@@ -56,7 +56,7 @@ async function main() {
     try {
         // 3. HACEMOS EL FETCH AQUÍ ADENTRO (Esperamos los datos)
         // OJO: Asegúrate de pasar &tipo=all si tu PHP lo requiere para devolver todo el paquete
-        const res = await fetch(`../php/obtener_info_pj.php?nombre=${personaje}`);
+        const res = await fetch(`../php/obtener_info_pj.php?personaje=${personaje}&tipo=all`);
         const data = await res.json();
 
         // 4. Desempaquetamos los datos
