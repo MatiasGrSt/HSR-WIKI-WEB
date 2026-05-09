@@ -1,6 +1,7 @@
 export function crearIconosMajorTraces(traces) {
     let htmlFinal = '';
     let idx = 1;
+    console.log(traces);
 
     for (const [nombreGrupo, listaRastros] of Object.entries(traces)) {
         
