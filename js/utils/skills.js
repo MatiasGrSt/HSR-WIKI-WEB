@@ -28,12 +28,10 @@ function activarClicsModal(groups, charName) {
             const tipo = img.dataset.tipo; 
             const isNovaflare = img.dataset.isnf === "true"; 
 
-            console.log(groups.normal[tipo]);
 
             // Decidimos qué datos pasarle al modal
             const skillsArray = isNovaflare ? groups.novaflare[tipo] : groups.normal[tipo];
             const modeString = isNovaflare ? 'novaflare' : 'normal';
-            console.log(`Abriendo modal para ${tipo} (${modeString}) con ${skillsArray.length} habilidades.`);
             
             // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
             openSkillModal(tipo, skillsArray, modeString, charName); 

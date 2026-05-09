@@ -34,10 +34,7 @@ export function inicializarModal() {
 /**
  * Función principal para abrir el modal desde fuera (skills.js).
  */
-export async function openSkillModal(type, skills, mode, charName, element) {
-    currentCharName = charName;
-    currentElement = element;
-
+export async function openSkillModal(type, skills, mode) {
     // Guardamos las habilidades en el estado del modal
     modalState.skills = skills.map(s => ({
         skill: s,
@@ -45,6 +42,7 @@ export async function openSkillModal(type, skills, mode, charName, element) {
     }));
     modalState.activeIndex = 0;
 
+    console.log(modalState);
     document.getElementById('modal-info-habilidad').style.display = 'flex';
     
     // Cargamos el contenido inicial
