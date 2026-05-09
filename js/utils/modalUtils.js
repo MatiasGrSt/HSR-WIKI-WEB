@@ -34,6 +34,7 @@ export function inicializarModal() {
  * Función principal para abrir el modal desde fuera (skills.js).
  */
 export async function openSkillModal(type, skills, element) {
+    console.log('Abriendo modal para:', type, skills, element);
     // Guardamos las habilidades en el estado del modal
     modalState.skills = skills.map(s => ({
         skill: s
@@ -42,7 +43,7 @@ export async function openSkillModal(type, skills, element) {
     // Actualizamos el elemento para el fondo del modal
     elemento = element;
     
-    document.getElementById('modal-info-habilidad').style.display = 'flex';
+    document.querySelector('.modal-overlay-skill').style.display = 'flex';
     
     // Cargamos el contenido inicial
     await updateModalContent();
@@ -111,7 +112,7 @@ async function updateModalContent() {
  * Procesa el texto de la descripción reemplazando {stat_x} por los valores del nivel.
  */
 function updateModalDescription() {
-    const modal = document.getElementById('modal-info-habilidad');
+    const modal = document.querySelector('.modal-overlay-skill');
     const entry = modalState.skills[modalState.activeIndex];
     const skill = entry.skill;
     const lvl = parseInt(modal.querySelector('#skill-lvl-range').value);
