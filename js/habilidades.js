@@ -99,10 +99,6 @@ function pairMajorTracesByName(traces) {
 
 async function renderMajorTraces(char, isNovaflareChar) {
     const container = document.getElementById('hab_cont');
-    try {
-        const res = await fetch(`../php/obtener_info_pj.php?personaje=${char}&tipo=major_traces`);
-        const data = await res.json();
-        if (!Array.isArray(data) || data.length === 0) return;
 
         const pairs = pairMajorTracesByName(data);
 
@@ -154,7 +150,6 @@ async function renderMajorTraces(char, isNovaflareChar) {
             item.appendChild(nfWrapper);
             container.appendChild(item);
         });
-    } catch (e) { console.error('Error renderizando major traces:', e); }
 }
 
 function renderAllSkillTypes(groups, mode) {

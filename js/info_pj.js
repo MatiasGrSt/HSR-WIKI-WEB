@@ -1,7 +1,7 @@
 import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 //import { cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
-import { cargarInfo, cargarHabilidades } from './utils/cargasPj.js';
+import { cargarInfo, cargarHabilidades, cargarMajorTraces } from './utils/cargasPj.js';
 import { inicializarModal } from './utils/modalUtils.js';
 
 function cambiarPestana(idBoton) {
@@ -85,7 +85,7 @@ async function main() {
 
         // Cargar el resto de módulos
         await cargarHabilidades(habilidades, info.name, info.element);
-        //await cargarMajorTraces(info.name, isNovaflareChar);
+        await cargarMajorTraces(traces_ma);
         //await cargarMinorTraces(info.name, info.element);
         await cargarEidolones(info.name, isNovaflareChar);
 

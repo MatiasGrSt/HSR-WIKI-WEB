@@ -1,6 +1,5 @@
 import { organizarHabilidades, juntarHabilidades, crearIconosHabilidades } from "./skillsUtils.js"
 
-
 // Le pasamos info y rareza como parámetros para no depender de variables globales
 export function cargarInfo(info, rareza) {
     document.getElementById('name').innerText = info.name;
@@ -38,4 +37,15 @@ export async function cargarHabilidades(habilidades, charName, element) {
     const groups = { normal: gruposNormal, novaflare: gruposNovaflare };
 
     crearIconosHabilidades(groups, charName, element);
+}
+
+export function cargarMajorTraces(traces) {
+    let grupos = {};
+    traces.forEach(trace => {
+        if (!grupos[trace.name]) {
+            grupos[trace.name] = [];
+        }
+        grupos[trace.name].push(trace);
+    });
+    return grupos;
 }
