@@ -64,7 +64,7 @@
     transform: translate(-50%, -50%);
 }
 
-#hab_cont>div:not(.modal-overlay-skill) {
+#hab_cont>div {
     position: absolute;
     z-index: 5;
     transform: translate(-50%, -50%) scale(1);
