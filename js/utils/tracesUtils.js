@@ -5,54 +5,51 @@ export function crearIconosMajorTraces(traces) {
 
     for (const [nombreGrupo, listaRastros] of Object.entries(traces)) {
         
-        listaRastros.forEach(rastro => {
-            // 2. AHORA SÍ filtramos el array que está dentro de cada grupo
-            const TraceNormales = listaRastros.filter(t => t.enhanced === null);
-            const TraceNovaflare = listaRastros.filter(t => t.enhanced === 1);
+        // BORRAMOS EL FOR EACH. Filtramos el array del grupo directamente.
+        const TraceNormales = listaRastros.filter(t => t.enhanced === null);
+        const TraceNovaflare = listaRastros.filter(t => t.enhanced === 1);
 
-            console.log(nombreGrupo);
-            console.log(TraceNormales);
-            console.log(TraceNovaflare);
+        console.log(`Grupo: ${nombreGrupo}`);
+        console.log("Normales:", TraceNormales);
+        console.log("Novaflare:", TraceNovaflare);
 
-            htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}">`;
+        htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}">`;
 
-            // --------------------------------------------------------- 
-            // PARTE NORMAL
-            // ---------------------------------------------------------
-            if (TraceNormales.length > 0) {
-                const rastroN = TraceNormales[0];
-                htmlFinal += `
-                    <div class="Matrace-version Matrace-normal-version">
-                        <img src="../imagenes/personajes/${rastroN.character_id}/Pasiva_${idx}.webp">
-                        <div class="popup Matrace-popup">
-                            <h3 class="type">${nombreGrupo}</h3>
-                            <p>${rastroN.description}</p>
-                        </div>
+        // --------------------------------------------------------- 
+        // PARTE NORMAL
+        // ---------------------------------------------------------
+        if (TraceNormales.length > 0) {
+            const rastroN = TraceNormales[0];
+            htmlFinal += `
+                <div class="Matrace-version Matrace-normal-version">
+                    <img src="../imagenes/personajes/${rastroN.character_id}/Pasiva_${idx}.webp">
+                    <div class="popup Matrace-popup">
+                        <h3 class="type">${nombreGrupo}</h3>
+                        <p>${rastroN.description}</p>
                     </div>
-                `;
-            }
+                </div>
+            `;
+        }
 
-            // ---------------------------------------------------------
-            // 2. CREAMOS LA PARTE NOVAFLARE (Oculta por defecto)
-            // ---------------------------------------------------------
-            if (TraceNovaflare.length > 0) {
-                // CAMBIO: Cambiamos a rastroNF para no confundir
-                const rastroNF = TraceNovaflare[0]; 
-                htmlFinal += `
-                    <div class="Matrace-version Matrace-novaflare-version" style="display: none;">
-                        <img src="../imagenes/personajes/${rastroNF.character_id}/Pasiva_${idx}.webp">
-                        <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
-                        <div class="popup Matrace-popup">
-                            <h3 class="type">${nombreGrupo}</h3>
-                            <p>${rastroNF.description}</p>
-                        </div>
+        // ---------------------------------------------------------
+        // 2. CREAMOS LA PARTE NOVAFLARE (Oculta por defecto)
+        // ---------------------------------------------------------
+        if (TraceNovaflare.length > 0) {
+            const rastroNF = TraceNovaflare[0]; 
+            htmlFinal += `
+                <div class="Matrace-version Matrace-novaflare-version" style="display: none;">
+                    <img src="../imagenes/personajes/${rastroNF.character_id}/Pasiva_${idx}.webp">
+                    <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
+                    <div class="popup Matrace-popup">
+                        <h3 class="type">${nombreGrupo}</h3>
+                        <p>${rastroNF.description}</p>
                     </div>
-                `;
-            }
+                </div>
+            `;
+        }
 
-            htmlFinal += `</div>`; // Cerramos el contenedor principal
-            idx++;
-        });
+        htmlFinal += `</div>`; // Cerramos el contenedor principal
+        idx++;
     }
     
     document.getElementById('hab_cont').insertAdjacentHTML('beforeend', htmlFinal);
