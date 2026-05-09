@@ -52,7 +52,7 @@ export async function openSkillModal(type, skills, element) {
  * Actualiza el contenido visual (Imagen, Título, Stats y Niveles).
  */
 async function updateModalContent() {
-    const modal = document.getElementById('modal-overlay-skill');
+    const modal = document.querySelector('.modal-overlay-skill');
     const entry = modalState.skills[modalState.activeIndex];
     const skill = entry.skill;
     const isNF = skill.enhanced;
@@ -65,9 +65,8 @@ async function updateModalContent() {
 
     // 2. Imagen e Iconos
     const tipoF = skill.type.replaceAll(' ', '_');
-    const imgName = isNF ? `${tipoF}_2` : tipoF;
     const img = modal.querySelector('#modal-img-skill');
-    img.src = `../imagenes/personajes/${skill.character_id}/${imgName}.webp`;
+    img.src = `../imagenes/personajes/${skill.character_id}/${tipoF}.webp`;
     img.onerror = () => { img.src = `../imagenes/personajes/${skill.character_id}/${tipoF}.webp`; };
 
     // 3. Títulos y Badges
