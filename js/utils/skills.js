@@ -28,7 +28,7 @@ function activarClicsModal(groups, charName) {
             const tipo = img.dataset.tipo; 
             const isNovaflare = img.dataset.isnf === "true"; 
 
-            console.log(`Trigger clickeado: tipo=${tipo}, isNovaflare=${isNovaflare}, ${groups.normal[tipo]}, ${groups.novaflare[tipo]}`); // Debug para verificar que tenemos los datos correctos
+            console.log(groups.normal[tipo]);
 
             // Decidimos qué datos pasarle al modal
             const skillsArray = isNovaflare ? groups.novaflare[tipo] : groups.normal[tipo];
