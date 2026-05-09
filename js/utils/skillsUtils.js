@@ -41,6 +41,7 @@ function activarClicsModal(groups, charName, element) {
             
             // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
             openSkillModal(tipo, skillsArray, element); 
+            inicializarModal();
         });
     });
 }
