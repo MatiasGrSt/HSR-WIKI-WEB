@@ -9,6 +9,10 @@ export function crearIconosMajorTraces(traces) {
             const TraceNormales = listaRastros.filter(t => t.enhanced === null);
             const TraceNovaflare = listaRastros.filter(t => t.enhanced === 1);
 
+            console.log(nombreGrupo);
+            console.log(TraceNormales);
+            console.log(TraceNovaflare);
+
             htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}">`;
 
             // --------------------------------------------------------- 
