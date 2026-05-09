@@ -93,6 +93,8 @@ main {
     padding: 20px 50px 10px 50px;
     pointer-events: auto;
     cursor: default;
+    position: relative;
+    z-index: 1;
 
     background: linear-gradient(180deg, #ffffff 0%, var(--color-rareza, #f29e38) 100%);
     -webkit-background-clip: text;
@@ -117,6 +119,8 @@ main {
     margin: 0 auto 10px auto;
     width: fit-content;
     padding: 14px 28px;
+    position: relative;
+    z-index: 1;
 
     background: linear-gradient(135deg, rgba(20, 22, 35, 0.95) 0%, rgba(10, 11, 16, 0.95) 100%);
     border: 1px solid rgba(255, 255, 255, 0.08);
@@ -189,12 +193,13 @@ main {
    NOVAFLARE SWITCH (visible en general y hab)
    ==================================================================== */
 .novaflare-switch-wrapper {
-    display: none; /* Activado via JS con toggleSwitchVisibility */
+    display: none;
     align-items: center;
     justify-content: center;
     gap: 14px;
-    z-index: 100;
+    z-index: 1;
     pointer-events: auto;
+    position: relative;
 
     background: linear-gradient(135deg, rgba(20, 22, 35, 0.98) 0%, rgba(10, 11, 16, 0.98) 100%);
     border: 1px solid rgba(255, 0, 85, 0.3);
