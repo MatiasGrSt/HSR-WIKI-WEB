@@ -129,6 +129,7 @@ main {
     overflow-x: hidden;
     box-sizing: border-box;
     flex-grow: 1;
+    z-index: 0;
 }
 
 /* =========================================
