@@ -1,0 +1,5 @@
+# Ignorar configuración real con contraseñas
+php/config.php
+
+# Ignorar la carpeta de caché autogenerada
+php/cache/
