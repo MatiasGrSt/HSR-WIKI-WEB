@@ -54,10 +54,17 @@ async function main() {
     document.title = personaje ? `${personaje} - HSR Wiki` : 'Personaje - HSR Wiki';
 
     try {
-        // 3. HACEMOS EL FETCH AQUÍ ADENTRO (Esperamos los datos)
-        // OJO: Asegúrate de pasar &tipo=all si tu PHP lo requiere para devolver todo el paquete
         const res = await fetch(`../php/obtener_info_pj.php?personaje=${personaje}&tipo=all`);
         const data = await res.json();
+        
+        // ¡AÑADE ESTO!
+        console.log("Datos recibidos de PHP:", data);
+
+        // Protección extra para evitar que se rompa la página
+        if (data.error) {
+            console.error("Error del servidor:", data.error);
+            return; // Detenemos la ejecución aquí
+        }
 
         // 4. Desempaquetamos los datos
         const info = data.info;
