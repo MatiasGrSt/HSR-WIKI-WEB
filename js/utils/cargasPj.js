@@ -2,7 +2,7 @@ import { organizarHabilidades, juntarHabilidades, crearIconosHabilidades } from 
 
 
 // Le pasamos info y rareza como parámetros para no depender de variables globales
-function cargarInfo(info, rareza) {
+export function cargarInfo(info, rareza) {
     document.getElementById('name').innerText = info.name;
 
     const estrellasHTML = Array(rareza).fill(`<img src="../imagenes/Utilities/${rareza}.webp" class="star-icon">`).join('');
