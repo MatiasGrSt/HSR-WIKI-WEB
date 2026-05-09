@@ -16,7 +16,7 @@ export const colores = {
 
     vias: {
         "Abundancia": 'rgb(159, 189, 104)',
-        "Destrucción": 'rgb(185, 137, 48)',
+        "Destrucción": 'rgb(95, 0, 0)',
         "Erudición": 'rgb(183, 0, 58)',
         "Armonía": 'rgb(255, 77, 160)',
         "Cacería": 'rgb(88, 124, 221)',
