@@ -101,7 +101,7 @@
 #hab_cont .trace_ma {
     width: 95px;
     height: 95px;
-    background: linear-gradient(135deg, rgba(240, 242, 250, 0.95) 0%, rgba(210, 215, 235, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(240, 242, 250, 1) 0%, rgba(210, 215, 235, 1) 100%);
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px; /* Futuristic squircle instead of circle */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255,255,255,0.9);
@@ -121,7 +121,7 @@
 #hab_cont .trace_mi {
     width: 60px;
     height: 60px;
-    background: rgba(15, 16, 25, 0.9);
+    background: rgb(24, 25, 40);
     border: 1px solid rgba(255, 255, 255, 0.05);
 }
 #hab_cont .trace_mi:hover {
