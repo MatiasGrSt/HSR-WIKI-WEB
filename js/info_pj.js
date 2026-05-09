@@ -16,7 +16,7 @@ function cambiarPestana(idBoton) {
     Object.values(secciones).forEach(seccion => {
         if (seccion) seccion.style.display = 'none';
     });
- 
+
     const seccionActiva = secciones[idBoton];
     if (seccionActiva) {
         seccionActiva.style.display = 'flex';
@@ -101,21 +101,21 @@ async function main() {
         document.head.appendChild(link);
 
         document.querySelector('.splash_art').src = `../imagenes/personajes/${info.name}/Splash_Art.webp`;
-        
+
         // Llamamos a cargarInfo pasándole los datos que necesita
         await cargarInfo(info, rareza);
 
         if (isNovaflareChar) {
-        const switchContainer = document.getElementById('novaflare-switch-container');
-        if (switchContainer) {
-            // Limpiamos por si acaso y creamos el switch usando tu utilidad
-            switchContainer.innerHTML = ''; 
-            createNovaflareSwitch(switchContainer, (modo) => {
-                aplicarModoGlobal(modo);
-            });
-            toggleSwitchVisibility(switchContainer, true);
+            const switchContainer = document.getElementById('novaflare-switch-container');
+            if (switchContainer) {
+                // Limpiamos por si acaso y creamos el switch usando tu utilidad
+                switchContainer.innerHTML = '';
+                const switchEl = createNovaflareSwitch(switchContainer, (modo) => {
+                    aplicarModoGlobal(modo);
+                });
+                toggleSwitchVisibility(switchEl, true);
+            }
         }
-    }
 
         // Cargar el resto de módulos
         await cargarHabilidades(habilidades, info.name, info.element);
