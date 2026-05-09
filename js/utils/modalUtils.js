@@ -33,7 +33,6 @@ export function inicializarModal() {
  * Función principal para abrir el modal desde fuera (skills.js).
  */
 export async function openSkillModal(type, skills, element) {
-    console.log('Abriendo modal para:', type, skills, element);
     
     // Guardamos las habilidades en el estado del modal
     modalState.skills = skills.map(s => ({

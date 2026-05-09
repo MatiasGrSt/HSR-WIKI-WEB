@@ -1,5 +1,5 @@
 import { organizarHabilidades, juntarHabilidades, crearIconosHabilidades } from "./skillsUtils.js"
-import { crearIconosMajorTraces } from "./majorTracesUtils.js";
+import { crearIconosMajorTraces, crearIconosMinorTraces } from "./tracesUtils.js";
 
 // Le pasamos info y rareza como parámetros para no depender de variables globales
 export function cargarInfo(info, rareza) {
@@ -40,7 +40,7 @@ export async function cargarHabilidades(habilidades, charName, element) {
     crearIconosHabilidades(groups, charName, element);
 }
 
-export function cargarMajorTraces(traces) {
+export function cargarTraces(traces) {
     let grupos = {};
     traces.forEach(trace => {
         if (!grupos[trace.name]) {

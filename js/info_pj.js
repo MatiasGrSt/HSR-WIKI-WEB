@@ -1,6 +1,6 @@
 import { colores } from './colores.js';
 import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
-//import { cargarMinorTraces, cargarMajorTraces } from './habilidades.js';
+import { crearIconosMinorTraces } from './utils/tracesUtils.js';
 import { cargarInfo, cargarHabilidades, cargarMajorTraces } from './utils/cargasPj.js';
 import { inicializarModal } from './utils/modalUtils.js';
 
@@ -84,7 +84,8 @@ async function main() {
         // Cargar el resto de módulos
         await cargarHabilidades(habilidades, info.name, info.element);
         await cargarMajorTraces(traces_ma);
-        //await cargarMinorTraces(info.name, info.element);
+        console.log(tracen_mi);
+        await crearIconosMinorTraces(tracen_mi);
         await cargarEidolones(info.name, isNovaflareChar);
 
         // Si hay Novaflare, agregar listener al switch para actualizar eidolones
