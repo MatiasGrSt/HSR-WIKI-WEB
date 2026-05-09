@@ -49,10 +49,19 @@ main {
     height: 100%;
     position: relative;
     animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    overflow-y: auto;
+}
+
+/* El fondo va en ::before para que splash_art pueda vivir por encima de él */
+.general::before {
+    content: '';
+    position: absolute;
+    inset: 0;
     background: radial-gradient(ellipse at top right, rgba(0, 240, 255, 0.04), transparent 60%),
                 radial-gradient(ellipse at bottom left, rgba(112, 0, 255, 0.05), transparent 60%);
     pointer-events: none;
-    overflow-y: auto;
+    z-index: 0;
 }
 
 /* ====================================================================
@@ -64,8 +73,9 @@ main {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 80%;
-    z-index: -1;
+    z-index: 0;  /* Positivo para estar sobre ::before pero bajo el resto del contenido */
     opacity: 0.6;
+    pointer-events: none;
     mask-image: radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
     -webkit-mask-image: radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
 }
