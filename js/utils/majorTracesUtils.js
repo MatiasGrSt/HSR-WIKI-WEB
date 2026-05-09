@@ -17,7 +17,7 @@ export function crearIconosMajorTraces(traces) {
             const rastroN = TraceNormales[0];
             htmlFinal += `
                 <div class="Matrace-version Matrace-normal-version" data-tipo="${nombreGrupo}" data-isnf="false">
-                    <img src="../imagenes/personajes/${rastroN.character_id}/${rastroN.icon}.webp">
+                    <img src="../imagenes/personajes/${rastroN.character_id}/Pasiva_${idx}.webp">
                     <div class="popup Matrace-popup">
                         <h3 class="type">${nombreGrupo}</h3>
                         <p>${rastroN.description}</p>
@@ -34,7 +34,7 @@ export function crearIconosMajorTraces(traces) {
             const rastroNF = TraceNovaflare[0]; 
             htmlFinal += `
                 <div class="Matrace-version Matrace-novaflare-version" style="display: none;" data-tipo="${nombreGrupo}" data-isnf="true">
-                    <img src="../imagenes/personajes/${rastroNF.character_id}/${rastroNF.icon}.webp">
+                    <img src="../imagenes/personajes/${rastroNF.character_id}/Pasiva_${idx}.webp">
                     <span class="skill-novaflare-badge novaflare-badge-global">Novaflare</span>
                     <div class="popup Matrace-popup">
                         <h3 class="type">${nombreGrupo}</h3>

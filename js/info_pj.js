@@ -56,15 +56,6 @@ async function main() {
     try {
         const res = await fetch(`../php/obtener_info_pj.php?personaje=${personaje}&tipo=all`);
         const data = await res.json();
-        
-        // ¡AÑADE ESTO!
-        console.log("Datos recibidos de PHP:", data);
-
-        // Protección extra para evitar que se rompa la página
-        if (data.error) {
-            console.error("Error del servidor:", data.error);
-            return; // Detenemos la ejecución aquí
-        }
 
         // 4. Desempaquetamos los datos
         const info = data.info;
