@@ -9,7 +9,7 @@ let elemento = null; // Valor por defecto, se actualizará al cargar el personaj
  * Se llama una sola vez desde el main().
  */
 export function inicializarModal() {
-    const modal = document.getElementById('modal-info-habilidad');
+    const modal = document.querySelector('.modal-content-skill');
     if (!modal) return;
 
     // Botón cerrar

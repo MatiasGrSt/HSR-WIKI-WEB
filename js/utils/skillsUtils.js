@@ -1,5 +1,8 @@
-import { openSkillModal } from "./modal.js";
+import { openSkillModal, inicializarModal } from "./modalUtils.js";
 
+//------------------------------------------------------------------------------------------
+//---------------------------------UTILS DE ORGANIZACIÓN DE HABILIDADES--------------------- cargasPj.js
+//------------------------------------------------------------------------------------------
 export function organizarHabilidades(habilidades) {
     const normal = habilidades.filter(h => h.enhanced === null);
     const novaflare = habilidades.filter(h => h.enhanced === 1);
@@ -17,6 +20,9 @@ export function juntarHabilidades(lista) {
     return grupos;
 }
 
+//------------------------------------------------------------------------------------------
+//---------------------------------UTILS DE RENDERIZADO DE ICONOS--------------------------- skillsUtils.js
+//------------------------------------------------------------------------------------------
 function activarClicsModal(groups, charName, element) {
     const triggers = document.querySelectorAll('.skill-trigger');
 
@@ -34,11 +40,15 @@ function activarClicsModal(groups, charName, element) {
             const modeString = isNovaflare ? 'novaflare' : 'normal';
             
             // Llamamos a tu modal (asegúrate de que modal.js reciba estos parámetros)
+            inicializarModal();
             openSkillModal(tipo, skillsArray, element); 
         });
     });
 }
 
+//------------------------------------------------------------------------------------------
+//---------------------------------RENDERIZADO DE ICONOS------------------------------------ cargasPj.js
+//------------------------------------------------------------------------------------------
 export function crearIconosHabilidades(habilidades, charName, element) {
     const todosLosTipos = new Set([
         ...Object.keys(habilidades.normal || {}), 
