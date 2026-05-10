@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('UTC');
 // --- 1. SISTEMA DE SEGURIDAD CORS (Lista VIP) ---
 $dominios_permitidos = [
     'https://www.astralwiki.com',
