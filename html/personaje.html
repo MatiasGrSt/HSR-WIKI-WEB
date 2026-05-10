@@ -21,7 +21,6 @@
             <h1 id="name"></h1>
 
             <div class="element_path_rarity"></div>
-            <div id="novaflare-switch-container"></div>
 
             <div class="info">
                 <p id="introduction"></p>
@@ -56,6 +55,14 @@
             </div>
 
             <div class="habilidades">
+                <div class="novaflare-switch-container" style="display: none;">
+                    <span class="switch-label">Novaflare</span>
+                    <label class="switch">
+                        <input type="checkbox" class="novaflare-toggle-input">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
                 <div class="modal-overlay-skill" style="display:none;">
                     <div class="modal-content-skill">
                         <span class="modal-close-skill">&times;</span>
@@ -87,7 +94,17 @@
                 <div id="hab_cont"></div>
             </div>
 
-            <div class="eidolones" id="eidolones-container"></div>
+            <div class="eidolones">
+                <div class="novaflare-switch-container" style="display: none;">
+                    <span class="switch-label">Novaflare</span>
+                    <label class="switch">
+                        <input type="checkbox" class="novaflare-toggle-input">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div id="eidolon_cont"></div>
+            </div>
         </div>
     </main>
 

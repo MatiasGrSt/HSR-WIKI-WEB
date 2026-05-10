@@ -3,39 +3,31 @@
 // ====================================================================
 /**
  * Crea el switch Novaflare en un contenedor dado
- * @param {HTMLElement} container - Contenedor donde insertar el switch
  * @param {Function} callback - Función que se llama al cambiar (recibe 'normal' o 'novaflare')
  * @returns {HTMLElement} El elemento del switch
  */
-export function createNovaflareSwitch(container, callback) {
-    const wrapper = document.createElement('div');
-    wrapper.className = 'novaflare-switch-wrapper';
-    wrapper.innerHTML = `
-        <span class="switch-label">Novaflare</span>
-        <label class="switch">
-            <input type="checkbox" id="novaflare-toggle">
-            <span class="slider round"></span>
-        </label>
-    `;
+export function initNovaflareSwitches(callback) {
+    const inputs = document.querySelectorAll('.novaflare-toggle-input');
 
-    const checkbox = wrapper.querySelector('input[type="checkbox"]');
+    inputs.forEach(input => {
+        input.addEventListener('change', function() {
+            const isChecked = this.checked;
+            const mode = isChecked ? 'novaflare' : 'normal';
 
-    checkbox.addEventListener('change', function() {
-        const mode = this.checked ? 'novaflare' : 'normal';
-        callback(mode);
+            // Sincronizamos todos los otros switches de la página
+            inputs.forEach(otherInput => {
+                if (otherInput !== this) otherInput.checked = isChecked;
+            });
+
+            callback(mode);
+        });
     });
-
-    container.appendChild(wrapper);
-    return wrapper;
 }
 
-/**
- * Muestra u oculta el switch
- */
-export function toggleSwitchVisibility(switchElement, show = true) {
-    if (switchElement) {
-        switchElement.style.display = show ? 'flex' : 'none';
-    }
+export function toggleSwitchVisibility(show = true) {
+    document.querySelectorAll('.novaflare-switch-container').forEach(cont => {
+        cont.style.display = show ? 'flex' : 'none';
+    });
 }
 
 /**

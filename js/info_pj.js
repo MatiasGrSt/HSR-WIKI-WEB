@@ -48,8 +48,8 @@ function aplicarModoGlobal(modo) {
     document.querySelectorAll('.skill-nf-version').forEach(el => el.style.display = isNF ? 'flex' : 'none');
 
     // 2. Swapear Rastros Mayores (Major Traces)
-    document.querySelectorAll('.Matrace-normal-version').forEach(el => el.style.display = isNF ? 'none' : 'block');
-    document.querySelectorAll('.Matrace-novaflare-version').forEach(el => el.style.display = isNF ? 'block' : 'none');
+    document.querySelectorAll('.Matrace-normal-version').forEach(el => el.style.display = isNF ? 'none' : 'flex');
+    document.querySelectorAll('.Matrace-novaflare-version').forEach(el => el.style.display = isNF ? 'flex' : 'none');
 }
 
 // Variable global para el switch
@@ -106,15 +106,16 @@ async function main() {
         await cargarInfo(info, rareza);
 
         if (isNovaflareChar) {
-            const switchContainer = document.getElementById('novaflare-switch-container');
-            if (switchContainer) {
-                // Limpiamos por si acaso y creamos el switch usando tu utilidad
-                switchContainer.innerHTML = '';
-                const switchEl = createNovaflareSwitch(switchContainer, (modo) => {
-                    aplicarModoGlobal(modo);
-                });
-                toggleSwitchVisibility(switchEl, true);
-            }
+            // 1. Mostramos los switches que ya están en el HTML
+            toggleSwitchVisibility(true);
+
+            // 2. Activamos su funcionamiento
+            initNovaflareSwitches((modo) => {
+                aplicarModoGlobal(modo); // Tu función que swapea las clases CSS
+            });
+        } else {
+            // Si no es Novaflare, nos aseguramos de que sigan ocultos
+            toggleSwitchVisibility(false);
         }
 
         // Cargar el resto de módulos
