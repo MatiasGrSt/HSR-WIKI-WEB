@@ -194,9 +194,11 @@ main {
     margin: 5px auto 25px auto; 
     
     /* Aseguramos que sea interactuable y esté sobre el splash_art */
-    position: relative;
+    position: absolute;
     z-index: 10;
     pointer-events: auto;
+    top: -90px;
+    right: 300px;
 }
 
 .novaflare-switch-wrapper {
