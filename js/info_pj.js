@@ -3,7 +3,7 @@ import { cargarEidolones, updateEidolonesMode } from './eidolones.js';
 import { crearIconosMinorTraces } from './utils/tracesUtils.js';
 import { cargarInfo, cargarHabilidades, cargarMajorTraces } from './utils/cargasPj.js';
 import { inicializarModal } from './utils/modalUtils.js';
-import { createNovaflareSwitch, toggleSwitchVisibility } from './utils/switchUtils.js';
+import { initNovaflareSwitches, toggleSwitchVisibility } from './utils/switchUtils.js';
 
 function cambiarPestana(idBoton) {
     const secciones = {
