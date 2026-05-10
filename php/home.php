@@ -1,35 +1,30 @@
 <?php
-// --- SISTEMA DE SEGURIDAD CORS (Lista VIP) ---
+// --- 1. SISTEMA DE SEGURIDAD CORS (Lista VIP) ---
 $dominios_permitidos = [
-    'https://www.astralwiki.com', // Tu dominio principal
-    'https://astralwiki.com',     // Tu dominio sin www
-    'http://localhost:4321',      // Entorno de desarrollo local (Astro)
-    'http://127.0.0.1:4321'       // Entorno de desarrollo alternativo
+    'https://www.astralwiki.com',
+    'https://astralwiki.com',
+    'http://localhost:4321',
+    'http://127.0.0.1:4321'
 ];
 
-// Comprobamos de dónde viene la petición
 $origen = $_SERVER['HTTP_ORIGIN'] ?? '';
 
-// Si viene de uno de nuestros dominios, le abrimos la puerta
 if (in_array($origen, $dominios_permitidos)) {
     header('Access-Control-Allow-Origin: ' . $origen);
     header('Access-Control-Allow-Methods: GET, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type');
 }
 
-// Si el navegador solo está haciendo una pregunta de seguridad (Preflight), 
-// cortamos aquí para no gastar recursos de tu servidor
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit(0);
 }
-// ---------------------------------------------
 
 header('Content-Type: application/json; charset=utf-8');
 
+// --- 2. CONFIGURACIÓN DE API ---
 $token = "GOTW0iUyBua4MUf8g8ojTKr2fQGZnxLq";
 $base_url = "https://panel.astralwiki.com/items/";
 
-// Función para llamar a Directus
 function fetchDirectus($url_final) {
     global $token;
     $opciones = [
@@ -41,76 +36,61 @@ function fetchDirectus($url_final) {
     return $res ? json_decode($res, true)['data'] : [];
 }
 
-$accion = $_GET['accion'] ?? 'eventos';
+// --- 3. RECOPILACIÓN DE DATOS ---
 
-switch ($accion) {
+// A. Obtener Versión Actual
+$version_data = fetchDirectus($base_url . "general?filter[name][_eq]=version&limit=1");
+$version = !empty($version_data) ? $version_data[0]['values'] : "???";
+
+// B. Obtener Fin de Versión (Marcador especial en la tabla eventos)
+$fin_version_data = fetchDirectus($base_url . "events?filter[title][_eq]=fin_version&fields=end_time&limit=1");
+$fin_version = !empty($fin_version_data) ? $fin_version_data[0]['end_time'] : null;
+
+// C. Obtener y Procesar Eventos
+$eventos_raw = fetchDirectus($base_url . "events?filter[title][_neq]=fin_version");
+$ahora = date('Y-m-d H:i:s');
+$eventos_procesados = [];
+
+foreach ($eventos_raw as $evento) {
+    $start = $evento['start_time'];
+    $end = $evento['end_time'];
     
-    case 'eventos':
-        // 1. Obtener el fin de versión
-        $fin_version_data = fetchDirectus($base_url . "events?filter[title][_eq]=fin_version&fields=end_time&limit=1");
-        $fin_version = !empty($fin_version_data) ? $fin_version_data[0]['end_time'] : null;
+    // Lógica de estados
+    if ($ahora >= $start && $ahora <= $end) {
+        $status = 'activo';
+    } elseif ($ahora < $start && $start <= $fin_version) {
+        $status = 'proximamente';
+    } elseif ($ahora < $start && $start > $fin_version) {
+        $status = 'anunciado';
+    } else {
+        $status = 'finalizado';
+    }
 
-        // 2. Obtener todos los eventos (menos el marcador de fin_version)
-        $eventos_raw = fetchDirectus($base_url . "events?filter[title][_neq]=fin_version");
-
-        $ahora = date('Y-m-d H:i:s');
-        $eventos_procesados = [];
-
-        foreach ($eventos_raw as $evento) {
-            $start = $evento['start_time'];
-            $end = $evento['end_time'];
-            $status = 'finalizado'; // Valor por defecto
-
-            if ($ahora >= $start && $ahora <= $end) {
-                $status = 'activo';
-            } elseif ($ahora < $start && $start <= $fin_version) {
-                $status = 'proximamente';
-            } elseif ($ahora < $start && $start > $fin_version) {
-                $status = 'anunciado';
-            }
-
-            $evento['status'] = $status;
-            $eventos_procesados[] = $evento;
-        }
-
-        // 3. Ordenar: Activos primero, luego por fecha de inicio
-        usort($eventos_procesados, function($a, $b) {
-            if ($a['status'] === 'activo' && $b['status'] !== 'activo') return -1;
-            if ($a['status'] !== 'activo' && $b['status'] === 'activo') return 1;
-            return strcmp($a['start_time'], $b['start_time']);
-        });
-
-        echo json_encode([
-            "eventos" => $eventos_procesados,
-            "fin_version" => $fin_version
-        ], JSON_UNESCAPED_UNICODE);
-        break;
-
-    case 'codes':
-        // Filtramos en la tabla general los que empiecen por code_
-        $codigos = fetchDirectus($base_url . "general?filter[name][_contains]=code_");
-        echo json_encode($codigos, JSON_UNESCAPED_UNICODE);
-        break;
-
-    case 'featured_characters':
-        // Filtramos personajes destacados
-        $featured = fetchDirectus($base_url . "general?filter[name][_contains]=character_");
-        $nombres = array_column($featured, 'values');
-        echo json_encode($nombres, JSON_UNESCAPED_UNICODE);
-        break;
-
-    case 'version':
-        // Obtenemos la versión actual
-        $version_data = fetchDirectus($base_url . "general?filter[name][_eq]=version&limit=1");
-        if (!empty($version_data)) {
-            echo json_encode(["version" => $version_data[0]['values']], JSON_UNESCAPED_UNICODE);
-        } else {
-            echo json_encode(["error" => "No se encontró la versión"], JSON_UNESCAPED_UNICODE);
-        }
-        break;
-
-    default:
-        echo json_encode(["error" => "Acción no válida."]);
-        break;
+    $evento['status'] = $status;
+    $eventos_procesados[] = $evento;
 }
-?>
+
+// Ordenar eventos: Activos primero, luego por fecha de inicio
+usort($eventos_procesados, function($a, $b) {
+    if ($a['status'] === 'activo' && $b['status'] !== 'activo') return -1;
+    if ($a['status'] !== 'activo' && $b['status'] === 'activo') return 1;
+    return strcmp($a['start_time'], $b['start_time']);
+});
+
+// D. Obtener Códigos
+$codigos = fetchDirectus($base_url . "general?filter[name][_contains]=code_");
+
+// E. Obtener Personajes Destacados
+$featured = fetchDirectus($base_url . "general?filter[name][_contains]=character_");
+$personajes = array_column($featured, 'values');
+
+
+// --- 4. RESPUESTA ÚNICA ---
+echo json_encode([
+    "version"       => $version,
+    "fin_version"   => $fin_version,
+    "eventos"       => $eventos_procesados,
+    "codigos"       => $codigos,
+    "personajes"    => $personajes,
+    "server_time"   => $ahora // Añadimos la hora del servidor por si acaso
+], JSON_UNESCAPED_UNICODE);
