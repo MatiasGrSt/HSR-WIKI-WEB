@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
 
-/* ====================================================================
-   ANTIGRAVITY — GENERAL.CSS
-   Variables, layout, nav, name, element/path, botones, switch
-   ==================================================================== */
-
 :root {
     --ag-bg-base: #06070a;
     --ag-panel-bg: rgba(14, 16, 26, 0.95);
@@ -100,12 +95,6 @@ main {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 0.8));
-    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.3s ease;
-}
-
-#name:hover {
-    transform: scale(1.04);
     filter: drop-shadow(0 0 15px var(--color-rareza, #f29e38));
 }
 
@@ -193,12 +182,21 @@ main {
    NOVAFLARE SWITCH (visible en general y hab)
    ==================================================================== */
 .novaflare-switch-container {
-    /* Por defecto oculto, el JS lo pasará a 'flex' */
+    /* El JS cambiará esto a 'flex' cuando sea un personaje Novaflare */
     display: none; 
+    
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 20px 0;
+    
+    /* Margen superior pequeño para pegarlo al bloque de arriba 
+       y margen inferior para separarlo de lo que venga después */
+    margin: 5px auto 25px auto; 
+    
+    /* Aseguramos que sea interactuable y esté sobre el splash_art */
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
 }
 
 .novaflare-switch-wrapper {

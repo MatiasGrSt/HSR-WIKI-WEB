@@ -1,22 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
-
-/* ====================================================================
-   ANTIGRAVITY AESTHETIC - PREMIUM CSS
-   ==================================================================== */
-
-:root {
-    --ag-bg-base: #06070a;
-    --ag-panel-bg: rgba(14, 16, 26, 0.95);
-    --ag-border-glow: rgba(0, 240, 255, 0.5);
-    --ag-accent-1: #00f0ff;
-    --ag-accent-2: #7000ff;
-    --ag-nf-1: #ff0055;
-    --ag-nf-2: #ffcc00;
-    --ag-text-main: #e2e8f0;
-    --ag-text-muted: #94a3b8;
-    --ag-font: 'Outfit', sans-serif;
-}
-
 .habilidades, .habilidades * {
     font-family: var(--ag-font);
 }
