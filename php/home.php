@@ -89,7 +89,7 @@ $personajes = array_column($featured, 'values');
 // --- DENTRO DE init_home.php ---
 
 // F. Obtener Endgame Activo (Filtramos los que no han terminado)
-$endgame_raw = fetchDirectus($base_url . "Endgames");
+$endgame_raw = fetchDirectus($base_url . "endgames");
 $endgame_procesado = [];
 
 foreach ($endgame_raw as $eg) {
