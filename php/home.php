@@ -86,12 +86,25 @@ $featured = fetchDirectus($base_url . "general?filter[name][_contains]=character
 $personajes = array_column($featured, 'values');
 
 
-// --- 4. RESPUESTA ÚNICA ---
+// --- DENTRO DE init_home.php ---
+
+// F. Obtener Endgame Activo (Filtramos los que no han terminado)
+$endgame_raw = fetchDirectus($base_url . "endgame?filter[end_time][_gt]=" . $ahora . "&sort=end_time");
+$endgame_procesado = [];
+
+foreach ($endgame_raw as $eg) {
+    // Calculamos si está activo o es el siguiente
+    // (A veces hay dos MoC en la lista, mostramos el más cercano a terminar)
+    $endgame_procesado[] = $eg;
+}
+
+// --- EN EL JSON_ENCODE FINAL AÑADE: ---
 echo json_encode([
     "version"       => $version,
     "fin_version"   => $fin_version,
     "eventos"       => $eventos_procesados,
     "codigos"       => $codigos,
     "personajes"    => $personajes,
-    "server_time"   => $ahora // Añadimos la hora del servidor por si acaso
+    "endgame"       => $endgame_procesado, // <--- NUEVO
+    "server_time"   => $ahora
 ], JSON_UNESCAPED_UNICODE);
