@@ -1,10 +1,4 @@
 /* ====================================================================
-   ANTIGRAVITY — INFO.CSS
-   Cubre: .info, #introduction, #voice_actors, .novaflare-switch-wrapper (override)
-   Renderizado por: cargarInfo() en cargasPj.js
-   ==================================================================== */
-
-/* ====================================================================
    CONTENEDOR DE LA SECCIÓN
    ==================================================================== */
 .info {
@@ -142,12 +136,4 @@
     padding-right: 8px;
     margin-block: 0;
     padding-top: 3px;
-}
-
-/* ====================================================================
-   OVERRIDE DEL SWITCH EN CONTEXTO INFO
-   (en la sección info el switch está oculto, es solo visible en habilidades)
-   ==================================================================== */
-.novaflare-switch-wrapper {
-    display: none;
 }
