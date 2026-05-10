@@ -535,25 +535,38 @@
 }
 
 #hab_cont > div.novaflare-active {
-    border-color: var(--ag-nf-1) !important;
+    /* Quitamos el !important del borde para que la animación pueda controlarlo */
+    border-color: var(--ag-nf-1);
     background: linear-gradient(135deg, rgba(40,10,25,1) 0%, rgba(10,11,16,1) 100%);
     box-shadow:
         0 0 15px 2px rgba(255, 0, 85, 0.6),
         inset 0 0 20px rgba(255, 0, 85, 0.3);
+    /* Forzamos la aceleración por hardware para que el pulso sea súper fluido */
     animation: ag-novaflare-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 #hab_cont > div.novaflare-active:hover {
+    /* Al hacer hover, pausamos un poco la animación y hacemos que brille al máximo */
     box-shadow:
         0 0 25px 5px rgba(255, 0, 85, 0.8),
         inset 0 0 30px rgba(255, 0, 85, 0.5);
     transform: translate(-50%, -50%) scale(1.15);
+    border-color: var(--ag-nf-2);
 }
 
 @keyframes ag-novaflare-pulse {
-    0% { box-shadow: 0 0 15px 2px rgba(255, 0, 85, 0.6), inset 0 0 20px rgba(255, 0, 85, 0.3); }
-    50% { box-shadow: 0 0 25px 8px rgba(255, 204, 0, 0.6), inset 0 0 30px rgba(255, 204, 0, 0.3); border-color: var(--ag-nf-2) !important; }
-    100% { box-shadow: 0 0 15px 2px rgba(255, 0, 85, 0.6), inset 0 0 20px rgba(255, 0, 85, 0.3); }
+    0% { 
+        box-shadow: 0 0 15px 2px rgba(255, 0, 85, 0.6), inset 0 0 20px rgba(255, 0, 85, 0.3); 
+        border-color: var(--ag-nf-1); 
+    }
+    50% { 
+        box-shadow: 0 0 25px 8px rgba(255, 204, 0, 0.6), inset 0 0 30px rgba(255, 204, 0, 0.3); 
+        border-color: var(--ag-nf-2); /* Sin el !important */
+    }
+    100% { 
+        box-shadow: 0 0 15px 2px rgba(255, 0, 85, 0.6), inset 0 0 20px rgba(255, 0, 85, 0.3); 
+        border-color: var(--ag-nf-1); 
+    }
 }
 
 @keyframes fadeInRight {
