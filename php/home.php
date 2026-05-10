@@ -1,6 +1,30 @@
 <?php
+// --- SISTEMA DE SEGURIDAD CORS (Lista VIP) ---
+$dominios_permitidos = [
+    'https://www.astralwiki.com', // Tu dominio principal
+    'https://astralwiki.com',     // Tu dominio sin www
+    'http://localhost:4321',      // Entorno de desarrollo local (Astro)
+    'http://127.0.0.1:4321'       // Entorno de desarrollo alternativo
+];
+
+// Comprobamos de dónde viene la petición
+$origen = $_SERVER['HTTP_ORIGIN'] ?? '';
+
+// Si viene de uno de nuestros dominios, le abrimos la puerta
+if (in_array($origen, $dominios_permitidos)) {
+    header('Access-Control-Allow-Origin: ' . $origen);
+    header('Access-Control-Allow-Methods: GET, OPTIONS');
+    header('Access-Control-Allow-Headers: Content-Type');
+}
+
+// Si el navegador solo está haciendo una pregunta de seguridad (Preflight), 
+// cortamos aquí para no gastar recursos de tu servidor
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    exit(0);
+}
+// ---------------------------------------------
+
 header('Content-Type: application/json; charset=utf-8');
-header('Access-Control-Allow-Origin: *');
 
 $token = "GOTW0iUyBua4MUf8g8ojTKr2fQGZnxLq";
 $base_url = "https://panel.astralwiki.com/items/";
