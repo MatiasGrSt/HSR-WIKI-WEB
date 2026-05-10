@@ -43,13 +43,35 @@ function manejoBotones() {
 function aplicarModoGlobal(modo) {
     const isNF = (modo === 'novaflare');
 
-    // 1. Swapear Habilidades
-    document.querySelectorAll('.skill-normal-version').forEach(el => el.style.display = isNF ? 'none' : 'flex');
-    document.querySelectorAll('.skill-nf-version').forEach(el => el.style.display = isNF ? 'flex' : 'none');
+    // 1. Habilidades — solo swap si el contenedor tiene versión NF
+    document.querySelectorAll('.skill-item-container').forEach(container => {
+        const hasNf = container.dataset.hasNf === 'true';
+        const normal = container.querySelector('.skill-normal-version');
+        const nf     = container.querySelector('.skill-nf-version');
 
-    // 2. Swapear Rastros Mayores (Major Traces)
-    document.querySelectorAll('.Matrace-normal-version').forEach(el => el.style.display = isNF ? 'none' : 'flex');
-    document.querySelectorAll('.Matrace-novaflare-version').forEach(el => el.style.display = isNF ? 'flex' : 'none');
+        if (hasNf) {
+            if (normal) normal.style.display = isNF ? 'none' : 'flex';
+            if (nf)     nf.style.display     = isNF ? 'flex' : 'none';
+        } else {
+            // Sin versión NF: el normal siempre queda visible
+            if (normal) normal.style.display = 'flex';
+        }
+    });
+
+    // 2. Rastros Mayores — misma lógica
+    document.querySelectorAll('.trace_ma').forEach(container => {
+        const hasNf = container.dataset.hasNf === 'true';
+        const normal = container.querySelector('.Matrace-normal-version');
+        const nf     = container.querySelector('.Matrace-novaflare-version');
+
+        if (hasNf) {
+            if (normal) normal.style.display = isNF ? 'none' : 'flex';
+            if (nf)     nf.style.display     = isNF ? 'flex' : 'none';
+        } else {
+            // Sin versión NF: el normal siempre queda visible
+            if (normal) normal.style.display = 'flex';
+        }
+    });
 }
 
 // Variable global para el switch

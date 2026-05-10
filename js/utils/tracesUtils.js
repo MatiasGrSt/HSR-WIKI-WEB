@@ -11,7 +11,8 @@ export function crearIconosMajorTraces(traces) {
         // Novaflare: Si enhanced es 1 o "1"
         const TraceNovaflare = listaRastros.filter(t => Number(t.enhanced) === 1);
 
-        htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}">`;
+        const hasNf = TraceNovaflare.length > 0;
+        htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}" data-has-nf="${hasNf}">`;
 
         // 1. PARTE NORMAL
         if (TraceNormales.length > 0) {

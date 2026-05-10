@@ -61,7 +61,8 @@ export function crearIconosHabilidades(habilidades, charName, element) {
         const skillsNovaflare = habilidades.novaflare[tipo] || [];
         const tipoLimpio = tipo.replaceAll(' ', '_'); // Para las rutas de imágenes
 
-        htmlFinal += `<div class="skill-item-container" id="${tipoLimpio}">`;
+        const hasNf = skillsNovaflare.length > 0;
+        htmlFinal += `<div class="skill-item-container" id="${tipoLimpio}" data-has-nf="${hasNf}">`;
 
         // ---------------------------------------------------------
         // 1. CREAMOS LA PARTE NORMAL (Visible por defecto)
