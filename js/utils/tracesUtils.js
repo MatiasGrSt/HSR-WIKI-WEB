@@ -1,23 +1,23 @@
 export function crearIconosMajorTraces(traces) {
     let htmlFinal = '';
     let idx = 1;
-    console.log(traces);
 
     for (const [nombreGrupo, listaRastros] of Object.entries(traces)) {
         
-        // BORRAMOS EL FOR EACH. Filtramos el array del grupo directamente.
-        const TraceNormales = listaRastros.filter(t => t.enhanced === null);
-        const TraceNovaflare = listaRastros.filter(t => t.enhanced === 1);
+        // FLEXIBILIDAD: 
+        // Normal: Si enhanced es null, 0, undefined o false
+        const TraceNormales = listaRastros.filter(t => !t.enhanced || Number(t.enhanced) === 0);
+        
+        // Novaflare: Si enhanced es 1 o "1"
+        const TraceNovaflare = listaRastros.filter(t => Number(t.enhanced) === 1);
 
         console.log(`Grupo: ${nombreGrupo}`);
-        console.log("Normales:", TraceNormales);
-        console.log("Novaflare:", TraceNovaflare);
+        console.log("Normales encontrados:", TraceNormales.length);
+        console.log("Novaflare encontrados:", TraceNovaflare.length);
 
         htmlFinal += `<div class="trace_ma" id="Pasiva_${idx}">`;
 
-        // --------------------------------------------------------- 
-        // PARTE NORMAL
-        // ---------------------------------------------------------
+        // 1. PARTE NORMAL
         if (TraceNormales.length > 0) {
             const rastroN = TraceNormales[0];
             htmlFinal += `
@@ -31,9 +31,7 @@ export function crearIconosMajorTraces(traces) {
             `;
         }
 
-        // ---------------------------------------------------------
-        // 2. CREAMOS LA PARTE NOVAFLARE (Oculta por defecto)
-        // ---------------------------------------------------------
+        // 2. PARTE NOVAFLARE
         if (TraceNovaflare.length > 0) {
             const rastroNF = TraceNovaflare[0]; 
             htmlFinal += `
@@ -48,7 +46,7 @@ export function crearIconosMajorTraces(traces) {
             `;
         }
 
-        htmlFinal += `</div>`; // Cerramos el contenedor principal
+        htmlFinal += `</div>`; 
         idx++;
     }
     
