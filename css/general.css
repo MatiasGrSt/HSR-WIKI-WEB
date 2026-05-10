@@ -140,23 +140,13 @@ main {
     filter: drop-shadow(0 0 6px rgba(255,255,255,0.2));
 }
 
-#element p,
-#path p {
-    margin: 0;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--ag-text-muted);
-}
-
 .element {
-    font-weight: 700;
+    font-weight: bold;
     color: var(--color-elemento, var(--ag-accent-1));
 }
 
 .path {
-    font-weight: 700;
+    font-weight: bold;
     color: var(--color-via, var(--ag-accent-2));
 }
 
