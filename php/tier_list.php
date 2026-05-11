@@ -19,4 +19,4 @@ if ($respuesta === FALSE) {
 
 $datos = json_decode($respuesta, true)['data'] ?? [];
 echo json_encode($datos, JSON_UNESCAPED_UNICODE);
-?> 
+?>
