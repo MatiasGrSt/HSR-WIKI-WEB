@@ -33,8 +33,8 @@ $skill_id = $_GET['skill_id'] ?? '';
 
 // 2. CONECTAMOS CON LA CAJA FUERTE (Fase 1)
 $config = require __DIR__ . '/config.php';
-$token = $config['directus_token'];
-$base_url = $config['directus_url']; 
+$token = GOTW0iUyBua4MUf8g8ojTKr2fQGZnxLq;
+$base_url = 'https://panel.astralwiki.com/items/'; 
 
 // 4. FUNCIONES Y LLAMADAS A DIRECTUS (Solo llega aquí si no hay caché)
 function fetchDirectus($coleccion, $filtro_campo, $filtro_valor, $orden = '') {
