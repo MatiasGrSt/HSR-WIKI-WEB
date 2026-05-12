@@ -34,7 +34,7 @@ $skill_id = $_GET['skill_id'] ?? '';
 // 2. CONECTAMOS CON LA CAJA FUERTE (Fase 1)
 $config = require __DIR__ . '/config.php';
 $token = $config['directus_token'];
-$base_url = $config['directus_url'];
+$base_url = $config['directus_url']; 
 
 // ==========================================
 // 3. SISTEMA DE CACHÉ (Lectura ultra rápida)
