@@ -1,24 +1,24 @@
 <?php
+// --- ESCUDO ANTI-ERRORES ---
+ini_set('display_errors', 0);
+error_reporting(0);
+
 // --- SISTEMA DE SEGURIDAD CORS (Lista VIP) ---
 $dominios_permitidos = [
-    'https://www.astralwiki.com', // Tu dominio principal
-    'https://astralwiki.com',     // Tu dominio sin www
-    'http://localhost:4321',      // Entorno de desarrollo local (Astro)
-    'http://127.0.0.1:4321'       // Entorno de desarrollo alternativo
+    'https://www.astralwiki.com',
+    'https://astralwiki.com',    
+    'http://localhost:4321',      
+    'http://127.0.0.1:4321'       
 ];
 
-// Comprobamos de dónde viene la petición
 $origen = $_SERVER['HTTP_ORIGIN'] ?? '';
 
-// Si viene de uno de nuestros dominios, le abrimos la puerta
 if (in_array($origen, $dominios_permitidos)) {
     header('Access-Control-Allow-Origin: ' . $origen);
     header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
     header('Access-Control-Allow-Headers: Content-Type');
 }
 
-// Si el navegador solo está haciendo una pregunta de seguridad (Preflight), 
-// cortamos aquí para no gastar recursos de tu servidor
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     exit(0);
 }
@@ -31,12 +31,12 @@ $personaje = $_GET['personaje'] ?? '';
 $tipo = $_GET['tipo'] ?? '';
 $skill_id = $_GET['skill_id'] ?? ''; 
 
-// 2. CONECTAMOS CON LA CAJA FUERTE (Fase 1)
+// 2. CONECTAMOS CON LA CAJA FUERTE (config.php)
 $config = require __DIR__ . '/config.php';
-$token = GOTW0iUyBua4MUf8g8ojTKr2fQGZnxLq;
-$base_url = 'https://panel.astralwiki.com/items/'; 
+$token = $config['directus_token'];
+$base_url = $config['directus_url']; 
 
-// 4. FUNCIONES Y LLAMADAS A DIRECTUS (Solo llega aquí si no hay caché)
+// 3. FUNCIONES Y LLAMADAS A DIRECTUS (Sin sistema de caché)
 function fetchDirectus($coleccion, $filtro_campo, $filtro_valor, $orden = '') {
     global $token, $base_url;
     $url = $base_url . $coleccion . "?filter[" . $filtro_campo . "][_eq]=" . urlencode($filtro_valor);
@@ -75,9 +75,9 @@ switch($tipo) {
         die(json_encode(["error" => "Tipo de información no válido."]));
 }
 
+// Generamos el JSON final
 $json_final = json_encode($finalData, JSON_UNESCAPED_UNICODE);
 
-
-// Devolvemos los datos
+// 4. DEVOLVEMOS LOS DATOS DIRECTAMENTE (¡Aquí hemos borrado el file_put_contents!)
 echo $json_final;
 ?>
