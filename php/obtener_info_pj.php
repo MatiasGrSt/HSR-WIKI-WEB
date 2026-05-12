@@ -36,25 +36,6 @@ $config = require __DIR__ . '/config.php';
 $token = $config['directus_token'];
 $base_url = $config['directus_url']; 
 
-// ==========================================
-// 3. SISTEMA DE CACHÉ (Lectura ultra rápida)
-// ==========================================
-$carpeta_cache = __DIR__ . '/cache/';
-if (!is_dir($carpeta_cache)) {
-    mkdir($carpeta_cache, 0777, true); // Crea la carpeta si no existe
-}
-
-// Creamos un nombre de archivo seguro usando MD5 (Ej: cache_a1b2c3d4.json)
-$nombre_archivo = 'cache_' . md5($personaje . $tipo . $skill_id) . '.json';
-$ruta_cache = $carpeta_cache . $nombre_archivo;
-
-// ¡MAGIA! Si el archivo ya existe, lo escupimos en 5 milisegundos y nos vamos.
-if (file_exists($ruta_cache)) {
-    echo file_get_contents($ruta_cache);
-    exit; 
-}
-// ==========================================
-
 // 4. FUNCIONES Y LLAMADAS A DIRECTUS (Solo llega aquí si no hay caché)
 function fetchDirectus($coleccion, $filtro_campo, $filtro_valor, $orden = '') {
     global $token, $base_url;
@@ -96,11 +77,6 @@ switch($tipo) {
 
 $json_final = json_encode($finalData, JSON_UNESCAPED_UNICODE);
 
-// ==========================================
-// 5. SISTEMA DE CACHÉ (Guardado automático)
-// ==========================================
-// Guardamos los datos para que el siguiente usuario no tenga que esperar
-file_put_contents($ruta_cache, $json_final);
 
 // Devolvemos los datos
 echo $json_final;
