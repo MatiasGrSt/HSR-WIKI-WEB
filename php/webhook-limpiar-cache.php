@@ -23,4 +23,4 @@ if ($archivos !== false) {
 }
 
 echo "¡Éxito! Toda la caché antigua ha sido eliminada.";
-?>
+?> 
