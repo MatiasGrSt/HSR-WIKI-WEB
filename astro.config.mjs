@@ -1,9 +1,9 @@
 import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
-import node from '@astrojs/node'; // <--- Asegúrate de que esto esté
+import node from '@astrojs/node';
 
 export default defineConfig({
-  output: 'server', // <--- ESTO ES CRÍTICO
+  output: 'server',
   adapter: node({
     mode: 'standalone',
   }),

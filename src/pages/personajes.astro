@@ -8,6 +8,7 @@ import PersonajesApp from '../components/Personajes/PersonajesApp.jsx';
 
 import { getDatosPersonajes, getVersionActual } from "../lib/listapj.js";
 
+export const prerender = false;
 const personajes = await getDatosPersonajes();
 const versionActual = await getVersionActual();
 ---

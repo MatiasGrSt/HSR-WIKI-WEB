@@ -7,7 +7,7 @@ import Footer from "../components/Footer.astro";
 import TierListApp from "../components/TierList/TierListApp.jsx";
 
 import { getTierListData } from "../lib/tierlist.js";
-
+export const prerender = false;
 const { personajes, tierData } = await getTierListData();
 ---
 

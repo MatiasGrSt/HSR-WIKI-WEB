@@ -14,7 +14,7 @@ import VersionCountdown from '../components/Home/VersionCountdown.jsx';
 import EndgameTracker from '../components/Home/EndgameTracker.jsx';
 
 import { getHomeData } from "../lib/home.js";
-
+export const prerender = false;
 const { version, fin_version, eventos, codigos, personajes, endgame } = await getHomeData();
 ---
 
