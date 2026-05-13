@@ -1,0 +1,94 @@
+/* =====================================================
+   CharCard.css — Estilos compartidos del icono de
+   personaje, usados por OfficialTierList y CustomTierList
+   ===================================================== */
+
+/* ── Wrapper relativo (permite badges absolutas) ── */
+.cc-char-circle-wrap {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    flex-shrink: 0;
+}
+
+/* ── Círculo con la imagen ── */
+.cc-char-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    background: rgba(12, 12, 22, 0.9);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55),
+                inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+/* Brillo cristalino — capa sobre la imagen */
+.cc-char-circle::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.22) 0%,
+        rgba(255, 255, 255, 0.06) 40%,
+        transparent 65%
+    );
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Imagen del personaje */
+.cc-char-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1.05);
+    pointer-events: none;
+}
+
+/* ── Nombre debajo del círculo ── */
+.cc-char-name {
+    color: var(--ag-text-muted, #94a3b8);
+    font-size: 0.58rem;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    max-width: 76px;
+    pointer-events: none;
+    letter-spacing: 0.2px;
+    transition: color 0.2s;
+}
+
+/* ── Badges de elemento y vía ── */
+.cc-char-badge {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: contain;
+    background: rgba(8, 8, 18, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    z-index: 10;
+    padding: 0;
+    transition: transform 0.2s ease;
+}
+
+.cc-char-badge--element {
+    top: 0;
+    left: 0;
+}
+
+.cc-char-badge--path {
+    top: 0;
+    right: 0;
+}

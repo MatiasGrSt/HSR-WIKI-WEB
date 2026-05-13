@@ -1,0 +1,173 @@
+/* --- ABUNDANCE --- */
+
+.via-abundance#Basic_Attack { top: 54%; left: 29%; }
+.via-abundance#Skill { top: 54%; left: 71%; }
+.via-abundance#Ultimate { top: 58%; left: 50%; }
+.via-abundance#Talent { top: 37%; left: 50%; }
+
+.via-abundance#Technique { top: 78.5%; left: 50%; }
+
+.via-abundance#trace_ma_1 { top: 6%; left: 50%; }
+.via-abundance#trace_ma_2 { top: 86%; left: 18.5%; }
+.via-abundance#trace_ma_2 { top: 86%; left: 81.5%; }
+
+.via-abundance#trace_mi_1{ top: 39.5%; left: 12.5%; }
+.via-abundance#trace_mi_2{ top: 21.5%; left: 50%; }
+.via-abundance#trace_mi_3{ top: 39.5%; left: 87.5%; }
+
+
+/* --- HARMONY --- */
+
+.via-harmony#Basic_Attack { top: 42.5%; left: 25.5%; }
+.via-harmony#Skill { top: 42.5%; left: 74.5%; }
+.via-harmony#Ultimate { top: 61%; left: 50%; }
+.via-harmony#Talent { top: 38%; left: 50%; }
+
+.via-harmony#Technique { top: 84%; left: 50%; }
+
+.via-harmony#trace_ma_1 { top: 55%; left: -5%; }
+.via-harmony#trace_ma_2 { top: 55%; left: 105%; }
+.via-harmony#trace_ma_3 { top: 12%; left: 50%; }
+
+.via-harmony#trace_mi_1{ top: 30%; left: 30%; }
+.via-harmony#trace_mi_2{ top: 25%; left: 50%; }
+.via-harmony#trace_mi_3{ top: 30%; left: 70%; }
+
+
+/* --- THE HUNT --- */
+
+.via-the_hunt#Basic_Attack { top: 37%; left: 26%; }
+.via-the_hunt#Skill { top: 37%; left: 74%; }
+.via-the_hunt#Ultimate { top: 48.5%; left: 50%; }
+.via-the_hunt#Talent { top: 24%; left: 50%; }
+
+.via-the_hunt#Technique { top: 70%; left: 50%; }
+
+.via-the_hunt#trace_ma_1 { top: 72%; left: 24.5%; }
+.via-the_hunt#trace_ma_2 { top: 72%; left: 75.5%; }
+.via-the_hunt#trace_ma_3 { top: 6.5%; left: 50%; }
+
+.via-the_hunt#trace_mi_1{ top: 17%; left: 7.5%; }
+.via-the_hunt#trace_mi_2{ top: 95%; left: 50%; }
+.via-the_hunt#trace_mi_3{ top: 17%; left: 92.5%; }
+
+
+/* --- PRESERVATION --- */
+
+.via-preservation#Basic_Attack { top: 51.5%; left: 26.5%; }  
+.via-preservation#Skill { top: 51.5%; left: 73.5%; }  
+.via-preservation#Ultimate { top: 48.5%; left: 50%; }   
+.via-preservation#Talent { top: 26.5%; left: 50%; }
+
+.via-preservation#Technique { top: 74.5%; left: 50%; }
+
+.via-preservation#trace_ma_1 { top: 93.5%; left: 23.5%; }
+.via-preservation#trace_ma_2 { top: 93.5%; left: 76.5%; }
+.via-preservation#trace_ma_3 { top: 10%; left: 50%; }
+
+.via-preservation#trace_mi_1{ top: 31.5%; left: 7%; }
+.via-preservation#trace_mi_2{ top: 61.5%; left: 50%; }
+.via-preservation#trace_mi_3{ top: 31.5%; left: 93%; }
+
+
+/* --- DESTRUCTION --- */
+
+.via-destruction#Basic_Attack { top: 46%; left: 23%; }  
+.via-destruction#Skill { top: 46%; left: 77%; }  
+.via-destruction#Ultimate { top: 49.5%; left: 50%; }   
+.via-destruction#Talent { top: 27.5%; left: 50%; }
+
+.via-destruction#Technique { top: 74.5%; left: 50%; }
+
+.via-destruction#trace_ma_1 { top: 77.5%; left: 21.5%; }
+.via-destruction#trace_ma_2 { top: 77.5%; left: 78.5%; }
+.via-destruction#trace_ma_3 { top: 10.5%; left: 50%; }
+
+.via-destruction#trace_mi_1{ top: 28%; left: 5%; }
+.via-destruction#trace_mi_2{ top: 90%; left: 50%; }
+.via-destruction#trace_mi_3{ top: 28%; left: 95%; }
+
+
+/* --- ERUDITION --- */
+
+.via-erudition#Basic_Attack { top: 56.5%; left: 27.5%; }  
+.via-erudition#Skill { top: 56.5%; left: 72.5%; }  
+.via-erudition#Ultimate { top: 56.5%; left: 50%; }   
+.via-erudition#Talent { top: 37%; left: 50%; }
+
+.via-erudition#Technique { top: 94%; left: 50%; }
+
+.via-erudition#trace_ma_1 { top: 56.5%; left: 9%; }
+.via-erudition#trace_ma_2 { top: 56.5%; left: 91%; }
+.via-erudition#trace_ma_3 { top: 6%; left: 50%; }
+
+.via-erudition#trace_mi_1{ top: 92%; left: 28%; }
+.via-erudition#trace_mi_2{ top: 21.5%; left: 50%; }
+.via-erudition#trace_mi_3{ top: 92%; left: 72%; }
+
+
+/* --- ELATION --- */
+
+.via-elation#Basic_Attack { top: 13%; left: 29.5%; }  
+.via-elation#Skill { top: 13%; left: 70.5%; }  
+.via-elation#Ultimate { top: 29.5%; left: 50%; }   
+.via-elation#Talent { top: 50.5%; left: 50%; }
+
+.via-elation#Technique { top: 70.9%; left: 50%; }
+
+.via-elation#trace_ma_1 { top: 94%; left: 50%; }
+.via-elation#trace_ma_2 { top: 26%; left: 10%; }
+.via-elation#trace_ma_3 { top: 26%; left: 90%; }
+
+.via-elation#trace_mi_1{ top: 47%; left: 30%; }
+.via-elation#trace_mi_2{ top: 40%; left: 50%; }
+.via-elation#trace_mi_3{ top: 47%; left: 70%; }
+
+.via-elation#Elation_Skill{ top: 6%; left: 50%; }
+#Elation_Skill img {
+    filter: grayscale(100%) brightness(80%) sepia(100%) hue-rotate(-50deg) saturate(500%);
+}
+
+
+/* --- NIHILITY --- */
+
+.via-nihility#Basic_Attack { top: 45%; left: 25%; }  
+.via-nihility#Skill { top: 45%; left: 75%; }  
+.via-nihility#Ultimate { top: 43%; left: 50%; }   
+.via-nihility#Talent { top: 24%; left: 50%; }
+
+.via-nihility#Technique { top: 65%; left: 50%; }
+
+.via-nihility#trace_ma_1 { top: 38%; left: 6%; }
+.via-nihility#trace_ma_2 { top: 38%; left: 94%; }
+.via-nihility#trace_ma_3 { top: 6.5%; left: 50%; }
+
+.via-nihility#trace_mi_1{ top: 75%; left: 30%; }
+.via-nihility#trace_mi_2{ top: 85%; left: 50%; }
+.via-nihility#trace_mi_3{ top: 75%; left: 70%; }
+
+
+/* --- REMEMBRANCE --- */
+
+.via-remembrance#Basic_Attack { top: 65%; left: 27%; }  
+.via-remembrance#Skill { top: 65%; left: 73.5%; }  
+.via-remembrance#Ultimate { top: 71.5%; left: 50%; }   
+.via-remembrance#Talent { top: 42%; left: 85.5%; }
+
+.via-remembrance#Technique { top: 42%; left: 14.5%; }
+
+.via-remembrance#trace_ma_1 { top: 42%; left: 105%; }
+.via-remembrance#trace_ma_2 { top: 93%; left: 50%; }
+.via-remembrance#trace_ma_3 { top: 17.5%; left: 25%; }
+
+.via-remembrance#trace_mi_1{ top: 44.75%; left: 30%; }
+.via-remembrance#trace_mi_2{ top: 54.75%; left: 50%; }
+.via-remembrance#trace_mi_3{ top: 44.75%; left: 70%; }
+
+.via-remembrance#Memosprite_Skill{ top: 38%; left: 50%; }
+.via-remembrance#Memosprite_Talent{ top: 9%; left: 50%; }
+
+.via-remembrance#Unique{ top: 20%; left: 70%;}
+#Memosprite_Skill>img, #Memosprite_Talent>img {
+    filter: grayscale(100%) brightness(80%) sepia(100%) hue-rotate(180deg) saturate(500%);
+}

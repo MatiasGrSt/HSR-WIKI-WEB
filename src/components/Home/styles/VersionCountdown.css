@@ -1,0 +1,70 @@
+/* src/components/Home/VersionCountdown.css */
+.version-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    animation: pulseGlowCyber 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+    width: 90%;
+    max-width: var(--ag-max-width);
+    margin: 0 auto;    /* Esto es lo que lo centra mágicamente */
+    
+    /* Opcional: Si quieres que sea más sutil, puedes bajarle un poco el padding */
+    padding: 15px 40px;
+
+}
+
+.version-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.version-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--ag-text-muted, #94a3b8);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.version-title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(90deg, #fff, #a5b4fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.version-timer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.version-timer-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: var(--color-rareza, #f29e38);
+    letter-spacing: 2px;
+}
+
+.version-timer {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--ag-accent-1, #00f0ff);
+    letter-spacing: 2px;
+    font-variant-numeric: tabular-nums;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+}

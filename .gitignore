@@ -1,5 +1,24 @@
-# Ignorar configuración real con contraseñas
-php/config.php
+# build output
+dist/
 
-# Ignorar la carpeta de caché autogenerada
-php/cache/
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/

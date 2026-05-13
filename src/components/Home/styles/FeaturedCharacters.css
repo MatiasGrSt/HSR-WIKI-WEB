@@ -1,0 +1,59 @@
+.section-characters {
+    margin-bottom: 60px;
+}
+
+#characters-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 45px;
+    padding: 40px 0;
+}
+
+.char-card {
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    background: linear-gradient(180deg, rgba(30, 30, 36, 0.4) 0%, rgba(20, 20, 24, 0.8) 100%);
+    padding: 30px 25px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 150px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    text-decoration: none;
+}
+
+.char-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    background: linear-gradient(180deg, rgba(40, 40, 48, 0.6) 0%, rgba(25, 25, 30, 0.9) 100%);
+    border-color: rgba(206, 174, 125, 0.6);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(206, 174, 125, 0.25);
+}
+
+.char-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid rgba(206, 174, 125, 0.8);
+    object-fit: cover;
+    box-shadow: 0 0 20px rgba(206, 174, 125, 0.3);
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
+    background-color: #000;
+}
+
+.char-card:hover img {
+    box-shadow: 0 0 35px rgba(206, 174, 125, 0.7);
+    border-color: #fff;
+    transform: scale(1.08);
+}
+
+.char-name {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15rem;
+    letter-spacing: 0.5px;
+    margin: 0;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}

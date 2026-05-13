@@ -1,0 +1,208 @@
+/* ============================================================
+   OPCIÓN D: "NEON CIRCUIT" — Cards minimalistas con borde
+   de neón brillante por tipo. Diseño limpio, mucho espacio,
+   el color es el protagonista.
+   ============================================================ */
+
+.eg-moc {
+    --mode-color: #00f0ff;
+    --mode-glow: rgba(0, 240, 255, 0.2);
+}
+
+.eg-pf {
+    --mode-color: #a78bfa;
+    --mode-glow: rgba(167, 139, 250, 0.2);
+}
+
+.eg-as {
+    --mode-color: #f87171;
+    --mode-glow: rgba(248, 113, 113, 0.2);
+}
+
+.eg-aa {
+    --mode-color: #fde68a;
+    --mode-glow: rgba(253, 230, 138, 0.2);
+}
+
+.endgame-section {
+    margin-bottom: 60px;
+    width: 100%;
+    padding: 0 4%;
+    box-sizing: border-box;
+}
+
+.endgame-section .section-title {
+    margin-bottom: 40px;
+}
+
+.endgame-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    max-width: var(--ag-max-width);
+    margin: 0 auto;
+}
+
+/* Card ultra-minimalista: solo el borde neon define el tipo */
+.eg-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #0a0b10;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 2px solid var(--mode-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.eg-panel:hover {
+    border-color: var(--mode-color);
+    box-shadow: 0 0 30px var(--mode-glow), 0 20px 40px rgba(0, 0, 0, 0.5);
+    transform: translateY(-6px) scale(1.01);
+}
+
+/* Línea de neón animada arriba */
+.eg-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: var(--mode-color);
+    box-shadow: 0 0 12px 2px var(--mode-color);
+    opacity: 0.6;
+}
+
+.eg-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: linear-gradient(180deg, var(--mode-glow) 0%, transparent 100%);
+    opacity: 0.4;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+.eg-panel:hover .eg-glow {
+    opacity: 0.8;
+}
+
+.eg-panel-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 24px;
+}
+
+/* Cabecera: icono pequeño + tipo + título en línea horizontal */
+.eg-panel-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.eg-icon-wrap {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--mode-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 15px var(--mode-glow);
+}
+
+.eg-icon {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+}
+
+.eg-icon-placeholder {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--mode-color);
+    text-transform: uppercase;
+    text-shadow: 0 0 8px var(--mode-color);
+}
+
+/* Tipo + título apilados verticalmente junto al icono */
+.eg-panel-header>div:last-child,
+.eg-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.eg-type {
+    font-size: 0.65rem;
+    font-weight: 800;
+    color: var(--mode-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.eg-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 4px 0 0 0;
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    line-height: 1.2;
+}
+
+/* Zona de buff: línea divisoria simple */
+.eg-buff-box {
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.buff-label {
+    font-size: 0.6rem;
+    font-weight: 800;
+    color: var(--mode-color);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    opacity: 0.7;
+}
+
+.buff-name-display {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+.buff-desc {
+    margin: 4px 0 0 0;
+    font-size: 0.8rem;
+    color: var(--ag-text-muted, #94a3b8);
+    line-height: 1.5;
+}
+
+/* Timer en esquina inferior derecha */
+.eg-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.eg-timer {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: var(--mode-color);
+    letter-spacing: 1px;
+    text-shadow: 0 0 6px var(--mode-color);
+}

@@ -1,0 +1,54 @@
+---
+// Importamos tu CSS directamente aquí (Astro lo inyectará por ti)
+import '/src/styles/basico.css';
+
+// Obtenemos la ruta actual (ej: "/personajes" o "/")
+const currentPath = Astro.url.pathname;
+
+// Función para saber si el enlace debe tener la clase 'activo'
+const isActivo = (path: string) => {
+    // Si la ruta actual coincide con el enlace, devolvemos 'activo'
+    return currentPath === path || currentPath === path + '/' ? 'activo' : '';
+};
+---
+
+<nav>
+    <div class="nav-header">
+        <a href="/">
+            <img src="/imagenes/Utils/Logo.webp" class="logo" alt="Logo">
+        </a>
+        <img src="/imagenes/Utils/Profile_Card_Default.webp" class="fondo-logo" alt="Profile">
+    </div>
+    <hr>
+
+    <ul id="fondo">
+        <li><a href="/" class={isActivo('/')}>Home</a></li>
+        <li><a href="/personajes" class={isActivo('/personajes')}>Characters</a></li>
+        <li><a href="/tierlist" class={isActivo('/tierlist')}>Tier List</a></li>
+        <li><a href="/light_cones" class={isActivo('/light_cones')}>Light Cones</a></li>
+        <li><a href="/guias" class={isActivo('/guias')}>Guides</a></li>
+        
+        <hr class="bottom-divider"> 
+        
+        <li><a href="/#opiniones">Opinions</a></li>
+        <li><a href="/#creditos">Credits</a></li>
+    </ul>
+</nav>
+
+<script>
+    // ESTE SCRIPT SE EJECUTA EN EL NAVEGADOR DEL USUARIO
+    // Mantenemos tu lógica para el fondo dinámico del móvil (Phone.webp)
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const personaje = urlParams.get('personaje');
+        
+        if (personaje) {
+            const ul = document.getElementById('fondo');
+            if (ul) {
+                const personajeUrl = encodeURIComponent(personaje);
+                // La ruta de la imagen también es absoluta desde public/
+                ul.style.backgroundImage = `url('/imagenes/Personajes/${personajeUrl}/Phone.webp')`;
+            }
+        }
+    });
+</script>

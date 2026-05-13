@@ -1,0 +1,55 @@
+---
+import '/src/styles/basico.css';
+
+// Las importaciones de componentes déjalas igual, esas están bien:
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import PersonajesApp from '../components/Personajes/PersonajesApp.jsx';
+
+let personajes = [];
+let versionActual = 1.0;
+
+try {
+    // Fetch Personajes
+    const resData = await fetch('https://www.astralwiki.com/php/datos.php');
+    if (!resData.ok) throw new Error(`HTTP ${resData.status}`);
+    const data = await resData.json();
+    personajes = data; // Guardamos el array directo
+
+    // Fetch Versión
+    const resVer = await fetch('https://www.astralwiki.com/php/home.php?accion=version');
+    const verData = await resVer.json();
+    versionActual = parseFloat(verData.version);
+
+} catch (e) {
+    console.error('[personajes.astro] Error al cargar datos:', e);
+}
+---
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Characters - HSR Wiki</title>
+</head>
+<!-- Cloudflare Web Analytics -->
+ <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fcc1cfa50eb54cd6b251acfc91e1f9bb"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->
+<body>
+    <Nav />
+    <main id="main-scroll">
+        <div id="content-layout">
+            <h2 class="section-title">CHARACTERS</h2>
+            
+            <PersonajesApp 
+                personajesIniciales={personajes} 
+                versionActual={versionActual} 
+                client:load 
+            />
+        </div>
+    <Footer />
+    </main>
+</body>
+</html>

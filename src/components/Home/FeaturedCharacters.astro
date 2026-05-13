@@ -1,0 +1,40 @@
+---
+// src/components/Home/FeaturedCharacters.astro
+import './styles/FeaturedCharacters.css';
+interface Props {
+  personajes: string[];
+}
+
+const { personajes } = Astro.props;
+---
+
+<section class="section-characters">
+    <h2 class="section-title">FEATURED CHARACTER</h2>
+    <div id="characters-list">
+        {personajes.length === 0 ? (
+            <p style="color: #b0b0b0; text-align: center; width: 100%;">
+                There is no featured characters right now.
+            </p>
+        ) : (
+            personajes.map((charName) => (
+                <a href={`/personaje?personaje=${encodeURIComponent(charName)}`} class="char-card">
+                    <img 
+                        src={`/imagenes/Personajes/${charName}/Icon.webp`}
+                        onerror="this.onerror=null; this.src='/imagenes/Utils/Error.webp';"
+                        loading="lazy" 
+                    />
+                    <h3 class="char-name">{charName}</h3>
+                </a>
+            ))
+        )}
+    </div>
+</section>
+
+<style is:global>
+    .section-characters {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+</style>

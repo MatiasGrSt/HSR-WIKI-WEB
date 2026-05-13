@@ -1,0 +1,42 @@
+/* Se sobrepone a basico.css: #content-layout */
+#content-layout {
+    margin-top: 5vh; 
+    gap: 90px;
+}
+
+.top-banner-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 6vh; /* Este es el nuevo margen real al techo de la página */
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 45px;
+    align-items: start;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+/* Reloj estilo Modal de Habilidades */
+.timer-display {
+    font-size: 2.6rem;
+    color: var(--ag-accent-1, #00f0ff);
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, rgba(20,22,35,0.8) 0%, rgba(10,11,16,0.9) 100%);
+    padding: 25px 20px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    animation: pulseGlowCyber 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    font-variant-numeric: tabular-nums;
+    margin-top: 10px;
+    text-shadow: 0 0 15px rgba(0, 240, 255, 0.4);
+}

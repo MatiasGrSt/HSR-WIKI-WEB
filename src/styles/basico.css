@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+/* ===========================================
+   DESIGN TOKENS — Fuente única de verdad
+   =========================================== */
+:root {
+    --ag-accent-1: #00f0ff;
+    --ag-accent-2: #ceae7d;
+    --ag-font: 'Outfit', sans-serif;
+    --ag-text-main: #e2e8f0;
+    --ag-text-muted: #94a3b8;
+    --color-rareza: #f29e38;
+    --ag-bg: #121212;
+    --ag-surface: #0a0a0c;
+    --ag-radius-panel: 24px;
+    --ag-radius-card: 16px;
+    --ag-max-width: 1300px;
+}
+
+@keyframes pulseGlowCyber {
+    0% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 10px rgba(255,255,255,0.02); border-color: rgba(0, 240, 255, 0.2); }
+    50% { box-shadow: 0 0 30px rgba(0, 240, 255, 0.4), inset 0 0 15px rgba(0, 240, 255, 0.1); border-color: var(--ag-accent-1, #00f0ff); }
+    100% { box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 10px rgba(255,255,255,0.02); border-color: rgba(0, 240, 255, 0.2); }
+}
+
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
+    margin: 0;
+}
+
+/* --- Sidebar Navigation --- */
+nav {
+    width: 13.5%;
+    min-width: 220px;
+    flex-shrink: 0;
+    position: fixed;
+    height: 100vh;
+    background-color: #0a0a0c;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    transform: translateZ(0);
+}
+
+nav hr {
+    width: 100%;
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #ceae7d, transparent);
+    margin: 0;
+}
+
+.nav-header {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.nav-header a {
+    z-index: 1;
+    display: block;
+    width: 100%;
+}
+
+.fondo-logo {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    -webkit-mask-image: radial-gradient(circle, black 50%, transparent 100%);
+    mask-image: radial-gradient(circle, black 50%, transparent 100%);
+}
+
+.logo {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 7px rgba(0, 0, 0, 1));
+}
+
+a .logo:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+    transition: all 0.3s ease;
+}
+
+nav ul li a {
+    display: block;
+    font-size: 1.1rem;
+    text-decoration: none;
+    padding: 14px 25px;
+    color: #a0a0a0;
+    transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+    font-weight: 600;
+    border-left: 0px solid transparent;
+}
+
+nav ul li a:hover:not(.activo) {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 32px;
+    border-left: 4px solid rgba(76, 201, 240, 0.5);
+}
+
+nav a.activo {
+    font-size: 1.1rem;
+    background: linear-gradient(90deg, rgba(76, 201, 240, 0.15) 0%, rgba(76, 201, 240, 0) 100%);
+    color: #ffffff;
+    padding: 14px 25px 14px 32px;
+    border-left: 4px solid #4cc9f0;
+    text-shadow: 0 0 10px rgba(76, 201, 240, 0.5);
+}
+
+#fondo {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(14, 14, 14, 0.85);
+    background-blend-mode: multiply;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.bottom-divider {
+    margin-top: auto;
+}
+
+/* --- Main Content Area --- */
+main {
+    margin-left: 13.5%;
+    width: calc(100% - 13.5%);
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    flex-grow: 1;
+    z-index: 0;
+}
+
+/* =========================================
+   GLOBAL COMPONENTS
+   ========================================= */
+
+#content-layout {
+    margin-top: 10vh;
+    padding: 0 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    box-sizing: border-box;
+    animation: fadeInSlideUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre la línea azul y el texto */
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    position: relative; /* Para el posicionamiento del pseudo-elemento */
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+}
+
+/* La línea azul neon vertical */
+.section-title::before {
+    content: '';
+    display: block;
+    width: 4px; /* Ancho de la línea */
+    height: 1.8rem; /* Altura igual al tamaño de fuente del texto */
+    border-radius: 4px;
+    /* Degradado vertical: Cian -> Azul oscuro */
+    background: linear-gradient(180deg, var(--ag-accent-1, #00f0ff) 0%, #1d4ed8 100%);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.7), 0 0 20px rgba(0, 240, 255, 0.3);
+}
+
+.section-title.centered {
+    justify-content: center;
+    padding-left: 0;
+}
+
+.section-title.centered::before {
+    display: none;
+}
+
+.glass-dark {
+    background: linear-gradient(145deg, rgba(22, 22, 26, 0.6), rgba(12, 12, 14, 0.85));
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.glass-dark:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 20px rgba(76, 201, 240, 0.1);
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+/* ── Rareza en iconos de personaje (tier lists) ── */
+
+/* 5★ — toque dorado cristalino */
+.rarity-5 .cc-char-circle {
+    border-color: #c89b3c;
+    background: linear-gradient(145deg, rgba(200, 155, 60, 0.15) 0%, rgba(12, 12, 22, 0.92) 100%);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55),
+                0 0 14px rgba(200, 155, 60, 0.4),
+                inset 0 1px 0 rgba(255, 215, 100, 0.18);
+}
+
+/* 4★ — toque morado cristalino */
+.rarity-4 .cc-char-circle {
+    border-color: #9d6fcf;
+    background: linear-gradient(145deg, rgba(157, 111, 207, 0.15) 0%, rgba(12, 12, 22, 0.92) 100%);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.55),
+                0 0 14px rgba(157, 111, 207, 0.35),
+                inset 0 1px 0 rgba(180, 140, 255, 0.15);
+}
+
+/* Hover — glow intensificado */
+.rarity-5:hover .cc-char-circle {
+    border-color: #f0c060;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6),
+                0 0 22px rgba(200, 155, 60, 0.6),
+                inset 0 1px 0 rgba(255, 215, 100, 0.25);
+}
+
+.rarity-4:hover .cc-char-circle {
+    border-color: #c49ef0;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.6),
+                0 0 22px rgba(157, 111, 207, 0.55),
+                inset 0 1px 0 rgba(180, 140, 255, 0.22);
+}

@@ -1,0 +1,67 @@
+/* --- Active Codes --- */
+#codes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.code-item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 14px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    transition: all 0.3s ease;
+    color: #e0e0e0;
+    font-weight: 600;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.code-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(76, 201, 240, 0.5);
+    transform: translateX(8px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    color: #fff;
+}
+
+.code-value {
+    font-size: 1.2rem;
+    color: #4cc9f0;
+    font-family: 'Courier New', monospace;
+}
+
+/* --- Copy Button --- */
+.copy-btn {
+    background: transparent;
+    border: 1px solid rgba(76, 201, 240, 0.2);
+    border-radius: 8px;
+    color: var(--ag-text-muted, #94a3b8);
+    cursor: pointer;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+    text-transform: uppercase;
+}
+
+.copy-btn:hover {
+    background: rgba(76, 201, 240, 0.1);
+    border-color: var(--ag-accent-1, #00f0ff);
+    color: var(--ag-accent-1, #00f0ff);
+}
+
+.copy-btn.copied {
+    background: rgba(0, 240, 100, 0.1);
+    border-color: #00f064;
+    color: #00f064;
+}

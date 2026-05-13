@@ -1,0 +1,340 @@
+/* =====================================================
+   CustomTierList.css — Tier List Creator
+   ===================================================== */
+@import './CharCard.css';
+
+.ctl-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    width: 100%;
+}
+
+/* ── Opciones (toggle de roles) ── */
+.ctl-options {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Toggle switch estilo iOS */
+.ctl-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--ag-text-muted, #94a3b8);
+    user-select: none;
+    transition: color 0.2s;
+}
+.ctl-toggle:has(input:checked) { color: var(--ag-accent-1, #00f0ff); }
+
+.ctl-toggle input { display: none; }
+
+.ctl-toggle-track {
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+    transition: background 0.2s, border-color 0.2s;
+    flex-shrink: 0;
+}
+.ctl-toggle-track::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    top: 2px;
+    left: 2px;
+    transition: transform 0.2s, background 0.2s;
+}
+.ctl-toggle input:checked + .ctl-toggle-track {
+    background: rgba(0, 240, 255, 0.2);
+    border-color: rgba(0, 240, 255, 0.5);
+}
+.ctl-toggle input:checked + .ctl-toggle-track::after {
+    transform: translateX(16px);
+    background: var(--ag-accent-1, #00f0ff);
+}
+
+/* ── Board ── */
+.ctl-board {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.55);
+    background: rgba(10, 10, 14, 0.95);
+}
+
+/* ── Fila ── */
+.ctl-row {
+    display: flex;
+    min-height: 90px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    position: relative;
+    transition: background 0.15s;
+}
+
+.ctl-row:last-child { border-bottom: none; }
+
+.ctl-row.drag-over {
+    background: rgba(0, 240, 255, 0.05);
+    outline: 1px solid rgba(0, 240, 255, 0.3);
+    outline-offset: -1px;
+}
+
+/* ── Etiqueta de fila ── */
+.ctl-label {
+    width: 100px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-right: 2px solid rgba(0, 0, 0, 0.35);
+    box-shadow: inset -4px 0 16px rgba(0, 0, 0, 0.3);
+    cursor: default;
+}
+
+.ctl-label-text {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.75);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.2);
+    letter-spacing: -1px;
+    cursor: text;
+    user-select: none;
+}
+
+.ctl-label-input {
+    width: 75%;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 900;
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    text-align: center;
+    padding: 2px 4px;
+    outline: none;
+}
+
+/* Color picker */
+.ctl-color-pick {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.55;
+    transition: opacity 0.2s, transform 0.2s;
+    background: none;
+}
+.ctl-color-pick:hover { opacity: 1; transform: scale(1.2); }
+
+/* ── Personajes en fila ── */
+.ctl-row-chars {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 12px;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+/* ── Botón eliminar fila ── */
+.ctl-remove-row {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 60, 60, 0.15);
+    border: 1px solid rgba(255, 60, 60, 0.25);
+    border-radius: 50%;
+    color: rgba(255, 80, 80, 0.7);
+    font-size: 1rem;
+    line-height: 1;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s, background 0.2s;
+}
+.ctl-row:hover .ctl-remove-row { opacity: 1; }
+.ctl-remove-row:hover { background: rgba(255, 60, 60, 0.4); color: #fff; }
+
+/* ── Icono de personaje ── */
+.ctl-char {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    cursor: grab;
+    flex-shrink: 0;
+    width: 76px;
+    transition: transform 0.15s ease, filter 0.15s;
+    user-select: none;
+}
+.ctl-char:active { cursor: grabbing; }
+.ctl-char:hover {
+    transform: translateY(-4px) scale(1.07);
+    filter: brightness(1.1);
+}
+
+.ctl-char:hover .cc-char-name { color: #fff; }
+.ctl-char:hover .cc-char-badge { transform: scale(1.2); }
+
+/* ── Controles ── */
+.ctl-controls {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.ctl-btn {
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 9px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ctl-btn--add {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--ag-text-muted, #94a3b8);
+}
+.ctl-btn--add:hover {
+    background: rgba(255, 255, 255, 0.09);
+    color: var(--ag-text-main, #e2e8f0);
+    border-color: rgba(255, 255, 255, 0.18);
+}
+
+.ctl-btn--download {
+    background: rgba(0, 240, 255, 0.1);
+    border: 1px solid rgba(0, 240, 255, 0.4);
+    color: var(--ag-accent-1, #00f0ff);
+    box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+}
+.ctl-btn--download:hover {
+    background: rgba(0, 240, 255, 0.2);
+    border-color: var(--ag-accent-1, #00f0ff);
+    box-shadow: 0 4px 18px rgba(0, 240, 255, 0.25);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* ── Pool ── */
+.ctl-pool-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.ctl-pool-label {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ag-text-muted, #94a3b8);
+    margin: 0;
+}
+
+.ctl-pool {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 14px;
+    min-height: 90px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px dashed rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    transition: border-color 0.15s, background 0.15s;
+    align-content: flex-start;
+}
+
+.ctl-pool.drag-over {
+    border-color: rgba(0, 240, 255, 0.35);
+    background: rgba(0, 240, 255, 0.04);
+}
+
+.ctl-pool-empty {
+    color: var(--ag-text-muted, #94a3b8);
+    font-size: 0.8rem;
+    font-style: italic;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+}
+
+/* ══════════════════════════════════════════
+   MODO SPLIT POR ROLES
+   ══════════════════════════════════════════ */
+.ctl-roles-header {
+    display: flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.ctl-roles-corner {
+    width: 100px;
+    flex-shrink: 0;
+    border-right: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.ctl-roles-col-header {
+    flex: 1;
+    padding: 10px 8px;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ag-text-muted, #94a3b8);
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+}
+.ctl-roles-col-header:last-child { border-right: none; }
+
+.ctl-role-cell {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px;
+    min-height: 90px;
+    align-items: flex-start;
+    align-content: flex-start;
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    transition: background 0.15s;
+}
+.ctl-role-cell:last-child { border-right: none; }
+
+.ctl-role-cell.drag-over {
+    background: rgba(0, 240, 255, 0.06);
+    outline: 1px solid rgba(0, 240, 255, 0.3);
+    outline-offset: -1px;
+}

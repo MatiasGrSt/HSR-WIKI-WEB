@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+
+:root {
+    --ag-bg-base: #06070a;
+    --ag-panel-bg: rgba(14, 16, 26, 0.95);
+    --ag-accent-1: #00f0ff;
+    --ag-accent-2: #7000ff;
+    --ag-nf-1: #ff0055;
+    --ag-nf-2: #ffcc00;
+    --ag-text-main: #e2e8f0;
+    --ag-text-muted: #94a3b8;
+    --ag-font: 'Outfit', sans-serif;
+}
+
+* {
+    font-family: var(--ag-font);
+    box-sizing: border-box;
+}
+
+/* ====================================================================
+   LAYOUT
+   ==================================================================== */
+main {
+    margin-left: 13.5%;
+    width: calc(100% - 13.5%);
+    box-sizing: border-box;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding: 0;
+    background-color: var(--ag-bg-base);
+}
+
+@media (max-width: 1630px) {
+    main {
+        margin-left: 220px;
+        width: calc(100% - 220px);
+    }
+}
+
+.general {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    animation: fadeInRight 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    pointer-events: none;
+    overflow-y: auto;
+}
+
+.general::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at top right, rgba(0, 240, 255, 0.04), transparent 60%),
+        radial-gradient(ellipse at bottom left, rgba(112, 0, 255, 0.05), transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ====================================================================
+   SPLASH ART
+   ==================================================================== */
+.splash_art {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    z-index: 0;
+    opacity: 0.6;
+    pointer-events: none;
+    mask-image: radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at center, black 30%, transparent 100%);
+}
+
+.splash_art.difuminado {
+    filter: blur(25px) saturate(1.5);
+    opacity: 0.3;
+}
+
+/* ====================================================================
+   NAME
+   ==================================================================== */
+#name {
+    text-align: center;
+    font-weight: 800;
+    font-size: 72px;
+    letter-spacing: 3px;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 20px 50px 10px 50px;
+    pointer-events: auto;
+    cursor: default;
+    position: relative;
+    z-index: 1;
+
+    background: linear-gradient(180deg, #ffffff 0%, var(--color-rareza, #f29e38) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px var(--color-rareza, #f29e38));
+}
+
+/* ====================================================================
+   ELEMENTO / VÍA / RAREZA
+   ==================================================================== */
+.element_path_rarity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto 10px auto;
+    width: fit-content;
+    padding: 14px 28px;
+    position: relative;
+    z-index: 1;
+
+    background: linear-gradient(135deg, rgba(20, 22, 35, 0.95) 0%, rgba(10, 11, 16, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    pointer-events: auto;
+}
+
+.element_path {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+    padding-bottom: 10px;
+}
+
+#element,
+#path {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#element img,
+#path img {
+    width: 28px;
+    height: auto;
+    filter: drop-shadow(0 0 6px rgba(255, 255, 255, 0.2));
+}
+
+.element {
+    font-weight: bold;
+    color: var(--color-elemento, var(--ag-accent-1));
+}
+
+.path {
+    font-weight: bold;
+    color: var(--color-via, var(--ag-accent-2));
+}
+
+#rarity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding-top: 10px;
+    margin-top: 0;
+    gap: 4px;
+}
+
+#rarity img,
+.star-icon {
+    width: 28px;
+    height: auto;
+    filter: drop-shadow(0 0 5px var(--color-rareza, #f29e38));
+}
+
+/* ====================================================================
+   NOVAFLARE SWITCH
+   ==================================================================== */
+
+/* Wrapper que agrupa el panel y el switch, permite posicionamiento relativo */
+.rarity-novaflare-group {
+    position: relative;
+    width: fit-content;
+    margin: 0 auto 10px auto;
+    pointer-events: auto;
+    z-index: 1;
+}
+
+/* El switch se ancla al borde izquierdo del grupo, centrado verticalmente */
+.novaflare-switch-container {
+    position: absolute;
+    left: calc(-100% - 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    pointer-events: auto;
+    z-index: 10;
+}
+
+.novaflare-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    z-index: 10;
+    pointer-events: auto;
+    position: relative;
+    background: linear-gradient(135deg, rgba(20, 22, 35, 0.98) 0%, rgba(10, 11, 16, 0.98) 100%);
+    border: 1px solid rgba(255, 0, 85, 0.3);
+    padding: 10px 24px;
+    border-radius: 30px;
+    box-shadow: 0 4px 20px rgba(255, 0, 85, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.novaflare-switch-wrapper:has(.novaflare-toggle-input:checked) {
+    border-color: rgba(255, 204, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(255, 204, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.switch-label {
+    font-size: 13px;
+    font-weight: 800;
+    color: var(--ag-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.novaflare-switch-wrapper:has(.novaflare-toggle-input:checked) .switch-label {
+    color: var(--ag-nf-2);
+    text-shadow: 0 0 8px rgba(255, 204, 0, 0.5);
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+}
+
+.novaflare-toggle-input:checked+.slider {
+    background: linear-gradient(135deg, var(--ag-nf-1), var(--ag-nf-2));
+    border-color: transparent;
+    box-shadow: 0 0 12px rgba(255, 0, 85, 0.5);
+}
+
+.novaflare-toggle-input:checked+.slider:before {
+    transform: translateX(26px);
+    background: #fff;
+    box-shadow: 0 0 8px rgba(255, 204, 0, 0.6);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* ====================================================================
+   BOTONES DE NAVEGACIÓN
+   ==================================================================== */
+.botones {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    pointer-events: auto;
+    z-index: 50;
+}
+
+.botones img {
+    width: 58px;
+    height: 58px;
+    border-radius: 16px;
+    cursor: pointer;
+    object-fit: cover;
+    padding: 6px;
+    background: linear-gradient(135deg, rgba(20, 22, 35, 0.9) 0%, rgba(10, 11, 16, 0.9) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        filter 0.3s ease;
+    filter: saturate(0.7) brightness(0.8);
+}
+
+.botones img:hover {
+    transform: scale(1.12) translateY(-3px);
+    border-color: var(--ag-accent-1);
+    box-shadow: 0 10px 25px rgba(0, 240, 255, 0.3), inset 0 0 12px rgba(0, 240, 255, 0.1);
+    filter: saturate(1) brightness(1.1);
+}
+
+.botones img:active {
+    transform: scale(0.95);
+    filter: brightness(0.8);
+}
+
+.botones img.activo {
+    border-color: var(--color-rareza, #f29e38);
+    background: linear-gradient(135deg, color-mix(in srgb, var(--color-rareza), transparent 50%) 0%, rgba(10, 11, 16, 0.95) 100%);
+    box-shadow: 0 0 20px color-mix(in srgb, var(--color-rareza), transparent 40%),
+        inset 0 0 10px color-mix(in srgb, var(--color-rareza), transparent 10%);
+    filter: saturate(1.2) brightness(1.15);
+    transform: scale(1.06);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ====================================================================
+   ANIMACIONES
+   ==================================================================== */
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

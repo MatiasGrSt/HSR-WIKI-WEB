@@ -1,0 +1,208 @@
+/* src/components/Home/EventCard.css */
+
+.event-card {
+    position: relative;
+    width: 100%;
+    height: 105px;
+    border-radius: 0 20px 20px 0; /* A juego con #introduction */
+    /* Fallback cuando no llega imagen del backend */
+    background-image: linear-gradient(135deg, #0e1020 0%, #181c2e 100%);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 25px;
+    overflow: hidden;
+    
+    /* Borde lateral color rareza a juego con info.css */
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid var(--color-rareza, #f29e38);
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.6), inset 1px 0 0 rgba(255,255,255,0.03);
+    
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+}
+
+/* Hover estilo Habilidades (Glow Neón) */
+.event-card:hover {
+    transform: translateX(5px) scale(1.02);
+    border-left-color: var(--ag-accent-1, #00f0ff);
+    border-top-color: rgba(0, 240, 255, 0.3);
+    border-bottom-color: rgba(0, 240, 255, 0.3);
+    border-right-color: rgba(0, 240, 255, 0.3);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(0, 240, 255, 0.15);
+}
+
+.event-card.expanded {
+    height: 340px;
+    border-left-color: var(--ag-accent-1, #00f0ff);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 240, 255, 0.1);
+}
+
+.event-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 105px;
+    /* Fondo premium calcado de #introduction */
+    background: linear-gradient(160deg, rgba(14, 16, 26, 0.92) 0%, rgba(8, 9, 14, 0.98) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 35px;
+    box-sizing: border-box;
+    transition: background 0.3s ease;
+}
+
+.event-card:hover .event-overlay {
+    background: linear-gradient(160deg, rgba(14, 16, 26, 0.85) 0%, rgba(8, 9, 14, 0.95) 100%);
+}
+
+.event-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    margin-right: 40px;
+}
+
+/* Estilo copiado de #voice_actors */
+.event-title {
+    margin: 0;
+    font-size: 1.05rem;
+    font-weight: 400;
+    color: var(--ag-text-main, #e2e8f0);
+    text-align: right;
+}
+
+.event-badges-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Badges calcadas de .novaflare-badge */
+.event-badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.badge-global {
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255,255,255,0.1);
+}
+
+.badge-regional {
+    background: linear-gradient(135deg, rgba(0,240,255,0.15), rgba(0,240,255,0.05));
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: var(--ag-accent-1, #00f0ff);
+    box-shadow: 0 4px 10px rgba(0,240,255,0.15);
+}
+
+.time-countdown {
+    font-size: 0.75rem;
+    color: var(--ag-text-muted, #94a3b8);
+    margin: 0 30px 0 0;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 6px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.time-highlight {
+    color: var(--color-rareza, #f29e38);
+    font-weight: 800;
+    font-size: 0.95rem;
+    margin-left: 5px;
+    text-shadow: 0 0 10px rgba(242, 158, 56, 0.4);
+}
+
+/* Botón estilo .modal-arrow */
+.expand-btn {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--ag-text-main, #e2e8f0);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    position: absolute;
+    right: 20px;
+    bottom: 32px;
+}
+
+.expand-btn:hover {
+    background: var(--ag-text-main, #e2e8f0);
+    color: #000;
+    transform: scale(1.15);
+    box-shadow: 0 4px 15px rgba(255,255,255,0.3);
+}
+
+.event-details-content {
+    position: absolute;
+    top: 105px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 105px);
+    background: linear-gradient(180deg, rgba(22, 24, 35, 0.98) 0%, rgba(12, 14, 20, 0.98) 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 30px;
+    box-sizing: border-box;
+    color: var(--ag-text-main, #e2e8f0);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Custom Scrollbar calcada de Modal */
+.event-details-content::-webkit-scrollbar { width: 6px; }
+.event-details-content::-webkit-scrollbar-track { background: transparent; }
+.event-details-content::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.2); border-radius: 10px; }
+
+.time-info { 
+    text-align: center; 
+    margin-bottom: 20px; 
+    padding-bottom: 15px; 
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+}
+.time-info span { color: var(--ag-text-muted, #94a3b8); font-size: 0.85rem; font-weight: 600; letter-spacing: 1px;}
+.time-info .separator { margin: 0 15px; color: var(--ag-accent-1, #00f0ff); opacity: 0.5; }
+
+.event-desc { 
+    text-align: left; 
+    margin-bottom: 20px; 
+    font-size: 0.95rem; 
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.event-action { text-align: center; margin-top: auto; }
+.event-web-link {
+    display: inline-block;
+    background: linear-gradient(135deg, rgba(20,22,35,1), rgba(10,11,16,1));
+    border: 1px solid rgba(0, 240, 255, 0.3);
+    color: var(--ag-accent-1, #00f0ff);
+    padding: 10px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 800;
+    letter-spacing: 1px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.event-web-link:hover { 
+    transform: translateY(-3px) scale(1.05); 
+    border-color: var(--ag-accent-1, #00f0ff);
+    box-shadow: 0 10px 25px rgba(0, 240, 255, 0.2);
+}

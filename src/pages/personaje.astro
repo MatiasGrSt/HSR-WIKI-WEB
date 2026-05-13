@@ -1,0 +1,29 @@
+---
+import '/src/styles/basico.css';
+
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import CharacterPage from '../components/Character/CharacterPage.jsx';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+    data-cf-beacon='{"token": "fcc1cfa50eb54cd6b251acfc91e1f9bb"}'>
+</script>
+<body>
+    <Nav />
+    
+    <main>
+        <CharacterPage client:load />
+
+        <Footer />
+    </main>
+</body>
+
+</html>

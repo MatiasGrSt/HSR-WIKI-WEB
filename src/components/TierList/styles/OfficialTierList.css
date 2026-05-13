@@ -1,0 +1,238 @@
+/* =====================================================
+   OfficialTierList.css — Antigravity Design System
+   Tabla 2D: EV (vertical) × Rol (horizontal)
+   ===================================================== */
+@import './CharCard.css';
+
+/* ── Wrapper principal ── */
+.otl-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    width: 100%;
+    padding-bottom: 60px;
+}
+
+/* ══════════════════════════════════════════
+   SELECTOR DE MODO DE JUEGO
+   ══════════════════════════════════════════ */
+.otl-modes {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.otl-mode-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--ag-text-muted, #94a3b8);
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 9px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+.otl-mode-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--ag-text-main, #e2e8f0);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.otl-mode-btn.active {
+    background: rgba(0, 240, 255, 0.1);
+    border-color: rgba(0, 240, 255, 0.45);
+    color: var(--ag-accent-1, #00f0ff);
+    box-shadow: 0 0 14px rgba(0, 240, 255, 0.2),
+                inset 0 0 8px rgba(0, 240, 255, 0.07);
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+}
+
+/* ══════════════════════════════════════════
+   TABLA 2D — CSS Grid
+   Columnas: [EV-label] [DPS] [Sub DPS] [Amplifier] [Support]
+   ══════════════════════════════════════════ */
+.otl-table {
+    display: grid;
+    grid-template-columns: 90px repeat(4, 1fr);
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 24px 56px rgba(0, 0, 0, 0.65),
+                0 0 0 1px rgba(255, 255, 255, 0.03);
+    background: rgba(10, 10, 14, 0.95);
+}
+
+/* ── Esquina superior izquierda ── */
+.otl-corner {
+    background: rgba(0, 0, 0, 0.4);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Cabeceras de Rol ── */
+.otl-role-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 8px;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--ag-text-muted, #94a3b8);
+    text-align: center;
+}
+
+.otl-role-header:last-child { border-right: none; }
+
+/* ── Etiqueta de EV (columna izquierda) ── */
+.otl-ev-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90px;
+    border-right: 2px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    position: relative;
+    user-select: none;
+}
+
+.otl-ev-num {
+    font-size: 1.6rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.75);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.25),
+                 0 -1px 1px rgba(0, 0, 0, 0.5);
+    letter-spacing: -1px;
+}
+
+/* ── Celdas de personajes ── */
+.otl-cell {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 12px;
+    min-height: 90px;
+    align-items: flex-start;
+    align-content: flex-start;
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.01);
+    transition: background 0.2s;
+}
+
+.otl-cell:last-child { border-right: none; }
+
+/* Última fila sin borde inferior */
+.otl-table > .otl-ev-label:last-of-type,
+.otl-table > .otl-cell:nth-last-child(-n+4) {
+    border-bottom: none;
+}
+
+.otl-cell:hover { background: rgba(255, 255, 255, 0.025); }
+
+/* ══════════════════════════════════════════
+   ICONO DE PERSONAJE
+   ══════════════════════════════════════════ */
+.otl-char {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 76px;
+    transition: transform 0.2s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.2s;
+    will-change: transform;
+}
+
+.otl-char:hover {
+    transform: translateY(-5px) scale(1.07);
+    filter: brightness(1.1);
+    z-index: 10;
+}
+
+.otl-char:hover .cc-char-name { color: #fff; }
+.otl-char:hover .cc-char-badge { transform: scale(1.2); }
+
+/* ── Badge Novaflare ── */
+.otl-badge {
+    position: absolute;
+    font-size: 0.48rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    padding: 2px 5px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.otl-badge--nova {
+    bottom: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #ff4e50, #f9d423);
+    color: #000;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+/* ══════════════════════════════════════════
+   DISCLAIMER
+   ══════════════════════════════════════════ */
+.otl-disclaimer {
+    text-align: center;
+    color: var(--ag-text-muted, #94a3b8);
+    font-size: 0.75rem;
+    font-style: italic;
+    margin: 0;
+    opacity: 0.7;
+}
+
+/* ══════════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════════ */
+@media (max-width: 768px) {
+    .otl-table {
+        grid-template-columns: 60px repeat(4, 1fr);
+    }
+
+    .otl-ev-num { font-size: 1.1rem; }
+
+    .otl-char { width: 52px; }
+
+    .otl-cell {
+        gap: 5px;
+        padding: 7px 8px;
+        min-height: 68px;
+    }
+
+    .otl-role-header {
+        font-size: 0.62rem;
+        letter-spacing: 0.5px;
+        padding: 10px 4px;
+    }
+
+    .otl-mode-btn {
+        padding: 8px 14px;
+        font-size: 0.7rem;
+    }
+
+    .cc-char-circle-wrap,
+    .cc-char-circle {
+        width: 52px;
+        height: 52px;
+    }
+}

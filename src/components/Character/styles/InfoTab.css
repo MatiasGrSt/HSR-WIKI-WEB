@@ -1,0 +1,108 @@
+/* ====================================================================
+   CONTENEDOR DE LA SECCIÓN INFO
+   ==================================================================== */
+.info {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+}
+
+#introduction,
+#voice_actors {
+    pointer-events: auto;
+}
+
+/* ====================================================================
+   INTRODUCCIÓN / DESCRIPCIÓN
+   ==================================================================== */
+#introduction {
+    position: absolute;
+    top: 28vh;
+    background: linear-gradient(160deg, rgba(14, 16, 26, 0.97) 0%, rgba(8, 9, 14, 0.95) 100%);
+    border-radius: 0 20px 20px 0;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 3px solid var(--color-rareza, #f29e38);
+    box-shadow: 8px 0 30px rgba(0, 0, 0, 0.6), inset 1px 0 0 rgba(255,255,255,0.03);
+    padding: 24px 28px;
+    width: 480px;
+    max-width: 88vw;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    color: var(--ag-text-main, #e2e8f0);
+    font-weight: 300;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: hidden;
+    display: block;
+    margin: 0;
+}
+
+#introduction::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-rareza, #f29e38), transparent 70%);
+}
+
+/* ====================================================================
+   DOBLAJES / VOICE ACTORS
+   ==================================================================== */
+#voice_actors {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 0;
+    width: fit-content;
+    padding: 8px 0 8px 16px;
+    background: linear-gradient(225deg, rgba(14, 16, 26, 0.97) 0%, rgba(8, 9, 14, 0.95) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-right: none;
+    border-radius: 20px 0 0 20px;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.6), inset -1px 0 0 rgba(255,255,255,0.03);
+    position: absolute;
+    right: 5px;
+    top: 18vh;
+}
+
+#voice_actors > div {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-right: 3px solid var(--color-rareza, #f29e38);
+    text-align: right;
+    margin-block: 12px;
+    padding-right: 0;
+    transition: border-color 0.3s ease;
+}
+
+#voice_actors > div:hover {
+    border-color: var(--ag-accent-1, #00f0ff);
+}
+
+#voice_actors > div p:first-of-type {
+    margin-right: 8px;
+    margin-block: 0 3px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--ag-text-muted, #94a3b8);
+}
+
+#voice_actors > div p:last-of-type {
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--ag-text-main, #e2e8f0);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin-right: 0;
+    padding-right: 8px;
+    margin-block: 0;
+    padding-top: 3px;
+}

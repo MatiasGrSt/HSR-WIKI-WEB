@@ -1,0 +1,91 @@
+/* ── TierListApp — Nav Oficial / Creador ── */
+
+.tla-nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.tla-nav-btn {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--ag-text-muted, #94a3b8);
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px 32px;
+    border-radius: 100px;  /* pill */
+    transition: all 0.2s ease;
+}
+
+.tla-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.09);
+    color: var(--ag-text-main, #e2e8f0);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.tla-nav-btn.active {
+    background: rgba(0, 240, 255, 0.12);
+    border-color: rgba(0, 240, 255, 0.5);
+    color: var(--ag-accent-1, #00f0ff);
+    box-shadow: 0 0 16px rgba(0, 240, 255, 0.18),
+                inset 0 0 10px rgba(0, 240, 255, 0.06);
+    text-shadow: 0 0 12px rgba(0, 240, 255, 0.5);
+}
+
+/* ── Grid de disclaimers ── */
+.tl-disclaimer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 380px));
+    gap: 10px;
+    justify-content: center;
+}
+
+/* ── Info box individual ── */
+.tl-info-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 14px 18px;
+    background: rgba(0, 240, 255, 0.05);
+    border: 1px solid rgba(0, 240, 255, 0.18);
+    border-radius: 10px;
+}
+
+.tl-info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 1px;
+    color: var(--ag-accent-1, #00f0ff);
+}
+
+.tl-info-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: currentColor;
+}
+
+.tl-info-text {
+    font-family: var(--ag-font, 'Outfit', sans-serif);
+    font-size: 0.82rem;
+    color: var(--ag-text-muted, #94a3b8);
+    line-height: 1.6;
+}
+
+.tl-info-text strong {
+    color: var(--ag-text-main, #e2e8f0);
+    font-weight: 700;
+}
+
+.tl-info-text em {
+    color: var(--ag-accent-2, #ceae7d);
+    font-style: normal;
+    font-weight: 600;
+}
