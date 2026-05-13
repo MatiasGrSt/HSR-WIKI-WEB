@@ -13,17 +13,9 @@ import EventsPanel from '../components/Home/EventsPanel.jsx';
 import VersionCountdown from '../components/Home/VersionCountdown.jsx';
 import EndgameTracker from '../components/Home/EndgameTracker.jsx';
 
-// Valores por defecto por si el servidor falla
-let version = null, fin_version = null, eventos = [], codigos = [], personajes = [], endgame = [];
+import { getHomeData } from "../lib/home.js";
 
-try {
-    const response = await fetch('https://www.astralwiki.com/php/home.php');
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const data = await response.json();
-    ({ version, fin_version, eventos, codigos, personajes, endgame } = data);
-} catch (e) {
-    console.error('[index.astro] Error al cargar datos de home:', e);
-}
+const { version, fin_version, eventos, codigos, personajes, endgame } = await getHomeData();
 ---
 
 <!DOCTYPE html>

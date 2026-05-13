@@ -15,15 +15,16 @@ export default function CharacterPage() {
         const personaje = urlParams.get('personaje');
 
         if (!personaje) {
-            setError("No se ha especificado ningún personaje en la URL.");
+            setError("No se ha especificado ningún personaje.");
             return;
         }
 
         document.title = `${personaje} - HSR Wiki`;
 
-        fetch(`https://www.astralwiki.com/php/obtener_info_pj.php?personaje=${personaje}&tipo=all`)
+        // LLAMADA A TU NUEVA API DE ASTRO
+        fetch(`/api/get-character.json?personaje=${personaje}&tipo=all`)
             .then(res => {
-                if (!res.ok) throw new Error("Error de conexión con el servidor.");
+                if (!res.ok) throw new Error("Error al obtener datos del personaje.");
                 return res.json();
             })
             .then(json => setData(json))

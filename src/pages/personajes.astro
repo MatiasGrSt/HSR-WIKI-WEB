@@ -6,24 +6,10 @@ import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PersonajesApp from '../components/Personajes/PersonajesApp.jsx';
 
-let personajes = [];
-let versionActual = 1.0;
+import { getDatosPersonajes, getVersionActual } from "../lib/listapj.js";
 
-try {
-    // Fetch Personajes
-    const resData = await fetch('https://www.astralwiki.com/php/datos.php');
-    if (!resData.ok) throw new Error(`HTTP ${resData.status}`);
-    const data = await resData.json();
-    personajes = data; // Guardamos el array directo
-
-    // Fetch Versión
-    const resVer = await fetch('https://www.astralwiki.com/php/home.php?accion=version');
-    const verData = await resVer.json();
-    versionActual = parseFloat(verData.version);
-
-} catch (e) {
-    console.error('[personajes.astro] Error al cargar datos:', e);
-}
+const personajes = await getDatosPersonajes();
+const versionActual = await getVersionActual();
 ---
 
 <!DOCTYPE html>

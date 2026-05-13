@@ -6,35 +6,9 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import TierListApp from "../components/TierList/TierListApp.jsx";
 
-const TOKEN = import.meta.env.DIRECTUS_TOKEN || process.env.DIRECTUS_TOKEN;
-const URL_BASE = import.meta.env.DIRECTUS_URL || process.env.DIRECTUS_URL;
+import { getTierListData } from "../lib/tierlist.js";
 
-let personajes = [];
-let tierData = [];
-
-try {
-    const headers = {
-        "Authorization": `Bearer ${TOKEN}`,
-    };
-
-    // Lanzamos ambas peticiones a la vez
-    const [resPers, resTier] = await Promise.all([
-        fetch(`${URL_BASE}/items/characters?limit=-1`, { headers }),
-        fetch(`${URL_BASE}/items/tier_list?limit=-1`, { headers })
-    ]);
-
-    const jsonPers = await resPers.json();
-    const jsonTier = await resTier.json();
-
-    // Extraemos los datos (Directus siempre los mete en .data)
-    personajes = jsonPers.data || [];
-    tierData = jsonTier.data || [];
-
-    console.log(personajes, tierData);
-
-} catch (e) {
-    console.error("Error en el fetch de Directus:", e);
-}
+const { personajes, tierData } = await getTierListData();
 ---
 
 <!DOCTYPE html>
