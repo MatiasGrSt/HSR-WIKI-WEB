@@ -28,7 +28,7 @@ export default function Lista({ personajes, versionActual }) {
                             '--color-via': colores.vias[p.path] || '#fff'
                         }}
                     >
-                        <a href={`personaje.html?personaje=${p.name}`}>
+                        <a href={`personaje?personaje=${p.name}`}>
                             <img src={`../imagenes/Utils/Tipos/${p.element}.webp`} alt={p.element} className="char-element-icon" />
                             
                             <div className="rarity-stars">
