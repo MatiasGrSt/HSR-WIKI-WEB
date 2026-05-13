@@ -14,7 +14,7 @@ const isActivo = (path: string) => {
 
 <nav>
     <div class="nav-header">
-        <a href="/">
+        <a href="/index">
             <img src="/imagenes/Utils/Logo.webp" class="logo" alt="Logo">
         </a>
         <img src="/imagenes/Utils/Profile_Card_Default.webp" class="fondo-logo" alt="Profile">
@@ -22,16 +22,19 @@ const isActivo = (path: string) => {
     <hr>
 
     <ul id="fondo">
-        <li><a href="/" class={isActivo('/')}>Home</a></li>
+        <li><a href="/index" class={isActivo('/')}>Home</a></li>
         <li><a href="/personajes" class={isActivo('/personajes')}>Characters</a></li>
         <li><a href="/tierlist" class={isActivo('/tierlist')}>Tier List</a></li>
         <li><a href="/light_cones" class={isActivo('/light_cones')}>Light Cones</a></li>
-        <li><a href="/guias" class={isActivo('/guias')}>Guides</a></li>
+        <li><a href="/relics" class={isActivo('/relics')}>Relics</a></li>
+        <li><a href="/endgames" class={isActivo('/endgames')}>End Games</a></li>
+        <li><a href="/sim_universe" class={isActivo('/sim_universe')}>Simulated Universe</a></li>
+        <li><a href="/guides" class={isActivo('/guias')}>Guides</a></li>
         
         <hr class="bottom-divider"> 
         
-        <li><a href="/#opiniones">Opinions</a></li>
-        <li><a href="/#creditos">Credits</a></li>
+        <li><a href="/index#opiniones">Opinions</a></li>
+        <li><a href="/index#creditos">Credits</a></li>
     </ul>
 </nav>
 
