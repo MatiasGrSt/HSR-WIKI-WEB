@@ -8,4 +8,4 @@ export default defineConfig({
     mode: 'standalone',
   }),
   integrations: [react()],
-});
+}); 
