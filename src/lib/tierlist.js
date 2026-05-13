@@ -5,15 +5,17 @@ const TOKEN = import.meta.env.DIRECTUS_TOKEN || process.env.DIRECTUS_TOKEN;
 const URL_BASE = import.meta.env.DIRECTUS_URL || process.env.DIRECTUS_URL;
 
 export async function getTierListData() {
-    const headers = {
+    const headers = { 
         "Authorization": `Bearer ${TOKEN}`,
+        "Cache-Control": "no-cache", // <--- Esto le dice a Directus: "No me des nada guardado"
+        "Pragma": "no-cache"
     };
 
     try {
         // Lanzamos ambas peticiones a la vez
         const [resPers, resTier] = await Promise.all([
-            fetch(`${URL_BASE}/items/characters?limit=-1`, { headers }),
-            fetch(`${URL_BASE}/items/tier_list?limit=-1`, { headers })
+            fetch(`${URL_BASE}/items/characters?limit=-1`, { headers, cache: 'no-store' }),
+            fetch(`${URL_BASE}/items/tier_list?limit=-1`, { headers, cache: 'no-store' })
         ]);
 
         // Verificamos si las respuestas son correctas

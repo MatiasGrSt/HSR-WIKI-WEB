@@ -13,12 +13,16 @@ export async function GET({ request }) {
 
     const TOKEN = import.meta.env.DIRECTUS_TOKEN || process.env.DIRECTUS_TOKEN;
     const BASE_URL = import.meta.env.DIRECTUS_URL || process.env.DIRECTUS_URL;
-    const headers = { "Authorization": `Bearer ${TOKEN}` };
+    const headers = { 
+        "Authorization": `Bearer ${TOKEN}`,
+        "Cache-Control": "no-cache", // <--- Esto le dice a Directus: "No me des nada guardado"
+        "Pragma": "no-cache"
+    };
 
     // Función interna para pedir a Directus
     const fetchDirectus = async (coleccion, campo, valor, sort = '') => {
         const url = `${BASE_URL}/items/${coleccion}?filter[${campo}][_eq]=${encodeURIComponent(valor)}${sort ? '&sort=' + sort : ''}`;
-        const res = await fetch(url, { headers });
+        const res = await fetch(url, { headers, cache: 'no-store' });
         const json = await res.json();
         return json.data || [];
     };
