@@ -6,35 +6,32 @@ import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import TierListApp from "../components/TierList/TierListApp.jsx";
 
+const TOKEN = import.meta.env.DIRECTUS_TOKEN;
+const URL_BASE = import.meta.env.DIRECTUS_URL;
+
 let personajes = [];
 let tierData = [];
 
-// 1. Configuración (Sustituye al token de tu PHP)
-const TOKEN = import.meta.env.DIRECTUS_TOKEN;
-const BASE_URL = import.meta.env.DIRECTUS_URL;
-
-// 2. Cabeceras de seguridad
-const headers = {
-    "Authorization": `Bearer ${TOKEN}`,
-    "Content-Type": "application/json"
-};
-
 try {
-    // Llamamos directamente a Directus. 
-    // Nota: Si quieres traer campos específicos usa ?fields=id,name,rarity...
+    const headers = {
+        "Authorization": `Bearer ${TOKEN}`,
+    };
+
+    // Lanzamos ambas peticiones a la vez
     const [resPers, resTier] = await Promise.all([
-        fetch(`${BASE_URL}/characters?limit=-1`, { headers }), 
-        fetch(`${BASE_URL}/tier_list`, { headers }),
+        fetch(`${URL_BASE}/items/characters?limit=-1`, { headers }),
+        fetch(`${URL_BASE}/items/tier_list?limit=-1`, { headers })
     ]);
 
-    const dataPers = await resPers.json();
-    const dataTier = await resTier.json();
+    const jsonPers = await resPers.json();
+    const jsonTier = await resTier.json();
 
-    personajes = dataPers.data || [];
-    tierData = dataTier.data || [];
+    // Extraemos los datos (Directus siempre los mete en .data)
+    personajes = jsonPers.data || [];
+    tierData = jsonTier.data || [];
 
 } catch (e) {
-    console.error("Error cargando la tier list:", e);
+    console.error("Error en el fetch de Directus:", e);
 }
 ---
 
