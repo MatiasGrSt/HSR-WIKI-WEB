@@ -92,7 +92,7 @@ export default function OfficialTierList({ personajes, tierListData, seccion, on
                                     {tablaData[ev][role].map(char => (
                                         <a
                                             key={char.name}
-                                            href={`/personaje.html?personaje=${encodeURIComponent(char.name)}`}
+                                            href={`personaje?personaje=${encodeURIComponent(char.name)}`}
                                             className={`otl-char rarity-${char.rarity}`}
                                             title={char.name}
                                         >
