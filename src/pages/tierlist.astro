@@ -30,6 +30,8 @@ try {
     personajes = jsonPers.data || [];
     tierData = jsonTier.data || [];
 
+    console.log(personajes, tierData);
+
 } catch (e) {
     console.error("Error en el fetch de Directus:", e);
 }
