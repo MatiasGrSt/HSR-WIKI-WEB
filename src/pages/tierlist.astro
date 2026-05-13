@@ -9,13 +9,30 @@ import TierListApp from "../components/TierList/TierListApp.jsx";
 let personajes = [];
 let tierData = [];
 
+// 1. Configuración (Sustituye al token de tu PHP)
+const TOKEN = import.meta.env.DIRECTUS_TOKEN;
+const BASE_URL = import.meta.env.DIRECTUS_URL;
+
+// 2. Cabeceras de seguridad
+const headers = {
+    "Authorization": `Bearer ${TOKEN}`,
+    "Content-Type": "application/json"
+};
+
 try {
+    // Llamamos directamente a Directus. 
+    // Nota: Si quieres traer campos específicos usa ?fields=id,name,rarity...
     const [resPers, resTier] = await Promise.all([
-        fetch("https://www.astralwiki.com/php/datos.php"),
-        fetch("https://www.astralwiki.com/php/tier_list.php"),
+        fetch(`${BASE_URL}/characters?limit=-1`, { headers }), 
+        fetch(`${BASE_URL}/tier_list`, { headers }),
     ]);
-    personajes = await resPers.json();
-    tierData = await resTier.json();
+
+    const dataPers = await resPers.json();
+    const dataTier = await resTier.json();
+
+    personajes = dataPers.data || [];
+    tierData = dataTier.data || [];
+
 } catch (e) {
     console.error("Error cargando la tier list:", e);
 }
