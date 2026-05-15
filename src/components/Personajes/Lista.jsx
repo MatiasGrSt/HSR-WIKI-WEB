@@ -18,15 +18,6 @@ export default function Lista({ personajes, versionActual }) {
                         key={p.name} 
                         id={p.name}
                         className="char-card"
-                        style={{
-                            backgroundImage: `url('../imagenes/Utils/Fondos/${p.element}.webp')`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            '--color-rareza': colores.rarezas[rarezaNum],
-                            '--color-elemento': colores.elementos[p.element] || '#fff',
-                            '--color-via': colores.vias[p.path] || '#fff'
-                        }}
                     >
                         <a href={`personaje?personaje=${p.name}`}>
                             <img src={`../imagenes/Utils/Tipos/${p.element}.webp`} alt={p.element} className="char-element-icon" />
