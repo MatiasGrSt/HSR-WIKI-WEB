@@ -153,6 +153,10 @@ main {
     font-weight: bold;
     color: var(--color-via, var(--ag-accent-2));
 }
+.stat {
+    font-weight: bold;
+    color: var(--color-rareza, #f29e38);
+}
 
 #rarity {
     display: flex;

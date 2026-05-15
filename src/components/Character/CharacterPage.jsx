@@ -3,6 +3,7 @@ import './styles/CharacterPage.css'
 import { colores } from '../Utils/colores.js';
 import InfoTab from './InfoTab';
 import SkillsTab from './SkillsTab';
+import EidolonsTab from './EidolonsTab';
 
 export default function CharacterPage() {
     const [data, setData] = useState(null);
@@ -34,7 +35,7 @@ export default function CharacterPage() {
     if (error) return <div className="error-message">🚨 Error: {error}</div>;
     if (!data) return <div className="loading">⏳ Cargando datos astrales...</div>;
 
-    const { info, skills, major_traces, minor_traces } = data;
+    const { info, skills, major_traces, minor_traces, eidolons } = data;
     const isNovaflareChar = Number(info.novaflare) === 1;
 
     const cssVars = {
@@ -113,7 +114,7 @@ export default function CharacterPage() {
             {activeTab === 'habilidades' && (
                 <SkillsTab info={info} skills={skills} majorTraces={major_traces} minorTraces={minor_traces} isNovaflareMode={isNovaflareMode} />
             )}
-            {activeTab === 'eidolones' && <div style={{color:'white', textAlign:'center'}}>Sección de Eidolones en construcción...</div>}
+            {activeTab === 'eidolones' && <EidolonsTab info={info} eidolons={eidolons} isNovaflareMode={isNovaflareMode} />}
             {activeTab === 'guide' && <div style={{color:'white', textAlign:'center'}}>Sección de Guía en construcción...</div>}
             
         </div>

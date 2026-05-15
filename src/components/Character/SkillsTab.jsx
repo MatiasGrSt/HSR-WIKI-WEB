@@ -66,8 +66,6 @@ export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNo
 
                     if (!currentSkills) return null;
 
-                    const claseTipo = tipo.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, '-');
-
                     return (
                         <div key={tipo} className={`skill skill-trigger via-${viaLimpia}`} id={tipoLimpio} onClick={() => handleOpenModal(tipo, isCurrentlyNF)}>
                             <img src={`../imagenes/Personajes/${info.name}/${tipoLimpio}.webp`} alt={tipo} />
