@@ -3,7 +3,7 @@ import React, { useState, useMemo } from 'react';
 import './styles/SkillsTab.css';
 import './styles/SkillsPositionsByPath.css';
 import { organizarHabilidades, juntarHabilidades, transformarTrace } from './Utils.jsx';
-//import SkillModal from './SkillModal'; // Lo crearemos en el siguiente paso
+import SkillModal from './SkillModal';
 
 export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNovaflareMode }) {
     const [modalData, setModalData] = useState({ isOpen: false, skillsArray: [], type: '' });
@@ -143,7 +143,9 @@ export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNo
                 {modalData.isOpen && (
                     <SkillModal 
                         skills={modalData.skillsArray} 
-                        element={info.element} 
+                        element={info.element}
+                        path={info.path}
+                        characterName={info.name}
                         onClose={() => setModalData({ ...modalData, isOpen: false })} 
                     />
                 )}
