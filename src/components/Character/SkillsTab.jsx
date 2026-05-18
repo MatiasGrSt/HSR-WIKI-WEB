@@ -4,7 +4,6 @@ import './styles/SkillsTab.css';
 import './styles/SkillsPositionsByPath.css';
 import { organizarHabilidades, juntarHabilidades, transformarTrace } from './Utils.jsx';
 import SkillModal from './SkillModal';
-
 export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNovaflareMode }) {
     const [modalData, setModalData] = useState({ isOpen: false, skillsArray: [], type: '' });
 
@@ -57,6 +56,7 @@ export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNo
                 
                 {/* RENDERIZAR HABILIDADES */}
                 {Object.keys(processedSkills.normal).map(tipo => {
+                    
                     const tipoLimpio = tipo.replaceAll(' ', '_');
                     const hasNf = processedSkills.novaflare[tipo]?.length > 0;
                     const isCurrentlyNF = isNovaflareMode && hasNf;
@@ -129,7 +129,7 @@ export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNo
                     const { tipoLimpio, valorLimpio } = transformarTrace(rastro.type, rastro.value, info.element);
                     return (
 
-                        <div key={`min${idx}`} className={`trace_mi via-${viaLimpia}`} id={`trace_mi_${idx+1}`}>
+                        <div key={`min${rastro.idx}`} className={`trace_mi via-${viaLimpia}`} id={`trace_mi_${rastro.idx}`}>
                             <img src={`../imagenes/Utils/Stats/${tipoLimpio.replaceAll(' ', '_')}.webp`} alt={tipoLimpio} />
                             <div className="popup MItrace-popup">
                                 <h3 className="type">{tipoLimpio}</h3>

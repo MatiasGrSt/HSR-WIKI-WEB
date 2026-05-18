@@ -17,14 +17,14 @@ export function juntarHabilidades(lista) {
 export function transformarTrace(texto, valor, element) {
     const traducciones = {
         'ATK': 'Attack', 'DEF': 'Defense', 'HP': 'HP',
-        'CRIT D': 'Crit Damage', 'CRIT R': 'Crit Rate',
-        'EFFECT RES': 'Effect Resistance', 'EFFECT RATE': 'Effect Hit Rate',
-        'BREAK': 'Break', 'SPD': 'Speed', 'ELATION': 'Elation',
-        'DMG': `${element} Damage`
+        'CRIT DMG': 'Crit Damage', 'CRIT Rate': 'Crit Rate',
+        'Effect RES': 'Effect Resistance', 'Effect Hit Rate': 'Effect Hit Rate',
+        'Break': 'Break', 'SPD': 'Speed', 'Elation': 'Elation',
+        'DMG:': `${element} Damage`
     };
 
     const tipoLimpio = traducciones[texto] || texto;
-    const valorLimpio = (texto !== 'SPD' && texto !== 'ELATION') ? `+${valor}%` : `+${valor}`;
+    const valorLimpio = (texto !== 'SPD') ? `+${valor}%` : `+${valor}`;
 
     return { tipoLimpio, valorLimpio };
 }

@@ -34,10 +34,10 @@ export async function GET({ request }) {
             // Hacemos todas las peticiones que hacía tu PHP en paralelo
             const [resBasic, resSkills, resEidolons, resTraces, resTracesMi] = await Promise.all([
                 fetchDirectus('characters', 'name', personaje),
-                fetchDirectus('skills', 'character_id', personaje),
-                fetchDirectus('eidolons', 'character_id', personaje, 'lvl'),
-                fetchDirectus('traces', 'character_id', personaje),
-                fetchDirectus('traces_mi', 'character_id', personaje)
+                fetchDirectus('skills', 'character_name', personaje),
+                fetchDirectus('eidolons', 'character_name', personaje, 'lvl'),
+                fetchDirectus('traces', 'character_name', personaje),
+                fetchDirectus('traces_mi', 'character_name', personaje)
             ]);
 
             if (resBasic.length === 0) {

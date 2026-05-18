@@ -11,9 +11,17 @@
 .via-abundance#trace_ma_2 { top: 86%; left: 18.5%; }
 .via-abundance#trace_ma_2 { top: 86%; left: 81.5%; }
 
-.via-abundance#trace_mi_1{ top: 39.5%; left: 12.5%; }
-.via-abundance#trace_mi_2{ top: 21.5%; left: 50%; }
-.via-abundance#trace_mi_3{ top: 39.5%; left: 87.5%; }
+.via-abundance#trace_mi_1{ top: 95%; left: 60.5%; }
+.via-abundance#trace_mi_2{ top: 70%; left: 90%; }
+.via-abundance#trace_mi_3{ top: 54%; left: 100%; }
+.via-abundance#trace_mi_4{ top: 39.5%; left: 85%; }
+.via-abundance#trace_mi_5{ top: 70%; left: 10%; }
+.via-abundance#trace_mi_6{ top: 54%; left: 0%; }
+.via-abundance#trace_mi_7{ top: 39.5%; left: 15%; }
+.via-abundance#trace_mi_8{ top: 10%; left: 75%; }
+.via-abundance#trace_mi_9{ top: 10%; left: 25%; }
+.via-abundance#trace_mi_10{ top: 95%; left: 39.5%; }
+
 
 
 /* --- HARMONY --- */
@@ -32,6 +40,13 @@
 .via-harmony#trace_mi_1{ top: 30%; left: 30%; }
 .via-harmony#trace_mi_2{ top: 25%; left: 50%; }
 .via-harmony#trace_mi_3{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_4{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_5{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_6{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_7{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_8{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_9{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_10{ top: 30%; left: 70%; }
 
 
 /* --- THE HUNT --- */
@@ -47,9 +62,16 @@
 .via-the_hunt#trace_ma_2 { top: 72%; left: 75.5%; }
 .via-the_hunt#trace_ma_3 { top: 6.5%; left: 50%; }
 
-.via-the_hunt#trace_mi_1{ top: 17%; left: 7.5%; }
-.via-the_hunt#trace_mi_2{ top: 95%; left: 50%; }
-.via-the_hunt#trace_mi_3{ top: 17%; left: 92.5%; }
+.via-the_hunt#trace_mi_1{ top: 95%; left: 50%; }
+.via-the_hunt#trace_mi_2{ top: 57%; left: 9.5%; }
+.via-the_hunt#trace_mi_3{ top: 43%; left: -5.5%; }
+.via-the_hunt#trace_mi_4{ top: 22%; left: 11%; }
+.via-the_hunt#trace_mi_5{ top: 57%; left: 90.5%; }
+.via-the_hunt#trace_mi_6{ top: 43%; left: 105.5%; }
+.via-the_hunt#trace_mi_7{ top: 22%; left: 89%; }
+.via-the_hunt#trace_mi_8{ top: -10%; left: 50%; }
+.via-the_hunt#trace_mi_9{ top: -5%; left: 20%; }
+.via-the_hunt#trace_mi_10{ top: -5%; left: 20%; }
 
 
 /* --- PRESERVATION --- */
@@ -65,9 +87,16 @@
 .via-preservation#trace_ma_2 { top: 93.5%; left: 76.5%; }
 .via-preservation#trace_ma_3 { top: 10%; left: 50%; }
 
-.via-preservation#trace_mi_1{ top: 31.5%; left: 7%; }
-.via-preservation#trace_mi_2{ top: 61.5%; left: 50%; }
-.via-preservation#trace_mi_3{ top: 31.5%; left: 93%; }
+.via-preservation#trace_mi_1{ top: 90%; left: 50%; }
+.via-preservation#trace_mi_2{ top: 68.5%; left: 5%; }
+.via-preservation#trace_mi_3{ top: 43.5%; left: -13.5%; }
+.via-preservation#trace_mi_4{ top: 26.5%; left: 8%; }
+.via-preservation#trace_mi_5{ top: 68.5%; left: 95%; }
+.via-preservation#trace_mi_6{ top: 43.5%; left: 113.5%; }
+.via-preservation#trace_mi_7{ top: 26.5%; left: 92%; }
+.via-preservation#trace_mi_8{ top: -7.5%; left: 50%; }
+.via-preservation#trace_mi_9{ top: -2.5%; left: 20%; }
+.via-preservation#trace_mi_10{ top: -2.5%; left: 80%; }
 
 
 /* --- DESTRUCTION --- */
@@ -124,7 +153,7 @@
 .via-elation#trace_mi_3{ top: 47%; left: 70%; }
 
 .via-elation#Elation_Skill{ top: 6%; left: 50%; }
-#Elation_Skill img {
+#Elation_Skill>img {
     filter: grayscale(100%) brightness(80%) sepia(100%) hue-rotate(-50deg) saturate(500%);
 }
 

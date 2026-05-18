@@ -5,13 +5,13 @@ export const colores = {
     },
 
     elementos: {
-        "Fire": "rgb(240, 70, 68)",
-        "Ice": "rgb(31, 182, 209)",
-        "Imaginary": "rgb(214, 193, 70)",
-        "Physical": "rgb(172, 171, 171)",
-        "Lightning": "rgb(204, 92, 227)",
-        "Wind": "rgb(59, 189, 134)",
-        "Quantum": "rgb(140, 128, 255)"
+        "Fire": "#F84F36",
+        "Ice": "#47C7FD",
+        "Imaginary": "#F4D258",
+        "Physical": "#acabab",
+        "Lightning": "#8872F1",
+        "Wind": "#00FF9C",
+        "Quantum": "#1C29BA"
     },
 
     vias: {

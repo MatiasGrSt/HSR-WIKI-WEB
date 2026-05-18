@@ -32,7 +32,6 @@ export default function CharacterPage() {
             .catch(err => setError(err.toString()));
     }, []);
 
-    if (error) return <div className="error-message">🚨 Error: {error}</div>;
     if (!data) return <div className="loading">⏳ Cargando datos astrales...</div>;
 
     const { info, skills, major_traces, minor_traces, eidolons } = data;
