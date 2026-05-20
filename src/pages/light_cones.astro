@@ -4,6 +4,13 @@ import '/src/styles/basico.css';
 // Las importaciones de componentes déjalas igual, esas están bien:
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import LightConesApp from '../components/LightCones/LightConesApp.jsx';
+
+import { getDatosConos, getVersionActual } from "../lib/cones.js";
+
+export const prerender = false;
+const conos = await getDatosConos();
+const versionActual = await getVersionActual();
 ---
 
 <!DOCTYPE html>
@@ -11,7 +18,7 @@ import Footer from '../components/Footer.astro';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Light Cones - HSR Wiki</title>
+    <title>Characters - HSR Wiki</title>
 </head>
 <!-- Cloudflare Web Analytics -->
  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fcc1cfa50eb54cd6b251acfc91e1f9bb"}'>
@@ -22,7 +29,13 @@ import Footer from '../components/Footer.astro';
     <main id="main-scroll">
         <div id="content-layout">
             <h2 class="section-title">LIGHT CONES</h2>
-            <p>Page in process...</p>
+            
+            <LightConesApp 
+                conosIniciales={conos} 
+                versionActual={versionActual} 
+                client:load 
+            />
+        </div>
     <Footer />
     </main>
 </body>
