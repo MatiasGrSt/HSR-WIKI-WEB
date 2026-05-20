@@ -41,14 +41,14 @@ export default function Buscador(props) {
                         icon="/imagenes/Utils/Todos.svg" color="#fff" 
                     />
                     <FilterButton 
-                        label="5 Estrellas" value="5" currentArray={filtroTipo} 
+                        label="Cavern Relic" value="Cavern Relic" currentArray={filtroTipo} 
                         toggle={() => manejarToggle(filtroTipo, setFiltroTipo, 'Cavern Relic')} 
-                        icon="/imagenes/Utils/5.webp" color={colores.rarezas[5]} 
+                        icon="/imagenes/Utils/Relic.webp" color={'#365f63'} 
                     />
                     <FilterButton 
-                        label="4 Estrellas" value="4" currentArray={filtroTipo} 
+                        label="Planar Ornament" value="Planar Ornament" currentArray={filtroTipo} 
                         toggle={() => manejarToggle(filtroTipo, setFiltroTipo, 'Planar Ornament')} 
-                        icon="/imagenes/Utils/4.webp" color={colores.rarezas[4]} 
+                        icon="/imagenes/Utils/Planar.webp" color={'#321d49'} 
                     />
                 </div>
             </div>

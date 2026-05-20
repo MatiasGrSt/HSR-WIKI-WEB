@@ -7,19 +7,17 @@ export default function RelicsApp({ relicsIniciales, versionActual }) {
     // 1. AHORA LOS FILTROS SON ARRAYS. Un array vacío [] significa "Todos"
     const [busqueda, setBusqueda] = useState('');
     const [filtroTipo, setFiltroTipo] = useState([]);
-    console.log(relicsIniciales)
 
     // 2. Lógica Multi-Filtro
     const relicsMostrados = useMemo(() => {
         let filtrados = relicsIniciales.filter(r => {
-            if (busqueda && !p.name.toLowerCase().includes(busqueda.toLowerCase())) return false;
+            if (busqueda && !r.name?.toLowerCase().includes(busqueda.toLowerCase())) return false;
             if (filtroTipo.length > 0 && !filtroTipo.includes(r.type)) return false;
-
             return true;
         });
 
         return filtrados.sort((a, b) => a.name.localeCompare(b.name));
-    }, [relicsIniciales, versionActual, busqueda]);
+    }, [relicsIniciales, versionActual, busqueda, filtroTipo]);
 
     return (
         <>
@@ -27,7 +25,7 @@ export default function RelicsApp({ relicsIniciales, versionActual }) {
                 busqueda={busqueda} setBusqueda={setBusqueda}
                 filtroTipo={filtroTipo} setFiltroTipo={setFiltroTipo}
             />
-            <Lista lightcones={relicsMostrados} versionActual={versionActual} />
+            <Lista relics={relicsMostrados} versionActual={versionActual} />
         </>
     );
 }

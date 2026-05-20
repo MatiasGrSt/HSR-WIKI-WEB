@@ -12,7 +12,6 @@ export async function getDatosRelics() {
     try {
         const res = await fetch(`${URL_BASE}/items/relics?limit=-1`, { headers, cache: 'no-store' });
         const json = await res.json();
-        console.log(relics)
         return json.data || [];
     } catch (e) {
         console.error("Error fetching relics:", e);

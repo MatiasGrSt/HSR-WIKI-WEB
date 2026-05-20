@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* ===========================================
    DESIGN TOKENS — Fuente única de verdad
@@ -7,7 +6,7 @@
 :root {
     --ag-accent-1: #00f0ff;
     --ag-accent-2: #ceae7d;
-    --ag-font: 'Outfit', sans-serif;
+    --ag-font: 'Exo 2', sans-serif;
     --ag-text-main: #e2e8f0;
     --ag-text-muted: #94a3b8;
     --color-rareza: #f29e38;
@@ -30,7 +29,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     background-color: #121212;
     color: #e0e0e0;
     margin: 0;

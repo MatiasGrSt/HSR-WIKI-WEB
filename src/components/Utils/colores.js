@@ -25,5 +25,10 @@ export const colores = {
         "Preservation": 'rgb(112, 66, 36)',
         "Remembrance": 'rgb(175, 231, 255)',
         "Elation": 'rgb(255, 54, 54)'
+    },
+
+    relics: {
+        "Cavern Relic": "#365f63", // Gris oscuro / Azulado
+        "Planar Ornament": "#321d49", // Púrpura oscuro
     }
 };

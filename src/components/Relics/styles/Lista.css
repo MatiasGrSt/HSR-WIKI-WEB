@@ -1,114 +1,67 @@
-/* --- Characters Grid & Cards --- */
-.lista-conos {
+
+.lista-relics {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Más pequeño que 500px */
+    gap: 20px;
     list-style: none;
-    padding: 10px 0;
-    margin: 10px 0 40px;
+    padding: 0;
 }
 
-/* Character Card Base */
-.lista-conos li {
-    position: relative;
-    aspect-ratio: 1 / 1.5;
-    overflow: hidden;
-    background-color: #1a1a1a;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 0 12px 0 0;
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
-    cursor: pointer;
-    
-    /* Hardware acceleration & isolation for smooth scroll */
-    contain: content;
-    will-change: transform;
-}
-
-/* Hover Elevation & Glow */
-.lista-conos li:hover {
-    transform: translateY(-10px) scale(1.03);
-    z-index: 10;
-    border-color: var(--color-rareza, #f29e38);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7), 0 0 30px color-mix(in srgb, var(--color-rareza, #f29e38) 40%, transparent);
-}
-
-/* Character Image */
-.lista-conos li .cone-portrait {
-    position: absolute;
-    top: -5px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-    transition: transform 0.5s ease;
-}
-
-.lista-conos li:hover .cone-portrait {
-    transform: scale(1.05);
-}
-
-/* Element Type Badge */
-.lista-conos li .cone-path-icon {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 28px;
-    height: 28px;
-    z-index: 4;
-    padding: 3px;
-    border: 1px solid var(--color-rareza, #f29e38);
-    
-    background: #1a1a1ad2;
-    border-radius: 50%;
-}
-
-/* Character Name Gradient Overlay */
-.lista-conos li p:not(.version):not(.novaflare) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    margin: 0;
-    padding: 35px 0 15px;
-    background: linear-gradient(to top, rgba(10, 10, 12, 1) 0%, rgba(10, 10, 12, 0.7) 40%, transparent 100%);
-    color: white;
-    text-align: center;
-    font-weight: 800;
-    font-size: 1.1rem;
-    letter-spacing: 1px;
-    z-index: 3;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
-}
-
-/* Rarity Stars Positioning */
-.rarity-stars {
-    position: absolute;
+/* Tarjeta de Reliquia */
+.relic-card {
+    background: #1a1a1a;
+    border: 1px solid var(--color-relic, #f29e38);
+    border-radius: 12px;
+    padding: 15px;
     display: flex;
-    justify-content: center;
-    gap: 2px;
-    width: 100%;
-    z-index: 10;
-    bottom: -12px;
+    flex-direction: column; /* Apila imagen/nombre arriba y info abajo */
 }
 
-.star-icon {
-    width: 25px;
-    height: auto;
+/* Parte superior: Imagen + Nombre */
+.relic-basic {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
 }
 
-/* Optional Badges (e.g. New Version) */
-.version {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: rgba(255, 0, 0, 0.8);
+.relic-portrait {
+    width: 64px;
+    height: 64px;
+    object-fit: contain; /* Para que la imagen no se recorte */
+}
+
+.relic-name {
+    font-weight: 800;
     color: white;
-    padding: 2px 8px;
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+.relic-type {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* Parte inferior: Descripciones */
+.relic-info {
+    border-top: 1px solid var(--color-relic, #f29e38);
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+.relic-desc {
+    color: #d1d1d1;
+    font-size: 0.95rem;
+    margin: 5px 0;
+    line-height: 1.4;
+}
+
+.relic-set-bonus {
     font-weight: bold;
-    font-size: 0.8rem;
-    z-index: 4;
-    border-radius: 0 0 0 8px;
+    color: #3bbfbd; /* Puedes ponerle un color chulo */
+    margin-right: 5px;
 }
 
 

@@ -40,7 +40,7 @@ export default function Lista({ lightcones, versionActual }) {
                             </div>
                             
                             <p className="cone-name">{p.name}</p>
-                            <img src={`../imagenes/Utils/LightCones/${p.id}.webp`} alt={p.name} className="cone-portrait" />
+                            <img src={`../imagenes/LightCones/${p.id}.webp`} alt={p.name} className="cone-portrait" />
                         </div>
                     </li>
                 );
