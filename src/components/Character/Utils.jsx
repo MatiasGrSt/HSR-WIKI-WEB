@@ -19,11 +19,11 @@ export function transformarTrace(texto, valor, element) {
         'ATK': 'Attack', 'DEF': 'Defense', 'HP': 'HP',
         'CRIT DMG': 'Crit Damage', 'CRIT Rate': 'Crit Rate',
         'Effect RES': 'Effect Resistance', 'Effect Hit Rate': 'Effect Hit Rate',
-        'Break': 'Break', 'SPD': 'Speed', 'Elation': 'Elation',
-        'DMG:': `${element} Damage`
+        'Break': 'Break', 'SPD': 'Speed', 'Elation': 'Elation'
     };
 
-    const tipoLimpio = traducciones[texto] || texto;
+    let tipoLimpio = traducciones[texto] || texto;
+    if (tipoLimpio.includes('DMG')){tipoLimpio = `${element} Damage`}
     const valorLimpio = (texto !== 'SPD') ? `+${valor}%` : `+${valor}`;
 
     return { tipoLimpio, valorLimpio };

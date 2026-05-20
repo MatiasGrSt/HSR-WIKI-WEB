@@ -3,6 +3,7 @@ import React, { useState, useMemo } from 'react';
 import './styles/SkillsTab.css';
 import './styles/SkillsPositionsByPath.css';
 import { organizarHabilidades, juntarHabilidades, transformarTrace } from './Utils.jsx';
+import SkillTree from './Lines.jsx'
 import SkillModal from './SkillModal';
 export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNovaflareMode }) {
     const [modalData, setModalData] = useState({ isOpen: false, skillsArray: [], type: '' });
@@ -51,7 +52,7 @@ export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNo
         <div className="habilidades">
             <div 
                 id="hab_cont" 
-                style={{ backgroundImage: `url('../imagenes/Utils/ViasBg/Path_${info.path}.webp')` }}
+                style={{ '--bg-path': `url('../imagenes/Utils/ViasBg/Path_${info.path}.webp')` }}
             >
                 
                 {/* RENDERIZAR HABILIDADES */}
@@ -150,6 +151,7 @@ export default function SkillsTab({ info, skills, majorTraces, minorTraces, isNo
                     />
                 )}
             </div>
+            <SkillTree personaje={info}/>
         </div>
     );
 }

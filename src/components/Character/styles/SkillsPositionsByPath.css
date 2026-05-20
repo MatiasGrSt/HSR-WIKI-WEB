@@ -1,25 +1,25 @@
 /* --- ABUNDANCE --- */
 
-.via-abundance#Basic_Attack { top: 54%; left: 29%; }
-.via-abundance#Skill { top: 54%; left: 71%; }
-.via-abundance#Ultimate { top: 58%; left: 50%; }
-.via-abundance#Talent { top: 37%; left: 50%; }
+.via-abundance#Basic_Attack { top: 44%; left: 29%; }
+.via-abundance#Skill { top: 44%; left: 71%; }
+.via-abundance#Ultimate { top: 48%; left: 50%; }
+.via-abundance#Talent { top: 20%; left: 50%; }
 
-.via-abundance#Technique { top: 78.5%; left: 50%; }
+.via-abundance#Technique { top: 72.5%; left: 50%; }
 
-.via-abundance#trace_ma_1 { top: 6%; left: 50%; }
-.via-abundance#trace_ma_2 { top: 86%; left: 18.5%; }
-.via-abundance#trace_ma_2 { top: 86%; left: 81.5%; }
+.via-abundance#trace_ma_1 { top: -4%; left: 50%; }
+.via-abundance#trace_ma_2 { top: 76%; left: 18.5%; }
+.via-abundance#trace_ma_3 { top: 76%; left: 81.5%; }
 
 .via-abundance#trace_mi_1{ top: 95%; left: 60.5%; }
-.via-abundance#trace_mi_2{ top: 70%; left: 90%; }
-.via-abundance#trace_mi_3{ top: 54%; left: 100%; }
-.via-abundance#trace_mi_4{ top: 39.5%; left: 85%; }
-.via-abundance#trace_mi_5{ top: 70%; left: 10%; }
-.via-abundance#trace_mi_6{ top: 54%; left: 0%; }
-.via-abundance#trace_mi_7{ top: 39.5%; left: 15%; }
-.via-abundance#trace_mi_8{ top: 10%; left: 75%; }
-.via-abundance#trace_mi_9{ top: 10%; left: 25%; }
+.via-abundance#trace_mi_2{ top: 60%; left: 90%; }
+.via-abundance#trace_mi_3{ top: 44%; left: 100%; }
+.via-abundance#trace_mi_4{ top: 29.5%; left: 85%; }
+.via-abundance#trace_mi_5{ top: 60%; left: 10%; }
+.via-abundance#trace_mi_6{ top: 44%; left: 0%; }
+.via-abundance#trace_mi_7{ top: 29.5%; left: 15%; }
+.via-abundance#trace_mi_8{ top: 0%; left: 75%; }
+.via-abundance#trace_mi_9{ top: 0%; left: 25%; }
 .via-abundance#trace_mi_10{ top: 95%; left: 39.5%; }
 
 
@@ -31,22 +31,22 @@
 .via-harmony#Ultimate { top: 61%; left: 50%; }
 .via-harmony#Talent { top: 38%; left: 50%; }
 
-.via-harmony#Technique { top: 84%; left: 50%; }
+.via-harmony#Technique { top: 80%; left: 50%; }
 
-.via-harmony#trace_ma_1 { top: 55%; left: -5%; }
-.via-harmony#trace_ma_2 { top: 55%; left: 105%; }
+.via-harmony#trace_ma_1 { top: 55%; left: 5%; }
+.via-harmony#trace_ma_2 { top: 55%; left: 95%; }
 .via-harmony#trace_ma_3 { top: 12%; left: 50%; }
 
-.via-harmony#trace_mi_1{ top: 30%; left: 30%; }
-.via-harmony#trace_mi_2{ top: 25%; left: 50%; }
-.via-harmony#trace_mi_3{ top: 30%; left: 70%; }
-.via-harmony#trace_mi_4{ top: 30%; left: 70%; }
-.via-harmony#trace_mi_5{ top: 30%; left: 70%; }
-.via-harmony#trace_mi_6{ top: 30%; left: 70%; }
-.via-harmony#trace_mi_7{ top: 30%; left: 70%; }
-.via-harmony#trace_mi_8{ top: 30%; left: 70%; }
-.via-harmony#trace_mi_9{ top: 30%; left: 70%; }
-.via-harmony#trace_mi_10{ top: 30%; left: 70%; }
+.via-harmony#trace_mi_1{ top: 95%; left: 50%; }
+.via-harmony#trace_mi_2{ top: 40%; left: -10%; }
+.via-harmony#trace_mi_3{ top: 25%; left: 10%; }
+.via-harmony#trace_mi_4{ top: 90%; left: 20%; }
+.via-harmony#trace_mi_5{ top: 70%; left: 80%; }
+.via-harmony#trace_mi_6{ top: 60%; left: 65%; }
+.via-harmony#trace_mi_7{ top: 90%; left: 80%; }
+.via-harmony#trace_mi_8{ top: -5%; left: 50%; }
+.via-harmony#trace_mi_9{ top: 0%; left: 20%; }
+.via-harmony#trace_mi_10{ top: 0%; left: 80%; }
 
 
 /* --- THE HUNT --- */
@@ -71,7 +71,7 @@
 .via-the_hunt#trace_mi_7{ top: 22%; left: 89%; }
 .via-the_hunt#trace_mi_8{ top: -10%; left: 50%; }
 .via-the_hunt#trace_mi_9{ top: -5%; left: 20%; }
-.via-the_hunt#trace_mi_10{ top: -5%; left: 20%; }
+.via-the_hunt#trace_mi_10{ top: -5%; left: 80%; }
 
 
 /* --- PRESERVATION --- */
@@ -83,8 +83,8 @@
 
 .via-preservation#Technique { top: 74.5%; left: 50%; }
 
-.via-preservation#trace_ma_1 { top: 93.5%; left: 23.5%; }
-.via-preservation#trace_ma_2 { top: 93.5%; left: 76.5%; }
+.via-preservation#trace_ma_1 { top: 90%; left: 23.5%; }
+.via-preservation#trace_ma_2 { top: 90%; left: 76.5%; }
 .via-preservation#trace_ma_3 { top: 10%; left: 50%; }
 
 .via-preservation#trace_mi_1{ top: 90%; left: 50%; }
@@ -112,9 +112,16 @@
 .via-destruction#trace_ma_2 { top: 77.5%; left: 78.5%; }
 .via-destruction#trace_ma_3 { top: 10.5%; left: 50%; }
 
-.via-destruction#trace_mi_1{ top: 28%; left: 5%; }
-.via-destruction#trace_mi_2{ top: 90%; left: 50%; }
-.via-destruction#trace_mi_3{ top: 28%; left: 95%; }
+.via-destruction#trace_mi_1{ top: 95%; left: 50%; }
+.via-destruction#trace_mi_2{ top: 62.5%; left: 6.5%; }
+.via-destruction#trace_mi_3{ top: 47.5%; left: -8.5%; }
+.via-destruction#trace_mi_4{ top: 27.5%; left: 6.5%; }
+.via-destruction#trace_mi_5{ top: 62.5%; left: 93.5%; }
+.via-destruction#trace_mi_6{ top: 47.5%; left: 108.5%; }
+.via-destruction#trace_mi_7{ top: 27.5%; left: 93.5%; }
+.via-destruction#trace_mi_8{ top: -10%; left: 50%; }
+.via-destruction#trace_mi_9{ top: 0%; left: 20%; }
+.via-destruction#trace_mi_10{ top: 0%; left: 80%; }
 
 
 /* --- ERUDITION --- */
@@ -122,37 +129,52 @@
 .via-erudition#Basic_Attack { top: 56.5%; left: 27.5%; }  
 .via-erudition#Skill { top: 56.5%; left: 72.5%; }  
 .via-erudition#Ultimate { top: 56.5%; left: 50%; }   
-.via-erudition#Talent { top: 37%; left: 50%; }
+.via-erudition#Talent { top: 32%; left: 50%; }
 
 .via-erudition#Technique { top: 94%; left: 50%; }
 
 .via-erudition#trace_ma_1 { top: 56.5%; left: 9%; }
 .via-erudition#trace_ma_2 { top: 56.5%; left: 91%; }
-.via-erudition#trace_ma_3 { top: 6%; left: 50%; }
+.via-erudition#trace_ma_3 { top: -5%; left: 50%; }
 
 .via-erudition#trace_mi_1{ top: 92%; left: 28%; }
-.via-erudition#trace_mi_2{ top: 21.5%; left: 50%; }
-.via-erudition#trace_mi_3{ top: 92%; left: 72%; }
+.via-erudition#trace_mi_2{ top: 56.5%; left: -9%; }
+.via-erudition#trace_mi_3{ top: 78.5%; left: -5%; }
+.via-erudition#trace_mi_4{ top: 34.5%; left: -5%; }
+.via-erudition#trace_mi_5{ top: 56.5%; left: 109%; }
+.via-erudition#trace_mi_6{ top: 78.5%; left: 105%; }
+.via-erudition#trace_mi_7{ top: 34.5%; left: 105%; }
+.via-erudition#trace_mi_8{ top: 0%; left: 20%; }
+.via-erudition#trace_mi_9{ top: 0%; left: 80%; }
+.via-erudition#trace_mi_10{ top: 92%; left: 72%; }
 
 
 /* --- ELATION --- */
 
-.via-elation#Basic_Attack { top: 13%; left: 29.5%; }  
-.via-elation#Skill { top: 13%; left: 70.5%; }  
-.via-elation#Ultimate { top: 29.5%; left: 50%; }   
-.via-elation#Talent { top: 50.5%; left: 50%; }
+.via-elation#Basic_Attack { top: 3%; left: 29.5%; }  
+.via-elation#Skill { top: 3%; left: 70.5%; }  
+.via-elation#Ultimate { top: 19.5%; left: 50%; }   
+.via-elation#Talent { top: 40.5%; left: 50%; }
 
-.via-elation#Technique { top: 70.9%; left: 50%; }
+.via-elation#Technique { top: 60.9%; left: 50%; }
 
-.via-elation#trace_ma_1 { top: 94%; left: 50%; }
-.via-elation#trace_ma_2 { top: 26%; left: 10%; }
-.via-elation#trace_ma_3 { top: 26%; left: 90%; }
+.via-elation#trace_ma_1 { top: 90%; left: 50%; }
+.via-elation#trace_ma_2 { top: 16%; left: 10%; }
+.via-elation#trace_ma_3 { top: 16%; left: 90%; }
 
-.via-elation#trace_mi_1{ top: 47%; left: 30%; }
-.via-elation#trace_mi_2{ top: 40%; left: 50%; }
-.via-elation#trace_mi_3{ top: 47%; left: 70%; }
+.via-elation#trace_mi_1{ top: 55.9%; left: 25%; }
+.via-elation#trace_mi_2{ top: 55.9%; left: 75%; }
+.via-elation#trace_mi_3{ top: 90%; left: 30%; }
+.via-elation#trace_mi_4{ top: 90%; left: 70%; }
+.via-elation#trace_mi_5{ top: 36%; left: 0%; }
+.via-elation#trace_mi_6{ top: 56%; left: 2%; }
+.via-elation#trace_mi_7{ top: 45%; left: 15%; }
+.via-elation#trace_mi_8{ top: 36%; left: 100%; }
+.via-elation#trace_mi_9{ top: 56%; left: 98%; }
+.via-elation#trace_mi_10{ top: 45%; left: 85%; }
 
-.via-elation#Elation_Skill{ top: 6%; left: 50%; }
+
+.via-elation#Elation_Skill{ top: -4%; left: 50%; }
 #Elation_Skill>img {
     filter: grayscale(100%) brightness(80%) sepia(100%) hue-rotate(-50deg) saturate(500%);
 }
@@ -169,11 +191,19 @@
 
 .via-nihility#trace_ma_1 { top: 38%; left: 6%; }
 .via-nihility#trace_ma_2 { top: 38%; left: 94%; }
-.via-nihility#trace_ma_3 { top: 6.5%; left: 50%; }
+.via-nihility#trace_ma_3 { top: 0%; left: 50%; }
 
-.via-nihility#trace_mi_1{ top: 75%; left: 30%; }
-.via-nihility#trace_mi_2{ top: 85%; left: 50%; }
-.via-nihility#trace_mi_3{ top: 75%; left: 70%; }
+.via-nihility#trace_mi_1{ top: 80%; left: 50%; }
+.via-nihility#trace_mi_2{ top: 53%; left: -10%; }
+.via-nihility#trace_mi_3{ top: 73%; left: 5%; }
+.via-nihility#trace_mi_4{ top: 93%; left: 20%; }
+.via-nihility#trace_mi_5{ top: 53%; left: 110%; }
+.via-nihility#trace_mi_6{ top: 73%; left: 95%; }
+.via-nihility#trace_mi_7{ top: 93%; left: 80%; }
+.via-nihility#trace_mi_8{ top: 5%; left: 20%; }
+.via-nihility#trace_mi_9{ top: 5%; left: 80%; }
+.via-nihility#trace_mi_10{ top: 95%; left: 50%; }
+
 
 
 /* --- REMEMBRANCE --- */
@@ -189,9 +219,18 @@
 .via-remembrance#trace_ma_2 { top: 93%; left: 50%; }
 .via-remembrance#trace_ma_3 { top: 17.5%; left: 25%; }
 
-.via-remembrance#trace_mi_1{ top: 44.75%; left: 30%; }
-.via-remembrance#trace_mi_2{ top: 54.75%; left: 50%; }
-.via-remembrance#trace_mi_3{ top: 44.75%; left: 70%; }
+.via-remembrance#trace_mi_1{ top: 42%; left: -5%; }
+.via-remembrance#trace_mi_2{ top: 22%; left: 0%; }
+.via-remembrance#trace_mi_3{ top: 62%; left: 0%; }
+.via-remembrance#trace_mi_4{ top: 22%; left: 100%; }
+.via-remembrance#trace_mi_5{ top: 62%; left: 100%; }
+.via-remembrance#trace_mi_6{ top: 87%; left: 25%; }
+.via-remembrance#trace_mi_7{ top: 87%; left: 75%; }
+.via-remembrance#trace_mi_8{ top: 2.5%; left: 10%; }
+.via-remembrance#trace_mi_9{ top: -7%; left: 29%; }
+.via-remembrance#trace_mi_10{ top: -10.5%; left: 50%; }
+
+
 
 .via-remembrance#Memosprite_Skill{ top: 38%; left: 50%; }
 .via-remembrance#Memosprite_Talent{ top: 9%; left: 50%; }

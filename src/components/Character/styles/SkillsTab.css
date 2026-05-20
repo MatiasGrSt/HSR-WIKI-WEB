@@ -16,22 +16,43 @@
 
 .habilidades #hab_cont {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     transform: translate(-50%, -50%);
     aspect-ratio: 1 / 1;
-    height: 700px;
+    height: 650px;
     z-index: 0;
-    background-size: cover;
+}
+
+.habilidades #hab_cont::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-path);
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+    pointer-events: none;
+}
 
+.habilidades > .skill-tree-lines {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1 / 1;
+    height: 650px;
+    z-index: -1;
+    pointer-events: none;
+    overflow: visible;
 }
 
 /* ====================================================================
    NODE BASES
    ==================================================================== */
-#hab_cont > div {
+#hab_cont > div{
     position: absolute;
     z-index: 5;
     display: flex;
