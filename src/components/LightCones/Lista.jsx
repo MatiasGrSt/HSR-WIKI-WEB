@@ -1,26 +1,32 @@
 import './styles/Lista.css';
 import { colores } from '../Utils/colores.js';
 
-export default function Lista({ personajes, versionActual }) {
-    if (personajes.length === 0) {
-        return <div className="no-results">No characters were found.</div>;
+export default function Lista({ lightcones, versionActual }) {
+    if (lightcones.length === 0) {
+        return <div className="no-results">No Lightcones were found.</div>;
     }
 
     return (
-        <ul className="lista-personajes">
-            {personajes.map(p => {
+        <ul className="lista-conos">
+            {lightcones.map(p => {
                 const rarezaNum = Number(p.rarity);
-                const vPersonaje = parseFloat(p.version);
-                const esNovaflare = Number(p.novaflare) === 1;
+                const via = p?.path?.replaceAll(' ', '_') || "";
+
+                const cssVars = {
+                    '--color-rareza': colores.rarezas[Number(p.rarity)],
+                    '--color-via': colores.vias[p.path],
+                    '--color-elemento': colores.elementos[p.element]
+                };
                 
                 return (
                     <li 
                         key={p.name} 
-                        id={p.name}
-                        className="char-card"
+                        id={p.id}
+                        className="cone-card"
+                        style={cssVars}
                     >
-                        <a href={`personaje?personaje=${p.name}`}>
-                            <img src={`../imagenes/Utils/Tipos/${p.element}.webp`} alt={p.element} className="char-element-icon" />
+                        <div>
+                            <img src={`../imagenes/Utils/Vias/${via}.webp`} alt={p.path} className="cone-path-icon" />
                             
                             <div className="rarity-stars">
                                 {Array.from({ length: rarezaNum }).map((_, i) => (
@@ -33,13 +39,9 @@ export default function Lista({ personajes, versionActual }) {
                                 ))}
                             </div>
                             
-                            <p className="char-name">{p.name}</p>
-                            <img src={`../imagenes/Personajes/${p.name}/Presentation.webp`} alt={p.name} className="char-portrait" />
-                        </a>
-
-                        {vPersonaje === versionActual && <p className='version' id='nuevo'>NEW!</p>}
-                        {vPersonaje > versionActual && <p className='version'>{p.version}</p>}
-                        {esNovaflare && <p className='novaflare'>Novaflare</p>}
+                            <p className="cone-name">{p.name}</p>
+                            <img src={`../imagenes/Utils/LightCones/${p.id}.webp`} alt={p.name} className="cone-portrait" />
+                        </div>
                     </li>
                 );
             })}

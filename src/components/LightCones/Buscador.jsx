@@ -54,7 +54,7 @@ export default function Buscador(props) {
                     <FilterButton 
                         label="3 Estrellas" value="3" currentArray={filtroRareza} 
                         toggle={() => manejarToggle(filtroRareza, setFiltroRareza, '3')} 
-                        icon="/imagenes/Utils/4.webp" color={colores.rarezas[3]} 
+                        icon="/imagenes/Utils/3.webp" color={colores.rarezas[3]} 
                     />
                 </div>
             </div>

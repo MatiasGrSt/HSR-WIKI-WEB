@@ -1,7 +1,8 @@
 export const colores = {
     rarezas: {
         5: "#d29640",
-        4: "#9c63d5"
+        4: "#9c63d5",
+        3: "#70a1e9"
     },
 
     elementos: {

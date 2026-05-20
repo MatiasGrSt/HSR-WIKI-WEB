@@ -4,6 +4,13 @@ import '/src/styles/basico.css';
 // Las importaciones de componentes déjalas igual, esas están bien:
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import RelicsApp from '../components/Relics/RelicsApp.jsx';
+import { getDatosRelics } from "../lib/relics.js";
+import { getVersionActual } from "../lib/listapj.js";
+
+export const prerender = false;
+const relics = await getDatosRelics();
+const versionActual = await getVersionActual();
 ---
 
 <!DOCTYPE html>
@@ -22,7 +29,12 @@ import Footer from '../components/Footer.astro';
     <main id="main-scroll">
         <div id="content-layout">
             <h2 class="section-title">RELICS</h2>
-            <p>Page in process...</p>
+
+            <RelicsApp 
+                relicsIniciales={relics} 
+                versionActual={versionActual} 
+                client:load 
+            />
     <Footer />
     </main>
 </body>

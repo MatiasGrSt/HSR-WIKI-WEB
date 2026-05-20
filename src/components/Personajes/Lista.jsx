@@ -12,12 +12,19 @@ export default function Lista({ personajes, versionActual }) {
                 const rarezaNum = Number(p.rarity);
                 const vPersonaje = parseFloat(p.version);
                 const esNovaflare = Number(p.novaflare) === 1;
-                
+
+                const cssVars = {
+                    '--color-rareza': colores.rarezas[Number(p.rarity)],
+                    '--color-via': colores.vias[p.path],
+                    '--color-elemento': colores.elementos[p.element]
+                };
+            
                 return (
                     <li 
                         key={p.name} 
                         id={p.name}
                         className="char-card"
+                        style={cssVars}
                     >
                         <a href={`personaje?personaje=${p.name}`}>
                             <img src={`../imagenes/Utils/Tipos/${p.element}.webp`} alt={p.element} className="char-element-icon" />
