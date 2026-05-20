@@ -2,12 +2,15 @@
 import { useState, useMemo } from 'react';
 import Buscador from './Buscador.jsx';
 import Lista from './Lista.jsx';
+import ModalInfo from './Modal.jsx';
 
 export default function LightConesApp({ conosIniciales, versionActual }) {
     // 1. AHORA LOS FILTROS SON ARRAYS. Un array vacío [] significa "Todos"
     const [busqueda, setBusqueda] = useState('');
     const [filtroRareza, setFiltroRareza] = useState([]);
     const [filtroVia, setFiltroVia] = useState([]);
+
+    const [itemSeleccionado, setItemSeleccionado] = useState(null);
 
     // 2. Lógica Multi-Filtro
     const conosMostrados = useMemo(() => {
@@ -36,7 +39,14 @@ export default function LightConesApp({ conosIniciales, versionActual }) {
                 filtroRareza={filtroRareza} setFiltroRareza={setFiltroRareza}
                 filtroVia={filtroVia} setFiltroVia={setFiltroVia}
             />
-            <Lista lightcones={conosMostrados} versionActual={versionActual} />
+            <Lista lightcones={conosMostrados} versionActual={versionActual} onItemClick={setItemSeleccionado} />
+
+            {itemSeleccionado && (
+                <ModalInfo 
+                    item={itemSeleccionado} 
+                    onClose={() => setItemSeleccionado(null)} 
+                />
+            )}
         </>
     );
 }

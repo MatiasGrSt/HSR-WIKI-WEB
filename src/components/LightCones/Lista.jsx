@@ -1,7 +1,8 @@
 import './styles/Lista.css';
 import { colores } from '../Utils/colores.js';
 
-export default function Lista({ lightcones, versionActual }) {
+// 1. AÑADIDO: Recibir 'onItemClick' en los props
+export default function Lista({ lightcones, versionActual, onItemClick }) {
     if (lightcones.length === 0) {
         return <div className="no-results">No Lightcones were found.</div>;
     }
@@ -13,9 +14,11 @@ export default function Lista({ lightcones, versionActual }) {
                 const via = p?.path?.replaceAll(' ', '_') || "";
 
                 const cssVars = {
-                    '--color-rareza': colores.rarezas[Number(p.rarity)],
+                    '--color-rareza': colores.rarezas[rarezaNum],
                     '--color-via': colores.vias[p.path],
-                    '--color-elemento': colores.elementos[p.element]
+                    // Nota: Normalmente los conos de luz no tienen elemento en HSR, 
+                    // pero si lo tienes en tu BD, déjalo.
+                    '--color-elemento': colores.elementos[p.element] 
                 };
                 
                 return (
@@ -23,7 +26,9 @@ export default function Lista({ lightcones, versionActual }) {
                         key={p.name} 
                         id={p.id}
                         className="cone-card"
-                        style={cssVars}
+                        // 2. AÑADIDO: Combinar cssVars con el cursor y añadir el onClick
+                        style={{ ...cssVars, cursor: 'pointer' }}
+                        onClick={() => onItemClick(p)}
                     >
                         <div>
                             <img src={`../imagenes/Utils/Vias/${via}.webp`} alt={p.path} className="cone-path-icon" />
