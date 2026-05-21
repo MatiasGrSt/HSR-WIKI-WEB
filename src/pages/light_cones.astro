@@ -7,10 +7,12 @@ import Footer from '../components/Footer.astro';
 import LightConesApp from '../components/LightCones/LightConesApp.jsx';
 
 import { getDatosConos } from "../lib/cones.js";
+import { getStatsConos } from "../lib/conesStats.js";
 import { getVersionActual } from "../lib/listapj.js";
 
 export const prerender = false;
 const conos = await getDatosConos();
+const statsConos = await getStatsConos();
 const versionActual = await getVersionActual();
 ---
 
@@ -33,6 +35,7 @@ const versionActual = await getVersionActual();
             
             <LightConesApp 
                 conosIniciales={conos} 
+                statsConos={statsConos}
                 versionActual={versionActual} 
                 client:load 
             />

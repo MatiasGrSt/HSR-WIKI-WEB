@@ -4,7 +4,7 @@ import Buscador from './Buscador.jsx';
 import Lista from './Lista.jsx';
 import ModalInfo from './Modal.jsx';
 
-export default function LightConesApp({ conosIniciales, versionActual }) {
+export default function LightConesApp({ conosIniciales, statsConos, versionActual }) {
     // 1. AHORA LOS FILTROS SON ARRAYS. Un array vacío [] significa "Todos"
     const [busqueda, setBusqueda] = useState('');
     const [filtroRareza, setFiltroRareza] = useState([]);
@@ -44,6 +44,7 @@ export default function LightConesApp({ conosIniciales, versionActual }) {
             {itemSeleccionado && (
                 <ModalInfo 
                     item={itemSeleccionado} 
+                    statsConos={statsConos}
                     onClose={() => setItemSeleccionado(null)} 
                 />
             )}
